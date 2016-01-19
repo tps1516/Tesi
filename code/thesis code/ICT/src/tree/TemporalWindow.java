@@ -56,9 +56,7 @@ public class TemporalWindow<Object> extends CircularFifoQueue<Object> implements
 		this.add((Object) "null");
 	}
 	
-	/*
-	 * rimuovere bug null
-	 */
+	
 	public String toString(){
 		String s=this.featureName+ ": ";
 		
@@ -76,6 +74,7 @@ public class TemporalWindow<Object> extends CircularFifoQueue<Object> implements
 		for(Object o: this){
 			t.add(o);
 		};
+		t.featureName=this.featureName;
 		return t;
 	}
 	
