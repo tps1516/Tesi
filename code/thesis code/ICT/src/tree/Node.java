@@ -40,6 +40,7 @@ public abstract class Node implements Serializable{
 	protected Integer beginExampleIndex;
 	protected Integer endExampleIndex;
 	protected SnapshotSchema schema; // which includes the model
+	private FeatureAveragesNode featureAvgNode = null;
 	
 	private Node father;
 	private int depth=0;
@@ -299,7 +300,7 @@ public abstract class Node implements Serializable{
 			
 	public String toString(){
 		String str="";
-		for(int i=0;i<getDepth()-1;i++)
+		/*for(int i=0;i<getDepth()-1;i++)
 			str+="-";
 		str+=(beginExampleIndex+":"+endExampleIndex+"[");
 		for(Feature f:getSchema().getTargetList()){
@@ -308,10 +309,25 @@ public abstract class Node implements Serializable{
 			if(f.getStopTree())
 				str+="(L)";
 		}
-		str+="]"+centroid+"\n";
-		
+		str+="]"+centroid+"\n";*/
+
+		if(this instanceof SplittingNode){
+			str+="ID: " + this.getIdNode() + ": SPLITTING NODE. ";
+			if(this.father!=null)
+				str+="Figlio di: " + father.getIdNode();
+			str+=" --- [" + this.getBeginExampleIndex() + ":" + this.getEndExampleIndex() + "] --- SPLIT SU: " + ((SplittingNode)this).getSplitFeature().getName() + "<=" + ((SplittingNode)this).getSplitThereshld();
+		}else{
+			str+="ID: " + this.getIdNode() + ": LEAF NODE. ";
+			if(this.father!=null)
+			str+="Figlio di: " + father.getIdNode();
+			str+=" --- [" + this.getBeginExampleIndex() + ":" + this.getEndExampleIndex() + "]";
+		}
+		str+="\n" + "Averages:";
+		str+="\n" + featureAvgNode.toString(); 
 		return str;
 	}
+	
+	
 	public void setSchema(SnapshotSchema schema) {
 		this.schema = schema;
 	}
@@ -423,7 +439,25 @@ Map<Integer,ErrorStatistic>  estimateGetisAndOrdError(SnapshotData snap, int beg
 				 if(father !=null && father.getSchema().getTargetList().get(f.getIndexMining()-father.getSchema().getSpatialList().size()).getStopTree())
 					//era foglia già al passo precedente
 				 {
-					 getSchema().getTargetList().set(f.getIndexMining()-getSchema().getSpatialList().size(),(Feature)father.getSchema().getTargetList().get(f.getIndexMining()-father.getSchema().getSpatialList().size()).clone());
+					 //getSchema().getTargetList().set(f.getIndexMining()-getSchema().getSpatialList().size(),(Feature)father.getSchema().getTargetList().get(f.getIndexMining()-father.getSchema().getSpatialList().size()).clone());
+					 f.clear();
+					 int index = f.getIndexMining();
+					 f.setAutocorrelation(father.schema.getTargetList().get(index-father.getSchema().getSpatialList().size()).getAutocorrelation());
+					 f.setIndexMining(father.schema.getTargetList().get(index-father.getSchema().getSpatialList().size()).getIndexMining());
+					 f.setIndexStream(father.schema.getTargetList().get(index-father.getSchema().getSpatialList().size()).getIndexStream());
+					 f.setStopTree(father.schema.getTargetList().get(index-father.getSchema().getSpatialList().size()).getStopTree());
+					 for(int i = this.getBeginExampleIndex(); i <= this.getEndExampleIndex(); i++){
+						 if(!(trainingSet.getSensorPoint(i).getMeasure(index).isNull())){
+							 if(f instanceof NumericFeature) {
+									((NumericFeature)f).setMin((Double)trainingSet.getSensorPoint(i).getMeasure(index).getValue()); // update max
+									((NumericFeature)f).setMax((Double)trainingSet.getSensorPoint(i).getMeasure(index).getValue()); //update min
+									((NumericFeature)f).setMean((Double)trainingSet.getSensorPoint(i).getMeasure(index).getValue()); //update mean
+								}					
+								else 
+								if (f instanceof CategoricalFeature) 						
+									((CategoricalFeature)f).addCategory((String)trainingSet.getSensorPoint(i).getMeasure(index).getValue()); 
+						 }
+					 }
 				 }
 				 	//è diventato foglia a questo passo
 				 else{
@@ -475,14 +509,32 @@ Map<Integer,ErrorStatistic>  estimateGetisAndOrdError(SnapshotData snap, int beg
 		if(centroidType.equals("random"))
 			centroid=data.sampleCentroid(schema,beginExampleIndex,endExampleIndex, centroidPerc);
 		else
-			centroid=data.quadSampleCentroid(schema, beginExampleIndex, endExampleIndex, mbr,centroidPerc);
+			centroid=data.quadSampleCentroid(schema, beginExampleIndex, endExampleIndex, mbr,centroidPerc);	
+	}
 	
-		
-				
-		
-		
+	void initializedFeatureAvgNode(){
+		featureAvgNode = new FeatureAveragesNode(this);
+	}
+	
+	void updateFeatureAvgNode(){
+		featureAvgNode.updateAverages(this);
+	}
+	
+	FeatureAveragesNode getFeatureAvgNode(){
+		return featureAvgNode;
+	}
 
-		
+	void setFeatureAvgNode(FeatureAveragesNode fAvgNode){
+		try{
+			featureAvgNode = fAvgNode.Clone();
+		}catch(CloneNotSupportedException e){
+			System.out.println("Clonazione non supportata, riga 500 Node");
+			e.printStackTrace();
+		}
+	}
+	
+	void insAvgNull(){
+		featureAvgNode.avgNull();
 	}
 
 

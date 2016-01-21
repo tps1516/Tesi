@@ -15,7 +15,9 @@ public class TemporalWindow<Object> extends CircularFifoQueue<Object> implements
 	private static int windowMaxSize;
 	
 	private String featureName;
-	
+	private TemporalWindow(){
+		super(windowMaxSize);
+	}
 	/*
 	 * costruttore della classe
 	 * istanzia la coda in base alla dimensione massima
@@ -70,7 +72,7 @@ public class TemporalWindow<Object> extends CircularFifoQueue<Object> implements
 	
 	public TemporalWindow clone() throws CloneNotSupportedException{
 		
-		TemporalWindow t= (TemporalWindow)super.clone();
+		TemporalWindow t=new TemporalWindow();
 		for(Object o: this){
 			t.add(o);
 		};

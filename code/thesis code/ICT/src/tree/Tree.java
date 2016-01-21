@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintStream;
-
 import java.io.Serializable;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -27,22 +27,22 @@ import data.datavalue.Value;
 import data.feature.AutocorrelationI;
 import data.feature.CategoricalFeature;
 import data.feature.Feature;
-
 import data.feature.NumericFeature;
-
 import snapshot.SnapshotData;
 import snapshot.SnapshotSchema;
 import snapshot.SnapshotWeigth;
 
-public class Tree implements Serializable,Comparable<Tree>{
+public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 
 	private static final long serialVersionUID = 1L;
 	private Node root=null;
 	private Node father=null;
 	private Tree leftSubTree=null;
 	private Tree rightsubTree=null;
- long computationTime=0;
-	Tree (){
+    long computationTime=0;
+	
+    
+    Tree (){
 		
 	}
 
@@ -234,6 +234,49 @@ public class Tree implements Serializable,Comparable<Tree>{
 		this.father=father;
 		Node testRoot=new LeafNode(autocorrelation, data, schema, W, beginIndex, endIndex,minimumExamples,depth,father);
 		if( isLeaf(autocorrelation,testRoot.getSchema(), minimumExamples)){
+			
+		   root=testRoot;
+		   root.initializedFeatureAvgNode();
+		   root.updateFeatureAvgNode();	
+			
+		   //root.sampling(data,centroidType,ccentroidPerc);
+					
+			
+		}
+		else //split node
+		{
+			try{
+				root=new SplittingNode(testRoot,autocorrelation, data, testRoot.getSchema(), W, beginIndex, endIndex,minimumExamples,depth,numberOfSplits,father,testType);
+			}
+			catch (SplitException e){
+				
+				setLeaf(testRoot.getSchema());
+				root=testRoot;
+				root.sampling(data,centroidType,ccentroidPerc);
+				root.initializedFeatureAvgNode();
+				root.updateFeatureAvgNode();
+				return;
+			
+				
+			}
+			
+			root.updateFeatureAvgNode();
+			leftSubTree=new Tree();
+			rightsubTree=new Tree();
+			leftSubTree.learnTree( data, root.getSchema(), W, autocorrelation,  ((SplittingNode)root).splitLeft.beginIndex, ((SplittingNode)root).splitLeft.endIndex, minimumExamples,depth+1, numberOfSplits,root,ccentroidPerc,centroidType,testType);
+			rightsubTree.learnTree( data, root.getSchema(), W, autocorrelation, ((SplittingNode)root).splitRight.beginIndex, ((SplittingNode)root).splitRight.endIndex, minimumExamples,depth+1,numberOfSplits,root,ccentroidPerc,centroidType,testType);
+			
+		}
+				
+	}
+	
+	/*
+	 * DA MODIFICARE PER RENDERLO RELEARN
+	 * private void learnTree(SnapshotData data, SnapshotSchema schema, SnapshotWeigth W, AutocorrelationI autocorrelation, int beginIndex, int endIndex, int minimumExamples, int depth, int numberOfSplits, Node father,  float ccentroidPerc,String centroidType, String testType){
+		
+		this.father=father;
+		Node testRoot=new LeafNode(autocorrelation, data, schema, W, beginIndex, endIndex,minimumExamples,depth,father);
+		if( isLeaf(autocorrelation,testRoot.getSchema(), minimumExamples)){
 			if(root==null)
 				root=testRoot;
 			else{
@@ -270,7 +313,7 @@ public class Tree implements Serializable,Comparable<Tree>{
 		}
 				
 	}
-	
+	 */
 	
 	// Chiamato negli alberi aspaziali
 	private void learnTree(SnapshotData data, SnapshotSchema schema, int beginIndex, int endIndex, int minimumExamples, int depth, int numberOfSplits, Node father,  float ccentroidPerc, String centroidType, String testType){
@@ -335,6 +378,7 @@ public class Tree implements Serializable,Comparable<Tree>{
 
 	}
 	
+	/*
 	public String toString(){
 		String str="";
 		if(root.getFather()==null)
@@ -352,7 +396,17 @@ public class Tree implements Serializable,Comparable<Tree>{
 		
 		return str;
 	}
-
+	*/
+	
+	public String toString(){
+		String str="";
+		
+		for (Node n:this){
+			str=str+ n.toString() + "\n";
+		}
+		
+		return str;
+	}
 	
 
 	public void prune(SnapshotData snap, SnapshotSchema schema,
@@ -485,16 +539,16 @@ public class Tree implements Serializable,Comparable<Tree>{
 				for(Integer f:unprunedE.keySet()){ //rendo foglie tutti gl iattributi
 				//pruning
 					root.getSchema().getTargetList().get(f-root.getSchema().getSpatialList().size()).setStopTree(true);
-					if(leftSubTree!=null)
+					/*if(leftSubTree!=null)
 						leftSubTree.propagateModel(root.getSchema().getTargetList().get(f-root.getSchema().getSpatialList().size()));
 					if(rightsubTree!=null)
 						rightsubTree.propagateModel(root.getSchema().getTargetList().get(f-root.getSchema().getSpatialList().size()));
+					*/
 					outputE.put(f,prunedE.get(f));	
-
-					leftSubTree=null;
-					rightsubTree=null;
-					root=new LeafNode(root.getSchema(),root.getBeginExampleIndex(),root.getEndExampleIndex(),root.getDepth(),root.getFather());
 				}
+				leftSubTree=null;
+				rightsubTree=null;
+				root=new LeafNode(root.getSchema(),root.getBeginExampleIndex(),root.getEndExampleIndex(),root.getDepth(),root.getFather(), root.getFeatureAvgNode());
 						
 					//System.out.println("Pruning");
 				return outputE;
@@ -890,11 +944,66 @@ private double interClusterDisperison(SnapshotData snap, int begin, int end) {
 		}
 		else{//leaf node
 			
-			root.sampling(snap,centroidType,ccentroidPerc);
-						
+			root.sampling(snap,centroidType,ccentroidPerc);				
 		
+		}				
+	}
+	
+	/*
+	 * classe interna 
+	 * realizza l'iteratore per l'alberp
+	 */
+	public class TreeIterator implements Iterator<Node> {
+
+		private Tree tree;
+		private LinkedList<Node> nodiVisitati; 
+		private int i;
+		
+		public TreeIterator(Tree t){
+			this.tree=t;
+			nodiVisitati= new LinkedList<Node>();
+			nodiVisitati=visitaInAmpiezza();
+			i=0;
+			
+		}
+		@Override
+		public boolean hasNext() {
+			return i<nodiVisitati.size();
 		}
 
-				
+		@Override
+		public Node next() {
+			int j=i;
+			i++;
+			return nodiVisitati.get(j);
+		}
+
+		private LinkedList<Node> visitaInAmpiezza(){
+			LinkedList<Tree> daVisitare= new LinkedList<Tree>();
+			LinkedList<Node> nodiVisitati = new LinkedList<Node>();
+			
+			daVisitare.add(tree);
+			while(!daVisitare.isEmpty()) {
+				Tree t= daVisitare.get(0);
+				daVisitare.remove(0);
+				if (t!=null) {
+					nodiVisitati.add(t.root);
+					daVisitare.add(t.leftSubTree);
+					daVisitare.add(t.rightsubTree);
+				}
+			}
+			
+			return nodiVisitati;
+		}
 	}
+
+	/*
+	 * restituisce l'iteratore
+	 * per l'albero
+	 */
+	public Iterator<Node> iterator() {
+		return new TreeIterator(this);
+	}
+	
+	
 }

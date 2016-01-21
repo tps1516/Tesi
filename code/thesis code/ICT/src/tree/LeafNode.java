@@ -35,9 +35,10 @@ public class LeafNode extends Node {
 				minExamples,depth,father);
 	}
 	
-	public LeafNode(SnapshotSchema schema, int begin, int end, int depth, Node father){
+	public LeafNode(SnapshotSchema schema, int begin, int end, int depth, Node father, FeatureAveragesNode fAvgNode){
 		super(schema,begin,end,depth,father);
 		//super(AutocorrelationI a, PrototypeI p,SnapshotData trainingSet, SnapshotSchema schema, SnapshotWeigth W, int beginExampleIndex, int endExampleIndex, int minExamples, int depth, Node father){
+		super.setFeatureAvgNode(fAvgNode);
 	}
 	
 

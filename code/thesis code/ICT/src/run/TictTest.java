@@ -10,19 +10,18 @@ import java.io.PrintStream;
 import java.util.GregorianCalendar;
 
 import mbrModel.KNNModel;
-
 import snapshot.DynamicSnapshotWeight;
 import snapshot.ErrorFormatException;
 import snapshot.SnapshotData;
 import snapshot.SnapshotSchema;
 import snapshot.SnapshotWeigth;
+import tree.TemporalWindow;
 import tree.Tree;
 import data.EuclideanDistance;
 import data.feature.AutocorrelationI;
 import data.feature.Feature;
 import data.feature.ResubstitutionIndex;
 import data.feature.ResubstitutionIndexOnGetisOrd;
-
 import data.feature.GetisOrdIndex;
 
 // completare deve prendere trainign and testing sets
@@ -45,6 +44,7 @@ public class TictTest {
 		String sampling="quadtree";
 		String testType="target";
 		String isSpatial="GO";
+		Integer dimTW = 0;
 		
 		try{
 			 streamName="dataset/"+args[0];//"soace_ga_training_5XY.arff";
@@ -53,6 +53,7 @@ public class TictTest {
 			 splitNumber=new Integer(args[2]); //random split identifier
 			 bperc= new Float(args[3]);
 			 centroidPercentage=new Float(args[4]);
+			 dimTW=new Integer(args[5]);
 		/*	 sampling=new String(args[5]);
 			 testType=new String(args[6]);
 			 isSpatial=new Boolean(args[7]);
@@ -74,6 +75,7 @@ public class TictTest {
 			return;
 			
 		}
+		TemporalWindow.setWindowMaxSize(dimTW);
 		String configStr="";
 		AutocorrelationI autoCorrelation;
 		
@@ -199,7 +201,7 @@ public class TictTest {
 					
 						
 						tree=new Tree(snapTrain, schemaTrain, W, autoCorrelation, splitNumber,centroidPercentage,sampling,testType);
-						
+						System.out.println(tree);
 						KNNModel knn=new KNNModel();
 						tree.populateKNNModel(knn);
 						
@@ -244,7 +246,7 @@ public class TictTest {
 						tree.prune(snapTrain,schemaTrain,W,autoCorrelation);
 						afterPruningLeaves=tree.countLeaves();
 						tree.drift(snapTrain,schemaTrain,W,autoCorrelation,  splitNumber,centroidPercentage,sampling,testType);
-						
+						System.out.println(tree);
 						KNNModel knn=new KNNModel();
 						tree.populateKNNModel(knn);
 						
