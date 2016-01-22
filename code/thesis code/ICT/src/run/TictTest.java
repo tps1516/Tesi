@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.GregorianCalendar;
 
-import mbrModel.KNNModel;
+//import mbrModel.KNNModel;
 import snapshot.DynamicSnapshotWeight;
 import snapshot.ErrorFormatException;
 import snapshot.SnapshotData;
@@ -202,8 +202,8 @@ public class TictTest {
 						
 						tree=new Tree(snapTrain, schemaTrain, W, autoCorrelation, splitNumber,centroidPercentage,sampling,testType);
 						System.out.println(tree);
-						KNNModel knn=new KNNModel();
-						tree.populateKNNModel(knn);
+						//KNNModel knn=new KNNModel();
+						//tree.populateKNNModel(knn);
 						
 						GregorianCalendar timeEnd= new GregorianCalendar();
 						
@@ -216,7 +216,7 @@ public class TictTest {
 						outputReport.println("Computation time(milliseconds)="+time);
 						
 						timeBegin= new GregorianCalendar();
-						String mse=knn.testKnn(snapTest, schemaTest, "output/stream/csvtict/"+args[0]+name+"_"+snapTest.getIdSnapshot()+".csv");
+						//String mse=knn.testKnn(snapTest, schemaTest, "output/stream/csvtict/"+args[0]+name+"_"+snapTest.getIdSnapshot()+".csv");
 						timeEnd= new GregorianCalendar();
 						outputReport.println("Interpolation time(milliseconds)="+(timeEnd.getTimeInMillis()-timeBegin.getTimeInMillis()));
 						
@@ -224,8 +224,8 @@ public class TictTest {
 						newLeaves=tree.countLeaves();
 				
 						
-						outputReport.println("Error statistics");
-						outputReport.println(configStr+"\n"+mse);
+						//outputReport.println("Error statistics");
+						//outputReport.println(configStr+"\n"+mse);
 						
 						outputReport.println("Leaves statisics");
 						outputReport.println("number of leaves of the tree inherited from the past="+pastLeaves);
@@ -247,8 +247,8 @@ public class TictTest {
 						afterPruningLeaves=tree.countLeaves();
 						tree.drift(snapTrain,schemaTrain,W,autoCorrelation,  splitNumber,centroidPercentage,sampling,testType);
 						System.out.println(tree);
-						KNNModel knn=new KNNModel();
-						tree.populateKNNModel(knn);
+						//KNNModel knn=new KNNModel();
+						//tree.populateKNNModel(knn);
 						
 						
 						
@@ -260,11 +260,11 @@ public class TictTest {
 						outputReport.println("Computation time(milliseconds)="+(timeEnd.getTimeInMillis()-timeBegin.getTimeInMillis()));
 						
 						timeBegin= new GregorianCalendar();
-						String mse=knn.testKnn(snapTest, schemaTest, "output//stream//csvtict//"+args[0]+name+"_"+snapTest.getIdSnapshot()+".csv");
+						//String mse=knn.testKnn(snapTest, schemaTest, "output//stream//csvtict//"+args[0]+name+"_"+snapTest.getIdSnapshot()+".csv");
 						timeEnd= new GregorianCalendar();
 						outputReport.println("Interpolation time(milliseconds)="+(timeEnd.getTimeInMillis()-timeBegin.getTimeInMillis()));
-						outputReport.println("Error statistics");
-						outputReport.println(configStr+"\n"+mse);
+						//outputReport.println("Error statistics");
+						//outputReport.println(configStr+"\n"+mse);
 						
 						
 						

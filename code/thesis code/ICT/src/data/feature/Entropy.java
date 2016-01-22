@@ -1,4 +1,4 @@
-package data.feature;
+/*package data.feature;
 
 import snapshot.SnapshotData;
 import snapshot.SnapshotWeigth;
@@ -26,4 +26,4 @@ public class Entropy //implements AutocorrelationI
 		return v==0;
 	}
 
-}
+}*/

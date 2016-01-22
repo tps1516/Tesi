@@ -51,7 +51,7 @@ abstract public class SnapshotWeigth implements Serializable{
 		//System.out.println("Maximum distance is:"+maxD);
 		return maxD;
 	}
-					
+		/*			
 	public static double maxofMinDist(SnapshotData data, DistanceI distance) {
 		double maxD=-1.0;
 
@@ -96,7 +96,7 @@ abstract public class SnapshotWeigth implements Serializable{
 			}
 			/*if(minI>maxD)
 				maxD=minI;
-				*/
+				
 			dist[i]=minI;
 		}
 		
@@ -106,7 +106,7 @@ abstract public class SnapshotWeigth implements Serializable{
 		System.out.println("Maximum of minimum distance at "+percentile+ " percentile:"+dist[size]);
 		return dist[size];
 	}	
-	
+	*/
 	abstract public void updateSnapshotWeigth(SnapshotData data, DistanceI distance);
 	abstract public Double getWeight (Integer id1, Integer id2);
 	abstract public Double getDistance (Integer id1, Integer id2);
@@ -127,8 +127,9 @@ abstract public class SnapshotWeigth implements Serializable{
 
 }
 
+	/*
 	public long getTimeInMillis(){
 		return (end.getTimeInMillis()-start.getTimeInMillis());
-	}
+	}*/
 	
 }

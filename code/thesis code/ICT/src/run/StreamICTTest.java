@@ -1,4 +1,4 @@
-package run;
+/*package run;
 
 import java.io.BufferedReader;
 import java.io.EOFException;
@@ -49,6 +49,7 @@ public class StreamICTTest {
 			 isSpatial=new Boolean(args[7]);
 			*/
 			// id=new Integer (args[5]);
+/*
 		}
 		catch(IndexOutOfBoundsException e){
 			String report="TICT@KDDE.UNIBA.IT\n";
@@ -154,7 +155,7 @@ public class StreamICTTest {
 						System.out.println ("Skipping "+snapTrain.getIdSnapshot());
 						continue;
 					}*/
-					
+					/*
 					snapTrain.updateNull(W, schemaTrain);
 					
 					
@@ -183,8 +184,8 @@ public class StreamICTTest {
 						
 						tree=new Tree(snapTrain, schemaTrain, W, autoCorrelation, splitNumber,centroidPercentage,sampling,testType);
 						
-						KNNModel knn=new KNNModel();
-						tree.populateKNNModel(knn);
+						//KNNModel knn=new KNNModel();
+						//tree.populateKNNModel(knn);
 						
 						GregorianCalendar timeEnd= new GregorianCalendar();
 						
@@ -197,7 +198,7 @@ public class StreamICTTest {
 						outputReport.println("Computation time(milliseconds)="+time);
 						
 						timeBegin= new GregorianCalendar();
-						String mse=knn.testKnn(snapTest, schemaTest, "output/stream/csvict/"+args[0]+name+"_"+snapTest.getIdSnapshot()+".csv");
+						//String mse=knn.testKnn(snapTest, schemaTest, "output/stream/csvict/"+args[0]+name+"_"+snapTest.getIdSnapshot()+".csv");
 						timeEnd= new GregorianCalendar();
 						outputReport.println("Interpolation time(milliseconds)="+(timeEnd.getTimeInMillis()-timeBegin.getTimeInMillis()));
 						
@@ -205,8 +206,8 @@ public class StreamICTTest {
 						newLeaves=tree.countLeaves();
 				
 						
-						outputReport.println("Error statistics");
-						outputReport.println(configStr+"\n"+mse);
+						//outputReport.println("Error statistics");
+						//outputReport.println(configStr+"\n"+mse);
 						
 						outputReport.println("Leaves statisics");
 						outputReport.println("number of leaves of the tree inherited from the past="+pastLeaves);
@@ -264,4 +265,4 @@ public class StreamICTTest {
         
 }
 
-}
+}*/

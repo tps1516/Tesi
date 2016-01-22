@@ -1,4 +1,4 @@
-package run;
+/*package run;
 
 import java.io.BufferedReader;
 import java.io.EOFException;
@@ -252,10 +252,10 @@ public class IctTest {
 		
 		
 	
-		KNNModel knn=new KNNModel();
+		//KNNModel knn=new KNNModel();
 		
 		//tree.populateKNNModel(knn,snap,0,snap.size()-1,schema,W);
-		tree.populateKNNModel(knn);
+		//tree.populateKNNModel(knn);
 		
 		
 		tree.saveSpatialClustering("output/cluster/train/"+args[1]+"_"+sampling+"_"+centroidPercentage+"_"+testType+"_"+bPerc+"_"+heuristic+".csv",snap,schema);
@@ -281,22 +281,22 @@ public class IctTest {
 		}
 		timeBegin =  timeEnd;
 		
-		String error=knn.testKnn(snapTest, schema,"output/csv/"+args[1]+"_"+sampling+"_"+centroidPercentage+"_"+testType+"_"+bPerc+"_"+heuristic+".csv");
+		//String error=knn.testKnn(snapTest, schema,"output/csv/"+args[1]+"_"+sampling+"_"+centroidPercentage+"_"+testType+"_"+bPerc+"_"+heuristic+".csv");
 		
 		timeEnd = new GregorianCalendar();
 	
 		
 		outputReport.println("Interpolation time (milliseconds)="+(timeEnd.getTimeInMillis()-timeBegin.getTimeInMillis()));
 	
-		String schemastr=";";
-		for(Feature f:schema.getTargetList())
-			schemastr+=(f.getName()+";");
-		System.out.println(schemastr);
-		System.out.println(error);
+		//String schemastr=";";
+		//for(Feature f:schema.getTargetList())
+		//	schemastr+=(f.getName()+";");
+		//System.out.println(schemastr);
+		//System.out.println(error);
 		
-		outputReport.println("Error statistics");
-		outputReport.println(schemastr);		
-		outputReport.println(error);
+		//outputReport.println("Error statistics");
+		//outputReport.println(schemastr);		
+		//outputReport.println(error);
 		
 		
 		tree.saveSpatialClustering("output/cluster/test/"+args[1]+"_"+sampling+"_"+centroidPercentage+"_"+testType+"_"+bPerc+"_"+heuristic+".csv",snapTest,schema);
@@ -335,3 +335,4 @@ public class IctTest {
 
 
 }
+*/

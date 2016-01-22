@@ -2,6 +2,7 @@ package snapshot;
 
 import java.io.BufferedReader;
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,7 +15,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
 
-import mbrModel.MBR;
+//import mbrModel.MBR;
 
 
 
@@ -459,7 +460,7 @@ public void sort(Feature f,int begin,int end){
 		
 	}
  
- 
+ /*
 	public SensorPoint computeCentroid(SnapshotSchema schema, int beginExampleIndex, int endExampleIndex)
 	{
 		int size=schema.getSpatialList().size();
@@ -489,7 +490,7 @@ public void sort(Feature f,int begin,int end){
 	}
 
 	
-/*
+
 	private void populateQUADTREE(SnapshotSchema schema, List<SensorPoint> centroid, Set<Integer> mbrData, int beginExampleIndex, int endExampleIndex, MBR mbr, int currentDepth, int maxDepth){
 		
 		
@@ -651,7 +652,7 @@ public void sort(Feature f,int begin,int end){
 		}
 			
 	}*/
-	
+	/*
 	class QUADTREESplit implements Comparable<QUADTREESplit>{
 		int beginExampleIndex;
 		int endExampleIndex;
@@ -683,14 +684,17 @@ public void sort(Feature f,int begin,int end){
 		@Override
 		public int compareTo(QUADTREESplit o) {
 			// TODO Auto-generated method stub
-			/*if(father<=this.father)
-				return -1;
-			else return +1;*/
+			//if(father<=this.father)
+			//	return -1;
+			//else return +1;
 			if(endExampleIndex-beginExampleIndex+1<=o.endExampleIndex-o.beginExampleIndex+1) 
 				return 1; 
 						else return -1;
 		}
 	}
+	*/
+	
+	/*
 	private void populateQUADTREE(SnapshotSchema schema, List<SensorPoint> centroid, Map<Integer,Set<QUADTREESplit>> quad, int numCentroids){
 		//int maxDepthEst=(int)(Math.log10(numCentroids)/Math.log10(4));
 				
@@ -717,9 +721,9 @@ public void sort(Feature f,int begin,int end){
 				int currentDepth=currentQuad.depth;
 				if(mbr.getCardinality()==1)
 				{
-					/*SensorPoint centre=mbr.determineCentre(this,beginExampleIndex,endExampleIndex);
-					centroid.add(centre);
-					*/
+					//SensorPoint centre=mbr.determineCentre(this,beginExampleIndex,endExampleIndex);
+					//centroid.add(centre);
+					//
 				
 					quad.get(first+1).add(currentQuad);
 					currentQuad.children.add(currentQuad);
@@ -935,11 +939,11 @@ public void sort(Feature f,int begin,int end){
 		
 
 	}
-		
+	*/	
 		
 		
 				
-		
+	/*	
 	public List<SensorPoint> quadSampleCentroid(SnapshotSchema schema, int beginExampleIndex, int endExampleIndex, MBR mbr, float perc)
 	{
 		List<SensorPoint> centroid=new LinkedList<SensorPoint>();
@@ -976,6 +980,8 @@ public void sort(Feature f,int begin,int end){
 		
 		return centroid;
 	}
+	
+	
 	public List<SensorPoint> sampleCentroid(SnapshotSchema schema, int beginExampleIndex, int endExampleIndex, float perc)
 	{
 		List<SensorPoint> centroid=new LinkedList<SensorPoint>();
@@ -1007,6 +1013,8 @@ public void sort(Feature f,int begin,int end){
 		return centroid;
 		
 	}
+	
+	
 	public MBR computeMBR(SnapshotSchema schema, int beginExampleIndex, int endExampleIndex)
 	{
 		double minX =(Double)	getSensorPoint(beginExampleIndex).getMeasure(0).getValue();
@@ -1029,6 +1037,8 @@ public void sort(Feature f,int begin,int end){
 		}
 		return new MBR(minX,minY,maxX,maxY,endExampleIndex-beginExampleIndex+1);
 	}
+	
+	*/
 	public void updateNull(SnapshotWeigth W,SnapshotSchema schema) {
 		 
 		// scaledSchema(schema);

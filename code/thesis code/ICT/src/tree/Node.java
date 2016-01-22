@@ -2,6 +2,7 @@ package tree;
 
 import java.io.Serializable;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -11,7 +12,7 @@ import java.util.Map;
 
 import javax.management.RuntimeErrorException;
 
-import mbrModel.MBR;
+//import mbrModel.MBR;
 
 
 
@@ -25,7 +26,7 @@ import data.SensorPoint;
 
 import data.feature.AutocorrelationI;
 import data.feature.CategoricalFeature;
-import data.feature.Entropy;
+//import data.feature.Entropy;
 import data.feature.Feature;
 import data.feature.NumericFeature;
 
@@ -46,8 +47,8 @@ public abstract class Node implements Serializable{
 	private int depth=0;
 	
 	
-	List<SensorPoint> centroid;
-	MBR mbr;
+	//List<SensorPoint> centroid;
+	//MBR mbr;
 	
 	public Node(SnapshotSchema schema, int beginExampleIndex, int endExampleIndex,  int depth, Node father){
 		this.beginExampleIndex=beginExampleIndex;
@@ -501,7 +502,7 @@ Map<Integer,ErrorStatistic>  estimateGetisAndOrdError(SnapshotData snap, int beg
 		
 		
 	}
-	
+	/*
 	void sampling(SnapshotData data,String centroidType, float centroidPerc){
 		
 	
@@ -510,7 +511,7 @@ Map<Integer,ErrorStatistic>  estimateGetisAndOrdError(SnapshotData snap, int beg
 			centroid=data.sampleCentroid(schema,beginExampleIndex,endExampleIndex, centroidPerc);
 		else
 			centroid=data.quadSampleCentroid(schema, beginExampleIndex, endExampleIndex, mbr,centroidPerc);	
-	}
+	}*/
 	
 	void initializedFeatureAvgNode(){
 		featureAvgNode = new FeatureAveragesNode(this);

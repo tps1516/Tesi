@@ -1,13 +1,13 @@
-package snapshot;
+/*package snapshot;
 
 import java.util.GregorianCalendar;
 
 import data.DistanceI;
 
 public class StaticSnapshotWeight extends SnapshotWeigth {
-	/**
-	 * 
-	 */
+	
+	 
+	 
 
 	private int size;
 	
@@ -33,8 +33,9 @@ public class StaticSnapshotWeight extends SnapshotWeigth {
 			//System.out.println(i);
 			for(int j=i;j<data.size();j++)
 			{
-				/*if(data.getSensorPoint(i).getId()==758 && data.getSensorPoint(j).getId()==872)
-					System.out.print("");*/
+				if(data.getSensorPoint(i).getId()==758 && data.getSensorPoint(j).getId()==872)
+					System.out.print("");
+
 				if(data.getSensorPoint(i).getId()!=data.getSensorPoint(j).getId())
 				{ 		
 						double d=distance.compute(data.getSensorPoint(i), data.getSensorPoint(j));
@@ -55,6 +56,7 @@ public class StaticSnapshotWeight extends SnapshotWeigth {
 
 	
 	
+/*
 	public Double getWeight (Integer id1, Integer id2){
 		
 		Double w=null;
@@ -121,3 +123,4 @@ public class StaticSnapshotWeight extends SnapshotWeigth {
 					
 	
 }
+*/

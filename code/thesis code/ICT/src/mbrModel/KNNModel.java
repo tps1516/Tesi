@@ -1,4 +1,4 @@
-package mbrModel;
+/*package mbrModel;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -135,7 +135,7 @@ public class KNNModel {
 			
 		}
 		*/
-		
+		/*
 		
 		public String toString(){
 			//return ""+distance;// 
@@ -177,7 +177,7 @@ public class KNNModel {
 			this.model.add(new Model(clusterId, s,data,schema,begin,end,W));
 	}
 	*/
-	
+	/*
 	private 	List<Double> predict(SensorPoint sp, SnapshotSchema schema){
 		
 		EuclideanDistance d=new EuclideanDistance(schema.getSpatialList().size());
@@ -369,6 +369,7 @@ public String testKnn(SnapshotData data, SnapshotSchema schema, String outfileNa
     		    		countNoZeroRRMSE++;
     		}
     		*/
+/*
     		if(!Double.isInfinite(nrmseValue)){
 				avgNrmse+=nrmseValue;
 				countNoZeroNRMSE++;
@@ -409,4 +410,4 @@ public String testKnn(SnapshotData data, SnapshotSchema schema, String outfileNa
 		return str;
 	}
 
-}
+}*/

@@ -1,4 +1,4 @@
-package tree;
+/*package tree;
 
 public class Cluster {
 	int begin;
@@ -21,3 +21,4 @@ public class Cluster {
 	}
 
 }
+*/

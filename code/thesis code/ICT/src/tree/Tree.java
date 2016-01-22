@@ -1,6 +1,7 @@
 package tree;
 
 import java.io.FileInputStream;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -17,7 +18,7 @@ import java.util.Map;
 
 import javax.management.RuntimeErrorException;
 
-import mbrModel.KNNModel;
+//import mbrModel.KNNModel;
 
 
 import data.DistanceI;
@@ -45,12 +46,12 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
     Tree (){
 		
 	}
-
+/*
 	public Tree(SnapshotData data, SnapshotSchema schema,int numberOfSplits, float centroidPerc,String centroidType, String testType){
 		learnTree(data,schema,0,data.size()-1,(int)(Math.sqrt(data.size()))*2,1,numberOfSplits,null,centroidPerc,centroidType,testType);
 		
 		
-	}
+	}*/
 
 	public Tree(SnapshotData data, SnapshotSchema schema, 
 			SnapshotWeigth weight, AutocorrelationI autocorrelation,
@@ -298,9 +299,19 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 			catch (SplitException e){
 				
 				setLeaf(testRoot.getSchema());
+				if(root==null){
+					root=testRoot;
+					root.setFeatureAvgNode(fAvgNode);
+					root.updateFeatureAvgNode();
+				}else{
+					setLeaf(root.getSchema());
+					root.updateFeatureAvgNode();
+				}
+				/*
 				root=testRoot;
 				root.setFeatureAvgNode(fAvgNode);
 				root.updateFeatureAvgNode();
+				*/
 				//root.sampling(data,centroidType,ccentroidPerc);
 				
 				return;
@@ -320,6 +331,7 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 	 
 	
 	// Chiamato negli alberi aspaziali
+	 /*
 	private void learnTree(SnapshotData data, SnapshotSchema schema, int beginIndex, int endIndex, int minimumExamples, int depth, int numberOfSplits, Node father,  float ccentroidPerc, String centroidType, String testType){
 	
 		this.father=father;
@@ -356,6 +368,7 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 		}
 				
 	}
+	*/
 	/**
 	 * Salva l'albero
 	 * @throws IOException 
@@ -471,7 +484,7 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 		}
 		
 	}
-	
+	/*
 	private void propagateModel(Feature f){
 		// propago il modello deciso per f nei ndi sottostanti
 		int fIndex=f.getIndexMining()-root.getSchema().getSpatialList().size();
@@ -482,7 +495,7 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 		if(rightsubTree!=null)
 			rightsubTree.propagateModel(root.getSchema().getTargetList().get(f.getIndexMining()-root.getSchema().getSpatialList().size()));
 		
-	}
+	}*/
 	
 	private Map<Integer,ErrorStatistic> prune(SnapshotData snap,  SnapshotWeigth W, AutocorrelationI a,
 			int begin, int end)
@@ -680,6 +693,7 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 			
 		
 	}
+	/*
 	public void populateKNNModel(KNNModel knn){
 		if(root.centroid!=null)
 		 knn.add(root.getIdNode(),root.centroid,(root.getModels()));
@@ -693,7 +707,7 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 	}
 	
 	
-	/*public void populateKNNModel(KNNModel knn, SnapshotData data, int begin, int end,SnapshotSchema schema,SnapshotWeigth W){
+	public void populateKNNModel(KNNModel knn, SnapshotData data, int begin, int end,SnapshotSchema schema,SnapshotWeigth W){
 		if(root instanceof SplittingNode){
 			//
 			int midindex=begin;
@@ -927,6 +941,7 @@ private double interClusterDisperison(SnapshotData snap, int begin, int end) {
 	 * per il training dello IDW 
 	 * (N.b. Da usare quando l'albero è già appreso
 	 */
+	/*
 	public void sampling(SnapshotData snap, SnapshotSchema schema, int beginIndex, int endIndex, float ccentroidPerc, String centroidType) throws SplitException{
 	
 
@@ -956,6 +971,7 @@ private double interClusterDisperison(SnapshotData snap, int begin, int end) {
 		
 		}				
 	}
+	*/
 	
 	/*
 	 * classe interna 

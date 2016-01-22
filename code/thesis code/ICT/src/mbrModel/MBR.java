@@ -1,4 +1,4 @@
-package mbrModel;
+/*package mbrModel;
 
 import java.io.Serializable;
 
@@ -81,3 +81,4 @@ public class MBR implements Serializable{
 
 
 }
+*/
