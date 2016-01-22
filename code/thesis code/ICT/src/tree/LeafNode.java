@@ -18,7 +18,6 @@ public class LeafNode extends Node {
 			int endExampleIndex, int minExamples, int depth,Node father) {
 		super(a,trainingSet, schema, W, beginExampleIndex, endExampleIndex,
 				minExamples,depth,father);
-	
 	}
 	
 	/*public LeafNode(AutocorrelationI a, SnapshotData trainingSet,
