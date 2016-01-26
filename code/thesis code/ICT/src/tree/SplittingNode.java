@@ -220,13 +220,13 @@ public class SplittingNode extends Node {
 	
 	public SplittingNode(Node n, AutocorrelationI a, SnapshotData trainingSet,
 			SnapshotSchema schema, SnapshotWeigth W,int beginExampleIndex,
-			int endExampleIndex, int minExamples,int depth,int step, Node father, String testType) throws SplitException {
+			int endExampleIndex, int minExamples,int depth,int step, Node father, String testType, int dim) throws SplitException {
 		super(n, a, trainingSet, schema, W, beginExampleIndex, endExampleIndex,
 				minExamples,depth,father);
 		
 		
 		setSplitInfo(a,trainingSet, W,beginExampleIndex, endExampleIndex,minExamples, step,testType);
-		super.initializedFeatureAvgNode();
+		super.initializedFeatureAvgNode(dim);
 		
 	}
 	

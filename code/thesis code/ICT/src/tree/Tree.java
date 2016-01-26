@@ -56,8 +56,8 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 	public Tree(SnapshotData data, SnapshotSchema schema, 
 			SnapshotWeigth weight, AutocorrelationI autocorrelation,
 			int numberOfSplits, float ccentroidPerc, 
-			String centroidType, String testType){
-		learnTree(data,schema,weight, autocorrelation,0,data.size()-1,(int)(Math.sqrt(data.size()))*2,1,numberOfSplits,null,ccentroidPerc,centroidType,testType);
+			String centroidType, String testType, int dim){
+		learnTree(data,schema,weight, autocorrelation,0,data.size()-1,(int)(Math.sqrt(data.size()))*2,1,numberOfSplits,null,ccentroidPerc,centroidType,testType, dim);
 	
 	}
 	
@@ -230,14 +230,14 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 	}
 	
 	//chiamato negli albari spaziali
-	private void learnTree(SnapshotData data, SnapshotSchema schema, SnapshotWeigth W, AutocorrelationI autocorrelation, int beginIndex, int endIndex, int minimumExamples, int depth, int numberOfSplits, Node father,  float ccentroidPerc,String centroidType, String testType){
+	private void learnTree(SnapshotData data, SnapshotSchema schema, SnapshotWeigth W, AutocorrelationI autocorrelation, int beginIndex, int endIndex, int minimumExamples, int depth, int numberOfSplits, Node father,  float ccentroidPerc,String centroidType, String testType, int dim){
 		
 		this.father=father;
 		Node testRoot=new LeafNode(autocorrelation, data, schema, W, beginIndex, endIndex,minimumExamples,depth,father);
 		if( isLeaf(autocorrelation,testRoot.getSchema(), minimumExamples)){
 			
 		   root=testRoot;
-		   root.initializedFeatureAvgNode();
+		   root.initializedFeatureAvgNode(dim);
 		   root.updateFeatureAvgNode();	
 			
 		   //root.sampling(data,centroidType,ccentroidPerc);
@@ -247,14 +247,14 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 		else //split node
 		{
 			try{
-				root=new SplittingNode(testRoot,autocorrelation, data, testRoot.getSchema(), W, beginIndex, endIndex,minimumExamples,depth,numberOfSplits,father,testType);
+				root=new SplittingNode(testRoot,autocorrelation, data, testRoot.getSchema(), W, beginIndex, endIndex,minimumExamples,depth,numberOfSplits,father,testType, dim);
 			}
 			catch (SplitException e){
 				
 				setLeaf(testRoot.getSchema());
 				root=testRoot;
 				//root.sampling(data,centroidType,ccentroidPerc);
-				root.initializedFeatureAvgNode();
+				root.initializedFeatureAvgNode(dim);
 				root.updateFeatureAvgNode();
 				return;
 			
@@ -264,8 +264,8 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 			root.updateFeatureAvgNode();
 			leftSubTree=new Tree();
 			rightsubTree=new Tree();
-			leftSubTree.learnTree( data, root.getSchema(), W, autocorrelation,  ((SplittingNode)root).splitLeft.beginIndex, ((SplittingNode)root).splitLeft.endIndex, minimumExamples,depth+1, numberOfSplits,root,ccentroidPerc,centroidType,testType);
-			rightsubTree.learnTree( data, root.getSchema(), W, autocorrelation, ((SplittingNode)root).splitRight.beginIndex, ((SplittingNode)root).splitRight.endIndex, minimumExamples,depth+1,numberOfSplits,root,ccentroidPerc,centroidType,testType);
+			leftSubTree.learnTree( data, root.getSchema(), W, autocorrelation,  ((SplittingNode)root).splitLeft.beginIndex, ((SplittingNode)root).splitLeft.endIndex, minimumExamples,depth+1, numberOfSplits,root,ccentroidPerc,centroidType,testType, dim);
+			rightsubTree.learnTree( data, root.getSchema(), W, autocorrelation, ((SplittingNode)root).splitRight.beginIndex, ((SplittingNode)root).splitRight.endIndex, minimumExamples,depth+1,numberOfSplits,root,ccentroidPerc,centroidType,testType, dim);
 			
 		}
 				
@@ -443,7 +443,7 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 	}
 	private void learnDriftingTree(SnapshotData snap,SnapshotWeigth W,AutocorrelationI a,int beginExampleIndex, int endExampleIndex, int minExamples, int splits, float ccentroidPerc,String centroidType, String testType){
 		if(beginExampleIndex==-1 || endExampleIndex==-1){
-			root.insAvgNull();
+			root.insLastOfFather();
 			return;
 		}
 		if (root instanceof SplittingNode){

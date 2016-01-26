@@ -12,11 +12,11 @@ public class TemporalWindow<Object> extends CircularFifoQueue<Object> implements
 	 * dimensione massima della 
 	 * finestra temporale
 	 */
-	private static int windowMaxSize;
+	private int windowMaxSize;
 	
 	private String featureName;
-	private TemporalWindow(){
-		super(windowMaxSize);
+	private TemporalWindow(int dim){
+		super(dim);
 	}
 	/*
 	 * costruttore della classe
@@ -24,20 +24,16 @@ public class TemporalWindow<Object> extends CircularFifoQueue<Object> implements
 	 * e memorizza il nome della feature a cui fa riferimento 
 	 * la finestra temporale
 	 */
-	TemporalWindow(Feature f){
-		super(windowMaxSize);
+	TemporalWindow(Feature f, int dim){
+		super(dim);
 		this.featureName=f.getName();
-	}
-	
-	/*
-	 * metodo di classe
-	 * setta l'attributo window max size
-	 */
-	public static void setWindowMaxSize(int dim){
 		windowMaxSize=dim;
 	}
 	
-	
+	/*
+	 *  restituisce la dimensione massima
+	 *  raggiungile dalla coda
+	 */
 	public int getwindowMaxSize(){
 		return windowMaxSize;
 	}
@@ -54,8 +50,8 @@ public class TemporalWindow<Object> extends CircularFifoQueue<Object> implements
 	 * aggiorna la finestra temporale
 	 * aggiungendo ad essa null
 	 */
-	void insNull(){
-		this.add((Object) "null");
+	void insLast(TemporalWindow tw){
+		this.add((Object) tw.get(tw.size()-1));
 	}
 	
 	
@@ -72,11 +68,12 @@ public class TemporalWindow<Object> extends CircularFifoQueue<Object> implements
 	
 	public TemporalWindow clone() throws CloneNotSupportedException{
 		
-		TemporalWindow t=new TemporalWindow();
+		TemporalWindow t=new TemporalWindow(this.getwindowMaxSize());
 		for(Object o: this){
 			t.add(o);
 		};
 		t.featureName=this.featureName;
+		t.windowMaxSize=this.windowMaxSize;
 		return t;
 	}
 	

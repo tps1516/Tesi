@@ -75,7 +75,6 @@ public class TictTest {
 			return;
 			
 		}
-		TemporalWindow.setWindowMaxSize(dimTW);
 		String configStr="";
 		AutocorrelationI autoCorrelation;
 		
@@ -200,7 +199,7 @@ public class TictTest {
 						timeBegin= new GregorianCalendar();
 					
 						
-						tree=new Tree(snapTrain, schemaTrain, W, autoCorrelation, splitNumber,centroidPercentage,sampling,testType);
+						tree=new Tree(snapTrain, schemaTrain, W, autoCorrelation, splitNumber,centroidPercentage,sampling,testType, dimTW);
 						System.out.println(tree);
 						//KNNModel knn=new KNNModel();
 						//tree.populateKNNModel(knn);

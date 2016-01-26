@@ -440,25 +440,7 @@ Map<Integer,ErrorStatistic>  estimateGetisAndOrdError(SnapshotData snap, int beg
 				 if(father !=null && father.getSchema().getTargetList().get(f.getIndexMining()-father.getSchema().getSpatialList().size()).getStopTree())
 					//era foglia già al passo precedente
 				 {
-					 //getSchema().getTargetList().set(f.getIndexMining()-getSchema().getSpatialList().size(),(Feature)father.getSchema().getTargetList().get(f.getIndexMining()-father.getSchema().getSpatialList().size()).clone());
-					 f.clear();
-					 int index = f.getIndexMining();
-					 f.setAutocorrelation(father.schema.getTargetList().get(index-father.getSchema().getSpatialList().size()).getAutocorrelation());
-					 f.setIndexMining(father.schema.getTargetList().get(index-father.getSchema().getSpatialList().size()).getIndexMining());
-					 f.setIndexStream(father.schema.getTargetList().get(index-father.getSchema().getSpatialList().size()).getIndexStream());
-					 f.setStopTree(father.schema.getTargetList().get(index-father.getSchema().getSpatialList().size()).getStopTree());
-					 for(int i = this.getBeginExampleIndex(); i <= this.getEndExampleIndex(); i++){
-						 if(!(trainingSet.getSensorPoint(i).getMeasure(index).isNull())){
-							 if(f instanceof NumericFeature) {
-									((NumericFeature)f).setMin((Double)trainingSet.getSensorPoint(i).getMeasure(index).getValue()); // update max
-									((NumericFeature)f).setMax((Double)trainingSet.getSensorPoint(i).getMeasure(index).getValue()); //update min
-									((NumericFeature)f).setMean((Double)trainingSet.getSensorPoint(i).getMeasure(index).getValue()); //update mean
-								}					
-								else 
-								if (f instanceof CategoricalFeature) 						
-									((CategoricalFeature)f).addCategory((String)trainingSet.getSensorPoint(i).getMeasure(index).getValue()); 
-						 }
-					 }
+					 getSchema().getTargetList().set(f.getIndexMining()-getSchema().getSpatialList().size(),(Feature)father.getSchema().getTargetList().get(f.getIndexMining()-father.getSchema().getSpatialList().size()).clone());
 				 }
 				 	//è diventato foglia a questo passo
 				 else{
@@ -502,6 +484,7 @@ Map<Integer,ErrorStatistic>  estimateGetisAndOrdError(SnapshotData snap, int beg
 		
 		
 	}
+	
 	/*
 	void sampling(SnapshotData data,String centroidType, float centroidPerc){
 		
@@ -513,8 +496,8 @@ Map<Integer,ErrorStatistic>  estimateGetisAndOrdError(SnapshotData snap, int beg
 			centroid=data.quadSampleCentroid(schema, beginExampleIndex, endExampleIndex, mbr,centroidPerc);	
 	}*/
 	
-	void initializedFeatureAvgNode(){
-		featureAvgNode = new FeatureAveragesNode(this);
+	void initializedFeatureAvgNode(int dim){
+		featureAvgNode = new FeatureAveragesNode(this, dim);
 	}
 	
 	void updateFeatureAvgNode(){
@@ -534,8 +517,8 @@ Map<Integer,ErrorStatistic>  estimateGetisAndOrdError(SnapshotData snap, int beg
 		}
 	}
 	
-	void insAvgNull(){
-		featureAvgNode.avgNull();
+	void insLastOfFather(){
+		featureAvgNode.insLastOfFather(father.getFeatureAvgNode());
 	}
 
 
