@@ -1,7 +1,6 @@
 package tree;
 
 import java.io.FileInputStream;
-
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -19,6 +18,7 @@ import java.util.Map;
 import javax.management.RuntimeErrorException;
 
 //import mbrModel.KNNModel;
+
 
 
 import data.DistanceI;
@@ -148,7 +148,6 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 }
 	private Boolean isLeaf(AutocorrelationI a,SnapshotSchema schema, int minExamples)
 	{
-		
 		boolean flag=true;
 		
 		for(Feature f:schema.getTargetList()){
