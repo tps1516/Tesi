@@ -149,7 +149,6 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 }
 	private Boolean isLeaf(AutocorrelationI a,SnapshotSchema schema, int minExamples)
 	{
-		
 		boolean flag=true;
 		
 		for(Feature f:schema.getTargetList()){
