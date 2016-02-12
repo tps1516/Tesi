@@ -7,8 +7,15 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
+
+
+
+
+import rForecast.ParametersRForecastIndex;
+import rForecast.RVar;
 //import mbrModel.KNNModel;
 import snapshot.DynamicSnapshotWeight;
 import snapshot.ErrorFormatException;
@@ -306,16 +313,30 @@ public class TictTest {
 				
 				}
 				catch(EOFException e){
+					System.out.println("asda");
 					break;
 				}
 			}
-				
-				
 		}
 		 catch(EOFException e){
 			 System.out.println(e);
 		 }
 		 catch(IOException e){
+			 ArrayList<Object> rParameters  = new ArrayList<Object>();
+			 ParametersRForecastIndex index = new ParametersRForecastIndex();
+			 rParameters.add(index.rPath, "C:/Program Files/R/R-3.1.2/bin/Rscript.exe");
+			 rParameters.add(index.lagMax, "2");
+			 rParameters.add(index.season, "NULL");
+			 rParameters.add(index.exogen, "NULL");
+			 rParameters.add(index.ic, "AIC");
+			 rParameters.add(index.type, "none");
+			 double[][] d = new double[10][2];
+			 for(int i = 0 ; i < 10 ; i ++)
+				 for (int k = 0 ; k < 2 ; k++)
+					 d[i][k] = 2.0;
+			 RVar r = new RVar();
+			 r.RForecasting(d, schemaTrain, rParameters, 10);
+			 r.executeVAR();
 			 System.out.println(e);
 			 
 		 }
