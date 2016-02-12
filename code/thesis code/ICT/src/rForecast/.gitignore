@@ -2,3 +2,5 @@
 /ParametersChecker.class
 /RForecast.class
 /RVar.class
+/RVarException.class
+/InvalidForecastParametersException.class
