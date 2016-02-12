@@ -1,7 +1,6 @@
 package tree;
 
 import java.io.FileInputStream;
-
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -9,6 +8,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -19,6 +19,7 @@ import java.util.Map;
 import javax.management.RuntimeErrorException;
 
 //import mbrModel.KNNModel;
+
 
 
 import data.DistanceI;
@@ -56,8 +57,8 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 	public Tree(SnapshotData data, SnapshotSchema schema, 
 			SnapshotWeigth weight, AutocorrelationI autocorrelation,
 			int numberOfSplits, float ccentroidPerc, 
-			String centroidType, String testType, int dim){
-		learnTree(data,schema,weight, autocorrelation,0,data.size()-1,(int)(Math.sqrt(data.size()))*2,1,numberOfSplits,null,ccentroidPerc,centroidType,testType, dim);
+			String centroidType, String testType, int dim,ArrayList<Object> rParameters){
+		learnTree(data,schema,weight, autocorrelation,0,data.size()-1,(int)(Math.sqrt(data.size()))*2,1,numberOfSplits,null,ccentroidPerc,centroidType,testType, dim,rParameters);
 	
 	}
 	
@@ -230,7 +231,7 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 	}
 	
 	//chiamato negli albari spaziali
-	private void learnTree(SnapshotData data, SnapshotSchema schema, SnapshotWeigth W, AutocorrelationI autocorrelation, int beginIndex, int endIndex, int minimumExamples, int depth, int numberOfSplits, Node father,  float ccentroidPerc,String centroidType, String testType, int dim){
+	private void learnTree(SnapshotData data, SnapshotSchema schema, SnapshotWeigth W, AutocorrelationI autocorrelation, int beginIndex, int endIndex, int minimumExamples, int depth, int numberOfSplits, Node father,  float ccentroidPerc,String centroidType, String testType, int dim,ArrayList<Object> rParameters){
 		
 		this.father=father;
 		Node testRoot=new LeafNode(autocorrelation, data, schema, W, beginIndex, endIndex,minimumExamples,depth,father);
@@ -238,7 +239,7 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 			
 		   root=testRoot;
 		   root.initializedFeatureAvgNode(dim);
-		   root.updateFeatureAvgNode();	
+		   root.updateFeatureAvgNode(rParameters);	
 			
 		   //root.sampling(data,centroidType,ccentroidPerc);
 					
@@ -255,24 +256,24 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 				root=testRoot;
 				//root.sampling(data,centroidType,ccentroidPerc);
 				root.initializedFeatureAvgNode(dim);
-				root.updateFeatureAvgNode();
+				root.updateFeatureAvgNode(rParameters);
 				return;
 			
 				
 			}
 			
-			root.updateFeatureAvgNode();
+			root.updateFeatureAvgNode(rParameters);
 			leftSubTree=new Tree();
 			rightsubTree=new Tree();
-			leftSubTree.learnTree( data, root.getSchema(), W, autocorrelation,  ((SplittingNode)root).splitLeft.beginIndex, ((SplittingNode)root).splitLeft.endIndex, minimumExamples,depth+1, numberOfSplits,root,ccentroidPerc,centroidType,testType, dim);
-			rightsubTree.learnTree( data, root.getSchema(), W, autocorrelation, ((SplittingNode)root).splitRight.beginIndex, ((SplittingNode)root).splitRight.endIndex, minimumExamples,depth+1,numberOfSplits,root,ccentroidPerc,centroidType,testType, dim);
+			leftSubTree.learnTree( data, root.getSchema(), W, autocorrelation,  ((SplittingNode)root).splitLeft.beginIndex, ((SplittingNode)root).splitLeft.endIndex, minimumExamples,depth+1, numberOfSplits,root,ccentroidPerc,centroidType,testType, dim,rParameters);
+			rightsubTree.learnTree( data, root.getSchema(), W, autocorrelation, ((SplittingNode)root).splitRight.beginIndex, ((SplittingNode)root).splitRight.endIndex, minimumExamples,depth+1,numberOfSplits,root,ccentroidPerc,centroidType,testType, dim,rParameters);
 			
 		}
 				
 	}
 	
 	
-	 private void learnTreeOnPreexistModel(SnapshotData data, SnapshotSchema schema, SnapshotWeigth W, AutocorrelationI autocorrelation, int beginIndex, int endIndex, int minimumExamples, int depth, int numberOfSplits, Node father,  float ccentroidPerc,String centroidType, String testType, FeatureAveragesNode fAvgNode){
+	 private void learnTreeOnPreexistModel(SnapshotData data, SnapshotSchema schema, SnapshotWeigth W, AutocorrelationI autocorrelation, int beginIndex, int endIndex, int minimumExamples, int depth, int numberOfSplits, Node father,  float ccentroidPerc,String centroidType, String testType, FeatureAveragesNode fAvgNode,ArrayList<Object> rParameters){
 		
 		this.father=father;
 		Node testRoot=new LeafNode(autocorrelation, data, schema, W, beginIndex, endIndex,minimumExamples,depth,father);
@@ -280,11 +281,11 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 			if(root==null){
 				root=testRoot;
 				root.setFeatureAvgNode(fAvgNode);
-				root.updateFeatureAvgNode();
+				root.updateFeatureAvgNode(rParameters);
 			}else{
 				// root così come era diventa foglia
 				setLeaf(root.getSchema());
-				root.updateFeatureAvgNode();
+				root.updateFeatureAvgNode(rParameters);
 			}
 			
 			//root.sampling(data,centroidType,ccentroidPerc);
@@ -302,10 +303,10 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 				if(root==null){
 					root=testRoot;
 					root.setFeatureAvgNode(fAvgNode);
-					root.updateFeatureAvgNode();
+					root.updateFeatureAvgNode(rParameters);
 				}else{
 					setLeaf(root.getSchema());
-					root.updateFeatureAvgNode();
+					root.updateFeatureAvgNode(rParameters);
 				}
 				/*
 				root=testRoot;
@@ -322,9 +323,9 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 		
 			leftSubTree=new Tree();
 			rightsubTree=new Tree();
-			leftSubTree.learnTreeOnPreexistModel( data, root.getSchema(), W, autocorrelation,  ((SplittingNode)root).splitLeft.beginIndex, ((SplittingNode)root).splitLeft.endIndex, minimumExamples,depth+1, numberOfSplits,root,ccentroidPerc,centroidType,testType, fAvgNode);
-			rightsubTree.learnTreeOnPreexistModel( data, root.getSchema(), W, autocorrelation, ((SplittingNode)root).splitRight.beginIndex, ((SplittingNode)root).splitRight.endIndex, minimumExamples,depth+1,numberOfSplits,root,ccentroidPerc,centroidType,testType, fAvgNode);
-			root.updateFeatureAvgNode();
+			leftSubTree.learnTreeOnPreexistModel( data, root.getSchema(), W, autocorrelation,  ((SplittingNode)root).splitLeft.beginIndex, ((SplittingNode)root).splitLeft.endIndex, minimumExamples,depth+1, numberOfSplits,root,ccentroidPerc,centroidType,testType, fAvgNode,rParameters);
+			rightsubTree.learnTreeOnPreexistModel( data, root.getSchema(), W, autocorrelation, ((SplittingNode)root).splitRight.beginIndex, ((SplittingNode)root).splitRight.endIndex, minimumExamples,depth+1,numberOfSplits,root,ccentroidPerc,centroidType,testType, fAvgNode,rParameters);
+			root.updateFeatureAvgNode(rParameters);
 		}
 				
 	}
@@ -435,27 +436,27 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 		
 	}
 	public void drift(SnapshotData snap, SnapshotSchema schema,
-			SnapshotWeigth W, AutocorrelationI a, int splits, float ccentroidPerc,String centroidType, String testType) {
+			SnapshotWeigth W, AutocorrelationI a, int splits, float ccentroidPerc,String centroidType, String testType,ArrayList<Object> rParameters) {
 		//tree pruning + incremental learning
-		this.learnDriftingTree(snap,W,a,0,snap.size()-1, (int)Math.sqrt(snap.size())*2, splits,ccentroidPerc,centroidType,testType);
+		this.learnDriftingTree(snap,W,a,0,snap.size()-1, (int)Math.sqrt(snap.size())*2, splits,ccentroidPerc,centroidType,testType,rParameters);
 	//	System.out.print("DRIFTED"+this);
 		
 	}
-	private void learnDriftingTree(SnapshotData snap,SnapshotWeigth W,AutocorrelationI a,int beginExampleIndex, int endExampleIndex, int minExamples, int splits, float ccentroidPerc,String centroidType, String testType){
+	private void learnDriftingTree(SnapshotData snap,SnapshotWeigth W,AutocorrelationI a,int beginExampleIndex, int endExampleIndex, int minExamples, int splits, float ccentroidPerc,String centroidType, String testType,ArrayList<Object> rParameters){
 		if(beginExampleIndex==-1 || endExampleIndex==-1){
 			root.insLastOfFather();
 			return;
 		}
 		if (root instanceof SplittingNode){
-			root.updateFeatureAvgNode();
+			root.updateFeatureAvgNode(rParameters);
 			snap.sort(((SplittingNode)root).getSplitFeature(), beginExampleIndex, endExampleIndex);
 			
 			{
 				
 				if(leftSubTree!=null)
-					leftSubTree.learnDriftingTree(snap, W, a, leftSubTree.root.getBeginExampleIndex(), leftSubTree.root.getEndExampleIndex(), minExamples, splits,ccentroidPerc,centroidType,testType);
+					leftSubTree.learnDriftingTree(snap, W, a, leftSubTree.root.getBeginExampleIndex(), leftSubTree.root.getEndExampleIndex(), minExamples, splits,ccentroidPerc,centroidType,testType,rParameters);
 				if(rightsubTree!=null)
-					rightsubTree.learnDriftingTree(snap, W, a, rightsubTree.root.getBeginExampleIndex(), rightsubTree.root.getEndExampleIndex(), minExamples, splits,ccentroidPerc,centroidType,testType);
+					rightsubTree.learnDriftingTree(snap, W, a, rightsubTree.root.getBeginExampleIndex(), rightsubTree.root.getEndExampleIndex(), minExamples, splits,ccentroidPerc,centroidType,testType,rParameters);
 			}
 		}
 		else
@@ -473,9 +474,9 @@ public class Tree implements Serializable,Comparable<Tree>,Iterable<Node>{
 				
 			}
 			if(reLearn && root.getBeginExampleIndex()!=-1 && root.endExampleIndex!=-1)
-				this.learnTreeOnPreexistModel(snap, root.getSchema(), W, a,  root.getBeginExampleIndex(), root.endExampleIndex, minExamples, root.getDepth(), splits, root.getFather(),  ccentroidPerc, centroidType,  testType, root.getFeatureAvgNode());
+				this.learnTreeOnPreexistModel(snap, root.getSchema(), W, a,  root.getBeginExampleIndex(), root.endExampleIndex, minExamples, root.getDepth(), splits, root.getFather(),  ccentroidPerc, centroidType,  testType, root.getFeatureAvgNode(),rParameters);
 			else {
-				root.updateFeatureAvgNode();
+				root.updateFeatureAvgNode(rParameters);
 				setLeaf(root.getSchema());
 				//root.sampling(snap,centroidType,ccentroidPerc);
 				

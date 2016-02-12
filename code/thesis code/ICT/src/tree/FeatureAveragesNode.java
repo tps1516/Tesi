@@ -71,4 +71,29 @@ public class FeatureAveragesNode implements Iterable<TemporalWindow>,
 		return fan;
 
 	}
+	
+	boolean temporalWindowsIsFull(){
+		
+		TemporalWindow tw=avgNode.get(0);
+		
+		return (tw.size()==tw.maxSize());
+		
+	}
+	
+	double[][] exportInMatrixForm(){
+		
+		double[][] dataset = new double[this.avgNode.get(0).size()][this.avgNode.size()];
+		
+		for (int i=0; i<avgNode.size(); i++) {
+			int j=0; 
+			TemporalWindow<Double> tw= avgNode.get(i);
+			for (double value: tw){
+				dataset[j][i]=value;
+				j++;
+			}
+		}
+		
+		return dataset;
+		
+	}
 }

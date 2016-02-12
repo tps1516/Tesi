@@ -5,7 +5,6 @@ import java.io.Serializable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +12,7 @@ import java.util.Map;
 import javax.management.RuntimeErrorException;
 
 //import mbrModel.MBR;
+
 
 
 
@@ -29,9 +29,9 @@ import data.feature.CategoricalFeature;
 //import data.feature.Entropy;
 import data.feature.Feature;
 import data.feature.NumericFeature;
-
 import data.feature.ResubstitutionIndex;
 import data.feature.SpatialFeature;
+import forecast.ForecastingModel;
 
 
 public abstract class Node implements Serializable{
@@ -45,7 +45,7 @@ public abstract class Node implements Serializable{
 	
 	private Node father;
 	private int depth=0;
-	
+	private ForecastingModel VARModel;
 	
 	//List<SensorPoint> centroid;
 	//MBR mbr;
@@ -500,10 +500,17 @@ Map<Integer,ErrorStatistic>  estimateGetisAndOrdError(SnapshotData snap, int beg
 		featureAvgNode = new FeatureAveragesNode(this, dim);
 	}
 	
-	void updateFeatureAvgNode(){
+	void updateFeatureAvgNode(ArrayList<Object> rParameters){
 		featureAvgNode.updateAverages(this);
+		if (this.featureAvgNode.temporalWindowsIsFull()){
+			learnVARModels(rParameters);
+		}
 	}
 	
+	private void learnVARModels(ArrayList<Object> rParameters){
+		double[][]dataset=this.featureAvgNode.exportInMatrixForm();
+		this.VARModel=new ForecastingModel(dataset,this.getSchema(),rParameters);
+	}
 	FeatureAveragesNode getFeatureAvgNode(){
 		return featureAvgNode;
 	}

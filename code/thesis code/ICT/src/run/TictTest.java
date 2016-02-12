@@ -201,6 +201,7 @@ public class TictTest {
 						
 						tree=new Tree(snapTrain, schemaTrain, W, autoCorrelation, splitNumber,centroidPercentage,sampling,testType, dimTW);
 						System.out.println(tree);
+						
 						//KNNModel knn=new KNNModel();
 						//tree.populateKNNModel(knn);
 						
@@ -316,6 +317,7 @@ public class TictTest {
 		 }
 		 catch(IOException e){
 			 System.out.println(e);
+			 
 		 }
 		 finally{
 	        	try {
@@ -324,6 +326,7 @@ public class TictTest {
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+					
 				}
 	        	
 		 }
@@ -340,6 +343,8 @@ public class TictTest {
 			outputReport.close();
 			
 		}
+		
+		
         
 }
 

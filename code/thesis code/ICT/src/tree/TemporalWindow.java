@@ -6,7 +6,7 @@ import org.apache.commons.collections4.queue.CircularFifoQueue;
 
 import data.feature.Feature;
 
-public class TemporalWindow<Object> extends CircularFifoQueue<Object> implements Cloneable{
+public class TemporalWindow<Double> extends CircularFifoQueue<Double> implements Cloneable{
 
 	/*
 	 * dimensione massima della 
@@ -43,7 +43,7 @@ public class TemporalWindow<Object> extends CircularFifoQueue<Object> implements
 	 * aggiungendo ad essa la nuova media
 	 */
 	void updateTemporalWindow(Feature f) {
-		this.add((Object) f.getPrototype());
+		this.add((Double) f.getPrototype());
 	}
 	
 	/*
@@ -51,15 +51,15 @@ public class TemporalWindow<Object> extends CircularFifoQueue<Object> implements
 	 * aggiungendo ad essa null
 	 */
 	void insLast(TemporalWindow tw){
-		this.add((Object) tw.get(tw.size()-1));
+		this.add((Double) tw.get(tw.size()-1));
 	}
 	
 	
 	public String toString(){
 		String s=this.featureName+ ": ";
 		
-		for (Object o: this){
-			s=s+o + " ";
+		for (Double d: this){
+			s=s+d + " ";
 		}
 		
 		return s;
@@ -69,8 +69,8 @@ public class TemporalWindow<Object> extends CircularFifoQueue<Object> implements
 	public TemporalWindow clone() throws CloneNotSupportedException{
 		
 		TemporalWindow t=new TemporalWindow(this.getwindowMaxSize());
-		for(Object o: this){
-			t.add(o);
+		for(Double d: this){
+			t.add(d);
 		};
 		t.featureName=this.featureName;
 		t.windowMaxSize=this.windowMaxSize;
