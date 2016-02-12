@@ -12,7 +12,7 @@ public class InvalidForecastParametersException extends RuntimeException{
 			super();
 		}
 		
-		InvalidForecastParametersException(String s){
+		public InvalidForecastParametersException(String s){
 			super(s);
 		}
 

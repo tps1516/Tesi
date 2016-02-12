@@ -39,8 +39,8 @@ public class ParametersChecker {
 
 		int lagMax;
 		try {
-			lagMax = (int) rParameters.get(index.lagMax);
-		} catch (InvalidForecastParametersException e) {
+			lagMax = Integer.parseInt((String) rParameters.get(index.lagMax));
+		} catch (Exception e) {
 			throw new InvalidForecastParametersException(
 					"Inserire un lagMax valido!");
 		}
@@ -52,14 +52,15 @@ public class ParametersChecker {
 		int season;
 		if (!rParameters.get(index.season).equals("NULL")) {
 			try {
-				season = (int) rParameters.get(index.season);
-			} catch (InvalidForecastParametersException e) {
+				season = Integer.parseInt((String) rParameters
+						.get(index.season));
+			} catch (Exception e) {
 				throw new InvalidForecastParametersException(
 						"Inserire un valore di season valido!");
 			}
 			if ((season < 0) || (season > 12)) {
 				throw new InvalidForecastParametersException(
-						"Inserire un lagMax valido!");
+						"Inserire un valore di season valido!");
 			}
 		}
 

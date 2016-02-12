@@ -1,12 +1,14 @@
 package rForecast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import snapshot.SnapshotSchema;
 import rForecast.ParametersRForecastIndex;
 import rcaller.RCaller;
 import rcaller.RCode;
 import data.feature.Feature;
+import forecast.ForecastingModelIndex;
 
 public class RVar extends RForecast {
 
@@ -16,27 +18,29 @@ public class RVar extends RForecast {
 	private String season;
 	private Object exogen;
 	private String ic;
-	private int TWsize = 2;
+	private int TWsize;
 	private RCaller caller;
 	private RCode code;
+	private ArrayList<Object> res;
 
 	@Override
 	public ArrayList<Object> RForecasting(double[][] dataset,
-			SnapshotSchema schema, ArrayList<Object> rParameters, int TWSize) {
+			SnapshotSchema schema, ArrayList<Object> rParameters) {
 		caller = new RCaller();
 		code = new RCode();
-		loadParameters(rParameters, TWSize);
+		loadParameters(rParameters);
 		loadRLibrary();
 		loadData(dataset, schema);
 		executeVARSelect();
 		executeVAR();
 		caller.setRscriptExecutable(rPath);
-		organizedata(schema);
+		organizeRdata(schema);
 		runandreturnresult();
-		return null;
+		organizeReturnResult(schema);
+		return res;
 	}
 
-	private void loadParameters(ArrayList<Object> rParameters, int TWSize) {
+	private void loadParameters(ArrayList<Object> rParameters) {
 		ParametersRForecastIndex index = new ParametersRForecastIndex();
 		this.rPath = (String) rParameters.get(index.rPath);
 		this.lagMax = (String) rParameters.get(index.lagMax);
@@ -47,7 +51,7 @@ public class RVar extends RForecast {
 		else
 			this.exogen = (String) rParameters.get(index.exogen);
 		this.ic = (String) rParameters.get(index.ic);
-		this.TWsize = TWSize;
+		this.TWsize = (int) rParameters.get(index.TWSize);
 	}
 
 	private void loadRLibrary() {
@@ -76,7 +80,6 @@ public class RVar extends RForecast {
 				+ s.getTargetList().get(s.getTargetList().size() - 1).getName()
 				+ "\"))";
 		code.addRCode(dimnames);
-		System.out.println(dimnames);
 	}
 
 	private void executeVARSelect() {
@@ -90,10 +93,9 @@ public class RVar extends RForecast {
 		else
 			VARSelect += " exo)";
 		code.addRCode(VARSelect);
-		System.out.println(VARSelect);
 	}
 
-	public void executeVAR() {
+	private void executeVAR() {
 		String p = "";
 		switch (ic) {
 		case ("AIC"): {
@@ -120,7 +122,7 @@ public class RVar extends RForecast {
 		code.addRCode(VAR);
 	}
 
-	private void organizedata(SnapshotSchema schema) {
+	private void organizeRdata(SnapshotSchema schema) {
 		for (Feature f : schema.getTargetList()) {
 			// PRELEVO I NOMI DELLE FEATURE CORRELATE
 			String nomefeature = f.getName();
@@ -143,15 +145,72 @@ public class RVar extends RForecast {
 		String nomefeature = schema.getTargetList()
 				.get(schema.getTargetList().size() - 1).getName();
 		result += nomefeature + "_f = " + nomefeature + "_nomifeature, ";
-		result += nomefeature + "_c = " + nomefeature + "_coeff)";
+		result += nomefeature + "_c = " + nomefeature + "_coeff, p = var$p)";
 		code.addRCode(result);
 	}
 
 	private void runandreturnresult() {
 		caller.setRCode(code);
 		caller.runAndReturnResult("result");
-		String[] k = caller.getParser().getAsStringArray("attr1_c");
-		for (int i = 0; i < k.length; i++)
-			System.out.println(k[i]);
+	}
+
+	private void organizeReturnResult(SnapshotSchema schema) {
+		res = new ArrayList<Object>();
+		ArrayList<ArrayList<Feature>> correlatedFeatures = new ArrayList<ArrayList<Feature>>(
+				schema.getTargetList().size());
+		ArrayList<ArrayList<ArrayList<Double>>> correlatedCoefficients = new ArrayList<ArrayList<ArrayList<Double>>>();
+		HashMap<String, Feature> HM = createHashMap(schema);
+		for (Feature f : schema.getTargetList()) {
+			String[] feature = caller.getParser().getAsStringArray(
+					f.getName() + "_f");
+			String[] coeff = caller.getParser().getAsStringArray(
+					f.getName() + "_c");
+			int p = caller.getParser().getAsIntArray("p")[0];
+			String[] adjfeature = adjustfeature(feature, p);
+			ArrayList<Feature> correlatedFeature = new ArrayList<Feature>();
+			ArrayList<ArrayList<Double>> coefficientsByFeature = new ArrayList<ArrayList<Double>>();
+			for (int i = 0; i < adjfeature.length; i++) {
+				correlatedFeature.add((Feature) HM.get(adjfeature[i]).clone());
+				ArrayList<Double> coefficients = new ArrayList<Double>(p);
+				coefficients = addCoefficients(adjfeature.length, i, coeff);
+				coefficientsByFeature.add(coefficients);
+			}
+			correlatedCoefficients.add(f.getIndexMining()
+					- schema.getSpatialList().size(), coefficientsByFeature);
+			correlatedFeatures.add(f.getIndexMining()
+					- schema.getSpatialList().size(), correlatedFeature);
+
+		}
+
+		ForecastingModelIndex index = new ForecastingModelIndex();
+		res.add(index.feature, correlatedFeatures);
+		res.add(index.coefficients, correlatedCoefficients);
+	}
+
+	private HashMap<String, Feature> createHashMap(SnapshotSchema s) {
+		HashMap<String, Feature> HM = new HashMap<String, Feature>();
+		for (Feature f : s.getTargetList())
+			HM.put(f.getName(), f);
+		return HM;
+	}
+
+	private String[] adjustfeature(String[] feature, int p) {
+		String[] ret = new String[feature.length / p];
+		int i;
+		for (i = 0; i < ret.length; i++)
+			ret[i] = feature[i].replace(".l1", "");
+		return ret;
+	}
+
+	private ArrayList<Double> addCoefficients(int step, int from, String[] coeff) {
+		ArrayList<Double> ret = new ArrayList<Double>();
+		for (int j = from; j < coeff.length; j = j + step) {
+			if (coeff[j].equals("NaN") || coeff[j].equals("Na")
+					|| coeff[j].equals("Null"))
+				ret.add(0.0);
+			else
+				ret.add(Double.valueOf(coeff[j]));
+		}
+		return ret;
 	}
 }

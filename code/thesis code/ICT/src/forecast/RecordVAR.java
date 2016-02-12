@@ -1,37 +1,35 @@
 package forecast;
 
 import java.util.ArrayList;
+import java.io.Serializable;
 
 import data.feature.Feature;
 
-class RecordVAR {
+class RecordVAR implements Serializable {
 	private Feature feature;
 	private ArrayList<Double> coefficients;
-	
-	 
-	RecordVAR(Feature f,ArrayList<Double> coef){
-		this.feature=f;
-		this.coefficients=coef;
+
+	RecordVAR(Feature f, ArrayList<Double> coef) {
+		this.feature = f;
+		this.coefficients = coef;
 	}
-	
-	
+
 	public String toString() {
-		String str="";
-		
-		str+= feature.getName()+ ":";
-		for (Double coef:coefficients){
-			str+=" " + coef;
+		String str = "";
+
+		str += feature.getName() + ":";
+		for (Double coef : coefficients) {
+			str += " " + coef;
 		}
-		
+
 		return str;
 	}
-	
-	
-	Feature getFeature(){
+
+	Feature getFeature() {
 		return this.feature;
 	}
-	
-	ArrayList<Double> getCoefficients(){
+
+	ArrayList<Double> getCoefficients() {
 		return this.coefficients;
 	}
 }

@@ -8,5 +8,6 @@ public class ParametersRForecastIndex {
 	public final int exogen = 3;
 	public final int ic = 4;
 	public final int type = 5;
+	public final int TWSize = 6;
 
 }

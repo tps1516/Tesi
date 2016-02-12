@@ -14,6 +14,11 @@ import java.util.GregorianCalendar;
 
 
 
+
+
+
+import rForecast.InvalidForecastParametersException;
+import rForecast.ParametersChecker;
 import rForecast.ParametersRForecastIndex;
 import rForecast.RVar;
 //import mbrModel.KNNModel;
@@ -51,7 +56,13 @@ public class TictTest {
 		String sampling="quadtree";
 		String testType="target";
 		String isSpatial="GO";
-		Integer dimTW = 0;
+		Integer TWSize = 0;
+		String rPath ;
+		String lagMax;
+		String season;
+		String exogen;
+		String ic;
+		String type;
 		
 		try{
 			 streamName="dataset/"+args[0];//"soace_ga_training_5XY.arff";
@@ -60,7 +71,13 @@ public class TictTest {
 			 splitNumber=new Integer(args[2]); //random split identifier
 			 bperc= new Float(args[3]);
 			 centroidPercentage=new Float(args[4]);
-			 dimTW=new Integer(args[5]);
+			 TWSize=new Integer(args[5]);
+			 rPath=String.valueOf(args[6]);
+			 lagMax= String.valueOf(args[7]);
+			 season= String.valueOf(args[8]);
+			 exogen= String.valueOf(args[9]);
+			 ic=String.valueOf(args[10]);
+			 type=String.valueOf(args[11]);
 		/*	 sampling=new String(args[5]);
 			 testType=new String(args[6]);
 			 isSpatial=new Boolean(args[7]);
@@ -82,6 +99,25 @@ public class TictTest {
 			return;
 			
 		}
+		
+		 ArrayList<Object> rParameters  = new ArrayList<Object>();
+		 ParametersRForecastIndex index = new ParametersRForecastIndex();
+		 rParameters.add(index.rPath, rPath);
+		 rParameters.add(index.lagMax, lagMax);
+		 rParameters.add(index.season, season);
+		 rParameters.add(index.exogen, exogen);
+		 rParameters.add(index.ic, ic);
+		 rParameters.add(index.type, type);
+		 rParameters.add(index.TWSize, TWSize);
+		 
+		 try{
+			 ParametersChecker checker = new ParametersChecker(TWSize-2);
+			 checker.check(rParameters);
+		 }catch (InvalidForecastParametersException e){
+			 System.out.println(e.getMessage());
+			 return;
+		 }
+		 
 		String configStr="";
 		AutocorrelationI autoCorrelation;
 		
@@ -206,7 +242,7 @@ public class TictTest {
 						timeBegin= new GregorianCalendar();
 					
 						
-						tree=new Tree(snapTrain, schemaTrain, W, autoCorrelation, splitNumber,centroidPercentage,sampling,testType, dimTW);
+						tree=new Tree(snapTrain, schemaTrain, W, autoCorrelation, splitNumber,centroidPercentage,sampling,testType, TWSize, rParameters);
 						System.out.println(tree);
 						
 						//KNNModel knn=new KNNModel();
@@ -252,7 +288,7 @@ public class TictTest {
 						currentTimeBegin = timeBegin.getTime();
 						tree.prune(snapTrain,schemaTrain,W,autoCorrelation);
 						afterPruningLeaves=tree.countLeaves();
-						tree.drift(snapTrain,schemaTrain,W,autoCorrelation,  splitNumber,centroidPercentage,sampling,testType);
+						tree.drift(snapTrain,schemaTrain,W,autoCorrelation,  splitNumber,centroidPercentage,sampling,testType, rParameters);
 						System.out.println(tree);
 						//KNNModel knn=new KNNModel();
 						//tree.populateKNNModel(knn);
@@ -322,21 +358,6 @@ public class TictTest {
 			 System.out.println(e);
 		 }
 		 catch(IOException e){
-			 ArrayList<Object> rParameters  = new ArrayList<Object>();
-			 ParametersRForecastIndex index = new ParametersRForecastIndex();
-			 rParameters.add(index.rPath, "C:/Program Files/R/R-3.1.2/bin/Rscript.exe");
-			 rParameters.add(index.lagMax, "2");
-			 rParameters.add(index.season, "NULL");
-			 rParameters.add(index.exogen, "NULL");
-			 rParameters.add(index.ic, "AIC");
-			 rParameters.add(index.type, "none");
-			 double[][] d = new double[10][2];
-			 for(int i = 0 ; i < 10 ; i ++)
-				 for (int k = 0 ; k < 2 ; k++)
-					 d[i][k] = 2.0;
-			 RVar r = new RVar();
-			 r.RForecasting(d, schemaTrain, rParameters, 10);
-			 r.executeVAR();
 			 System.out.println(e);
 			 
 		 }

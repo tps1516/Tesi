@@ -1,11 +1,12 @@
 package forecast;
 
 import java.util.ArrayList;
+import java.io.Serializable;
 import java.util.Iterator;
 
 import data.feature.Feature;
 
-public class FeatureVARForecastingModel extends FeatureForecastingModel implements Iterable<RecordVAR>{
+public class FeatureVARForecastingModel extends FeatureForecastingModel implements Iterable<RecordVAR>, Serializable{
 
 	private ArrayList<RecordVAR> equationModel;
 	
