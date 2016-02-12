@@ -16,7 +16,7 @@ public class FeatureVARForecastingModel extends FeatureForecastingModel implemen
 	}
 	 
 	public String toString(){
-		String str="";
+		String str="Feature: " + super.feature.getName() + "\n" + "equation: " + "\n";
 		for (RecordVAR r: this){
 			str+= r.toString() + "\n";
 		}

@@ -45,7 +45,7 @@ public abstract class Node implements Serializable{
 	
 	private Node father;
 	private int depth=0;
-	private ForecastingModel VARModel;
+	private ForecastingModel VARModel=null;
 	
 	//List<SensorPoint> centroid;
 	//MBR mbr;
@@ -325,6 +325,14 @@ public abstract class Node implements Serializable{
 		}
 		str+="\n" + "Averages:";
 		str+="\n" + featureAvgNode.toString(); 
+		
+		if (this.VARModel!=null){
+			str+="\n" + "MODELLO VAR: ";
+			str+="\n" + VARModel.toString();
+		}
+		else {
+			str+="\n" + "modello VAR non ancora avvalorato";
+		}
 		return str;
 	}
 	
