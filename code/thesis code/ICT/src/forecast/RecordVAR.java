@@ -8,7 +8,7 @@ class RecordVAR {
 	private Feature feature;
 	private ArrayList<Double> coefficients;
 	
-	
+	 
 	RecordVAR(Feature f,ArrayList<Double> coef){
 		this.feature=f;
 		this.coefficients=coef;

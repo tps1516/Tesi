@@ -15,7 +15,7 @@ public class ForecastingModel implements Iterable <FeatureForecastingModel>{
 	public ForecastingModel(double [][] dataset,SnapshotSchema schema, ArrayList<Object> rParameters){
 		
 	}
-	
+	 
 	public String toString(){
 		String str="";
 		for (FeatureForecastingModel VARModel: models){

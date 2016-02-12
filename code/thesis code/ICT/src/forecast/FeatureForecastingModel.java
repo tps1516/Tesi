@@ -10,7 +10,7 @@ public abstract class FeatureForecastingModel{
 	protected FeatureForecastingModel(Feature f){
 		this.feature=f;
 	}
-	
+	 
 	public abstract String toString();
 	
 	public Feature getFeature(){

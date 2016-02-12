@@ -13,7 +13,7 @@ public class FeatureVARForecastingModel extends FeatureForecastingModel implemen
 		super(f);
 		initializesEquationModel(correlatedFeature, coefficients);
 	}
-	
+	 
 	public String toString(){
 		String str="";
 		for (RecordVAR r: this){
