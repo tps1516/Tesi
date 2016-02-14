@@ -45,7 +45,7 @@ public abstract class Node implements Serializable{
 	
 	private Node father;
 	private int depth=0;
-	private ForecastingModel VARModel=null;
+	private ForecastingModel VARModel;
 	
 	//List<SensorPoint> centroid;
 	//MBR mbr;
@@ -56,6 +56,7 @@ public abstract class Node implements Serializable{
 		this.setSchema((SnapshotSchema)schema.clone());
 		this.father=father;
 		this.depth=depth;
+		this.VARModel=null;
 		
 	}
 	
@@ -67,7 +68,7 @@ public abstract class Node implements Serializable{
 		this.father=father;
 		this.depth=depth;
 		this.getSchema().reset(); // Reset the spatial attributes and all the target attributes which are now available for the tree construction
-		
+		this.VARModel=null;
 			
 		// Create the schema at the current node
 		
@@ -153,7 +154,7 @@ public abstract class Node implements Serializable{
 		this.father=father;
 		this.depth=depth;
 		this.getSchema().reset(); // Reset the spatial attributes and all the target attributes which are now available for the tree construction
-		
+		this.VARModel=null;
 		// Create the schema at the current node
 		
 		for(int i=beginExampleIndex;i<=endExampleIndex;i++)
@@ -211,7 +212,7 @@ public abstract class Node implements Serializable{
 			this.father=father;
 			this.depth=depth;
 			this.getSchema().reset(); // Reset the spatial attributes and all the target attributes which are now available for the tree construction
-			
+			this.VARModel=null;
 			// Create the schema at the current node
 			
 			int i=0;
