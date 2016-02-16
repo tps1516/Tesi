@@ -9,6 +9,7 @@ public abstract class Feature implements Serializable, Cloneable{
 	protected String name;
 	private int indexStream=-1;
 	private int indexMining=-1;
+	private int featureIndex = -1;
 	protected int countTuples=0;
 	
 	protected double autocorrelationMeasure=Double.NEGATIVE_INFINITY;
@@ -49,6 +50,14 @@ public abstract class Feature implements Serializable, Cloneable{
 
 	public int getIndexStream() {
 		return indexStream;
+	}
+	
+	public void setFeatureIndex(int nSpatial){
+		this.featureIndex = this.indexMining-nSpatial;
+	}
+	
+	public int getFeatureIndex(){
+		return this.featureIndex;
 	}
 
 	public void setIndexMining(int indexMining) {

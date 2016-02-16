@@ -35,8 +35,8 @@ public class RVar extends RForecast {
 		executeVAR();
 		caller.setRscriptExecutable(rPath);
 		organizeRdata(schema);
-		runandreturnresult();
-		organizeReturnResult(schema);
+		executeR();
+		mapRTOJava(schema);
 		return res;
 	}
 
@@ -149,24 +149,24 @@ public class RVar extends RForecast {
 		code.addRCode(result);
 	}
 
-	private void runandreturnresult() {
+	private void executeR() {
 		caller.setRCode(code);
 		caller.runAndReturnResult("result");
 	}
 
-	private void organizeReturnResult(SnapshotSchema schema) {
+	private void mapRTOJava(SnapshotSchema schema) {
 		res = new ArrayList<Object>();
 		ArrayList<ArrayList<Feature>> correlatedFeatures = new ArrayList<ArrayList<Feature>>(
 				schema.getTargetList().size());
 		ArrayList<ArrayList<ArrayList<Double>>> correlatedCoefficients = new ArrayList<ArrayList<ArrayList<Double>>>();
-		HashMap<String, Feature> HM = createHashMap(schema);
+		HashMap<String, Feature> HM = populateFeatureMap(schema);
 		for (Feature f : schema.getTargetList()) {
 			String[] feature = caller.getParser().getAsStringArray(
 					f.getName() + "_f");
 			String[] coeff = caller.getParser().getAsStringArray(
 					f.getName() + "_c");
 			int p = caller.getParser().getAsIntArray("p")[0];
-			String[] adjfeature = adjustfeature(feature, p);
+			String[] adjfeature = featureEpure(feature, p);
 			ArrayList<Feature> correlatedFeature = new ArrayList<Feature>();
 			ArrayList<ArrayList<Double>> coefficientsByFeature = new ArrayList<ArrayList<Double>>();
 			for (int i = 0; i < adjfeature.length; i++) {
@@ -187,14 +187,14 @@ public class RVar extends RForecast {
 		res.add(index.coefficients, correlatedCoefficients);
 	}
 
-	private HashMap<String, Feature> createHashMap(SnapshotSchema s) {
+	private HashMap<String, Feature> populateFeatureMap(SnapshotSchema s) {
 		HashMap<String, Feature> HM = new HashMap<String, Feature>();
 		for (Feature f : s.getTargetList())
 			HM.put(f.getName(), f);
 		return HM;
 	}
 
-	private String[] adjustfeature(String[] feature, int p) {
+	private String[] featureEpure(String[] feature, int p) {
 		String[] ret = new String[feature.length / p];
 		int i;
 		for (i = 0; i < ret.length; i++)
@@ -205,7 +205,7 @@ public class RVar extends RForecast {
 	private ArrayList<Double> addCoefficients(int step, int from, String[] coeff) {
 		ArrayList<Double> ret = new ArrayList<Double>();
 		for (int j = from; j < coeff.length; j = j + step) {
-			if (coeff[j].equals("NaN") || coeff[j].equals("Na")
+			if (coeff[j].equals("NaN") || coeff[j].equals("NA")
 					|| coeff[j].equals("Null"))
 				ret.add(0.0);
 			else

@@ -10,7 +10,7 @@ public class FeatureVARForecastingModel extends FeatureForecastingModel implemen
 
 	private ArrayList<RecordVAR> equationModel;
 	
-	protected FeatureVARForecastingModel(Feature f,ArrayList<Feature> correlatedFeature,ArrayList<ArrayList<Double>> coefficients) {
+	 FeatureVARForecastingModel(Feature f,ArrayList<Feature> correlatedFeature,ArrayList<ArrayList<Double>> coefficients) {
 		super(f);
 		initializesEquationModel(correlatedFeature, coefficients);
 	}

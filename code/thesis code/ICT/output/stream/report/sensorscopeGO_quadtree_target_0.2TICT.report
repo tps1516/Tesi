@@ -1,0 +1,114 @@
+TRAIN STREAM=sensorscopeTRAIN
+TEST STREAM=sensorscopeTEST
+W computation time (milliseconds):117
+**** ID: 2
+(x6<=35.5)
+(x6>35.5)
+
+Computation time(milliseconds)=143
+Interpolation time(milliseconds)=0
+Leaves statisics
+number of leaves of the tree inherited from the past=0
+number of leaves of the tree after pruning=0
+number of leaves in the new tree=2
+**** ID: 3
+(x6<=34.62219725867665)
+(x6>34.62219725867665)
+
+Computation time(milliseconds)=32
+Interpolation time(milliseconds)=0
+Leaves statisics
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+**** ID: 4
+(x6<=33.627)
+(x6>33.627)
+
+Computation time(milliseconds)=35
+Interpolation time(milliseconds)=0
+Leaves statisics
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+**** ID: 5
+(x2<=6.23069)
+(x2>6.23069)
+
+Computation time(milliseconds)=40
+Interpolation time(milliseconds)=0
+Leaves statisics
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+**** ID: 6
+(x6<=33.1551)
+(x6>33.1551)
+
+Computation time(milliseconds)=44
+Interpolation time(milliseconds)=1
+Leaves statisics
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+**** ID: 7
+(x6<=33.7176)
+(x6>33.7176)
+
+Computation time(milliseconds)=25
+Interpolation time(milliseconds)=0
+Leaves statisics
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+**** ID: 8
+(x6<=34.0263)
+(x6>34.0263)
+
+Computation time(milliseconds)=24
+Interpolation time(milliseconds)=0
+Leaves statisics
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+**** ID: 9
+(x6<=33.65)
+(x6>33.65)
+
+Computation time(milliseconds)=18
+Interpolation time(milliseconds)=4
+Leaves statisics
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+**** ID: 10
+(x6<=36.91849122563588)
+(x6>36.91849122563588)
+
+Computation time(milliseconds)=18
+Interpolation time(milliseconds)=0
+Leaves statisics
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+**** ID: 11
+(x6<=30.9539726719912)
+(x6>30.9539726719912)
+
+Computation time(milliseconds)=23
+Interpolation time(milliseconds)=0
+Leaves statisics
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+**** ID: 12
+(x2<=3.25206)
+(x2>3.25206)
+
+Computation time(milliseconds)=20
+Interpolation time(milliseconds)=0
+Leaves statisics
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+**** ID: 13

@@ -110,6 +110,7 @@ public class SnapshotSchema implements Serializable, Cloneable{
         }
         for(Feature f:target){
         	f.setIndexMining(id++);
+        	f.setFeatureIndex(this.getSpatialList().size());
         }
         inputStream.close();
         inputFileReader.close();
