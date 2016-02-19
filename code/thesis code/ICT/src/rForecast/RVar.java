@@ -12,6 +12,7 @@ import forecast.ForecastingModelIndex;
 
 public class RVar extends RForecast {
 
+	private String result;
 	private String rPath;
 	private String lagMax;
 	private String type;
@@ -23,89 +24,92 @@ public class RVar extends RForecast {
 	private RCode code;
 	private ArrayList<Combination> combinations;
 	private ArrayList<Object> res;
+	private HashMap<String, ArrayList<Object>> hashResult;
 
 	@Override
-	public ArrayList<Object> RForecasting(double[][] dataset,
+	public HashMap<String, ArrayList<Object>> RForecasting(double[][] dataset,
 			SnapshotSchema schema, ArrayList<Object> rParameters) {
 		caller = new RCaller();
 		code = new RCode();
-		
+
 		loadParameters(rParameters);
 		loadCombinations(rParameters);
 		caller.setRscriptExecutable(rPath);
-		for (Combination c: combinations){
-			System.out.println(c);
-		}
 		loadRLibrary();
 		loadData(dataset, schema);
-		for (Combination comb: combinations){
-			this.type=comb.getType();
-			this.ic=comb.getIC();
+		result = "result <- list (";
+		for (int i = 0; i < combinations.size(); i++) {
+			Combination comb = combinations.get(i);
+			this.type = comb.getType();
+			this.ic = comb.getIC();
 			executeVARSelect();
-			executeVAR();
-			organizeRdata(schema);
+			executeVAR(comb.toString());
+			organizeRdata(schema, comb.toString());
+			if (i == combinations.size() - 1)
+				result += ")";
+			else
+				result += ",";
 		}
+		code.addRCode(result);
 		executeR();
 		mapRTOJava(schema);
-		return res;
+		return hashResult;
 	}
 
 	private void loadParameters(ArrayList<Object> rParameters) {
 		ParametersRForecastIndex index = new ParametersRForecastIndex();
 		this.rPath = (String) rParameters.get(index.rPath);
 		this.lagMax = (String) rParameters.get(index.lagMax);
-		//this.type = (String) rParameters.get(index.type);
+		// this.type = (String) rParameters.get(index.type);
 		this.season = (String) rParameters.get(index.season);
 		if (rParameters.get(index.exogen) instanceof double[][])
 			this.exogen = (double[][]) rParameters.get(index.exogen);
 		else
 			this.exogen = (String) rParameters.get(index.exogen);
-		//this.ic = (String) rParameters.get(index.ic);
+		// this.ic = (String) rParameters.get(index.ic);
 		this.TWsize = (int) rParameters.get(index.TWSize);
 	}
 
-	
-	private void loadCombinations(ArrayList<Object> rParameters){
+	private void loadCombinations(ArrayList<Object> rParameters) {
 		ParametersRForecastIndex index = new ParametersRForecastIndex();
-		this.combinations=new ArrayList<Combination>();
+		this.combinations = new ArrayList<Combination>();
 		ArrayList<String> acceptableType = new ArrayList<String>();
 		ArrayList<String> acceptableIc = new ArrayList<String>();
 		initializedAcceptableType(acceptableType);
 		initializedAcceptableIc(acceptableIc);
 		type = (String) rParameters.get(index.type);
 		ic = (String) rParameters.get(index.ic);
-		if (type.equalsIgnoreCase("ALL") && ic.equalsIgnoreCase("ALL")){
-			
-			for (String sType: acceptableType){
-				
-				for (String sIc: acceptableIc){
-					Combination comb = new Combination(sType,sIc);
+		if (type.equalsIgnoreCase("ALL") && ic.equalsIgnoreCase("ALL")) {
+
+			for (String sType : acceptableType) {
+
+				for (String sIc : acceptableIc) {
+					Combination comb = new Combination(sType, sIc);
 					combinations.add(comb);
 				}
-				
+
 			}
-			
+
 		} else if (type.equalsIgnoreCase("ALL")) {
-			
-			for (String sType: acceptableType){
-				Combination comb=new Combination(sType,ic);
+
+			for (String sType : acceptableType) {
+				Combination comb = new Combination(sType, ic);
 				combinations.add(comb);
 			}
-			
-		} else if (ic.equalsIgnoreCase("ALL")){
-			
-			for (String sIc: acceptableIc){
-				Combination comb=new Combination(type,sIc);
+
+		} else if (ic.equalsIgnoreCase("ALL")) {
+
+			for (String sIc : acceptableIc) {
+				Combination comb = new Combination(type, sIc);
 				combinations.add(comb);
 			}
-			
+
 		} else {
-			Combination comb= new Combination(type,ic);
+			Combination comb = new Combination(type, ic);
 			combinations.add(comb);
 		}
 	}
-	
-	
+
 	private void loadRLibrary() {
 		code.clear();
 		code.addRCode("pack1 <- require(MASS)");
@@ -147,7 +151,7 @@ public class RVar extends RForecast {
 		code.addRCode(VARSelect);
 	}
 
-	private void executeVAR() {
+	private void executeVAR(String comb) {
 		String p = "";
 		switch (ic) {
 		case ("AIC"): {
@@ -167,38 +171,44 @@ public class RVar extends RForecast {
 			break;
 		}
 		}
-		String orderp = "orderp <- as.numeric(varNuova$selection[" + p + "])";
+		String orderp = comb + "_orderp <- as.numeric(varNuova$selection[" + p
+				+ "])";
 		code.addRCode(orderp);
-		String VAR = "var <- VAR(dataset, p = orderp, type = \"" + this.type
-				+ "\", ic = \"" + this.ic + "\")";
+		String VAR = "var <- VAR(dataset, p = " + comb + "_orderp, type = \""
+				+ this.type + "\", ic = \"" + this.ic + "\")";
 		code.addRCode(VAR);
 	}
 
-	private void organizeRdata(SnapshotSchema schema) {
+	private void organizeRdata(SnapshotSchema schema, String comb) {
 		for (Feature f : schema.getTargetList()) {
 			// PRELEVO I NOMI DELLE FEATURE CORRELATE
 			String nomefeature = f.getName();
 			code.addRCode("dataframe <- data.frame(var$varresult$"
 					+ nomefeature + "$coefficients)");
 			code.addRCode("nomifeature <- dimnames(dataframe)");
-			code.addRCode(nomefeature + "_nomifeature <- nomifeature[[1]]");
+			code.addRCode(nomefeature + "_" + comb
+					+ "_nomifeature <- nomifeature[[1]]");
 
 			// PRELEVO I VALORI DEI COEFFICIENTI
-			code.addRCode(nomefeature + "_coeff <- as.numeric(var$varresult$"
-					+ nomefeature + "$coefficients)");
+			code.addRCode(nomefeature + "_" + comb
+					+ "_coeff <- as.numeric(var$varresult$" + nomefeature
+					+ "$coefficients)");
 		}
-		String result = "result <- list (";
+
 		for (int i = 0; i < schema.getTargetList().size() - 1; i++) {
 			// SALVO I VALORI IN UNA SOLA LISTA
 			String nomefeature = schema.getTargetList().get(i).getName();
-			result += nomefeature + "_f = " + nomefeature + "_nomifeature, ";
-			result += nomefeature + "_c = " + nomefeature + "_coeff, ";
+			result += nomefeature + "_" + comb + "_f = " + nomefeature + "_"
+					+ comb + "_nomifeature, ";
+			result += nomefeature + "_" + comb + "_c = " + nomefeature + "_"
+					+ comb + "_coeff, ";
 		}
 		String nomefeature = schema.getTargetList()
 				.get(schema.getTargetList().size() - 1).getName();
-		result += nomefeature + "_f = " + nomefeature + "_nomifeature, ";
-		result += nomefeature + "_c = " + nomefeature + "_coeff, p = var$p)";
-		code.addRCode(result);
+		result += nomefeature + "_" + comb + "_f = " + nomefeature + "_" + comb
+				+ "_nomifeature, ";
+		result += nomefeature + "_" + comb + "_c = " + nomefeature + "_" + comb
+				+ "_coeff, p_" + comb + " = " + comb + "_orderp";
 	}
 
 	private void executeR() {
@@ -207,36 +217,103 @@ public class RVar extends RForecast {
 	}
 
 	private void mapRTOJava(SnapshotSchema schema) {
-		res = new ArrayList<Object>();
-		ArrayList<ArrayList<Feature>> correlatedFeatures = new ArrayList<ArrayList<Feature>>(
-				schema.getTargetList().size());
-		ArrayList<ArrayList<ArrayList<Double>>> correlatedCoefficients = new ArrayList<ArrayList<ArrayList<Double>>>();
-		HashMap<String, Feature> HM = populateFeatureMap(schema);
-		for (Feature f : schema.getTargetList()) {
-			String[] feature = caller.getParser().getAsStringArray(
-					f.getName() + "_f");
-			String[] coeff = caller.getParser().getAsStringArray(
-					f.getName() + "_c");
-			int p = caller.getParser().getAsIntArray("p")[0];
-			String[] adjfeature = featureEpure(feature, p);
-			ArrayList<Feature> correlatedFeature = new ArrayList<Feature>();
-			ArrayList<ArrayList<Double>> coefficientsByFeature = new ArrayList<ArrayList<Double>>();
-			for (int i = 0; i < adjfeature.length; i++) {
-				correlatedFeature.add((Feature) HM.get(adjfeature[i]).clone());
-				ArrayList<Double> coefficients = new ArrayList<Double>(p);
-				coefficients = addCoefficients(adjfeature.length, i, coeff);
-				coefficientsByFeature.add(coefficients);
+		hashResult = new HashMap<String, ArrayList<Object>>();
+		for (Combination comb : combinations) {
+			res = new ArrayList<Object>();
+			ArrayList<ArrayList<Feature>> correlatedFeatures = new ArrayList<ArrayList<Feature>>(
+					schema.getTargetList().size());
+			ArrayList<ArrayList<ArrayList<Double>>> correlatedCoefficients = new ArrayList<ArrayList<ArrayList<Double>>>();
+			int p = 0;
+
+			HashMap<String, Feature> HM = populateFeatureMap(schema);
+			ArrayList<Double> listCoefTrend = new ArrayList<Double>();
+			ArrayList<Double> listCoefConst = new ArrayList<Double>();
+
+			for (Feature f : schema.getTargetList()) {
+				double c_trend = 0.0;
+				double c_const = 0.0;
+
+				String[] feature = caller.getParser().getAsStringArray(
+						f.getName() + "_" + comb + "_f");
+				String[] coeff = caller.getParser().getAsStringArray(
+						f.getName() + "_" + comb + "_c");
+
+				switch (comb.getType()) {
+				case ("both"): {
+					c_trend = Double.parseDouble(coeff[coeff.length - 1]);
+					c_const = Double.parseDouble(coeff[coeff.length - 2]);
+					String[] aux = new String[feature.length - 2];
+					for (int i = 0; i < feature.length - 2; i++)
+						aux[i] = feature[i];
+					feature = aux;
+					String[] c_aux = new String[coeff.length - 2];
+					for (int i = 0; i < coeff.length - 2; i++)
+						c_aux[i] = coeff[i];
+					coeff = c_aux;
+					break;
+				}
+				case ("trend"): {
+					c_trend = Double.parseDouble(coeff[coeff.length - 1]);
+					c_const = 0.0;
+					String[] aux = new String[feature.length - 1];
+					for (int i = 0; i < feature.length - 1; i++)
+						aux[i] = feature[i];
+					feature = aux;
+					String[] c_aux = new String[coeff.length - 1];
+					for (int i = 0; i < coeff.length - 1; i++)
+						c_aux[i] = coeff[i];
+					coeff = c_aux;
+					break;
+				}
+				case ("const"): {
+					c_const = Double.parseDouble(coeff[coeff.length - 1]);
+					c_trend = 0.0;
+					String[] aux = new String[feature.length - 1];
+					for (int i = 0; i < feature.length - 1; i++)
+						aux[i] = feature[i];
+					feature = aux;
+					String[] c_aux = new String[coeff.length - 1];
+					for (int i = 0; i < coeff.length - 1; i++)
+						c_aux[i] = coeff[i];
+					coeff = c_aux;
+					break;
+				}
+				case ("none"): {
+					c_trend = 0.0;
+					c_const = 0.0;
+				}
+				}
+				listCoefTrend.add(f.getFeatureIndex(), c_trend);
+				listCoefConst.add(f.getFeatureIndex(), c_const);
+				p = caller.getParser().getAsIntArray("p_" + comb)[0];
+				String[] adjfeature = featureEpure(feature, p);
+				ArrayList<Feature> correlatedFeature = new ArrayList<Feature>();
+				ArrayList<ArrayList<Double>> coefficientsByFeature = new ArrayList<ArrayList<Double>>();
+				for (int i = 0; i < adjfeature.length; i++) {
+					correlatedFeature.add((Feature) HM.get(adjfeature[i])
+							.clone());
+					ArrayList<Double> coefficients = new ArrayList<Double>(p);
+					coefficients = addCoefficients(adjfeature.length, i, coeff);
+					coefficientsByFeature.add(coefficients);
+				}
+				correlatedCoefficients
+						.add(f.getIndexMining()
+								- schema.getSpatialList().size(),
+								coefficientsByFeature);
+				correlatedFeatures.add(f.getIndexMining()
+						- schema.getSpatialList().size(), correlatedFeature);
+
 			}
-			correlatedCoefficients.add(f.getIndexMining()
-					- schema.getSpatialList().size(), coefficientsByFeature);
-			correlatedFeatures.add(f.getIndexMining()
-					- schema.getSpatialList().size(), correlatedFeature);
 
+			ForecastingModelIndex index = new ForecastingModelIndex();
+			res.add(index.feature, correlatedFeatures);
+			res.add(index.coefficients, correlatedCoefficients);
+			res.add(index.p, p);
+			res.add(index.trend, listCoefTrend);
+			res.add(index.cost, listCoefConst);
+			hashResult.put(comb.toString(), res);
+			
 		}
-
-		ForecastingModelIndex index = new ForecastingModelIndex();
-		res.add(index.feature, correlatedFeatures);
-		res.add(index.coefficients, correlatedCoefficients);
 	}
 
 	private HashMap<String, Feature> populateFeatureMap(SnapshotSchema s) {
@@ -265,8 +342,7 @@ public class RVar extends RForecast {
 		}
 		return ret;
 	}
-	
-	
+
 	private void initializedAcceptableType(ArrayList<String> acceptableType) {
 		acceptableType.add("const");
 		acceptableType.add("trend");
