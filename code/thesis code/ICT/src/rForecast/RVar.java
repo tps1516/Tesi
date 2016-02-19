@@ -21,6 +21,7 @@ public class RVar extends RForecast {
 	private int TWsize;
 	private RCaller caller;
 	private RCode code;
+	private ArrayList<Combination> combinations;
 	private ArrayList<Object> res;
 
 	@Override
@@ -28,13 +29,22 @@ public class RVar extends RForecast {
 			SnapshotSchema schema, ArrayList<Object> rParameters) {
 		caller = new RCaller();
 		code = new RCode();
+		
 		loadParameters(rParameters);
+		loadCombinations(rParameters);
+		caller.setRscriptExecutable(rPath);
+		for (Combination c: combinations){
+			System.out.println(c);
+		}
 		loadRLibrary();
 		loadData(dataset, schema);
-		executeVARSelect();
-		executeVAR();
-		caller.setRscriptExecutable(rPath);
-		organizeRdata(schema);
+		for (Combination comb: combinations){
+			this.type=comb.getType();
+			this.ic=comb.getIC();
+			executeVARSelect();
+			executeVAR();
+			organizeRdata(schema);
+		}
 		executeR();
 		mapRTOJava(schema);
 		return res;
@@ -44,16 +54,58 @@ public class RVar extends RForecast {
 		ParametersRForecastIndex index = new ParametersRForecastIndex();
 		this.rPath = (String) rParameters.get(index.rPath);
 		this.lagMax = (String) rParameters.get(index.lagMax);
-		this.type = (String) rParameters.get(index.type);
+		//this.type = (String) rParameters.get(index.type);
 		this.season = (String) rParameters.get(index.season);
 		if (rParameters.get(index.exogen) instanceof double[][])
 			this.exogen = (double[][]) rParameters.get(index.exogen);
 		else
 			this.exogen = (String) rParameters.get(index.exogen);
-		this.ic = (String) rParameters.get(index.ic);
+		//this.ic = (String) rParameters.get(index.ic);
 		this.TWsize = (int) rParameters.get(index.TWSize);
 	}
 
+	
+	private void loadCombinations(ArrayList<Object> rParameters){
+		ParametersRForecastIndex index = new ParametersRForecastIndex();
+		this.combinations=new ArrayList<Combination>();
+		ArrayList<String> acceptableType = new ArrayList<String>();
+		ArrayList<String> acceptableIc = new ArrayList<String>();
+		initializedAcceptableType(acceptableType);
+		initializedAcceptableIc(acceptableIc);
+		type = (String) rParameters.get(index.type);
+		ic = (String) rParameters.get(index.ic);
+		if (type.equalsIgnoreCase("ALL") && ic.equalsIgnoreCase("ALL")){
+			
+			for (String sType: acceptableType){
+				
+				for (String sIc: acceptableIc){
+					Combination comb = new Combination(sType,sIc);
+					combinations.add(comb);
+				}
+				
+			}
+			
+		} else if (type.equalsIgnoreCase("ALL")) {
+			
+			for (String sType: acceptableType){
+				Combination comb=new Combination(sType,ic);
+				combinations.add(comb);
+			}
+			
+		} else if (ic.equalsIgnoreCase("ALL")){
+			
+			for (String sIc: acceptableIc){
+				Combination comb=new Combination(type,sIc);
+				combinations.add(comb);
+			}
+			
+		} else {
+			Combination comb= new Combination(type,ic);
+			combinations.add(comb);
+		}
+	}
+	
+	
 	private void loadRLibrary() {
 		code.clear();
 		code.addRCode("pack1 <- require(MASS)");
@@ -212,5 +264,20 @@ public class RVar extends RForecast {
 				ret.add(Double.valueOf(coeff[j]));
 		}
 		return ret;
+	}
+	
+	
+	private void initializedAcceptableType(ArrayList<String> acceptableType) {
+		acceptableType.add("const");
+		acceptableType.add("trend");
+		acceptableType.add("both");
+		acceptableType.add("none");
+	}
+
+	private void initializedAcceptableIc(ArrayList<String> acceptableIc) {
+		acceptableIc.add("AIC");
+		acceptableIc.add("HQ");
+		acceptableIc.add("SC");
+		acceptableIc.add("FPE");
 	}
 }

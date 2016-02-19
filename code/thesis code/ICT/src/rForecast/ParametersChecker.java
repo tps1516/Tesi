@@ -19,6 +19,7 @@ public class ParametersChecker {
 		this.acceptableType.add("trend");
 		this.acceptableType.add("both");
 		this.acceptableType.add("none");
+		this.acceptableType.add("ALL");
 	}
 
 	private void initializedAcceptableIc() {
@@ -26,6 +27,7 @@ public class ParametersChecker {
 		this.acceptableIc.add("HQ");
 		this.acceptableIc.add("SC");
 		this.acceptableIc.add("FPE");
+		this.acceptableIc.add("ALL");
 	}
 
 	public void check(ArrayList<Object> rParameters) {
