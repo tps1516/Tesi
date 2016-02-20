@@ -32,8 +32,8 @@ public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 	}
 
 	private Double[][] doubleToDouble(double[][] conv) {
-		int rows = conv[0].length;
-		int col = conv.length;
+		int rows = conv.length;
+		int col = conv[0].length;
 		Double[][] res = new Double[rows][col];
 		for (int i = 0; i < rows; i++)
 			for (int j = 0; j < col; j++)

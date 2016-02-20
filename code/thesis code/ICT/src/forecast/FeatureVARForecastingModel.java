@@ -22,8 +22,9 @@ public class FeatureVARForecastingModel extends FeatureForecastingModel
 			Double[][] timeseries, Double coefConst, Double coefTrend) {
 		super(f);
 		initializesEquationModel(correlatedFeature, coefficients);
+		this.p = p;
 		this.coefficientsConst = coefConst;
-		this.coefficientsTrend = coefConst;
+		this.coefficientsTrend = coefTrend;
 		setRMSE(timeseries);
 	}
 

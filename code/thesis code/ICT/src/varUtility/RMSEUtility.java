@@ -11,7 +11,7 @@ public class RMSEUtility {
 			FeatureVARForecastingModel VARModel) {
 		double RMSE = 0.0;
 		int beginIndexReducedMatrix = 0;
-		int timeseriesRows = timeseries[0].length;
+		int timeseriesRows = timeseries.length;
 		int endIndexComputeRMSE = timeseriesRows - 1;
 		int i = 0;
 		double[][] reducedMatrix;
@@ -32,10 +32,10 @@ public class RMSEUtility {
 	private double[][] reduceMatrix(Double[][] timeseries, int p,
 			FeatureVARForecastingModel VARModel, int beginIndexReducedMatrix,
 			int endIndexReducedMatrix) {
-		double[][] matrix = new double[p][timeseries.length];
+		double[][] matrix = new double[p][timeseries[0].length];
 		int indexMatrix = 0;
-		for (int i = beginIndexReducedMatrix; i < endIndexReducedMatrix; i++) {
-			for (int j = 0; j < timeseries.length; j++) {
+		for (int i = beginIndexReducedMatrix; i <= endIndexReducedMatrix; i++) {
+			for (int j = 0; j < timeseries[0].length; j++) {
 				matrix[indexMatrix][j] = timeseries[i][j];
 			}
 			indexMatrix++;
@@ -49,8 +49,8 @@ public class RMSEUtility {
 		for (RecordVAR record : VARModel) {
 			ArrayList<Double> coeff = record.getCoefficients();
 			ArrayList<Double> valReali = new ArrayList<Double>();
-			for (int i = 0; i < p; i++) {
-				valReali.add(p - i - 1, reducedMatrix[i][record.getFeature()
+			for (int i = p-1; i >= 0; i--) {
+				valReali.add(reducedMatrix[i][record.getFeature()
 						.getFeatureIndex()]);
 			}
 			for (int i = 0; i < p; i++)
