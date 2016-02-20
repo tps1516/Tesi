@@ -4,7 +4,7 @@ import forecast.FeatureVARForecastingModel;
 
 public class RMSEUtility {
 
-	public double computeRMSE(int p, double[][] timeseries,
+	public Double computeRMSE(int p, Double[][] timeseries,
 			FeatureVARForecastingModel VARModel) {
 		double RMSE = 0.0;
 		int beginIndexReducedMatrix = 0;
@@ -26,7 +26,7 @@ public class RMSEUtility {
 		return RMSE;
 	}
 
-	private double[][] reduceMatrix(double[][] timeseries, int p,
+	private double[][] reduceMatrix(Double[][] timeseries, int p,
 			FeatureVARForecastingModel VARModel, int beginIndexReducedMatrix,
 			int i) {
 		double[][] matrix = new double[p][timeseries.length];
