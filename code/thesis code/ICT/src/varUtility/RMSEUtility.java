@@ -1,6 +1,9 @@
 package varUtility;
 
+import java.util.ArrayList;
+
 import forecast.FeatureVARForecastingModel;
+import forecast.RecordVAR;
 
 public class RMSEUtility {
 
@@ -28,13 +31,31 @@ public class RMSEUtility {
 
 	private double[][] reduceMatrix(Double[][] timeseries, int p,
 			FeatureVARForecastingModel VARModel, int beginIndexReducedMatrix,
-			int i) {
+			int endIndexReducedMatrix) {
 		double[][] matrix = new double[p][timeseries.length];
-		return null;
+		int indexMatrix = 0;
+		for (int i = beginIndexReducedMatrix; i < endIndexReducedMatrix; i++) {
+			for (int j = 0; j < timeseries.length; j++) {
+				matrix[indexMatrix][j] = timeseries[i][j];
+			}
+			indexMatrix++;
+		}
+		return matrix;
 	}
 
 	private double predict(double[][] reducedMatrix,
 			FeatureVARForecastingModel VARModel, int p) {
-		return 0.0;
+		double predict = 0.0;
+		for (RecordVAR record : VARModel) {
+			ArrayList<Double> coeff = record.getCoefficients();
+			ArrayList<Double> valReali = new ArrayList<Double>();
+			for (int i = 0; i < p; i++) {
+				valReali.add(p - i - 1, reducedMatrix[i][record.getFeature()
+						.getFeatureIndex()]);
+			}
+			for (int i = 0; i < p; i++)
+				predict += coeff.get(i) * valReali.get(i);
+		}
+		return predict;
 	}
 }
