@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 import data.feature.Feature;
 
-class RecordVAR implements Serializable {
+public class RecordVAR implements Serializable {
 	private Feature feature;
 	private ArrayList<Double> coefficients;
 
@@ -25,11 +25,11 @@ class RecordVAR implements Serializable {
 		return str;
 	}
 
-	Feature getFeature() {
+	public Feature getFeature() {
 		return this.feature;
 	}
 
-	ArrayList<Double> getCoefficients() {
+	public ArrayList<Double> getCoefficients() {
 		return this.coefficients;
 	}
 }
