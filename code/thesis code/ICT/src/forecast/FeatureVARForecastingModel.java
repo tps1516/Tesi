@@ -15,7 +15,7 @@ public class FeatureVARForecastingModel extends FeatureForecastingModel implemen
 	private Double coefficientsConst;
 	private Double RMSE;
 	
-	 FeatureVARForecastingModel(Feature f,ArrayList<Feature> correlatedFeature,ArrayList<ArrayList<Double>> coefficients, int p,Double [][] timeseries, Double coefConst,Double coefTrend) {
+	public FeatureVARForecastingModel(Feature f,ArrayList<Feature> correlatedFeature,ArrayList<ArrayList<Double>> coefficients, int p,Double [][] timeseries, Double coefConst,Double coefTrend) {
 		super(f);
 		initializesEquationModel(correlatedFeature, coefficients);
 		this.coefficientsConst=coefConst;
