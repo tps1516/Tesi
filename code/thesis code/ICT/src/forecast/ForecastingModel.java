@@ -4,6 +4,7 @@ import rForecast.RForecast;
 import rForecast.RVar;
 import snapshot.SnapshotSchema;
 import varUtility.FromRToJava;
+import varUtility.OptimalVARModel;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -26,7 +27,8 @@ public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 		FromRToJava fRToJava = new FromRToJava();
 		resultRToJava = fRToJava.converter(resultR, schema,
 				doubleToDouble(dataset));
-		OptimalVARModel opt = OptimalVARModel();
+		OptimalVARModel opt = new OptimalVARModel();
+		setModels(opt.computeOptimalVARModel(resultRToJava, schema));
 	}
 
 	private Double[][] doubleToDouble(double[][] conv) {
