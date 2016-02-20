@@ -9,9 +9,9 @@ import forecast.FeatureForecastingModel;
 import forecast.FeatureVARForecastingModel;
 import forecast.ForecastingModel;
 
-public class OptimarVARModel {
+public class OptimalVARModel {
 
-	public ArrayList<FeatureForecastingModel> computOptimalVARModel(
+	public ArrayList<FeatureForecastingModel> computeOptimalVARModel(
 			HashMap<String, ForecastingModel> hm, SnapshotSchema schema) {
 		ArrayList<FeatureForecastingModel> optModel = new ArrayList<FeatureForecastingModel>();
 		double min;
