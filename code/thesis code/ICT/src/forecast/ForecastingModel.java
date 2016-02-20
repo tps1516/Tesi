@@ -12,9 +12,10 @@ import data.feature.Feature;
 
 public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 		Serializable {
-	private int p;
+	
 	private ArrayList<FeatureForecastingModel> models;
 
+	
 	public ForecastingModel(double[][] dataset, SnapshotSchema schema,
 			ArrayList<Object> rParameters) {
 		ArrayList<Object> result = new ArrayList<Object>();
@@ -23,8 +24,13 @@ public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 		initializesModels(result, schema);
 	}
 
+	
+	public ForecastingModel(ArrayList<FeatureForecastingModel> mod){
+		setModels(mod);
+	}
+	
 	public String toString() {
-		String str = "";
+		String str = "MODELLO VAR:" + "\n";;
 		for (FeatureForecastingModel VARModel : models) {
 			str += VARModel.toString() + "\n";
 		}
@@ -57,4 +63,13 @@ public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 		return this.models.iterator();
 	}
 
+	
+	private void setModels(ArrayList<FeatureForecastingModel> mod){
+		this.models=mod;
+	}
+	
+	
+	public FeatureForecastingModel getFeatureForecastingModel(Feature f){
+		return models.get(f.getFeatureIndex());
+	}
 }

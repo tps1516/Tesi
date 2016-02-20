@@ -66,4 +66,8 @@ public class FeatureVARForecastingModel extends FeatureForecastingModel implemen
 		RMSEUtility rmsUtilty= new RMSEUtility();
 		this.RMSE= rmsUtilty.computeRMSE(getP(), timeseries, this);
 	}
+	
+	public Double getRMSE(){
+		return this.RMSE;
+	}
 }
