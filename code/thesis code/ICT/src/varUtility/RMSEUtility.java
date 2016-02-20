@@ -56,6 +56,8 @@ public class RMSEUtility {
 			for (int i = 0; i < p; i++)
 				predict += coeff.get(i) * valReali.get(i);
 		}
+		predict += VARModel.getCoefficientsConst()
+				+ VARModel.getCoefficientsTrend();
 		return predict;
 	}
 }
