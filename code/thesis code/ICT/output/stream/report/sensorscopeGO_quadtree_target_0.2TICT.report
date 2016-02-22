@@ -1,11 +1,11 @@
 TRAIN STREAM=sensorscopeTRAIN
 TEST STREAM=sensorscopeTEST
-W computation time (milliseconds):50
+W computation time (milliseconds):15
 **** ID: 2
 (x6<=35.5)
 (x6>35.5)
 
-Computation time(milliseconds)=96
+Computation time(milliseconds)=31
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=0
@@ -15,7 +15,7 @@ number of leaves in the new tree=2
 (x6<=34.62219725867665)
 (x6>34.62219725867665)
 
-Computation time(milliseconds)=35
+Computation time(milliseconds)=0
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -25,7 +25,7 @@ number of leaves in the new tree=2
 (x6<=33.627)
 (x6>33.627)
 
-Computation time(milliseconds)=30
+Computation time(milliseconds)=15
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -35,7 +35,7 @@ number of leaves in the new tree=2
 (x2<=6.23069)
 (x2>6.23069)
 
-Computation time(milliseconds)=85
+Computation time(milliseconds)=16
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -45,7 +45,7 @@ number of leaves in the new tree=2
 (x6<=33.1551)
 (x6>33.1551)
 
-Computation time(milliseconds)=35
+Computation time(milliseconds)=0
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -55,7 +55,7 @@ number of leaves in the new tree=2
 (x6<=33.7176)
 (x6>33.7176)
 
-Computation time(milliseconds)=30
+Computation time(milliseconds)=0
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -65,7 +65,7 @@ number of leaves in the new tree=2
 (x6<=34.0263)
 (x6>34.0263)
 
-Computation time(milliseconds)=20
+Computation time(milliseconds)=0
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -75,7 +75,7 @@ number of leaves in the new tree=2
 (x6<=33.65)
 (x6>33.65)
 
-Computation time(milliseconds)=35
+Computation time(milliseconds)=0
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -85,7 +85,7 @@ number of leaves in the new tree=2
 (x6<=36.91849122563588)
 (x6>36.91849122563588)
 
-Computation time(milliseconds)=20
+Computation time(milliseconds)=16
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -95,7 +95,7 @@ number of leaves in the new tree=2
 (x6<=30.9539726719912)
 (x6>30.9539726719912)
 
-Computation time(milliseconds)=21
+Computation time(milliseconds)=0
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -105,7 +105,7 @@ number of leaves in the new tree=2
 (x2<=3.25206)
 (x2>3.25206)
 
-Computation time(milliseconds)=20
+Computation time(milliseconds)=0
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -116,7 +116,7 @@ number of leaves in the new tree=2
 (x6<=31.188304879383384)(x2>2.45375)
 (x6>31.188304879383384)
 
-Computation time(milliseconds)=20
+Computation time(milliseconds)=31
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -127,7 +127,7 @@ number of leaves in the new tree=3
 (x6<=32.25952713355518)(x6>36.637)
 (x6>32.25952713355518)
 
-Computation time(milliseconds)=30
+Computation time(milliseconds)=47
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=3
@@ -138,7 +138,7 @@ number of leaves in the new tree=3
 (x6<=31.985145774209176)(x6>39.8566)
 (x6>31.985145774209176)
 
-Computation time(milliseconds)=30
+Computation time(milliseconds)=16
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=3
@@ -149,7 +149,7 @@ number of leaves in the new tree=3
 (x6<=32.109138234967006)(x6>41.737137930932775)
 (x6>32.109138234967006)
 
-Computation time(milliseconds)=25
+Computation time(milliseconds)=31
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=3
@@ -159,7 +159,7 @@ number of leaves in the new tree=3
 (x6<=36.1337)
 (x6>36.1337)
 
-Computation time(milliseconds)=15
+Computation time(milliseconds)=0
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=3
@@ -169,7 +169,7 @@ number of leaves in the new tree=2
 (x6<=34.9672)
 (x6>34.9672)
 
-Computation time(milliseconds)=25
+Computation time(milliseconds)=0
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -179,7 +179,7 @@ number of leaves in the new tree=2
 (x8<=1.85722)
 (x8>1.85722)
 
-Computation time(milliseconds)=15
+Computation time(milliseconds)=0
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -189,7 +189,7 @@ number of leaves in the new tree=2
 (x8<=1.9841707488812899)
 (x8>1.9841707488812899)
 
-Computation time(milliseconds)=15
+Computation time(milliseconds)=0
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -199,363 +199,10 @@ number of leaves in the new tree=2
 (x9<=118.599)
 (x9>118.599)
 
-Computation time(milliseconds)=15
+Computation time(milliseconds)=9366
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=1
 number of leaves in the new tree=2
 **** ID: 22
-(x9<=118.599)
-(x9>118.599)
-
-Computation time(milliseconds)=95
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
-**** ID: 23
-(x9<=118.599)
-(x9>118.599)
-
-Computation time(milliseconds)=122
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
-**** ID: 24
-(x9<=118.599)
-(x9>118.599)
-
-Computation time(milliseconds)=20
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
-**** ID: 25
-(x9<=118.599)
-(x9>118.599)
-
-Computation time(milliseconds)=85
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
-**** ID: 26
-(x9<=118.599)
-(x9>118.599)
-
-Computation time(milliseconds)=10
-Interpolation time(milliseconds)=5
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
-**** ID: 27
-(x9<=118.599)
-(x9>118.599)(x3<=3.5533306460085043)
-(x9>118.599)(x3>3.5533306460085043)
-
-Computation time(milliseconds)=55
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 28
-(x9<=118.599)
-(x9>118.599)
-
-Computation time(milliseconds)=10
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
-**** ID: 29
-(x6<=42.6141)
-(x6>42.6141)
-
-Computation time(milliseconds)=15
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 30
-(x8<=1.4905627997824724)
-(x8>1.4905627997824724)
-
-Computation time(milliseconds)=25
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 31
-(x6<=50.10851157684416)
-(x6>50.10851157684416)
-
-Computation time(milliseconds)=135
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 32
-(x6<=46.76034680052927)
-(x6>46.76034680052927)
-
-Computation time(milliseconds)=164
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 33
-(x6<=48.0362)
-(x6>48.0362)
-
-Computation time(milliseconds)=10
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 34
-(x6<=45.7813)
-(x6>45.7813)
-
-Computation time(milliseconds)=15
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 35
-(x6<=42.3097)
-(x6>42.3097)
-
-Computation time(milliseconds)=140
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 36
-(x1<=1.62111)
-(x1>1.62111)
-
-Computation time(milliseconds)=25
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 37
-(x6<=41.1707)
-(x6>41.1707)
-
-Computation time(milliseconds)=25
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 38
-(x6<=43.12649444534377)
-(x6>43.12649444534377)
-
-Computation time(milliseconds)=15
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 39
-(x2<=0.232309)
-(x2>0.232309)
-
-Computation time(milliseconds)=15
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 40
-(x6<=42.17189121541572)
-(x6>42.17189121541572)
-
-Computation time(milliseconds)=10
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 41
-(x6<=44.097629143624594)
-(x6>44.097629143624594)
-
-Computation time(milliseconds)=36
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 42
-(x1<=2.02231)
-(x1>2.02231)
-
-Computation time(milliseconds)=10
-Interpolation time(milliseconds)=5
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 43
-(x8<=1.4748)
-(x8>1.4748)
-
-Computation time(milliseconds)=97
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
-**** ID: 44
-(x8<=1.4748)
-(x8>1.4748)(x3<=353.7783194613715)
-(x8>1.4748)(x3>353.7783194613715)
-
-Computation time(milliseconds)=40
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 45
-(x8<=1.4748)
-(x8>1.4748)(x1<=7.02692)
-(x8>1.4748)(x1>7.02692)
-
-Computation time(milliseconds)=20
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 46
-(x8<=1.4748)
-(x8>1.4748)(x6<=76.8133)
-(x8>1.4748)(x6>76.8133)
-
-Computation time(milliseconds)=120
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 47
-(x8<=1.4748)
-(x8>1.4748)(x9<=130.068)
-(x8>1.4748)(x9>130.068)
-
-Computation time(milliseconds)=25
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 48
-(x8<=1.4748)
-(x8>1.4748)(x1<=8.67597)
-(x8>1.4748)(x1>8.67597)
-
-Computation time(milliseconds)=25
-Interpolation time(milliseconds)=5
-Leaves statisics
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 49
-(x8<=1.4748)
-(x8>1.4748)(x1<=8.37475)
-(x8>1.4748)(x1>8.37475)
-
-Computation time(milliseconds)=105
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 50
-(x8<=1.4748)
-(x8>1.4748)(x1<=7.76327)
-(x8>1.4748)(x1>7.76327)
-
-Computation time(milliseconds)=32
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 51
-(x8<=1.4748)
-(x8>1.4748)(x4<=49.2026)
-(x8>1.4748)(x4>49.2026)
-
-Computation time(milliseconds)=55302
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 52
-(x8<=1.4748)
-(x8>1.4748)(x5<=17.0734)
-(x8>1.4748)(x5>17.0734)
-
-Computation time(milliseconds)=49888
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 53
-(x8<=1.4748)
-(x8>1.4748)(x9<=124.0686770975904)
-(x8>1.4748)(x9>124.0686770975904)
-
-Computation time(milliseconds)=49616
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 54
-(x8<=1.4748)
-(x8>1.4748)(x9<=127.27174690303399)
-(x8>1.4748)(x9>127.27174690303399)
-
-Computation time(milliseconds)=48500
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 55
-(x8<=1.4748)
-(x8>1.4748)(x3<=1.0351945680884305)
-(x8>1.4748)(x3>1.0351945680884305)
-
-Computation time(milliseconds)=48904
-Interpolation time(milliseconds)=0
-Leaves statisics
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
-**** ID: 56

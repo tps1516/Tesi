@@ -1,11 +1,11 @@
 package rForecast;
 
-class Combination {
+class VARParameter {
 
 	private String type;
 	private String ic;
 	
-	Combination(String type, String ic) {
+	VARParameter(String type, String ic) {
 		this.type = type;
 		this.ic = ic;
 	}

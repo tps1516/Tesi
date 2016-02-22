@@ -2,6 +2,7 @@ package rForecast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 import snapshot.SnapshotSchema;
 import rForecast.ParametersRForecastIndex;
@@ -22,40 +23,87 @@ public class RVar extends RForecast {
 	private int TWsize;
 	private RCaller caller;
 	private RCode code;
-	private ArrayList<Combination> combinations;
+	private LinkedList<VARParameter> VARParameters;
 	private ArrayList<Object> res;
 	private HashMap<String, ArrayList<Object>> hashResult;
 
-	@Override
+	/*
+	 * tale metodo ha la responsabilità di interfacciarsi con R 
+	 * per eseguire le funzioni VAR su tutte le combinazioni richieste
+	 * e di restituire i risultati ottenuti dalla sua chiamata 
+	 * 
+	 */
 	public HashMap<String, ArrayList<Object>> RForecasting(double[][] dataset,
 			SnapshotSchema schema, ArrayList<Object> rParameters) {
+		
 		caller = new RCaller();
 		code = new RCode();
-
+		code.clear();
+		
+		// carico i parametri passati in input 
 		loadParameters(rParameters);
-		loadCombinations(rParameters);
+		
+		//setto il path dello script R.exe
 		caller.setRscriptExecutable(rPath);
+		
+		// costruisco tutte le combinazioni possibili in base ai parametri da cambiare
+		loadCombinations(rParameters);
+		
+		//carico le librerie che servono per eseguire la funzione VAR
 		loadRLibrary();
+		
+		//carico il dataset 
 		loadData(dataset, schema);
+		
 		result = "result <- list (";
-		for (int i = 0; i < combinations.size(); i++) {
-			Combination comb = combinations.get(i);
+		
+		/*
+		 * ciclo su tutte le possibili combinazioni per ottenere i risultati 
+		 * variando i parametri di input della funzione VAR
+		 */
+		for (int i = 0; i < VARParameters.size(); i++) {
+			
+			VARParameter comb = VARParameters.get(i);
 			this.type = comb.getType();
 			this.ic = comb.getIC();
+			
+			//aggiungo la funzione varSelect
 			executeVARSelect();
+			
+			//aggiungo la funzione VAR
 			executeVAR(comb.toString());
-			organizeRdata(schema, comb.toString());
-			if (i == combinations.size() - 1)
+			
+			/*
+			 * richiamo i comandi R per ottenere i dati organizzati in modo
+			 * tale sapere come poterli recuperare
+			 */
+			outputRSchemaSetup(schema, comb.toString());
+			
+			//chiudo la stringa di ritorno
+			if (i == VARParameters.size() - 1)
 				result += ")";
 			else
 				result += ",";
 		}
+		
+		//aggiungo lo script R appena scritto
 		code.addRCode(result);
+		
+		//eseguo lo script
 		executeR();
+		
+		//costruisco l'oggetto java da restuituire recuperando i dati ottenuti da R
 		mapRTOJava(schema);
+		
+		
 		return hashResult;
 	}
 
+	/*
+	 * metodo privato
+	 * ha la responsabilità di caricare i parametri passati in input 
+	 * per l'esecuzione della funzione VAR
+	 */
 	private void loadParameters(ArrayList<Object> rParameters) {
 		ParametersRForecastIndex index = new ParametersRForecastIndex();
 		this.rPath = (String) rParameters.get(index.rPath);
@@ -70,48 +118,103 @@ public class RVar extends RForecast {
 		this.TWsize = (int) rParameters.get(index.TWSize);
 	}
 
+	
+	/*
+	 * metodo privato
+	 * ha la responsabilità di creare le diverse combinazioni
+	 * al variare dei parametri "type" e "ic"
+	 */
 	private void loadCombinations(ArrayList<Object> rParameters) {
 		ParametersRForecastIndex index = new ParametersRForecastIndex();
-		this.combinations = new ArrayList<Combination>();
+		this.VARParameters = new LinkedList<VARParameter>();
+		
+		
+		/*
+		 * cambiarli in static come costanti
+		 */
 		ArrayList<String> acceptableType = new ArrayList<String>();
 		ArrayList<String> acceptableIc = new ArrayList<String>();
+		
+		//inizializzo l'array contenente tutti i valori di type ammessi
 		initializedAcceptableType(acceptableType);
+		
+		//inizializzo l'array contenete tutti i valori di ic ammessi 
 		initializedAcceptableIc(acceptableIc);
+		
+		//recupero i valori di type e ic passati in input
 		type = (String) rParameters.get(index.type);
 		ic = (String) rParameters.get(index.ic);
+		
+		/*
+		 *  verifico quali combinazioni di type e ic sono state richieste
+		 *  se ic o type assumono il valore ALL allora vorrà dire che 
+		 *  bisognerà effettuare la funzione VAR con tutti i valori ammessi
+		 *  da tali parametri
+		 */
 		if (type.equalsIgnoreCase("ALL") && ic.equalsIgnoreCase("ALL")) {
 
+			/*
+			 * in questo caso sia ic che type assumono valore ALL
+			 * quindi bisogna creare 16 combinazioni
+			 * variando entrambi i parametri
+			 */
+			
 			for (String sType : acceptableType) {
-
+				
 				for (String sIc : acceptableIc) {
-					Combination comb = new Combination(sType, sIc);
-					combinations.add(comb);
+					VARParameter comb = new VARParameter(sType, sIc);
+					VARParameters.add(comb);
 				}
 
 			}
 
 		} else if (type.equalsIgnoreCase("ALL")) {
 
+			/*
+			 * in questo caso solo type ha valore ALL
+			 * quindi si creano soltanto 4 combinazioni 
+			 * facendo variare solo il valore di type
+			 * con ic fissato 
+			 */
 			for (String sType : acceptableType) {
-				Combination comb = new Combination(sType, ic);
-				combinations.add(comb);
+				VARParameter comb = new VARParameter(sType, ic);
+				VARParameters.add(comb);
 			}
 
 		} else if (ic.equalsIgnoreCase("ALL")) {
 
+			/*
+			 * in questo caso solo ic ha valore ALL
+			 * quindi si creano soltanto 4 combinazioni 
+			 * facendo variare solo il valore di ic
+			 * con type fissato 
+			 */
 			for (String sIc : acceptableIc) {
-				Combination comb = new Combination(type, sIc);
-				combinations.add(comb);
+				VARParameter comb = new VARParameter(type, sIc);
+				VARParameters.add(comb);
 			}
 
 		} else {
-			Combination comb = new Combination(type, ic);
-			combinations.add(comb);
+			
+			/*
+			 * in questo caso ne type e ne ic hanno valore ALL
+			 * quindi si crea una sola combinazione con entrambi
+			 * i parametri già fissatti dall'utente 
+			 */
+			VARParameter comb = new VARParameter(type, ic);
+			VARParameters.add(comb);
 		}
 	}
 
+	
+	/*
+	 * metodo privato
+	 * aggiunge allo script R da eseguire
+	 * il codice necessario per caricare tutte le librerie R
+	 * necessarie per eseguire la funzione VAR
+	 */
 	private void loadRLibrary() {
-		code.clear();
+		
 		code.addRCode("pack1 <- require(MASS)");
 		code.addRCode("pack2 <- require(sandwich)");
 		code.addRCode("pack3 <- require(base)");
@@ -123,6 +226,12 @@ public class RVar extends RForecast {
 		code.addRCode("pack8 <- require(Runiversal)");
 	}
 
+	
+	/*
+	 * metodo privato
+	 * ha la responsabilità di aggiungere allo script R 
+	 * il codice per caricare il dataset su cui effettuare la funzione VAR
+	 */
 	private void loadData(double[][] dataset, SnapshotSchema s) {
 
 		code.addDoubleMatrix("dataset", dataset);
@@ -138,6 +247,12 @@ public class RVar extends RForecast {
 		code.addRCode(dimnames);
 	}
 
+	
+	/*
+	 * metodo privato
+	 * ha la responsabilità di aggiungere allo script R 
+	 * il codice per eseguire la funzione varSelect
+	 */
 	private void executeVARSelect() {
 		if (exogen instanceof double[][])
 			code.addDoubleMatrix("exo", (double[][]) this.exogen);
@@ -151,8 +266,19 @@ public class RVar extends RForecast {
 		code.addRCode(VARSelect);
 	}
 
+	
+	/*
+	 * metodo privato
+	 * ha la responsabilità di aggiungere allo script R 
+	 * il codice per eseguire la funzione VAR
+	 */
 	private void executeVAR(String comb) {
 		String p = "";
+		
+		/*
+		 * verifico che ic verrà utilizzato 
+		 * per ottenere il p adeguato
+		 */
 		switch (ic) {
 		case ("AIC"): {
 			p = "1";
@@ -171,15 +297,40 @@ public class RVar extends RForecast {
 			break;
 		}
 		}
+		
+		//recupero il p adeguato 
 		String orderp = comb + "_orderp <- as.numeric(varNuova$selection[" + p
 				+ "])";
+		
 		code.addRCode(orderp);
+		
 		String VAR = "var <- VAR(dataset, p = " + comb + "_orderp, type = \""
 				+ this.type + "\", ic = \"" + this.ic + "\")";
+		
 		code.addRCode(VAR);
 	}
 
-	private void organizeRdata(SnapshotSchema schema, String comb) {
+	
+	/*
+	 * metodo privato 
+	 * ha la responsabilità di aggiungere il codice R
+	 * per organizzare i dati ottenuti dall'esecuzione della funzione VAR  
+	 * da restituire a java 
+	 */
+	private void outputRSchemaSetup(SnapshotSchema schema, String comb) {
+		
+		/*
+		 * per ciascuna feature dello schema 
+		 * ottengo un array di stringhe che sono le feature
+		 * correlate alla feature in esame l'insieme di tutti i coefficienti
+		 * per predire tale feature
+		 * per disambiguare tutti gli array di stringhe ciascun array verrà chiamato
+		 * nel seguente modo: 
+		 * nomeDellaFeatureAcuiFaRiferimento_combinazioneDeiParametriConCuiEStatoOttenuto_nomifeature
+		 * per disambiguare tutti gli array di coefficienti ciascun array verrà chiamato
+		 * nel seguente modo:
+		 * nomeDellaFeatureAcuiFaRiferimento_combinazioneDeiParametriConCuiEStatoOttenuto_coeff
+		 */
 		for (Feature f : schema.getTargetList()) {
 			// PRELEVO I NOMI DELLE FEATURE CORRELATE
 			String nomefeature = f.getName();
@@ -195,14 +346,19 @@ public class RVar extends RForecast {
 					+ "$coefficients)");
 		}
 
+		/*
+		 * salvo tutti gli array in una sola lista
+		 * che sarà restituita a JAVA
+		 * assegnando ciascun array ad una variabile nella lista
+		 */
 		for (int i = 0; i < schema.getTargetList().size() - 1; i++) {
-			// SALVO I VALORI IN UNA SOLA LISTA
 			String nomefeature = schema.getTargetList().get(i).getName();
 			result += nomefeature + "_" + comb + "_f = " + nomefeature + "_"
 					+ comb + "_nomifeature, ";
 			result += nomefeature + "_" + comb + "_c = " + nomefeature + "_"
 					+ comb + "_coeff, ";
 		}
+		
 		String nomefeature = schema.getTargetList()
 				.get(schema.getTargetList().size() - 1).getName();
 		result += nomefeature + "_" + comb + "_f = " + nomefeature + "_" + comb
@@ -211,33 +367,86 @@ public class RVar extends RForecast {
 				+ "_coeff, p_" + comb + " = " + comb + "_orderp";
 	}
 
+	/*
+	 * eseguo lo script R
+	 */
 	private void executeR() {
 		caller.setRCode(code);
 		caller.runAndReturnResult("result");
 	}
 
+	/*
+	 * metodo privato
+	 * serve per avvalorare l'oggetto da restituire 
+	 * recupera i risultati ottenuti da R e li inserisce
+	 * raggruppati per combinazioni e per feature nell'hashmap
+	 */
 	private void mapRTOJava(SnapshotSchema schema) {
 		hashResult = new HashMap<String, ArrayList<Object>>();
-		for (Combination comb : combinations) {
+		
+		/*
+		 * ciclo su tutte le combinazioni presenti
+		 */
+		for (VARParameter comb : VARParameters) {
 			res = new ArrayList<Object>();
+			
+			/*
+			 * istanzio l'arraylist di arraylist delle feature correlate
+			 */
 			ArrayList<ArrayList<Feature>> correlatedFeatures = new ArrayList<ArrayList<Feature>>(
 					schema.getTargetList().size());
+			
+			/*
+			 * istanzio l'arrayList di arrayList di arrayList di double 
+			 * dei coefficienti
+			 */
 			ArrayList<ArrayList<ArrayList<Double>>> correlatedCoefficients = new ArrayList<ArrayList<ArrayList<Double>>>();
 			int p = 0;
 
+			/*
+			 * avvaloro l'hashmap ausiliario
+			 * che associa a ciascun nome la feature a cui fa riferimento
+			 */
 			HashMap<String, Feature> HM = populateFeatureMap(schema);
+			
 			ArrayList<Double> listCoefTrend = new ArrayList<Double>();
 			ArrayList<Double> listCoefConst = new ArrayList<Double>();
 
+			
+			/*
+			 * dall'array delle feature restitioto da R occorre
+			 * eliminare gli eventuali attributi "const" e "trend"
+			 * presenti presneti in base al valore di type utilizzato
+			 * essi si trovano nelle ultime posizioni dell'array delle feature
+			 * e bisogna spostare dall'array di coefficienti gli 
+			 * eventuali coefficieni di trend e di const sempre presenti
+			 * nelle ultime posizioni
+			 * con questo ciclo su tutt ele feature effettuo queste operazioni 
+			 * di rimozione e spostamento
+			 */
 			for (Feature f : schema.getTargetList()) {
 				double c_trend = 0.0;
 				double c_const = 0.0;
 
+				/*
+				 * recupero l'array delle feature correlate 
+				 * per tale combinazione e tale feature
+				 */
 				String[] feature = caller.getParser().getAsStringArray(
 						f.getName() + "_" + comb + "_f");
+				
+				/*
+				 * recupero l'array dei coefficienti correlati 
+				 * per tale combinazione e tale feature
+				 */
 				String[] coeff = caller.getParser().getAsStringArray(
 						f.getName() + "_" + comb + "_c");
 
+				
+				/*
+				 * in base alla specifica combinazione 
+				 * effettuo le operazioni sopracitate
+				 */
 				switch (comb.getType()) {
 				case ("both"): {
 					c_trend = Double.parseDouble(coeff[coeff.length - 1]);
@@ -283,28 +492,80 @@ public class RVar extends RForecast {
 					c_const = 0.0;
 				}
 				}
+				
+				/*
+				 * aggiungo negli arrayList dei coefficienti di trend e di const
+				 * i coefficienti appena recuperati
+				 * memorizzandoli nella corretta posizione e cioè in base
+				 * alla feature a cui fanno riferimento
+				 */
 				listCoefTrend.add(f.getFeatureIndex(), c_trend);
 				listCoefConst.add(f.getFeatureIndex(), c_const);
+				
+				//recupero il valore di p per la specifica combinazione
 				p = caller.getParser().getAsIntArray("p_" + comb)[0];
+				
+				/*
+				 *memorizzo le feateure correlate alla specifica feature
+				 *in esame solo una volta 
+				 *(erano memorizzate p volte)
+				 */
 				String[] adjfeature = featureEpure(feature, p);
+				
 				ArrayList<Feature> correlatedFeature = new ArrayList<Feature>();
 				ArrayList<ArrayList<Double>> coefficientsByFeature = new ArrayList<ArrayList<Double>>();
+				
+				/*
+				 * creo l'arrayList finale di feature correlate per 
+				 * la determinata feature e
+				 * creo per ciascuna feature correlata un arrayList contentente
+				 * tutti i coefficienti associati a quella feature correlata
+				 */
 				for (int i = 0; i < adjfeature.length; i++) {
+					
+					/*
+					 * tramite l'hashMap ausiliario recupero l'intera feature
+					 * in base al suo nome 
+					 */
 					correlatedFeature.add((Feature) HM.get(adjfeature[i])
 							.clone());
 					ArrayList<Double> coefficients = new ArrayList<Double>(p);
+					
+					/*
+					 * setto l'arrayList di coefficienti associati alla specifica
+					 * feature correlata
+					 */
 					coefficients = addCoefficients(adjfeature.length, i, coeff);
+					
+					/*
+					 * aggiungo l'arrayList di coefficienti all'arrayList
+					 * generale dei coefficienti associati per la determinata feature 
+					 * 
+					 */
 					coefficientsByFeature.add(coefficients);
 				}
+				
+				
+				/*
+				 * al termine del ciclo relativo ad una specifica feature
+				 * memorizzo il suo relativo arrayList di feature correlate
+				 * e il suo relativo arrayList di array list di coefficienti 
+				 * correlati memorizzandoli nei rispettivi arraylist
+				 * e nelle posizioni corrette in base all'indice della feature
+				 */
 				correlatedCoefficients
-						.add(f.getIndexMining()
-								- schema.getSpatialList().size(),
-								coefficientsByFeature);
-				correlatedFeatures.add(f.getIndexMining()
-						- schema.getSpatialList().size(), correlatedFeature);
+						.add(f.getFeatureIndex(),coefficientsByFeature);
+				correlatedFeatures.add(f.getFeatureIndex(), correlatedFeature);
 
 			}
 
+			/*
+			 * al termine del ciclo sulla determinata combinazione
+			 * memorizzo tutti i risultati ottenuti e appena organizzati
+			 * nelle posizioni corrette dell'arrayList di object
+			 * e infine aggiungo tale arrayList nell'hashMap da restituire
+			 * utilizzando come chiave la combinazione a cui esso fa riferimento
+			 */
 			ForecastingModelIndex index = new ForecastingModelIndex();
 			res.add(index.feature, correlatedFeatures);
 			res.add(index.coefficients, correlatedCoefficients);
@@ -316,6 +577,13 @@ public class RVar extends RForecast {
 		}
 	}
 
+	
+	/*
+	 * metodo privato 
+	 * ha la responsabilità di associare a ciascuna stringa
+	 * rappresentate il nome di una feature, la feature a cui fa riferimento
+	 * utilizzando un hashMap
+	 */
 	private HashMap<String, Feature> populateFeatureMap(SnapshotSchema s) {
 		HashMap<String, Feature> HM = new HashMap<String, Feature>();
 		for (Feature f : s.getTargetList())
@@ -323,6 +591,13 @@ public class RVar extends RForecast {
 		return HM;
 	}
 
+	
+	/*
+	 * metodo privato
+	 * ha la responsabilità di restituire un array di string
+	 * contente le feature correlate una sola volta invece di p volte
+	 * e eliminando la sottostringa ".l1"
+	 */
 	private String[] featureEpure(String[] feature, int p) {
 		String[] ret = new String[feature.length / p];
 		int i;
@@ -331,6 +606,13 @@ public class RVar extends RForecast {
 		return ret;
 	}
 
+	
+	/*
+	 * metodo privato
+	 * ha la responsabilità, data la posizione della feature,
+	 * di recuperare tutti i coefficienti associati a tale feature
+	 * dall'array generale di coefficienti restituito da R
+	 */
 	private ArrayList<Double> addCoefficients(int step, int from, String[] coeff) {
 		ArrayList<Double> ret = new ArrayList<Double>();
 		for (int j = from; j < coeff.length; j = j + step) {
