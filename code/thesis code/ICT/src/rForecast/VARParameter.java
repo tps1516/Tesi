@@ -1,6 +1,6 @@
 package rForecast;
 
-class VARParameter {
+public class VARParameter {
 
 	private String type;
 	private String ic;

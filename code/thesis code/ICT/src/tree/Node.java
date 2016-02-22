@@ -586,6 +586,10 @@ public abstract class Node implements Serializable {
 				rParameters);
 	}
 
+	public ForecastingModel getModel() {
+		return this.VARModel;
+	}
+
 	FeatureAveragesNode getFeatureAvgNode() {
 		return featureAvgNode;
 	}
@@ -603,8 +607,11 @@ public abstract class Node implements Serializable {
 		}
 	}
 
-	void insLastOfFather() {
+	void insLastOfFather(ArrayList<Object> rParameters) {
 		featureAvgNode.insLastOfFather(father.getFeatureAvgNode());
+		if (this.featureAvgNode.temporalWindowsIsFull()) {
+			learnVARModels(rParameters);
+		}
 	}
 
 }

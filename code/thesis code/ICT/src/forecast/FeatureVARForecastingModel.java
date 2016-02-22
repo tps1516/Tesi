@@ -15,28 +15,36 @@ public class FeatureVARForecastingModel extends FeatureForecastingModel
 	private Double coefficientsTrend;
 	private Double coefficientsConst;
 	private Double RMSE;
+	private String VARParameters;
+
+	public String getVARParameters() {
+		return this.VARParameters;
+	}
 
 	public FeatureVARForecastingModel(Feature f,
 			ArrayList<Feature> correlatedFeature,
 			ArrayList<ArrayList<Double>> coefficients, int p,
-			Double[][] timeseries, Double coefConst, Double coefTrend) {
+			Double[][] timeseries, Double coefConst, Double coefTrend,
+			String varPar) {
 		super(f);
 		initializesEquationModel(correlatedFeature, coefficients);
 		this.p = p;
 		this.coefficientsConst = coefConst;
 		this.coefficientsTrend = coefTrend;
+		this.VARParameters = varPar;
 		setRMSE(timeseries);
 	}
 
 	public String toString() {
 		String str = "Feature: " + super.feature.getName() + "\n"
 				+ "equation: " + "\n";
+		str += "Comb: " + this.VARParameters + "\n";
 		str += "p= " + this.p + "\n";
 		for (RecordVAR r : this) {
 			str += r.toString() + "\n";
 		}
-		str += "Trend coefficients: " + this.coefficientsConst + "\n";
-		str += "Const coefficients: " + this.coefficientsTrend + "\n";
+		str += "Trend coefficients: " + this.coefficientsTrend + "\n";
+		str += "Const coefficients: " + this.coefficientsConst + "\n";
 		str += "RMSE: " + this.RMSE + "\n";
 
 		return str;

@@ -38,7 +38,7 @@ public class FromRToJava {
 				FeatureForecastingModel VARModel = new FeatureVARForecastingModel(
 						f, listOfCorrelatedFeature.get(i),
 						listOfCorrelatedCoefficients.get(i), p, timeseries,
-						coefConst.get(i), coefTrend.get(i));
+						coefConst.get(i), coefTrend.get(i),combinations);
 				model.add(i, VARModel);
 			}
 

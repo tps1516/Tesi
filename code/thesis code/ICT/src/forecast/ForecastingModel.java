@@ -111,8 +111,7 @@ public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 	public FeatureForecastingModel getFeatureForecastingModel(Feature f) {
 		return models.get(f.getFeatureIndex());
 	}
-	
-	
+
 	/*
 	 * metodo privato
 	 * setta l'attributo models

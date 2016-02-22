@@ -4,7 +4,7 @@ W computation time (milliseconds):16
 **** ID: 2
 
 
-Computation time(milliseconds)=15
+Computation time(milliseconds)=0
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=0
@@ -14,7 +14,7 @@ number of leaves in the new tree=1
 (attr1<=10.0)
 (attr1>10.0)
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=15
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=1
@@ -46,7 +46,7 @@ number of leaves in the new tree=3
 (attr2<=8.0)(attr1>13.0)
 (attr2>8.0)
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=4938
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=3
@@ -56,7 +56,7 @@ number of leaves in the new tree=3
 (attr2<=8.0)
 (attr2>8.0)
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=2734
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=3
@@ -65,8 +65,8 @@ number of leaves in the new tree=2
 **** ID: 8
 
 
-Computation time(milliseconds)=0
-Interpolation time(milliseconds)=0
+Computation time(milliseconds)=1075
+Interpolation time(milliseconds)=10
 Leaves statisics
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=1
@@ -75,7 +75,7 @@ number of leaves in the new tree=1
 (attr1<=10.0)
 (attr1>10.0)
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=2703
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=1
@@ -85,7 +85,7 @@ number of leaves in the new tree=2
 (attr2<=8.0)
 (attr2>8.0)
 
-Computation time(milliseconds)=16
+Computation time(milliseconds)=2721
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -96,7 +96,7 @@ number of leaves in the new tree=2
 (attr2<=8.0)(attr1>13.0)
 (attr2>8.0)
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=4909
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=2
@@ -107,7 +107,7 @@ number of leaves in the new tree=3
 (attr2<=8.0)(attr1>13.0)
 (attr2>8.0)
 
-Computation time(milliseconds)=16
+Computation time(milliseconds)=4641
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=3
@@ -117,7 +117,7 @@ number of leaves in the new tree=3
 (attr2<=8.0)
 (attr2>8.0)
 
-Computation time(milliseconds)=2984
+Computation time(milliseconds)=2719
 Interpolation time(milliseconds)=0
 Leaves statisics
 number of leaves of the tree inherited from the past=3
