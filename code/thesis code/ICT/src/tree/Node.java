@@ -573,17 +573,17 @@ public abstract class Node implements Serializable {
 		featureAvgNode = new FeatureAveragesNode(this, dim);
 	}
 
-	void updateFeatureAvgNode(ArrayList<Object> rParameters) {
+	void updateFeatureAvgNode(ArrayList<Object> rParameters,HashMap<String,ArrayList<Double>>countRMSE) {
 		featureAvgNode.updateAverages(this);
 		if (this.featureAvgNode.temporalWindowsIsFull()) {
-			learnVARModels(rParameters);
+			learnVARModels(rParameters,countRMSE);
 		}
 	}
 
-	private void learnVARModels(ArrayList<Object> rParameters) {
+	private void learnVARModels(ArrayList<Object> rParameters,HashMap<String,ArrayList<Double>> countRMSE) {
 		double[][] dataset = this.featureAvgNode.exportInMatrixForm();
 		this.VARModel = new ForecastingModel(dataset, this.getSchema(),
-				rParameters);
+				rParameters,countRMSE);
 	}
 
 	public ForecastingModel getModel() {
@@ -607,10 +607,10 @@ public abstract class Node implements Serializable {
 		}
 	}
 
-	void insLastOfFather(ArrayList<Object> rParameters) {
+	void insLastOfFather(ArrayList<Object> rParameters,HashMap<String,ArrayList<Double>> countRMSE) {
 		featureAvgNode.insLastOfFather(father.getFeatureAvgNode());
 		if (this.featureAvgNode.temporalWindowsIsFull()) {
-			learnVARModels(rParameters);
+			learnVARModels(rParameters,countRMSE);
 		}
 	}
 

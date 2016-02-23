@@ -25,6 +25,7 @@ import snapshot.SnapshotSchema;
 import snapshot.SnapshotWeigth;
 import tree.TemporalWindow;
 import tree.Tree;
+import varUtility.VAROutput;
 import data.EuclideanDistance;
 import data.feature.AutocorrelationI;
 import data.feature.Feature;
@@ -46,6 +47,9 @@ public class TictTest {
 		String streamName = "";// "soace_ga_training_5XY.arff";
 		String config = "";// "gasd.ini";
 
+		GregorianCalendar timeGlobalBegin;
+		GregorianCalendar timeGlobalEnd;
+
 		float bperc = .1f;
 
 		Integer splitNumber = 20; // random split identifier
@@ -60,9 +64,15 @@ public class TictTest {
 		String exogen;
 		String ic;
 		String type;
-		//LinkedList<>
+		HashMap<String, PrintStream> hashFile;
+		HashMap<String, ArrayList<Double>> cRMSE = new HashMap<String,ArrayList<Double>>();
+		
+		
+		VAROutput varOutput = new VAROutput();
+		// LinkedList<>
 
 		try {
+			timeGlobalBegin = new GregorianCalendar();
 			streamName = "dataset/" + args[0];// "soace_ga_training_5XY.arff";
 			config = "dataset/" + args[1];// "gasd.ini";
 
@@ -123,18 +133,26 @@ public class TictTest {
 		FileOutputStream outputVARParameters = new FileOutputStream(
 				"output/R/outputVARParameters_" + args[0] + "_"
 						+ rParameters.get(index.TWSize)
-						+ rParameters.get(index.ic) + "_"
+						+ rParameters.get(index.type) + "_"
 						+ rParameters.get(index.ic) + "_" + ".csv");
-
+		FileOutputStream outputRMSE;
+		PrintStream countRMSE;
 		PrintStream outputVARParameter = new PrintStream(outputVARParameters);
 		outputVARParameter.print(";");
-		HashMap<String, Integer> counter = new HashMap<String, Integer>();
-		for (VARParameter vp: VARParam){
-			counter.put(vp.toString(), 0);
-			outputVARParameter.print(vp.toString()+";");
+		HashMap<String, Integer> counterVARParameter = new HashMap<String, Integer>();
+		hashFile = new HashMap<String, PrintStream>();
+		for (VARParameter vp : VARParam) {
+			counterVARParameter.put(vp.toString(), 0);
+			outputVARParameter.print(vp.toString() + ";");
+
+			outputRMSE = new FileOutputStream("output/R/outputRMSE_" + args[0]
+					+ "_" + rParameters.get(index.TWSize) + "_" + vp.toString()
+					+ ".csv");
+			countRMSE = new PrintStream(outputRMSE);
+			hashFile.put(vp.toString(), countRMSE);
 		}
 		outputVARParameter.print("\n");
-		
+
 		String configStr = "";
 		AutocorrelationI autoCorrelation;
 
@@ -143,10 +161,12 @@ public class TictTest {
 		else
 			autoCorrelation = new ResubstitutionIndex();
 
-		String name = isSpatial + "_" + sampling + "_" + testType + "_"
-				+ centroidPercentage;
+		String name = "TWSize_" + TWSize + "_Type_"
+				+ rParameters.get(index.type) + "_ic_"
+				+ rParameters.get(index.ic);
+
 		outputReport = new PrintStream(new FileOutputStream(
-				"output/stream/report/" + args[0] + name + "TICT.report"));
+				"output/stream/report/" + args[0] + name + "_TICT.report"));
 
 		outputReport.println("TRAIN STREAM=" + args[0] + "TRAIN");
 		outputReport.println("TEST STREAM=" + args[0] + "TEST");
@@ -208,6 +228,23 @@ public class TictTest {
 								continue;
 
 							if (W == null) {
+								/*
+								 * Avvalora la prima riga del file di output
+								 * dove vengono calcolate le medie degli RMSE
+								 */
+								for (String s : hashFile.keySet()) {
+									PrintStream p = hashFile.get(s);
+									p.print(";");
+									ArrayList<Double> countAux= new ArrayList<Double>(schemaTrain
+											.getTargetList().size());
+									for (Feature f : schemaTrain
+											.getTargetList()) {
+										p.print(f.getName() + ";");
+										countAux.add(f.getFeatureIndex(),0.0);
+									}
+									
+									cRMSE.put(s, countAux);
+								}
 								GregorianCalendar timeBegin = new GregorianCalendar();
 								b = SnapshotWeigth.maxDist(
 										snapTrain,
@@ -262,7 +299,7 @@ public class TictTest {
 									+ snapTrain.getIdSnapshot());
 							outputReport.println("**** ID: "
 									+ snapTrain.getIdSnapshot());
-							;
+
 							if (tree == null)// first snapshot in the stream
 							{
 
@@ -271,33 +308,33 @@ public class TictTest {
 								tree = new Tree(snapTrain, schemaTrain, W,
 										autoCorrelation, splitNumber,
 										centroidPercentage, sampling, testType,
-										TWSize, rParameters);
-								System.out.println(tree);
+										TWSize, rParameters,cRMSE);
 
 								// KNNModel knn=new KNNModel();
 								// tree.populateKNNModel(knn);
 
 								GregorianCalendar timeEnd = new GregorianCalendar();
-
+								System.out.println(tree);
 								long time = timeEnd.getTimeInMillis()
 										- timeBegin.getTimeInMillis();
 
 								tree.setComputationTime(time);
 
-								outputReport.println(tree
-										.symbolicClusterDescription(""));
+								outputReport.println(tree.toString());
 								outputReport
 										.println("Computation time(milliseconds)="
 												+ time);
 
-								timeBegin = new GregorianCalendar();
+								// timeBegin = new GregorianCalendar();
 								// String mse=knn.testKnn(snapTest, schemaTest,
 								// "output/stream/csvtict/"+args[0]+name+"_"+snapTest.getIdSnapshot()+".csv");
-								timeEnd = new GregorianCalendar();
-								outputReport
-										.println("Interpolation time(milliseconds)="
-												+ (timeEnd.getTimeInMillis() - timeBegin
-														.getTimeInMillis()));
+								// timeEnd = new GregorianCalendar();
+								/*
+								 * outputReport
+								 * .println("Interpolation time(milliseconds)="
+								 * + (timeEnd.getTimeInMillis() - timeBegin
+								 * .getTimeInMillis()));
+								 */
 
 								int pastLeaves = 0, afterPruningLeaves = 0, newLeaves = 0;
 								newLeaves = tree.countLeaves();
@@ -332,8 +369,8 @@ public class TictTest {
 								tree.drift(snapTrain, schemaTrain, W,
 										autoCorrelation, splitNumber,
 										centroidPercentage, sampling, testType,
-										rParameters);
-								System.out.println(tree);
+										rParameters,cRMSE);
+
 								// KNNModel knn=new KNNModel();
 								// tree.populateKNNModel(knn);
 
@@ -342,27 +379,29 @@ public class TictTest {
 								tree.setComputationTime(timeEnd
 										.getTimeInMillis()
 										- timeBegin.getTimeInMillis());
-
-								outputReport.println(tree
-										.symbolicClusterDescription(""));
+								System.out.println(tree);
+								outputReport.println(tree.toString());
 								outputReport
 										.println("Computation time(milliseconds)="
 												+ (timeEnd.getTimeInMillis() - timeBegin
 														.getTimeInMillis()));
 
-								timeBegin = new GregorianCalendar();
+								// timeBegin = new GregorianCalendar();
 								// String mse=knn.testKnn(snapTest, schemaTest,
 								// "output//stream//csvtict//"+args[0]+name+"_"+snapTest.getIdSnapshot()+".csv");
-								timeEnd = new GregorianCalendar();
-								outputReport
-										.println("Interpolation time(milliseconds)="
-												+ (timeEnd.getTimeInMillis() - timeBegin
-														.getTimeInMillis()));
-								// outputReport.println("Error statistics");
-								// outputReport.println(configStr+"\n"+mse);
-
+								// timeEnd = new GregorianCalendar();
+								/*
+								 * outputReport
+								 * .println("Interpolation time(milliseconds)="
+								 * + (timeEnd.getTimeInMillis() - timeBegin
+								 * .getTimeInMillis())); //
+								 * outputReport.println("Error statistics"); //
+								 * outputReport.println(configStr+"\n"+mse);
+								 * 
+								 * 
+								 * outputReport.println("Leaves statisics");
+								 */
 								newLeaves = tree.countLeaves();
-								outputReport.println("Leaves statisics");
 								outputReport
 										.println("number of leaves of the tree inherited from the past="
 												+ pastLeaves);
@@ -372,6 +411,8 @@ public class TictTest {
 								outputReport
 										.println("number of leaves in the new tree="
 												+ newLeaves);
+
+								outputReport.println("\n");
 
 								tree.salva("output/stream/model/" + args[0]
 										+ name + snapTrain.getIdSnapshot()
@@ -417,17 +458,22 @@ public class TictTest {
 								 * "testing inter-cluster dispersion;"
 								 * +testingInterDispersion);
 								 */
-								if(tree.countPar(counter)){
-									outputVARParameter.print("ID: "+snapTrain.getIdSnapshot()+";");
-									for (VARParameter vp: VARParam){										
-										outputVARParameter.print(counter.get(vp.toString())+";");
-									}	
-									outputVARParameter.print("\n");
-								}
-								
-								for (VARParameter vp: VARParam){
-									counter.put(vp.toString(), 0);
-								}
+								/*
+								 * if(tree.countPar(counter)){
+								 * outputVARParameter
+								 * .print("ID: "+snapTrain.getIdSnapshot()+";");
+								 * for (VARParameter vp: VARParam){
+								 * outputVARParameter
+								 * .print(counter.get(vp.toString())+";"); }
+								 * outputVARParameter.print("\n"); }
+								 * 
+								 * for (VARParameter vp: VARParam){
+								 * counter.put(vp.toString(), 0); }
+								 */
+								varOutput.updateOutputFile(tree, VARParam,
+										counterVARParameter,
+										outputVARParameter,
+										snapTrain.getIdSnapshot(),schemaTrain,hashFile,cRMSE);
 							}
 
 						} catch (EOFException e) {
@@ -458,10 +504,19 @@ public class TictTest {
 
 			e.printStackTrace();
 		} finally {
+			timeGlobalEnd = new GregorianCalendar();
+			try {
+			Long timeGlobalComputation = timeGlobalEnd.getTimeInMillis()
+					- timeGlobalBegin.getTimeInMillis();
+			outputReport.println("global times computation: "
+					+ timeGlobalComputation);
+			}
+			catch (Exception e){
+				System.out.println("eccezzione su long");
+			}
 			outputReport.close();
 			outputVARParameter.close();
 		}
 
 	}
-
 }

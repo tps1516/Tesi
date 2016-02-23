@@ -35,7 +35,7 @@ public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 	 * di input del modello VAR (type e ic)
 	 */
 	public ForecastingModel(double[][] dataset, SnapshotSchema schema,
-			ArrayList<Object> rParameters) {
+			ArrayList<Object> rParameters,HashMap<String,ArrayList<Double>>countRMSE) {
 		HashMap<String, ArrayList<Object>> resultR;
 		HashMap<String, ForecastingModel> resultRToJava;
 		RForecast r = new RVar();
@@ -67,7 +67,7 @@ public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 		 * al modello costruito con la combinazione di parametri
 		 * che minimizza il valore del RMSE
 		 */
-		setModels(opt.computeOptimalVARModel(resultRToJava, schema));
+		setModels(opt.computeOptimalVARModel(resultRToJava, schema,countRMSE));
 	}
 
 	/*
