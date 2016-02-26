@@ -79,7 +79,7 @@ public class FeatureVARForecastingModel extends FeatureForecastingModel
 
 	private void setRMSE(Double[][] timeseries) {
 		RMSEUtility rmsUtilty = new RMSEUtility();
-		this.RMSE = rmsUtilty.computeRMSE(getP(), timeseries, this);
+		this.RMSE = rmsUtilty.computeRMSE(timeseries, this);
 	}
 
 	public Double getRMSE() {

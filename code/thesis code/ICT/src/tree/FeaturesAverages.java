@@ -6,16 +6,15 @@ import java.util.Iterator;
 
 import data.feature.Feature;
 
-public class FeatureAveragesNode implements Iterable<TemporalWindow>,
-		Cloneable, Serializable {
+public class FeaturesAverages implements Iterable<TemporalWindow>, Cloneable,
+		Serializable {
 
 	private ArrayList<TemporalWindow> avgNode;
 
-	private FeatureAveragesNode() {
-
+	private FeaturesAverages() {
 	}
 
-	FeatureAveragesNode(Node n, int dim) {
+	FeaturesAverages(Node n, int dim) {
 		avgNode = new ArrayList<TemporalWindow>(n.getSchema().getTargetList()
 				.size());
 		int spazialFeatureSize = n.getSchema().getSpatialList().size();
@@ -34,7 +33,7 @@ public class FeatureAveragesNode implements Iterable<TemporalWindow>,
 		}
 	}
 
-	void insLastOfFather(FeatureAveragesNode fatherAvg) {
+	void insLastOfFather(FeaturesAverages fatherAvg) {
 		ArrayList<TemporalWindow> arrayListFather = fatherAvg.getArrayList();
 		for (int i = 0; i < avgNode.size(); i++) {
 			avgNode.get(i).insLast(arrayListFather.get(i));
@@ -59,9 +58,9 @@ public class FeatureAveragesNode implements Iterable<TemporalWindow>,
 		return s;
 	}
 
-	public FeatureAveragesNode Clone() throws CloneNotSupportedException {
+	public FeaturesAverages Clone() throws CloneNotSupportedException {
 
-		FeatureAveragesNode fan = new FeatureAveragesNode();
+		FeaturesAverages fan = new FeaturesAverages();
 		ArrayList<TemporalWindow> avgCopy = new ArrayList<TemporalWindow>(
 				this.avgNode.size());
 		for (TemporalWindow t : avgNode) {
@@ -71,29 +70,30 @@ public class FeatureAveragesNode implements Iterable<TemporalWindow>,
 		return fan;
 
 	}
-	
-	boolean temporalWindowsIsFull(){
-		
-		TemporalWindow tw=avgNode.get(0);
-		
-		return (tw.size()==tw.maxSize());
-		
+
+	boolean temporalWindowsIsFull() {
+
+		TemporalWindow tw = avgNode.get(0);
+
+		return (tw.size() == tw.maxSize());
+
 	}
-	
-	double[][] exportInMatrixForm(){
-		
-		double[][] dataset = new double[this.avgNode.get(0).size()][this.avgNode.size()];
-		
-		for (int i=0; i<avgNode.size(); i++) {
-			int j=0; 
-			TemporalWindow<Double> tw= avgNode.get(i);
-			for (double value: tw){
-				dataset[j][i]=value;
+
+	double[][] exportInMatrixForm() {
+
+		double[][] dataset = new double[this.avgNode.get(0).size()][this.avgNode
+				.size()];
+
+		for (int i = 0; i < avgNode.size(); i++) {
+			int j = 0;
+			TemporalWindow<Double> tw = avgNode.get(i);
+			for (double value : tw) {
+				dataset[j][i] = value;
 				j++;
 			}
 		}
-		
+
 		return dataset;
-		
+
 	}
 }

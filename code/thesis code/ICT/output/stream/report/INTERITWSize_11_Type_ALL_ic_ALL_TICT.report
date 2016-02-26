@@ -1,6 +1,6 @@
 TRAIN STREAM=INTERITRAIN
 TEST STREAM=INTERITEST
-W computation time (milliseconds):16
+W computation time (milliseconds):15
 **** ID: 2
 ID: 0: LEAF NODE.  --- [0:20]
 Averages:
@@ -20,7 +20,6 @@ Averages:
 attr1: 1.0 15.0 
 attr2: 2.0 2.0 
 
-modello VAR non ancora avvalorato
 ID: 5: LEAF NODE. Figlio di: 2 --- [0:9]
 Averages:
 attr1: 1.0 10.0 
@@ -34,7 +33,7 @@ attr2: 2.0 2.0
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=15
 number of leaves of the tree inherited from the past=1
 number of leaves of the tree after pruning=1
 number of leaves in the new tree=2
@@ -46,7 +45,6 @@ Averages:
 attr1: 1.0 15.0 10.0 
 attr2: 2.0 2.0 11.0 
 
-modello VAR non ancora avvalorato
 ID: 14: LEAF NODE. Figlio di: 11 --- [0:7]
 Averages:
 attr1: 1.0 15.0 10.0 
@@ -60,7 +58,7 @@ attr2: 2.0 2.0 15.0
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=422
+Computation time(milliseconds)=0
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=1
 number of leaves in the new tree=2
@@ -72,13 +70,11 @@ Averages:
 attr1: 1.0 15.0 10.0 11.0 
 attr2: 2.0 2.0 11.0 20.476190476190474 
 
-modello VAR non ancora avvalorato
 ID: 18: SPLITTING NODE. Figlio di: 11 --- [0:16] --- SPLIT SU: attr1<=13.0
 Averages:
 attr1: 1.0 15.0 10.0 12.058823529411764 
 attr2: 2.0 2.0 4.5 1.7647058823529411 
 
-modello VAR non ancora avvalorato
 ID: 15: LEAF NODE. Figlio di: 11 --- [17:20]
 Averages:
 attr1: 1.0 15.0 10.0 11.0 
@@ -98,7 +94,7 @@ attr2: 2.0 2.0 4.5 2.0
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=422
+Computation time(milliseconds)=0
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=2
 number of leaves in the new tree=3
@@ -110,13 +106,11 @@ Averages:
 attr1: 1.0 15.0 10.0 11.0 11.857142857142858 
 attr2: 2.0 2.0 11.0 20.476190476190474 1.0 
 
-modello VAR non ancora avvalorato
 ID: 18: SPLITTING NODE. Figlio di: 11 --- [0:20] --- SPLIT SU: attr1<=13.0
 Averages:
 attr1: 1.0 15.0 10.0 12.058823529411764 11.857142857142858 
 attr2: 2.0 2.0 4.5 1.7647058823529411 1.0 
 
-modello VAR non ancora avvalorato
 ID: 15: LEAF NODE. Figlio di: 11 --- [-1:-1]
 Averages:
 attr1: 1.0 15.0 10.0 11.0 11.857142857142858 
@@ -136,7 +130,7 @@ attr2: 2.0 2.0 4.5 2.0 1.0
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=406
+Computation time(milliseconds)=0
 number of leaves of the tree inherited from the past=3
 number of leaves of the tree after pruning=3
 number of leaves in the new tree=3
@@ -148,7 +142,6 @@ Averages:
 attr1: 1.0 15.0 10.0 11.0 11.857142857142858 1.0 
 attr2: 2.0 2.0 11.0 20.476190476190474 1.0 11.0 
 
-modello VAR non ancora avvalorato
 ID: 29: LEAF NODE. Figlio di: 11 --- [0:7]
 Averages:
 attr1: 1.0 15.0 10.0 12.058823529411764 11.857142857142858 1.0 
@@ -162,7 +155,7 @@ attr2: 2.0 2.0 15.0 100.0 1.0 15.0
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=1406
+Computation time(milliseconds)=0
 number of leaves of the tree inherited from the past=3
 number of leaves of the tree after pruning=2
 number of leaves in the new tree=2
@@ -176,7 +169,7 @@ attr2: 2.0 2.0 11.0 20.476190476190474 1.0 11.0 2.0
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=406
+Computation time(milliseconds)=0
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=1
 number of leaves in the new tree=1
@@ -188,7 +181,6 @@ Averages:
 attr1: 1.0 15.0 10.0 11.0 11.857142857142858 1.0 1.0 15.0 
 attr2: 2.0 2.0 11.0 20.476190476190474 1.0 11.0 2.0 2.0 
 
-modello VAR non ancora avvalorato
 ID: 39: LEAF NODE. Figlio di: 36 --- [0:9]
 Averages:
 attr1: 1.0 15.0 10.0 11.0 11.857142857142858 1.0 1.0 10.0 
@@ -202,7 +194,7 @@ attr2: 2.0 2.0 11.0 20.476190476190474 1.0 11.0 2.0 2.0
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=422
+Computation time(milliseconds)=0
 number of leaves of the tree inherited from the past=1
 number of leaves of the tree after pruning=1
 number of leaves in the new tree=2
@@ -214,7 +206,6 @@ Averages:
 attr1: 1.0 15.0 10.0 11.0 11.857142857142858 1.0 1.0 15.0 10.0 
 attr2: 2.0 2.0 11.0 20.476190476190474 1.0 11.0 2.0 2.0 11.0 
 
-modello VAR non ancora avvalorato
 ID: 48: LEAF NODE. Figlio di: 45 --- [0:7]
 Averages:
 attr1: 1.0 15.0 10.0 11.0 11.857142857142858 1.0 1.0 15.0 10.0 
@@ -228,7 +219,7 @@ attr2: 2.0 2.0 11.0 20.476190476190474 1.0 11.0 2.0 2.0 15.0
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=438
+Computation time(milliseconds)=0
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=1
 number of leaves in the new tree=2
@@ -240,13 +231,11 @@ Averages:
 attr1: 1.0 15.0 10.0 11.0 11.857142857142858 1.0 1.0 15.0 10.0 11.0 
 attr2: 2.0 2.0 11.0 20.476190476190474 1.0 11.0 2.0 2.0 11.0 20.476190476190474 
 
-modello VAR non ancora avvalorato
 ID: 52: SPLITTING NODE. Figlio di: 45 --- [0:16] --- SPLIT SU: attr1<=13.0
 Averages:
 attr1: 1.0 15.0 10.0 11.0 11.857142857142858 1.0 1.0 15.0 10.0 12.058823529411764 
 attr2: 2.0 2.0 11.0 20.476190476190474 1.0 11.0 2.0 2.0 4.5 1.7647058823529411 
 
-modello VAR non ancora avvalorato
 ID: 49: LEAF NODE. Figlio di: 45 --- [17:20]
 Averages:
 attr1: 1.0 15.0 10.0 11.0 11.857142857142858 1.0 1.0 15.0 10.0 11.0 
@@ -266,7 +255,7 @@ attr2: 2.0 2.0 11.0 20.476190476190474 1.0 11.0 2.0 2.0 4.5 2.0
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=1953
+Computation time(milliseconds)=0
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=2
 number of leaves in the new tree=3
@@ -278,56 +267,10 @@ Averages:
 attr1: 1.0 15.0 10.0 11.0 11.857142857142858 1.0 1.0 15.0 10.0 11.0 11.857142857142858 
 attr2: 2.0 2.0 11.0 20.476190476190474 1.0 11.0 2.0 2.0 11.0 20.476190476190474 1.0 
 
-MODELLO VAR: 
-MODELLO VAR:
-Feature: attr1
-equation: 
-Comb: const_HQ
-p= 2
-attr1: 0.0463459465482214 -0.517351115171179
-attr2: 0.352832221282399 -0.103727355099177
-Trend coefficients: 0.0
-Const coefficients: 10.6553126907475
-RMSE: 13.791316798318187
-
-Feature: attr2
-equation: 
-Comb: const_HQ
-p= 2
-attr1: 0.718104149522788 1.11698012287156
-attr2: -0.752293129726023 -0.462571554629046
-Trend coefficients: 0.0
-Const coefficients: 2.59630202583899
-RMSE: 8.66191680929043
-
-
 ID: 52: SPLITTING NODE. Figlio di: 45 --- [0:20] --- SPLIT SU: attr1<=13.0
 Averages:
 attr1: 1.0 15.0 10.0 11.0 11.857142857142858 1.0 1.0 15.0 10.0 12.058823529411764 11.857142857142858 
 attr2: 2.0 2.0 11.0 20.476190476190474 1.0 11.0 2.0 2.0 4.5 1.7647058823529411 1.0 
-
-MODELLO VAR: 
-MODELLO VAR:
-Feature: attr1
-equation: 
-Comb: const_HQ
-p= 1
-attr1: -0.0787478625259719
-attr2: -0.0566569541392216
-Trend coefficients: 0.0
-Const coefficients: 10.8967726995487
-RMSE: 21.715577653135547
-
-Feature: attr2
-equation: 
-Comb: const_HQ
-p= 1
-attr1: 0.403884380008619
-attr2: 0.0205617828425952
-Trend coefficients: 0.0
-Const coefficients: 2.00457550095901
-RMSE: 29.507706035005164
-
 
 ID: 49: LEAF NODE. Figlio di: 45 --- [-1:-1]
 Averages:
@@ -414,9 +357,78 @@ RMSE: 30.593464258275315
 
 
 
-Computation time(milliseconds)=153565
+Computation time(milliseconds)=3171
 number of leaves of the tree inherited from the past=3
 number of leaves of the tree after pruning=3
 number of leaves in the new tree=3
+
+
+**** ID: 13
+ID: 45: SPLITTING NODE.  --- [0:20] --- SPLIT SU: attr2<=8.0
+Averages:
+attr1: 15.0 10.0 11.0 11.857142857142858 1.0 1.0 15.0 10.0 11.0 11.857142857142858 1.0 
+attr2: 2.0 11.0 20.476190476190474 1.0 11.0 2.0 2.0 11.0 20.476190476190474 1.0 11.0 
+
+ID: 63: LEAF NODE. Figlio di: 45 --- [0:7]
+Averages:
+attr1: 15.0 10.0 11.0 11.857142857142858 1.0 1.0 15.0 10.0 12.058823529411764 11.857142857142858 1.0 
+attr2: 2.0 11.0 20.476190476190474 1.0 11.0 2.0 2.0 4.5 1.7647058823529411 1.0 4.5 
+
+MODELLO VAR: 
+MODELLO VAR:
+Feature: attr1
+equation: 
+Comb: both_AIC
+p= 2
+attr1: 0.104231388960564 -0.499136286528325
+attr2: 0.238034406370487 -0.142564126234108
+Trend coefficients: -0.0506407092983317
+Const coefficients: 11.9478927237389
+RMSE: 18.180612688007162
+
+Feature: attr2
+equation: 
+Comb: const_HQ
+p= 1
+attr1: 0.37085409857198
+attr2: 0.0394350910112698
+Trend coefficients: 0.0
+Const coefficients: 2.03729015548601
+RMSE: 33.04720346742657
+
+
+ID: 49: LEAF NODE. Figlio di: 45 --- [8:20]
+Averages:
+attr1: 15.0 10.0 11.0 11.857142857142858 1.0 1.0 15.0 10.0 11.0 11.857142857142858 1.0 
+attr2: 2.0 11.0 20.476190476190474 1.0 11.0 2.0 2.0 15.0 100.0 1.0 15.0 
+
+MODELLO VAR: 
+MODELLO VAR:
+Feature: attr1
+equation: 
+Comb: const_HQ
+p= 2
+attr1: 0.0784667845404317 -0.375413582630075
+attr2: 0.0525326441592662 -0.0782280255490953
+Trend coefficients: 0.0
+Const coefficients: 11.5260789290112
+RMSE: 15.766494287349076
+
+Feature: attr2
+equation: 
+Comb: const_HQ
+p= 2
+attr1: 1.48720412250632 2.80427264030424
+attr2: -0.27019245086375 -0.254131148600263
+Trend coefficients: 0.0
+Const coefficients: -12.2594574612775
+RMSE: 601.2096908225017
+
+
+
+Computation time(milliseconds)=1908
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
 
 

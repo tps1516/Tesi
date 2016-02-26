@@ -20,7 +20,6 @@ import javax.management.RuntimeErrorException;
 
 //import mbrModel.KNNModel;
 
-
 import data.DistanceI;
 import data.EuclideanDistance;
 import data.SensorPoint;
@@ -31,6 +30,8 @@ import data.feature.Feature;
 import data.feature.NumericFeature;
 import forecast.FeatureForecastingModel;
 import forecast.ForecastingModel;
+import rForecast.RVar;
+import rForecast.VARParameter;
 import snapshot.SnapshotData;
 import snapshot.SnapshotSchema;
 import snapshot.SnapshotWeigth;
@@ -63,105 +64,10 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 	public Tree(SnapshotData data, SnapshotSchema schema,
 			SnapshotWeigth weight, AutocorrelationI autocorrelation,
 			int numberOfSplits, float ccentroidPerc, String centroidType,
-			String testType, int dim, ArrayList<Object> rParameters,HashMap<String,ArrayList<Double>> countRMSE) {
+			String testType, int dim, ArrayList<Object> rParameters) {
 		learnTree(data, schema, weight, autocorrelation, 0, data.size() - 1,
 				(int) (Math.sqrt(data.size())) * 2, 1, numberOfSplits, null,
-				ccentroidPerc, centroidType, testType, dim, rParameters,countRMSE);
-
-	}
-
-	public String TestTree(SnapshotData data, SnapshotSchema schema,
-			String outfileName) throws IOException {
-
-		List<Double> MSE = new LinkedList<Double>();
-		List<Double> MAE = new LinkedList<Double>();
-		String str = "";
-		for (Feature f : root.getSchema().getTargetList()) {
-			if (!str.isEmpty())
-				str += ";";
-			str += f.getName() + "Pred," + f.getName();
-			MSE.add(new Double(0.0));
-			MAE.add(new Double(0.0));
-		}
-
-		for (int i = 0; i < data.size(); i++) {
-			List out = predict(data.getSensorPoint(i));
-			int index = 0;
-			str = "";
-			for (Feature f : root.getSchema().getTargetList()) {
-				f.getIndexMining();
-				Object o = out.get(index);
-				if (!str.isEmpty())
-					str += ";";
-				str += (o + ";" + data.getSensorPoint(i)
-						.getMeasure(f.getIndexMining()).getValue());
-				int indexFeature = f.getIndexMining()
-						- data.getSpatialFeaturesSize();
-
-				Value v = data.getSensorPoint(i).getMeasure(f.getIndexMining());
-				if (!v.isNull()) {
-					if (o instanceof Double) {
-						MSE.set(indexFeature,
-								MSE.get(indexFeature)
-										+ Math.pow(
-												(Double) o
-														- (Double) (data
-																.getSensorPoint(
-																		i)
-																.getMeasure(
-																		f.getIndexMining())
-																.getValue()), 2));
-						MAE.set(indexFeature,
-								MAE.get(indexFeature)
-										+ Math.abs((Double) o
-												- (Double) (data
-														.getSensorPoint(i)
-														.getMeasure(
-																f.getIndexMining())
-														.getValue())));
-					} else if (!o.equals((data.getSensorPoint(i).getMeasure(
-							f.getIndexMining() - data.getSpatialFeaturesSize())
-							.getValue())))
-						MSE.set(f.getIndexMining()
-								- data.getSpatialFeaturesSize(),
-								MSE.get(f.getIndexMining()
-										- data.getSpatialFeaturesSize()) + 1);
-				}
-				index++;
-			}
-			str = str.replace(".", ",");
-
-		}
-		String mse = "";
-		String mae = "";
-		int index = 0;
-		// for(Feature f: root.getSchema().getTargetList()){
-		for (Feature f : schema.getTargetList()) {
-			mse += Math.sqrt(MSE.get(index) / f.getCountTuples()) + ";";
-			if (f instanceof NumericFeature)
-				mae += MAE.get(index) / f.getCountTuples() + ";";
-			index++;
-		}
-
-		return (mse + mae);
-
-	}
-
-	private List<Object> predict(SensorPoint sp) {
-
-		LeafNode node = predictingNode(sp);
-		return node.getModels();
-
-	}
-
-	private LeafNode predictingNode(SensorPoint pt) {
-
-		if (root instanceof LeafNode)
-			return (LeafNode) root;
-		else if (((SplittingNode) root).branch(pt).equals("left"))
-			return leftSubTree.predictingNode(pt);
-		else
-			return rightsubTree.predictingNode(pt);
+				ccentroidPerc, centroidType, testType, dim, rParameters);
 
 	}
 
@@ -239,7 +145,7 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 			SnapshotWeigth W, AutocorrelationI autocorrelation, int beginIndex,
 			int endIndex, int minimumExamples, int depth, int numberOfSplits,
 			Node father, float ccentroidPerc, String centroidType,
-			String testType, int dim, ArrayList<Object> rParameters,HashMap<String, ArrayList<Double>> countRMSE) {
+			String testType, int dim, ArrayList<Object> rParameters) {
 
 		this.father = father;
 		Node testRoot = new LeafNode(autocorrelation, data, schema, W,
@@ -248,7 +154,7 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 
 			root = testRoot;
 			root.initializedFeatureAvgNode(dim);
-			root.updateFeatureAvgNode(rParameters,countRMSE);
+			root.updateFeatureAvgNode(rParameters);
 
 			// root.sampling(data,centroidType,ccentroidPerc);
 
@@ -265,24 +171,24 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 				root = testRoot;
 				// root.sampling(data,centroidType,ccentroidPerc);
 				root.initializedFeatureAvgNode(dim);
-				root.updateFeatureAvgNode(rParameters,countRMSE);
+				root.updateFeatureAvgNode(rParameters);
 				return;
 
 			}
 
-			root.updateFeatureAvgNode(rParameters,countRMSE);
+			root.updateFeatureAvgNode(rParameters);
 			leftSubTree = new Tree();
 			rightsubTree = new Tree();
 			leftSubTree.learnTree(data, root.getSchema(), W, autocorrelation,
 					((SplittingNode) root).splitLeft.beginIndex,
 					((SplittingNode) root).splitLeft.endIndex, minimumExamples,
 					depth + 1, numberOfSplits, root, ccentroidPerc,
-					centroidType, testType, dim, rParameters,countRMSE);
+					centroidType, testType, dim, rParameters);
 			rightsubTree.learnTree(data, root.getSchema(), W, autocorrelation,
 					((SplittingNode) root).splitRight.beginIndex,
 					((SplittingNode) root).splitRight.endIndex,
 					minimumExamples, depth + 1, numberOfSplits, root,
-					ccentroidPerc, centroidType, testType, dim, rParameters,countRMSE);
+					ccentroidPerc, centroidType, testType, dim, rParameters);
 
 		}
 
@@ -293,7 +199,7 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 			AutocorrelationI autocorrelation, int beginIndex, int endIndex,
 			int minimumExamples, int depth, int numberOfSplits, Node father,
 			float ccentroidPerc, String centroidType, String testType,
-			FeatureAveragesNode fAvgNode, ArrayList<Object> rParameters,HashMap<String,ArrayList<Double>> countRMSE) {
+			FeaturesAverages fAvgNode, ArrayList<Object> rParameters) {
 
 		this.father = father;
 		Node testRoot = new LeafNode(autocorrelation, data, schema, W,
@@ -302,15 +208,12 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 			if (root == null) {
 				root = testRoot;
 				root.setFeatureAvgNode(fAvgNode);
-				root.updateFeatureAvgNode(rParameters,countRMSE);
+				root.updateFeatureAvgNode(rParameters);
 			} else {
 				// root così come era diventa foglia
 				setLeaf(root.getSchema());
-				root.updateFeatureAvgNode(rParameters,countRMSE);
+				root.updateFeatureAvgNode(rParameters);
 			}
-
-			// root.sampling(data,centroidType,ccentroidPerc);
-
 		} else // split node
 		{
 			try {
@@ -324,17 +227,11 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 				if (root == null) {
 					root = testRoot;
 					root.setFeatureAvgNode(fAvgNode);
-					root.updateFeatureAvgNode(rParameters,countRMSE);
+					root.updateFeatureAvgNode(rParameters);
 				} else {
 					setLeaf(root.getSchema());
-					root.updateFeatureAvgNode(rParameters,countRMSE);
+					root.updateFeatureAvgNode(rParameters);
 				}
-				/*
-				 * root=testRoot; root.setFeatureAvgNode(fAvgNode);
-				 * root.updateFeatureAvgNode();
-				 */
-				// root.sampling(data,centroidType,ccentroidPerc);
-
 				return;
 
 			}
@@ -346,62 +243,19 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 					((SplittingNode) root).splitLeft.beginIndex,
 					((SplittingNode) root).splitLeft.endIndex, minimumExamples,
 					depth + 1, numberOfSplits, root, ccentroidPerc,
-					centroidType, testType, fAvgNode, rParameters,countRMSE);
+					centroidType, testType, fAvgNode, rParameters);
 			rightsubTree.learnTreeOnPreexistModel(data, root.getSchema(), W,
 					autocorrelation,
 					((SplittingNode) root).splitRight.beginIndex,
 					((SplittingNode) root).splitRight.endIndex,
 					minimumExamples, depth + 1, numberOfSplits, root,
 					ccentroidPerc, centroidType, testType, fAvgNode,
-					rParameters,countRMSE);
-			root.updateFeatureAvgNode(rParameters,countRMSE);
+					rParameters);
+			root.updateFeatureAvgNode(rParameters);
 		}
 
 	}
 
-	// Chiamato negli alberi aspaziali
-	/*
-	 * private void learnTree(SnapshotData data, SnapshotSchema schema, int
-	 * beginIndex, int endIndex, int minimumExamples, int depth, int
-	 * numberOfSplits, Node father, float ccentroidPerc, String centroidType,
-	 * String testType){
-	 * 
-	 * this.father=father; Node testRoot=new LeafNode(data, schema, beginIndex,
-	 * endIndex,minimumExamples,depth,father); if( isLeaf(testRoot.getSchema(),
-	 * minimumExamples)){
-	 * 
-	 * root=testRoot; root.sampling(data,centroidType,ccentroidPerc);
-	 * 
-	 * 
-	 * } else //split node { try{ root=new SplittingNode(data,
-	 * testRoot.getSchema(), beginIndex,
-	 * endIndex,minimumExamples,depth,numberOfSplits,father,testType); } catch
-	 * (SplitException e){
-	 * 
-	 * root=testRoot; setLeaf(testRoot.getSchema());
-	 * root.sampling(data,centroidType,ccentroidPerc);
-	 * 
-	 * return;
-	 * 
-	 * }
-	 * 
-	 * 
-	 * 
-	 * leftSubTree=new Tree(); rightsubTree=new Tree();
-	 * leftSubTree.learnTree(data, root.getSchema(),
-	 * ((SplittingNode)root).splitLeft.beginIndex,
-	 * ((SplittingNode)root).splitLeft.endIndex, minimumExamples,depth+1,
-	 * numberOfSplits,root,ccentroidPerc,centroidType,testType);
-	 * rightsubTree.learnTree(data, root.getSchema(),
-	 * ((SplittingNode)root).splitRight.beginIndex,
-	 * ((SplittingNode)root).splitRight.endIndex,
-	 * minimumExamples,depth+1,numberOfSplits
-	 * ,root,ccentroidPerc,centroidType,testType);
-	 * 
-	 * }
-	 * 
-	 * }
-	 */
 	/**
 	 * Salva l'albero
 	 * 
@@ -415,7 +269,6 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 				nomeFile));
 		out.writeObject(this);
 		out.close();
-
 	}
 
 	/**
@@ -429,7 +282,6 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 		Tree t = (Tree) in.readObject();
 		in.close();
 		return t;
-
 	}
 
 	/*
@@ -464,11 +316,11 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 	public void drift(SnapshotData snap, SnapshotSchema schema,
 			SnapshotWeigth W, AutocorrelationI a, int splits,
 			float ccentroidPerc, String centroidType, String testType,
-			ArrayList<Object> rParameters,HashMap<String,ArrayList<Double>> countRMSE) {
+			ArrayList<Object> rParameters) {
 		// tree pruning + incremental learning
 		this.learnDriftingTree(snap, W, a, 0, snap.size() - 1,
 				(int) Math.sqrt(snap.size()) * 2, splits, ccentroidPerc,
-				centroidType, testType, rParameters,countRMSE);
+				centroidType, testType, rParameters);
 		// System.out.print("DRIFTED"+this);
 
 	}
@@ -476,13 +328,13 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 	private void learnDriftingTree(SnapshotData snap, SnapshotWeigth W,
 			AutocorrelationI a, int beginExampleIndex, int endExampleIndex,
 			int minExamples, int splits, float ccentroidPerc,
-			String centroidType, String testType, ArrayList<Object> rParameters,HashMap<String,ArrayList<Double>> countRMSE) {
+			String centroidType, String testType, ArrayList<Object> rParameters) {
 		if (beginExampleIndex == -1 || endExampleIndex == -1) {
-			root.insLastOfFather(rParameters,countRMSE);
+			root.insLastOfFather(rParameters);
 			return;
 		}
 		if (root instanceof SplittingNode) {
-			root.updateFeatureAvgNode(rParameters,countRMSE);
+			root.updateFeatureAvgNode(rParameters);
 			snap.sort(((SplittingNode) root).getSplitFeature(),
 					beginExampleIndex, endExampleIndex);
 
@@ -493,13 +345,13 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 							leftSubTree.root.getBeginExampleIndex(),
 							leftSubTree.root.getEndExampleIndex(), minExamples,
 							splits, ccentroidPerc, centroidType, testType,
-							rParameters,countRMSE);
+							rParameters);
 				if (rightsubTree != null)
 					rightsubTree.learnDriftingTree(snap, W, a,
 							rightsubTree.root.getBeginExampleIndex(),
 							rightsubTree.root.getEndExampleIndex(),
 							minExamples, splits, ccentroidPerc, centroidType,
-							testType, rParameters,countRMSE);
+							testType, rParameters);
 			}
 		} else {
 			// Devo capire se ci sono abbastanza esempi per riapprendere il
@@ -525,9 +377,9 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 						root.getBeginExampleIndex(), root.endExampleIndex,
 						minExamples, root.getDepth(), splits, root.getFather(),
 						ccentroidPerc, centroidType, testType,
-						root.getFeatureAvgNode(), rParameters,countRMSE);
+						root.getFeatureAvgNode(), rParameters);
 			else {
-				root.updateFeatureAvgNode(rParameters,countRMSE);
+				root.updateFeatureAvgNode(rParameters);
 				setLeaf(root.getSchema());
 				// root.sampling(snap,centroidType,ccentroidPerc);
 
@@ -617,16 +469,7 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 					root.getSchema().getTargetList()
 							.get(f - root.getSchema().getSpatialList().size())
 							.setStopTree(true);
-					/*
-					 * if(leftSubTree!=null)
-					 * leftSubTree.propagateModel(root.getSchema
-					 * ().getTargetList(
-					 * ).get(f-root.getSchema().getSpatialList().size()));
-					 * if(rightsubTree!=null)
-					 * rightsubTree.propagateModel(root.getSchema
-					 * ().getTargetList
-					 * ().get(f-root.getSchema().getSpatialList().size()));
-					 */
+
 					outputE.put(f, prunedE.get(f));
 				}
 				leftSubTree = null;
@@ -636,7 +479,6 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 						root.getDepth(), root.getFather(),
 						root.getFeatureAvgNode());
 
-				// System.out.println("Pruning");
 				return outputE;
 			} else
 				return unprunedE;
@@ -672,7 +514,6 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 				depth += depthR;
 
 		}
-
 		return depth;
 	}
 
@@ -735,7 +576,6 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 			return left + right;
 		} else
 			return 1;
-
 	}
 
 	public String symbolicClusterDescription(String str) {
@@ -754,202 +594,6 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 			return (left + right);
 		} else
 			return str.replace("-", "") + "\n";
-
-	}
-
-	/*
-	 * public void populateKNNModel(KNNModel knn){ if(root.centroid!=null)
-	 * knn.add(root.getIdNode(),root.centroid,(root.getModels()));
-	 * if(leftSubTree !=null) leftSubTree.populateKNNModel(knn); if(rightsubTree
-	 * !=null) rightsubTree.populateKNNModel(knn);
-	 * 
-	 * 
-	 * 
-	 * }
-	 * 
-	 * 
-	 * public void populateKNNModel(KNNModel knn, SnapshotData data, int begin,
-	 * int end,SnapshotSchema schema,SnapshotWeigth W){ if(root instanceof
-	 * SplittingNode){ // int midindex=begin; Feature
-	 * splitFeature=((SplittingNode)root).getSplitFeature();
-	 * data.sort(splitFeature,begin,end); double splitValue=
-	 * ((SplittingNode)root).getSplitThereshld();
-	 * for(midindex=begin;midindex<=end &&
-	 * (Double)(data.getSensorPoint(midindex)
-	 * .getMeasure(splitFeature.getIndexMining
-	 * ()).getValue())<=splitValue;midindex++){
-	 * 
-	 * } if(leftSubTree !=null) leftSubTree.populateKNNModel(knn,data,
-	 * begin,midindex-1,schema,W); if(rightsubTree !=null)
-	 * rightsubTree.populateKNNModel(knn,data,midindex,end,schema,W); } else
-	 * if(root.centroid!=null)
-	 * knn.add(root.getIdNode(),root.centroid,data,begin,end,schema,W);
-	 * 
-	 * 
-	 * 
-	 * }
-	 */
-
-	private double intraClusterDisperison(SnapshotData snap, int begin, int end) {
-
-		if (begin > end)
-			return 0.0;
-		if (root instanceof SplittingNode) {
-			double leftDisp = 0.0, rightDisp = 0.0;
-			int midindex = begin;
-			Feature splitFeature = ((SplittingNode) root).getSplitFeature();
-			snap.sort(splitFeature, begin, end);
-			double splitValue = ((SplittingNode) root).getSplitThereshld();
-			for (midindex = begin; midindex <= end
-					&& (Double) (snap.getSensorPoint(midindex).getMeasure(
-							splitFeature.getIndexMining()).getValue()) <= splitValue; midindex++) {
-
-			}
-
-			if (begin <= midindex - 1)
-
-				leftDisp = leftSubTree.intraClusterDisperison(snap, begin,
-						midindex - 1);
-			else
-				leftDisp = 0.0; // no contribution
-
-			if (midindex <= end)
-				rightDisp = rightsubTree.intraClusterDisperison(snap, midindex,
-						end);
-
-			else
-				rightDisp = 0.0;
-
-			return leftDisp + rightDisp;
-		} else //
-		{
-			EuclideanDistance euclide = new EuclideanDistance(2);
-			double disp = 0;
-			for (int i = begin; i <= end; i++)
-				for (int j = begin; j <= end; j++) {
-					double d = euclide.compute(snap.getSensorPoint(i),
-							snap.getSensorPoint(j));
-					disp += d;
-
-				}
-
-			return disp / (Math.pow(end - begin + 1, 2));
-
-		}
-
-	}
-
-	/*
-	 * Calcola il set dei cluster attivi rispetto a snap
-	 */
-	private int computeActiveClusters(SnapshotData snap, int begin, int end) {
-		if (begin > end)
-			return 0;
-		if (root instanceof SplittingNode) {
-			int left = 0, right = 0;
-			int midindex = begin;
-			Feature splitFeature = ((SplittingNode) root).getSplitFeature();
-			snap.sort(splitFeature, begin, end);
-			double splitValue = ((SplittingNode) root).getSplitThereshld();
-			for (midindex = begin; midindex <= end
-					&& (Double) (snap.getSensorPoint(midindex).getMeasure(
-							splitFeature.getIndexMining()).getValue()) <= splitValue; midindex++) {
-				// System.out.println((Double)(snap.getSensorPoint(midindex).getMeasure(splitFeature.getIndexMining()).getValue()));
-			}
-
-			if (begin <= midindex - 1) {
-
-				left = leftSubTree.computeActiveClusters(snap, begin,
-						midindex - 1);
-
-			} else
-				// empty cluster
-				left = 0;
-			if (midindex <= end)
-				right = rightsubTree.computeActiveClusters(snap, midindex, end);
-
-			else
-				right = 0;
-
-			return left + right;
-		} else
-			//
-
-			return 1;
-
-	}
-
-	public double computeSpatialIntraClusterDispersion(SnapshotData snap) {
-
-		double disp = intraClusterDisperison(snap, 0, snap.size() - 1);
-		int countActiveClusters = computeActiveClusters(snap, 0,
-				snap.size() - 1);
-		System.out.println("Acive clusters:" + countActiveClusters + " Leaves:"
-				+ countLeaves());
-		return disp / countActiveClusters;
-
-	}
-
-	private double interClusterDisperison(SnapshotData snap, int begin, int end) {
-		if (begin > end - 1)
-			return 0.0;
-
-		if (root instanceof SplittingNode) {
-			double leftDisp = 0.0, rightDisp = 0.0;
-			int midindex = begin;
-			Feature splitFeature = ((SplittingNode) root).getSplitFeature();
-			snap.sort(splitFeature, begin, end);
-			double splitValue = ((SplittingNode) root).getSplitThereshld();
-			for (midindex = begin; midindex <= end
-					&& (Double) (snap.getSensorPoint(midindex).getMeasure(
-							splitFeature.getIndexMining()).getValue()) <= splitValue; midindex++) {
-
-			}
-
-			if (begin <= midindex - 1)
-				leftDisp = leftSubTree.interClusterDisperison(snap, begin,
-						midindex - 1);
-
-			else
-				leftDisp = 0.0; // no contribution
-
-			if (midindex <= end)
-
-				rightDisp = rightsubTree.interClusterDisperison(snap, midindex,
-						end);
-			else
-				rightDisp = 0.0; // no contribution
-
-			return leftDisp + rightDisp;
-		} else //
-		{
-			EuclideanDistance euclide = new EuclideanDistance(2);
-			double disp = 0;
-			for (int i = begin; i <= end; i++) {
-				for (int j = 0; j < begin; j++) {
-					double d = euclide.compute(snap.getSensorPoint(i),
-							snap.getSensorPoint(j));
-					disp += d;
-				}
-				for (int j = end + 1; j < snap.size() - 1; j++) {
-					double d = euclide.compute(snap.getSensorPoint(i),
-							snap.getSensorPoint(j));
-					disp += d;
-				}
-
-			}
-
-			return disp / ((end - begin + 1) * (begin + snap.size() - 1 - end));
-
-		}
-
-	}
-
-	public double computeSpatialInterClusterDispersion(SnapshotData snap) {
-		double disp = interClusterDisperison(snap, 0, snap.size() - 1);
-		int countActiveClusters = computeActiveClusters(snap, 0,
-				snap.size() - 1);
-		return disp / countActiveClusters;
 
 	}
 
@@ -1006,43 +650,6 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 	}
 
 	/*
-	 * Associa il campione dei centroidi ad ogni nodo foglia per il training
-	 * dello IDW (N.b. Da usare quando l'albero è già appreso
-	 */
-	/*
-	 * public void sampling(SnapshotData snap, SnapshotSchema schema, int
-	 * beginIndex, int endIndex, float ccentroidPerc, String centroidType)
-	 * throws SplitException{
-	 * 
-	 * 
-	 * root.beginExampleIndex=beginIndex; // aggiorno indici sulla base del
-	 * training set root.endExampleIndex=endIndex; if(root instanceof
-	 * SplittingNode){ int midindex=beginIndex; Feature
-	 * splitFeature=((SplittingNode)root).getSplitFeature();
-	 * snap.sort(splitFeature,beginIndex,endIndex); double splitValue=
-	 * ((SplittingNode)root).getSplitThereshld();
-	 * for(midindex=beginIndex;midindex<=endIndex &&
-	 * (Double)(snap.getSensorPoint
-	 * (midindex).getMeasure(splitFeature.getIndexMining
-	 * ()).getValue())<=splitValue;midindex++){ }
-	 * 
-	 * if(beginIndex<=midindex-1) leftSubTree.sampling( snap,schema, beginIndex,
-	 * midindex-1, ccentroidPerc, centroidType); else throw new
-	 * SplitException("Empty  Set for Sampling");
-	 * 
-	 * if(midindex<=endIndex) rightsubTree.sampling(snap, schema, midindex,
-	 * endIndex, ccentroidPerc, centroidType); else throw new
-	 * SplitException("Empty  Set for Sampling");
-	 * 
-	 * 
-	 * } else{//leaf node
-	 * 
-	 * root.sampling(snap,centroidType,ccentroidPerc);
-	 * 
-	 * } }
-	 */
-
-	/*
 	 * classe interna realizza l'iteratore per l'alberp
 	 */
 	public class TreeIterator implements Iterator<Node> {
@@ -1097,21 +704,36 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 		return new TreeIterator(this);
 	}
 
-	public boolean countPar(HashMap<String, Integer> hm) {
-		boolean res = false;
-		String par;
-		if (this.root.getFeatureAvgNode().temporalWindowsIsFull()) {
-			for (Node n : this) {
-				ForecastingModel model = n.getModel();
-				for (FeatureForecastingModel fModel : model) {
-					par = ((FeatureVARForecastingModel) fModel)
-							.getVARParameters();
-					hm.put(par, hm.get(par) + 1);
+	public HashMap<String, HashMap<String, Integer>> countPar() {
+		SnapshotSchema schema = this.root.getSchema();
+		HashMap<String, HashMap<String, Integer>> hmResult = new HashMap<String, HashMap<String, Integer>>();
+		HashMap<String, Integer> counterByPar;
+
+		for (Feature f : schema.getTargetList()) {
+			counterByPar = new HashMap<String, Integer>();
+			for (VARParameter s : RVar.getVARParameters()) {
+				String par = s.toString();
+				counterByPar.put(par, 0);
+			}
+			hmResult.put(f.getName(), counterByPar);
+		}
+
+		String pars;
+
+		for (Node n : this) {
+			if (n instanceof LeafNode) {
+				ForecastingModel model = ((LeafNode) n).getVARModel();
+				if (model == null)
+					return hmResult;
+				for (Feature f : schema.getTargetList()) {
+					FeatureVARForecastingModel fmodel = (FeatureVARForecastingModel) model
+							.getFeatureForecastingModel(f);
+					pars = fmodel.getVARParameters();
+					hmResult.get(f.getName()).put(pars,
+							hmResult.get(f.getName()).get(pars) + 1);
 				}
 			}
-			res = true;
 		}
-		return res;
+		return hmResult;
 	}
-
 }

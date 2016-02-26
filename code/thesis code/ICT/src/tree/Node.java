@@ -34,11 +34,11 @@ public abstract class Node implements Serializable {
 	protected Integer beginExampleIndex;
 	protected Integer endExampleIndex;
 	protected SnapshotSchema schema; // which includes the model
-	private FeatureAveragesNode featureAvgNode = null;
+	protected FeaturesAverages featureAvgNode = null;
 
 	private Node father;
 	private int depth = 0;
-	private ForecastingModel VARModel;
+	
 
 	// List<SensorPoint> centroid;
 	// MBR mbr;
@@ -50,7 +50,7 @@ public abstract class Node implements Serializable {
 		this.setSchema((SnapshotSchema) schema.clone());
 		this.father = father;
 		this.depth = depth;
-		this.VARModel = null;
+		
 
 	}
 
@@ -65,7 +65,7 @@ public abstract class Node implements Serializable {
 		this.getSchema().reset(); // Reset the spatial attributes and all the
 									// target attributes which are now available
 									// for the tree construction
-		this.VARModel = null;
+		
 
 		// Create the schema at the current node
 
@@ -166,7 +166,7 @@ public abstract class Node implements Serializable {
 		this.getSchema().reset(); // Reset the spatial attributes and all the
 									// target attributes which are now available
 									// for the tree construction
-		this.VARModel = null;
+		
 		// Create the schema at the current node
 
 		for (int i = beginExampleIndex; i <= endExampleIndex; i++) {
@@ -236,7 +236,7 @@ public abstract class Node implements Serializable {
 		this.getSchema().reset(); // Reset the spatial attributes and all the
 									// target attributes which are now available
 									// for the tree construction
-		this.VARModel = null;
+		
 		// Create the schema at the current node
 
 		int i = 0;
@@ -345,22 +345,29 @@ public abstract class Node implements Serializable {
 					+ this.getEndExampleIndex() + "] --- SPLIT SU: "
 					+ ((SplittingNode) this).getSplitFeature().getName() + "<="
 					+ ((SplittingNode) this).getSplitThereshld();
+			
+			str += "\n" + "Averages:";
+			str += "\n" + featureAvgNode.toString();
 		} else {
 			str += "ID: " + this.getIdNode() + ": LEAF NODE. ";
 			if (this.father != null)
 				str += "Figlio di: " + father.getIdNode();
 			str += " --- [" + this.getBeginExampleIndex() + ":"
 					+ this.getEndExampleIndex() + "]";
+			str += "\n" + "Averages:";
+			str += "\n" + featureAvgNode.toString();
+			
+			LeafNode leaf= (LeafNode) this;
+			if (leaf.getVARModel() != null) {
+				str += "\n" + "MODELLO VAR: ";
+				str += "\n" + leaf.getVARModel().toString();
+			} else {
+				str += "\n" + "modello VAR non ancora avvalorato";
+			}
 		}
-		str += "\n" + "Averages:";
-		str += "\n" + featureAvgNode.toString();
+		
 
-		if (this.VARModel != null) {
-			str += "\n" + "MODELLO VAR: ";
-			str += "\n" + VARModel.toString();
-		} else {
-			str += "\n" + "modello VAR non ancora avvalorato";
-		}
+		
 		return str;
 	}
 
@@ -570,35 +577,38 @@ public abstract class Node implements Serializable {
 	 */
 
 	void initializedFeatureAvgNode(int dim) {
-		featureAvgNode = new FeatureAveragesNode(this, dim);
+		featureAvgNode = new FeaturesAverages(this, dim);
 	}
 
-	void updateFeatureAvgNode(ArrayList<Object> rParameters,HashMap<String,ArrayList<Double>>countRMSE) {
+	void updateFeatureAvgNode(ArrayList<Object> rParameters) {
 		featureAvgNode.updateAverages(this);
-		if (this.featureAvgNode.temporalWindowsIsFull()) {
-			learnVARModels(rParameters,countRMSE);
+		
+		if (this instanceof LeafNode ){
+			
+			if (this.featureAvgNode.temporalWindowsIsFull()) {
+				((LeafNode) this).learnVARModels(rParameters);
+			}
+			
 		}
+		
+		
 	}
 
-	private void learnVARModels(ArrayList<Object> rParameters,HashMap<String,ArrayList<Double>> countRMSE) {
-		double[][] dataset = this.featureAvgNode.exportInMatrixForm();
-		this.VARModel = new ForecastingModel(dataset, this.getSchema(),
-				rParameters,countRMSE);
-	}
-
+	
+/*
 	public ForecastingModel getModel() {
 		return this.VARModel;
 	}
+	*/
 
-	FeatureAveragesNode getFeatureAvgNode() {
+	FeaturesAverages getFeatureAvgNode() {
 		return featureAvgNode;
 	}
 
-	public ForecastingModel getVARModel() {
-		return this.VARModel;
-	}
-
-	void setFeatureAvgNode(FeatureAveragesNode fAvgNode) {
+	/*
+	
+*/
+	void setFeatureAvgNode(FeaturesAverages fAvgNode) {
 		try {
 			featureAvgNode = fAvgNode.Clone();
 		} catch (CloneNotSupportedException e) {
@@ -607,10 +617,15 @@ public abstract class Node implements Serializable {
 		}
 	}
 
-	void insLastOfFather(ArrayList<Object> rParameters,HashMap<String,ArrayList<Double>> countRMSE) {
+	void insLastOfFather(ArrayList<Object> rParameters) {
 		featureAvgNode.insLastOfFather(father.getFeatureAvgNode());
-		if (this.featureAvgNode.temporalWindowsIsFull()) {
-			learnVARModels(rParameters,countRMSE);
+		
+		if (this instanceof LeafNode ){
+			
+			if (this.featureAvgNode.temporalWindowsIsFull()) {
+				((LeafNode) this).learnVARModels(rParameters);
+			}
+			
 		}
 	}
 

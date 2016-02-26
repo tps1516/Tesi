@@ -12,11 +12,11 @@ import forecast.ForecastingModel;
 public class OptimalVARModel {
 
 	public ArrayList<FeatureForecastingModel> computeOptimalVARModel(
-			HashMap<String, ForecastingModel> hm, SnapshotSchema schema,HashMap<String,ArrayList<Double>> countRMSE) {
+			HashMap<String, ForecastingModel> hm, SnapshotSchema schema) {
 		ArrayList<FeatureForecastingModel> optModel = new ArrayList<FeatureForecastingModel>();
 		double min;
 		FeatureVARForecastingModel FeatureDefModel = null;
-		
+
 		for (Feature f : schema.getTargetList()) {
 			min = Double.MAX_VALUE;
 			FeatureDefModel = null;
@@ -28,13 +28,11 @@ public class OptimalVARModel {
 					min = featureModel.getRMSE();
 					FeatureDefModel = featureModel;
 				}
-				
-				ArrayList<Double> rmse= countRMSE.get(comb);
+
+				ArrayList<Double> rmse = VAROutput.counterRMSE.get(comb);
 				Double precRMSE = rmse.get(f.getFeatureIndex());
-				rmse.set(f.getFeatureIndex(),precRMSE+featureModel.getRMSE());
-				countRMSE.put(comb, rmse);
-				
-				
+				rmse.set(f.getFeatureIndex(), precRMSE + featureModel.getRMSE());
+				VAROutput.counterRMSE.put(comb.toString(), rmse);
 			}
 			optModel.add(FeatureDefModel.getFeature().getFeatureIndex(),
 					FeatureDefModel);
