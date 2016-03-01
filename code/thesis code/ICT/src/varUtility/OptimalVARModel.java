@@ -20,20 +20,34 @@ public class OptimalVARModel {
 		for (Feature f : schema.getTargetList()) {
 			min = Double.MAX_VALUE;
 			FeatureDefModel = null;
+			HashMap<String,Double> hashRMSEFeatureByParameters=VAROutput.counterRMSE.get(f.getName());
 			for (String comb : hm.keySet()) {
 				ForecastingModel model = hm.get(comb);
-				FeatureVARForecastingModel featureModel = (FeatureVARForecastingModel) model
-						.getFeatureForecastingModel(f);
-				if (featureModel.getRMSE() < min) {
-					min = featureModel.getRMSE();
-					FeatureDefModel = featureModel;
-				}
+				
+				if (model==null) {
+					hashRMSEFeatureByParameters.put(comb, null);
+				} else {
+					
+					FeatureVARForecastingModel featureModel = (FeatureVARForecastingModel) model
+							.getFeatureForecastingModel(f);
+					if (featureModel.getRMSE() < min) {
+						min = featureModel.getRMSE();
+						FeatureDefModel = featureModel;
+					}
 
-				ArrayList<Double> rmse = VAROutput.counterRMSE.get(comb);
-				Double precRMSE = rmse.get(f.getFeatureIndex());
-				rmse.set(f.getFeatureIndex(), precRMSE + featureModel.getRMSE());
-				VAROutput.counterRMSE.put(comb.toString(), rmse);
+					Double precRMSE = hashRMSEFeatureByParameters.get(comb);
+					
+					if (precRMSE!=null){
+						hashRMSEFeatureByParameters.put(comb, precRMSE+featureModel.getRMSE());
+					}
+					
+					
+				}
+				
+				
 			}
+			
+			VAROutput.counterRMSE.put(f.getName(), hashRMSEFeatureByParameters);
 			optModel.add(FeatureDefModel.getFeature().getFeatureIndex(),
 					FeatureDefModel);
 		}

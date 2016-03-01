@@ -292,11 +292,6 @@ public class RVar extends RForecast {
 				+ "])";
 
 		code.addRCode(orderp);
-
-		String VAR = "var <- VAR(dataset, p = " + comb + "_orderp, type = \""
-				+ this.type + "\", ic = \"" + this.ic + "\")";
-
-		code.addRCode(VAR);
 	}
 
 	/*
@@ -305,6 +300,21 @@ public class RVar extends RForecast {
 	 * restituire a java
 	 */
 	private void outputRSchemaSetup(SnapshotSchema schema, String comb) {
+
+		for (Feature f : schema.getTargetList()) {
+			String nomefeature = f.getName();
+			code.addRCode(nomefeature + "_" + comb + "_nomifeature <- 0");
+			code.addRCode(nomefeature + "_" + comb + "_coeff <- 0");
+		}
+
+		String p = comb + "_orderp";
+
+		code.addRCode("if(!is.na(" + p + ")){");
+
+		String VAR = "var <- VAR(dataset, p = " + comb + "_orderp, type = \""
+				+ this.type + "\", ic = \"" + this.ic + "\")";
+
+		code.addRCode(VAR);
 
 		/*
 		 * per ciascuna feature dello schema ottengo un array di stringhe che
@@ -330,6 +340,8 @@ public class RVar extends RForecast {
 					+ "_coeff <- as.numeric(var$varresult$" + nomefeature
 					+ "$coefficients)");
 		}
+
+		code.addRCode("} else " + p + " = 0");
 
 		/*
 		 * salvo tutti gli array in una sola lista che sarà restituita a JAVA
@@ -372,189 +384,197 @@ public class RVar extends RForecast {
 		 */
 		for (VARParameter comb : VARParameters) {
 			res = new ArrayList<Object>();
-
-			/*
-			 * istanzio l'arraylist di arraylist delle feature correlate
-			 */
-			ArrayList<ArrayList<Feature>> correlatedFeatures = new ArrayList<ArrayList<Feature>>(
-					schema.getTargetList().size());
-
-			/*
-			 * istanzio l'arrayList di arrayList di arrayList di double dei
-			 * coefficienti
-			 */
-			ArrayList<ArrayList<ArrayList<Double>>> correlatedCoefficients = new ArrayList<ArrayList<ArrayList<Double>>>();
+			// recupero il valore di p per la specifica combinazione
 			int p = 0;
-
-			/*
-			 * avvaloro l'hashmap ausiliario che associa a ciascun nome la
-			 * feature a cui fa riferimento
-			 */
-			HashMap<String, Feature> HM = populateFeatureMap(schema);
-
-			ArrayList<Double> listCoefTrend = new ArrayList<Double>();
-			ArrayList<Double> listCoefConst = new ArrayList<Double>();
-
-			/*
-			 * dall'array delle feature restitioto da R occorre eliminare gli
-			 * eventuali attributi "const" e "trend" presenti presneti in base
-			 * al valore di type utilizzato essi si trovano nelle ultime
-			 * posizioni dell'array delle feature e bisogna spostare dall'array
-			 * di coefficienti gli eventuali coefficieni di trend e di const
-			 * sempre presenti nelle ultime posizioni con questo ciclo su tutt
-			 * ele feature effettuo queste operazioni di rimozione e spostamento
-			 */
-			for (Feature f : schema.getTargetList()) {
-				double c_trend = 0.0;
-				double c_const = 0.0;
+			p = caller.getParser().getAsIntArray("p_" + comb)[0];
+			if (p != 0) {
+				/*
+				 * istanzio l'arraylist di arraylist delle feature correlate
+				 */
+				ArrayList<ArrayList<Feature>> correlatedFeatures = new ArrayList<ArrayList<Feature>>(
+						schema.getTargetList().size());
 
 				/*
-				 * recupero l'array delle feature correlate per tale
-				 * combinazione e tale feature
+				 * istanzio l'arrayList di arrayList di arrayList di double dei
+				 * coefficienti
 				 */
-				String[] feature = caller.getParser().getAsStringArray(
-						f.getName() + "_" + comb + "_f");
+				ArrayList<ArrayList<ArrayList<Double>>> correlatedCoefficients = new ArrayList<ArrayList<ArrayList<Double>>>();
 
 				/*
-				 * recupero l'array dei coefficienti correlati per tale
-				 * combinazione e tale feature
+				 * avvaloro l'hashmap ausiliario che associa a ciascun nome la
+				 * feature a cui fa riferimento
 				 */
-				String[] coeff = caller.getParser().getAsStringArray(
-						f.getName() + "_" + comb + "_c");
+				HashMap<String, Feature> HM = populateFeatureMap(schema);
+
+				ArrayList<Double> listCoefTrend = new ArrayList<Double>();
+				ArrayList<Double> listCoefConst = new ArrayList<Double>();
 
 				/*
-				 * in base alla specifica combinazione effettuo le operazioni
-				 * sopracitate
+				 * dall'array delle feature restitioto da R occorre eliminare
+				 * gli eventuali attributi "const" e "trend" presenti presneti
+				 * in base al valore di type utilizzato essi si trovano nelle
+				 * ultime posizioni dell'array delle feature e bisogna spostare
+				 * dall'array di coefficienti gli eventuali coefficieni di trend
+				 * e di const sempre presenti nelle ultime posizioni con questo
+				 * ciclo su tutt ele feature effettuo queste operazioni di
+				 * rimozione e spostamento
 				 */
-				switch (comb.getType()) {
-				case ("both"): {
-					if (!(coeff[coeff.length - 1].equals("NA")))
-						c_trend = Double.parseDouble(coeff[coeff.length - 1]);
-					if (!(coeff[coeff.length - 2].equals("NA")))
-						c_const = Double.parseDouble(coeff[coeff.length - 2]);
-					String[] aux = new String[feature.length - 2];
-					for (int i = 0; i < feature.length - 2; i++)
-						aux[i] = feature[i];
-					feature = aux;
-					String[] c_aux = new String[coeff.length - 2];
-					for (int i = 0; i < coeff.length - 2; i++)
-						c_aux[i] = coeff[i];
-					coeff = c_aux;
-					break;
-				}
-				case ("trend"): {
-					if (!(coeff[coeff.length - 1].equals("NA")))
-						c_trend = Double.parseDouble(coeff[coeff.length - 1]);
-					c_const = 0.0;
-					String[] aux = new String[feature.length - 1];
-					for (int i = 0; i < feature.length - 1; i++)
-						aux[i] = feature[i];
-					feature = aux;
-					String[] c_aux = new String[coeff.length - 1];
-					for (int i = 0; i < coeff.length - 1; i++)
-						c_aux[i] = coeff[i];
-					coeff = c_aux;
-					break;
-				}
-				case ("const"): {
-					if (!(coeff[coeff.length - 1].equals("NA")))
-						c_const = Double.parseDouble(coeff[coeff.length - 1]);
-					c_trend = 0.0;
-					String[] aux = new String[feature.length - 1];
-					for (int i = 0; i < feature.length - 1; i++)
-						aux[i] = feature[i];
-					feature = aux;
-					String[] c_aux = new String[coeff.length - 1];
-					for (int i = 0; i < coeff.length - 1; i++)
-						c_aux[i] = coeff[i];
-					coeff = c_aux;
-					break;
-				}
-				case ("none"): {
-					c_trend = 0.0;
-					c_const = 0.0;
-				}
-				}
-
-				/*
-				 * aggiungo negli arrayList dei coefficienti di trend e di const
-				 * i coefficienti appena recuperati memorizzandoli nella
-				 * corretta posizione e cioè in base alla feature a cui fanno
-				 * riferimento
-				 */
-				listCoefTrend.add(f.getFeatureIndex(), c_trend);
-				listCoefConst.add(f.getFeatureIndex(), c_const);
-
-				// recupero il valore di p per la specifica combinazione
-				p = caller.getParser().getAsIntArray("p_" + comb)[0];
-
-				/*
-				 * memorizzo le feateure correlate alla specifica featurein
-				 * esame solo una volta(erano memorizzate p volte)
-				 */
-				String[] adjfeature = featureEpure(feature, p);
-
-				ArrayList<Feature> correlatedFeature = new ArrayList<Feature>();
-				ArrayList<ArrayList<Double>> coefficientsByFeature = new ArrayList<ArrayList<Double>>();
-
-				/*
-				 * creo l'arrayList finale di feature correlate per la
-				 * determinata feature e creo per ciascuna feature correlata un
-				 * arrayList contentente tutti i coefficienti associati a quella
-				 * feature correlata
-				 */
-				for (int i = 0; i < adjfeature.length; i++) {
+				for (Feature f : schema.getTargetList()) {
+					double c_trend = 0.0;
+					double c_const = 0.0;
 
 					/*
-					 * tramite l'hashMap ausiliario recupero l'intera feature in
-					 * base al suo nome
+					 * recupero l'array delle feature correlate per tale
+					 * combinazione e tale feature
 					 */
-					correlatedFeature.add((Feature) HM.get(adjfeature[i])
-							.clone());
-					ArrayList<Double> coefficients = new ArrayList<Double>(p);
+					String[] feature = caller.getParser().getAsStringArray(
+							f.getName() + "_" + comb + "_f");
 
 					/*
-					 * setto l'arrayList di coefficienti associati alla
-					 * specifica feature correlata
+					 * recupero l'array dei coefficienti correlati per tale
+					 * combinazione e tale feature
 					 */
-					coefficients = addCoefficients(adjfeature.length, i, coeff);
+					String[] coeff = caller.getParser().getAsStringArray(
+							f.getName() + "_" + comb + "_c");
 
 					/*
-					 * aggiungo l'arrayList di coefficienti all'arrayList
-					 * generale dei coefficienti associati per la determinata
-					 * feature
+					 * in base alla specifica combinazione effettuo le
+					 * operazioni sopracitate
 					 */
-					coefficientsByFeature.add(coefficients);
+					switch (comb.getType()) {
+					case ("both"): {
+						if (!(coeff[coeff.length - 1].equals("NA")))
+							c_trend = Double
+									.parseDouble(coeff[coeff.length - 1]);
+						if (!(coeff[coeff.length - 2].equals("NA")))
+							c_const = Double
+									.parseDouble(coeff[coeff.length - 2]);
+						String[] aux = new String[feature.length - 2];
+						for (int i = 0; i < feature.length - 2; i++)
+							aux[i] = feature[i];
+						feature = aux;
+						String[] c_aux = new String[coeff.length - 2];
+						for (int i = 0; i < coeff.length - 2; i++)
+							c_aux[i] = coeff[i];
+						coeff = c_aux;
+						break;
+					}
+					case ("trend"): {
+						if (!(coeff[coeff.length - 1].equals("NA")))
+							c_trend = Double
+									.parseDouble(coeff[coeff.length - 1]);
+						c_const = 0.0;
+						String[] aux = new String[feature.length - 1];
+						for (int i = 0; i < feature.length - 1; i++)
+							aux[i] = feature[i];
+						feature = aux;
+						String[] c_aux = new String[coeff.length - 1];
+						for (int i = 0; i < coeff.length - 1; i++)
+							c_aux[i] = coeff[i];
+						coeff = c_aux;
+						break;
+					}
+					case ("const"): {
+						if (!(coeff[coeff.length - 1].equals("NA")))
+							c_const = Double
+									.parseDouble(coeff[coeff.length - 1]);
+						c_trend = 0.0;
+						String[] aux = new String[feature.length - 1];
+						for (int i = 0; i < feature.length - 1; i++)
+							aux[i] = feature[i];
+						feature = aux;
+						String[] c_aux = new String[coeff.length - 1];
+						for (int i = 0; i < coeff.length - 1; i++)
+							c_aux[i] = coeff[i];
+						coeff = c_aux;
+						break;
+					}
+					case ("none"): {
+						c_trend = 0.0;
+						c_const = 0.0;
+					}
+					}
+
+					/*
+					 * aggiungo negli arrayList dei coefficienti di trend e di
+					 * const i coefficienti appena recuperati memorizzandoli
+					 * nella corretta posizione e cioè in base alla feature a
+					 * cui fanno riferimento
+					 */
+					listCoefTrend.add(f.getFeatureIndex(), c_trend);
+					listCoefConst.add(f.getFeatureIndex(), c_const);
+
+					/*
+					 * memorizzo le feateure correlate alla specifica featurein
+					 * esame solo una volta(erano memorizzate p volte)
+					 */
+					String[] adjfeature = featureEpure(feature, p);
+
+					ArrayList<Feature> correlatedFeature = new ArrayList<Feature>();
+					ArrayList<ArrayList<Double>> coefficientsByFeature = new ArrayList<ArrayList<Double>>();
+
+					/*
+					 * creo l'arrayList finale di feature correlate per la
+					 * determinata feature e creo per ciascuna feature correlata
+					 * un arrayList contentente tutti i coefficienti associati a
+					 * quella feature correlata
+					 */
+					for (int i = 0; i < adjfeature.length; i++) {
+
+						/*
+						 * tramite l'hashMap ausiliario recupero l'intera
+						 * feature in base al suo nome
+						 */
+						correlatedFeature.add((Feature) HM.get(adjfeature[i])
+								.clone());
+						ArrayList<Double> coefficients = new ArrayList<Double>(
+								p);
+
+						/*
+						 * setto l'arrayList di coefficienti associati alla
+						 * specifica feature correlata
+						 */
+						coefficients = addCoefficients(adjfeature.length, i,
+								coeff);
+
+						/*
+						 * aggiungo l'arrayList di coefficienti all'arrayList
+						 * generale dei coefficienti associati per la
+						 * determinata feature
+						 */
+						coefficientsByFeature.add(coefficients);
+					}
+
+					/*
+					 * al termine del ciclo relativo ad una specifica feature
+					 * memorizzo il suo relativo arrayList di feature correlate
+					 * e il suo relativo arrayList di array list di coefficienti
+					 * correlati memorizzandoli nei rispettivi arraylist e nelle
+					 * posizioni corrette in base all'indice della feature
+					 */
+					correlatedCoefficients.add(f.getFeatureIndex(),
+							coefficientsByFeature);
+					correlatedFeatures.add(f.getFeatureIndex(),
+							correlatedFeature);
+
 				}
 
 				/*
-				 * al termine del ciclo relativo ad una specifica feature
-				 * memorizzo il suo relativo arrayList di feature correlate e il
-				 * suo relativo arrayList di array list di coefficienti
-				 * correlati memorizzandoli nei rispettivi arraylist e nelle
-				 * posizioni corrette in base all'indice della feature
+				 * al termine del ciclo sulla determinata combinazione memorizzo
+				 * tutti i risultati ottenuti e appena organizzati nelle
+				 * posizioni corrette dell'arrayList di object e infine aggiungo
+				 * tale arrayList nell'hashMap da restituire utilizzando come
+				 * chiave la combinazione a cui esso fa riferimento
 				 */
-				correlatedCoefficients.add(f.getFeatureIndex(),
-						coefficientsByFeature);
-				correlatedFeatures.add(f.getFeatureIndex(), correlatedFeature);
-
-			}
-
-			/*
-			 * al termine del ciclo sulla determinata combinazione memorizzo
-			 * tutti i risultati ottenuti e appena organizzati nelle posizioni
-			 * corrette dell'arrayList di object e infine aggiungo tale
-			 * arrayList nell'hashMap da restituire utilizzando come chiave la
-			 * combinazione a cui esso fa riferimento
-			 */
-			ForecastingModelIndex index = new ForecastingModelIndex();
-			res.add(index.feature, correlatedFeatures);
-			res.add(index.coefficients, correlatedCoefficients);
-			res.add(index.p, p);
-			res.add(index.trend, listCoefTrend);
-			res.add(index.cost, listCoefConst);
-			hashResult.put(comb.toString(), res);
-
+				ForecastingModelIndex index = new ForecastingModelIndex();
+				res.add(index.feature, correlatedFeatures);
+				res.add(index.coefficients, correlatedCoefficients);
+				res.add(index.p, p);
+				res.add(index.trend, listCoefTrend);
+				res.add(index.cost, listCoefConst);
+				hashResult.put(comb.toString(), res);
+			} else
+				hashResult.put(comb.toString(), null);
 		}
 	}
 

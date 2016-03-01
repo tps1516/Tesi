@@ -1,7 +1,6 @@
 package tree;
 
 import java.io.Serializable;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -12,12 +11,12 @@ import javax.management.RuntimeErrorException;
 
 //import mbrModel.MBR;
 
+
 import snapshot.SnapshotData;
 import snapshot.SnapshotSchema;
 import snapshot.SnapshotWeigth;
-
+import windowStructure.FeatureWindow;
 import data.SensorPoint;
-
 import data.feature.AutocorrelationI;
 import data.feature.CategoricalFeature;
 //import data.feature.Entropy;
@@ -34,7 +33,7 @@ public abstract class Node implements Serializable {
 	protected Integer beginExampleIndex;
 	protected Integer endExampleIndex;
 	protected SnapshotSchema schema; // which includes the model
-	protected FeaturesAverages featureAvgNode = null;
+	protected FeatureWindow featureAvgNode = null;
 
 	private Node father;
 	private int depth = 0;
@@ -577,7 +576,7 @@ public abstract class Node implements Serializable {
 	 */
 
 	void initializedFeatureAvgNode(int dim) {
-		featureAvgNode = new FeaturesAverages(this, dim);
+		featureAvgNode = new FeatureWindow(this, dim);
 	}
 
 	void updateFeatureAvgNode(ArrayList<Object> rParameters) {
@@ -601,14 +600,14 @@ public abstract class Node implements Serializable {
 	}
 	*/
 
-	FeaturesAverages getFeatureAvgNode() {
+	FeatureWindow getFeatureAvgNode() {
 		return featureAvgNode;
 	}
 
 	/*
 	
 */
-	void setFeatureAvgNode(FeaturesAverages fAvgNode) {
+	void setFeatureAvgNode(FeatureWindow fAvgNode) {
 		try {
 			featureAvgNode = fAvgNode.Clone();
 		} catch (CloneNotSupportedException e) {

@@ -22,28 +22,36 @@ public class FromRToJava {
 			ArrayList<FeatureForecastingModel> model = new ArrayList<FeatureForecastingModel>(
 					schema.getTargetList().size());
 			ArrayList<Object> dataFromR = hm.get(combinations);
-			ArrayList<ArrayList<Feature>> listOfCorrelatedFeature = (ArrayList<ArrayList<Feature>>) dataFromR
-					.get(index.feature);
-			ArrayList<ArrayList<ArrayList<Double>>> listOfCorrelatedCoefficients = (ArrayList<ArrayList<ArrayList<Double>>>) dataFromR
-					.get(index.coefficients);
+			
+			if (dataFromR==null) {
+				hmResult.put(combinations, null);
+			} else {
+				
+				ArrayList<ArrayList<Feature>> listOfCorrelatedFeature = (ArrayList<ArrayList<Feature>>) dataFromR
+						.get(index.feature);
+				ArrayList<ArrayList<ArrayList<Double>>> listOfCorrelatedCoefficients = (ArrayList<ArrayList<ArrayList<Double>>>) dataFromR
+						.get(index.coefficients);
 
-			int p = (int) dataFromR.get(index.p);
-			ArrayList<Double> coefTrend = (ArrayList<Double>) dataFromR
-					.get(index.trend);
-			ArrayList<Double> coefConst = (ArrayList<Double>) dataFromR
-					.get(index.cost);
+				int p = (int) dataFromR.get(index.p);
+				ArrayList<Double> coefTrend = (ArrayList<Double>) dataFromR
+						.get(index.trend);
+				ArrayList<Double> coefConst = (ArrayList<Double>) dataFromR
+						.get(index.cost);
 
-			for (Feature f : schema.getTargetList()) {
-				int i = f.getFeatureIndex();
-				FeatureForecastingModel VARModel = new FeatureVARForecastingModel(
-						f, listOfCorrelatedFeature.get(i),
-						listOfCorrelatedCoefficients.get(i), p, timeseries,
-						coefConst.get(i), coefTrend.get(i),combinations);
-				model.add(i, VARModel);
+				for (Feature f : schema.getTargetList()) {
+					int i = f.getFeatureIndex();
+					FeatureForecastingModel VARModel = new FeatureVARForecastingModel(
+							f, listOfCorrelatedFeature.get(i),
+							listOfCorrelatedCoefficients.get(i), p, timeseries,
+							coefConst.get(i), coefTrend.get(i),combinations);
+					model.add(i, VARModel);
+				}
+
+				ForecastingModel fm = new ForecastingModel(model);
+				hmResult.put(combinations, fm);
+							
 			}
-
-			ForecastingModel fm = new ForecastingModel(model);
-			hmResult.put(combinations, fm);
+			
 
 		}
 

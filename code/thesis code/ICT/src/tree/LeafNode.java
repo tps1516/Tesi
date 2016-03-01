@@ -6,6 +6,7 @@ import java.util.HashMap;
 import snapshot.SnapshotData;
 import snapshot.SnapshotSchema;
 import snapshot.SnapshotWeigth;
+import windowStructure.FeatureWindow;
 import data.feature.AutocorrelationI;
 import forecast.ForecastingModel;
 
@@ -45,7 +46,7 @@ public class LeafNode extends Node {
 	}
 
 	public LeafNode(SnapshotSchema schema, int begin, int end, int depth,
-			Node father, FeaturesAverages fAvgNode) {
+			Node father, FeatureWindow fAvgNode) {
 		super(schema, begin, end, depth, father);
 		// super(AutocorrelationI a, PrototypeI p,SnapshotData trainingSet,
 		// SnapshotSchema schema, SnapshotWeigth W, int beginExampleIndex, int

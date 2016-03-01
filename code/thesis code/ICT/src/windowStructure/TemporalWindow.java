@@ -1,4 +1,4 @@
-package tree;
+package windowStructure;
 
 
 
@@ -46,9 +46,13 @@ public class TemporalWindow<Double> extends CircularFifoQueue<Double> implements
 		this.add((Double) f.getPrototype());
 	}
 	
+	void updateTemporalWindow(Double value){
+		this.add(value);
+	}
+	
 	/*
 	 * aggiorna la finestra temporale
-	 * aggiungendo ad essa null
+	 * aggiungendo ad essa il valore assunto dal padre
 	 */
 	void insLast(TemporalWindow tw){
 		this.add((Double) tw.get(tw.size()-1));

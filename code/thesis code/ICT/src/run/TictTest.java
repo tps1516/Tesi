@@ -23,10 +23,12 @@ import snapshot.ErrorFormatException;
 import snapshot.SnapshotData;
 import snapshot.SnapshotSchema;
 import snapshot.SnapshotWeigth;
-import tree.TemporalWindow;
 import tree.Tree;
 import varUtility.VAROutput;
+import windowStructure.TemporalWindow;
 import data.EuclideanDistance;
+import data.Network;
+import data.SensorPoint;
 import data.feature.AutocorrelationI;
 import data.feature.Feature;
 import data.feature.ResubstitutionIndex;
@@ -51,7 +53,7 @@ public class TictTest {
 		GregorianCalendar timeGlobalEnd;
 
 		float bperc = .1f;
-
+		Network network = new Network();
 		Integer splitNumber = 20; // random split identifier
 		float centroidPercentage = .2f;
 		String sampling = "quadtree";
@@ -168,6 +170,9 @@ public class TictTest {
 			BufferedReader inputStreamTrain;
 			BufferedReader inputStreamTest;
 			SnapshotWeigth W = null;
+			SnapshotData snapTrain = null;
+			SnapshotData snapTest = null;
+			HashMap<Integer, SensorPoint> hm = null;
 
 			try {
 
@@ -184,19 +189,38 @@ public class TictTest {
 
 					if (!inlineTrain.equals("@") || !inlineTest.equals("@"))
 						return;
-
+					
 					while (true) {
 						try {
 							// il primo snapshot contiene solo il network
 
-							SnapshotData snapTrain = new SnapshotData(
-									inputStreamTrain, schemaTrain);
+							if (snapTrain == null) {
+								snapTrain = new SnapshotData(inputStreamTrain,
+										schemaTrain);
 
-							SnapshotData snapTest = new SnapshotData(
-									inputStreamTest, schemaTest, true);
-							if (snapTrain.size() == 0 || snapTest.size() == 0)
-								continue;
+								snapTest = new SnapshotData(inputStreamTest,
+										schemaTest, true);
+								if (snapTrain.size() == 0
+										|| snapTest.size() == 0)
+									continue;
+								network.createWork(snapTrain, schemaTrain,
+										TWSize);
+								hm = new HashMap<Integer, SensorPoint>();
+								for (SensorPoint sp : snapTrain) {
+									hm.put(sp.getId(), null);
+								}
+							} else {
+								snapTrain = new SnapshotData(inputStreamTrain,
+										schemaTrain);
 
+								snapTest = new SnapshotData(inputStreamTest,
+										schemaTest, true);
+								if (snapTrain.size() == 0
+										|| snapTest.size() == 0)
+									continue;
+								network.updateNetword(snapTrain, schemaTrain,
+										hm);
+							}
 							if (W == null) {
 								/*
 								 * Avvalora la prima riga del file di output
@@ -229,6 +253,8 @@ public class TictTest {
 										schemaTrain);
 								snapTest = new SnapshotData(inputStreamTest,
 										schemaTest, true);
+								network.updateNetword(snapTrain, schemaTrain,
+										hm);
 							}
 
 							snapTrain.updateNull(W, schemaTrain);
@@ -350,7 +376,7 @@ public class TictTest {
 				} finally {
 					try {
 						inputStreamTrain.close();
-
+						
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -368,6 +394,11 @@ public class TictTest {
 		} finally {
 			outputReport.close();
 			VAROutput.closeFiles();
+			for(Integer i : network){
+				System.out.println(i);
+				System.out.print(network.getTemporalWindow(i));
+				
+			}
 		}
 
 	}

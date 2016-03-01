@@ -1,14 +1,11 @@
 package tree;
 
 import java.io.Serializable;
-
 import java.util.Comparator;
 import java.util.HashMap;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-
 import java.util.TreeSet;
 
 import javax.management.RuntimeErrorException;
@@ -16,10 +13,10 @@ import javax.management.RuntimeErrorException;
 import snapshot.SnapshotData;
 import snapshot.SnapshotSchema;
 import snapshot.SnapshotWeigth;
+import windowStructure.FeatureWindow;
 import data.SensorPoint;
 import data.datavalue.NumericValue;
 import data.datavalue.Value;
-
 import data.feature.AutocorrelationI;
 import data.feature.CategoricalFeature;
 import data.feature.Feature;
@@ -30,7 +27,6 @@ import data.feature.NumericFeature;
 
 import data.feature.ResubstitutionIndex;
 import data.feature.ResubstitutionIndexOnGetisOrd;
-
 import data.feature.SpatialResubstitutionIndex;
 
 class SplitPoint {
@@ -232,7 +228,7 @@ public class SplittingNode extends Node {
 	
 	public SplittingNode(Node n, AutocorrelationI a, SnapshotData trainingSet,
 			SnapshotSchema schema, SnapshotWeigth W,int beginExampleIndex,
-			int endExampleIndex, int minExamples,int depth,int step, Node father, String testType, FeaturesAverages fAvgNode) throws SplitException {
+			int endExampleIndex, int minExamples,int depth,int step, Node father, String testType, FeatureWindow fAvgNode) throws SplitException {
 		super(n, a, trainingSet, schema, W, beginExampleIndex, endExampleIndex,
 				minExamples,depth,father);
 		

@@ -20,6 +20,7 @@ import javax.management.RuntimeErrorException;
 
 //import mbrModel.KNNModel;
 
+
 import data.DistanceI;
 import data.EuclideanDistance;
 import data.SensorPoint;
@@ -35,6 +36,7 @@ import rForecast.VARParameter;
 import snapshot.SnapshotData;
 import snapshot.SnapshotSchema;
 import snapshot.SnapshotWeigth;
+import windowStructure.FeatureWindow;
 import forecast.FeatureVARForecastingModel;
 
 public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
@@ -199,7 +201,7 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 			AutocorrelationI autocorrelation, int beginIndex, int endIndex,
 			int minimumExamples, int depth, int numberOfSplits, Node father,
 			float ccentroidPerc, String centroidType, String testType,
-			FeaturesAverages fAvgNode, ArrayList<Object> rParameters) {
+			FeatureWindow fAvgNode, ArrayList<Object> rParameters) {
 
 		this.father = father;
 		Node testRoot = new LeafNode(autocorrelation, data, schema, W,
@@ -704,18 +706,19 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 		return new TreeIterator(this);
 	}
 
-	public HashMap<String, HashMap<String, Integer>> countPar() {
+	public ArrayList<Object> countPar() {
 		SnapshotSchema schema = this.root.getSchema();
-		HashMap<String, HashMap<String, Integer>> hmResult = new HashMap<String, HashMap<String, Integer>>();
+		HashMap<String, HashMap<String, Integer>> hmCombResult = new HashMap<String, HashMap<String, Integer>>();
 		HashMap<String, Integer> counterByPar;
-
+		HashMap<String,Double> hmOptimalRMSEByFeature= new HashMap<String,Double>();
 		for (Feature f : schema.getTargetList()) {
 			counterByPar = new HashMap<String, Integer>();
 			for (VARParameter s : RVar.getVARParameters()) {
 				String par = s.toString();
 				counterByPar.put(par, 0);
 			}
-			hmResult.put(f.getName(), counterByPar);
+			hmCombResult.put(f.getName(), counterByPar);
+			hmOptimalRMSEByFeature.put(f.getName(), 0.0);
 		}
 
 		String pars;
@@ -723,17 +726,26 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 		for (Node n : this) {
 			if (n instanceof LeafNode) {
 				ForecastingModel model = ((LeafNode) n).getVARModel();
-				if (model == null)
-					return hmResult;
+				if (model == null) {
+					ArrayList<Object> finalResult= new ArrayList<Object>();
+					finalResult.add(0,hmCombResult);
+					finalResult.add(1,hmOptimalRMSEByFeature);
+					return finalResult;
+				}
 				for (Feature f : schema.getTargetList()) {
 					FeatureVARForecastingModel fmodel = (FeatureVARForecastingModel) model
 							.getFeatureForecastingModel(f);
 					pars = fmodel.getVARParameters();
-					hmResult.get(f.getName()).put(pars,
-							hmResult.get(f.getName()).get(pars) + 1);
+					hmCombResult.get(f.getName()).put(pars,
+							hmCombResult.get(f.getName()).get(pars) + 1);
+					
+					hmOptimalRMSEByFeature.put(f.getName(), hmOptimalRMSEByFeature.get(f.getName())+fmodel.getRMSE());
 				}
 			}
 		}
-		return hmResult;
+		ArrayList<Object> finalResult= new ArrayList<Object>();
+		finalResult.add(0,hmCombResult);
+		finalResult.add(1,hmOptimalRMSEByFeature);
+		return finalResult;
 	}
 }
