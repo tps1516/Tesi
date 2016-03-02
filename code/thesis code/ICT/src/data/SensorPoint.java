@@ -7,7 +7,8 @@ import java.util.List;
 
 import data.datavalue.Value;
 
-public class SensorPoint implements Iterable<Value>, Cloneable, Serializable {
+public class SensorPoint implements Iterable<Value>, Cloneable, Serializable,
+		Comparable<SensorPoint> {
 	private int id;
 	private List<Value> measures = new ArrayList<Value>();
 
@@ -47,6 +48,16 @@ public class SensorPoint implements Iterable<Value>, Cloneable, Serializable {
 	public Iterator<Value> iterator() {
 		// TODO Auto-generated method stub
 		return measures.iterator();
+	}
+
+	@Override
+	public int compareTo(SensorPoint sp) {
+		if (sp.getId() > this.getId())
+			return 1;
+		else if (sp.getId() < this.getId())
+			return -1;
+		else
+			return 0;
 	}
 
 }

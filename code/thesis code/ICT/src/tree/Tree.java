@@ -20,7 +20,6 @@ import javax.management.RuntimeErrorException;
 
 //import mbrModel.KNNModel;
 
-
 import data.DistanceI;
 import data.EuclideanDistance;
 import data.SensorPoint;
@@ -710,7 +709,7 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 		SnapshotSchema schema = this.root.getSchema();
 		HashMap<String, HashMap<String, Integer>> hmCombResult = new HashMap<String, HashMap<String, Integer>>();
 		HashMap<String, Integer> counterByPar;
-		HashMap<String,Double> hmOptimalRMSEByFeature= new HashMap<String,Double>();
+		HashMap<String, Double> hmOptimalRMSEByFeature = new HashMap<String, Double>();
 		for (Feature f : schema.getTargetList()) {
 			counterByPar = new HashMap<String, Integer>();
 			for (VARParameter s : RVar.getVARParameters()) {
@@ -727,9 +726,9 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 			if (n instanceof LeafNode) {
 				ForecastingModel model = ((LeafNode) n).getVARModel();
 				if (model == null) {
-					ArrayList<Object> finalResult= new ArrayList<Object>();
-					finalResult.add(0,hmCombResult);
-					finalResult.add(1,hmOptimalRMSEByFeature);
+					ArrayList<Object> finalResult = new ArrayList<Object>();
+					finalResult.add(0, hmCombResult);
+					finalResult.add(1, hmOptimalRMSEByFeature);
 					return finalResult;
 				}
 				for (Feature f : schema.getTargetList()) {
@@ -738,14 +737,58 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 					pars = fmodel.getVARParameters();
 					hmCombResult.get(f.getName()).put(pars,
 							hmCombResult.get(f.getName()).get(pars) + 1);
-					
-					hmOptimalRMSEByFeature.put(f.getName(), hmOptimalRMSEByFeature.get(f.getName())+fmodel.getRMSE());
+
+					hmOptimalRMSEByFeature.put(
+							f.getName(),
+							hmOptimalRMSEByFeature.get(f.getName())
+									+ fmodel.getRMSE());
 				}
 			}
 		}
-		ArrayList<Object> finalResult= new ArrayList<Object>();
-		finalResult.add(0,hmCombResult);
-		finalResult.add(1,hmOptimalRMSEByFeature);
+		ArrayList<Object> finalResult = new ArrayList<Object>();
+		finalResult.add(0, hmCombResult);
+		finalResult.add(1, hmOptimalRMSEByFeature);
 		return finalResult;
+	}
+
+	public HashMap<Integer, ForecastingModel> deriveForecastingModel(
+			SnapshotData data) {
+
+		HashMap<Integer, ForecastingModel> result = new HashMap<Integer, ForecastingModel>();
+		res(this, data, 0, data.size() - 1, result);
+
+		return result;
+	}
+
+	private void res(Tree tree, SnapshotData data, int begin, int end,
+			HashMap<Integer, ForecastingModel> hm) {
+		if (tree.root instanceof SplittingNode) {
+			// PASSO RICORSIVO
+			SplittingNode node = (SplittingNode) this.root;
+			Feature featureSplit = node.getSplitFeature();
+			data.sort(featureSplit, begin, end);
+			for (int i = begin; i < end; i++) {
+				/*
+				 * controllo se il valore per quella feature per quel sensore
+				 * point è maggiore della soglia
+				 */
+				if (((Double) data.getSensorPoint(i)
+						.getMeasure(featureSplit.getIndexMining()).getValue()) <= node
+						.getSplitThereshld()) {
+					res(tree.leftSubTree, data, begin, i, hm);
+					res(tree.rightsubTree, data, i+1, end, hm);
+				}
+			}
+		} else {
+			// PASSO BASE
+			for (int i = begin; i <= end; i++) {
+				hm.put(data.getSensorPoint(i).getId(),
+						((LeafNode) tree.root).getVARModel());
+			}
+		}
+	}
+
+	public boolean existVARModel() {
+		return this.root.getFeatureAvgNode().temporalWindowsIsFull();
 	}
 }

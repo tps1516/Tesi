@@ -9,7 +9,6 @@ import tree.Node;
 import data.SensorPoint;
 import data.feature.Feature;
 
-
 /*
  * ha la responsabilità di tener traccia dei flusso di dati per feature (nello schema)
  * nel tempo memorizzando per ciascuna feature i suo valori in una coda di dimensione massima
@@ -17,7 +16,6 @@ import data.feature.Feature;
 public class FeatureWindow implements Iterable<TemporalWindow>, Cloneable,
 		Serializable {
 
-	
 	private ArrayList<TemporalWindow> featureWindow;
 
 	/*
@@ -25,45 +23,44 @@ public class FeatureWindow implements Iterable<TemporalWindow>, Cloneable,
 	 */
 	private FeatureWindow() {
 	}
-	
+
 	/*
-	 * costruttore della classe
-	 * tale costruttore viene utilizzato quando la timeseries viene associata 
-	 * a ciascun sensore nella rete
+	 * costruttore della classe tale costruttore viene utilizzato quando la
+	 * timeseries viene associata a ciascun sensore nella rete
 	 */
-	public FeatureWindow(SnapshotSchema schema, int dim){
-		
+	public FeatureWindow(SnapshotSchema schema, int dim) {
+
 		// istanzio l'arrayList di temporalwindow
-		featureWindow=new ArrayList<TemporalWindow> (schema.getTargetList().size());
-		
+		featureWindow = new ArrayList<TemporalWindow>(schema.getTargetList()
+				.size());
+
 		/*
 		 * per ciasucna feature nello schema istanzio una nuova temporalWindow
-		 * che conterrà i suoi valori nel tempo 
-		 * e la memorizzo nell'arrayList in base all'indice assunto dalla 
-		 * feature stessa nello schema per facilitarne il ritrovamento
+		 * che conterrà i suoi valori nel tempo e la memorizzo nell'arrayList in
+		 * base all'indice assunto dalla feature stessa nello schema per
+		 * facilitarne il ritrovamento
 		 */
-		for (Feature f: schema.getTargetList()){
-			featureWindow.add(f.getFeatureIndex(),new TemporalWindow(f,dim));
+		for (Feature f : schema.getTargetList()) {
+			featureWindow.add(f.getFeatureIndex(), new TemporalWindow(f, dim));
 		}
 	}
 
 	/*
-	 * costruttore della classe
-	 * esso viene utilizzato quando la timeseries viene associata
-	 * ad un cluster e serve per memorizzare per ciascuna feature
-	 * la media che essa assume nel cluster
+	 * costruttore della classe esso viene utilizzato quando la timeseries viene
+	 * associata ad un cluster e serve per memorizzare per ciascuna feature la
+	 * media che essa assume nel cluster
 	 */
 	public FeatureWindow(Node n, int dim) {
 		// istanzio l'arrayList di temporalwindow
-		featureWindow = new ArrayList<TemporalWindow>(n.getSchema().getTargetList()
-				.size());
+		featureWindow = new ArrayList<TemporalWindow>(n.getSchema()
+				.getTargetList().size());
 		int spazialFeatureSize = n.getSchema().getSpatialList().size();
-		
+
 		/*
 		 * per ciasucna feature nello schema istanzio una nuova temporalWindow
-		 * che conterrà i suoi valori nel tempo 
-		 * e la memorizzo nell'arrayList in base all'indice assunto dalla 
-		 * feature stessa nello schema per facilitarne il ritrovamento
+		 * che conterrà i suoi valori nel tempo e la memorizzo nell'arrayList in
+		 * base all'indice assunto dalla feature stessa nello schema per
+		 * facilitarne il ritrovamento
 		 */
 		for (Feature f : n.getSchema().getTargetList()) {
 			featureWindow.add(f.getIndexMining() - spazialFeatureSize,
@@ -71,12 +68,10 @@ public class FeatureWindow implements Iterable<TemporalWindow>, Cloneable,
 		}
 	}
 
-	
 	/*
-	 * tale metodo ha la responsabilità di aggiornare la timeseries
-	 * associata ad un nodo (cluster)
-	 * aggiungendo nella coda di valori di ciascuna feature il valore 
-	 * della media dalla feature nel cluster
+	 * tale metodo ha la responsabilità di aggiornare la timeseries associata ad
+	 * un nodo (cluster) aggiungendo nella coda di valori di ciascuna feature il
+	 * valore della media dalla feature nel cluster
 	 */
 	public void updateAverages(Node n) {
 		int spazialFeatureSize = n.getSchema().getSpatialList().size();
@@ -86,50 +81,32 @@ public class FeatureWindow implements Iterable<TemporalWindow>, Cloneable,
 			;
 		}
 	}
+
 	/*
-	 * tale metodo ha la responsabilità di aggiornare la timeseries
-	 * associata ad uno specifico sensore 
-	 * aggiungendo nella coda di valori di ciascuna feature il valore 
-	 * rilevato dal sensore per quella feature
+	 * tale metodo ha la responsabilità di aggiornare la timeseries associata ad
+	 * uno specifico sensore aggiungendo nella coda di valori di ciascuna
+	 * feature il valore rilevato dal sensore per quella feature
 	 */
-	public void updateSensorFeature(SensorPoint sensorPoint,SnapshotSchema schema){
-		
+	public void updateSensorFeature(SensorPoint sensorPoint,
+			SnapshotSchema schema) {
+
 		/*
-		 * verfico se il sensore in input è diverso da null in tal
-		 * caso procedo aggiornare le code di valori
-		 * per ciascuna feature con i valori rilevati dal sensore
+		 * ciclo sulle feature per aggiornare le corrispondenti code
 		 */
-		if (sensorPoint!=null){
-			
+		for (Feature f : schema.getTargetList()) {
+
 			/*
-			 * ciclo sulle feature per aggiornare
-			 * le corrispondenti code
+			 * recupero il valore memorizzato nel sensore per quella feature e
+			 * aggiorno la coda
 			 */
-			for (Feature f: schema.getTargetList()){
-				
-				/*
-				 * recupero il valore memorizzato nel sensore 
-				 * per quella feature e aggiorno la coda
-				 */
-				Double value = (Double) sensorPoint.getMeasure(f.getIndexMining()).getValue();
-				featureWindow.get(f.getFeatureIndex()).updateTemporalWindow(value);
-			}
-			
-		/*
-		 * se il sensore passato in input è uguale a null
-		 * vuol dire che il sensore non era attivo in questo snapshot
-		 * e anche la sua predizione all'istante precedente era null
-		 * in tal caso inserisco per ciascuna feature nella coda
-		 * il valore Double.maxValue	
-		 */
-		} else {
-			for (Feature f: schema.getTargetList()){
-				featureWindow.get(f.getFeatureIndex()).updateTemporalWindow(Double.MAX_VALUE);
-			}
+			Double value = (Double) sensorPoint.getMeasure(f.getIndexMining())
+					.getValue();
+			if (value == null)
+				value = Double.MAX_VALUE;
+			featureWindow.get(f.getFeatureIndex()).updateTemporalWindow(value);
 		}
+
 	}
-	
-	
 
 	public void insLastOfFather(FeatureWindow fatherAvg) {
 		ArrayList<TemporalWindow> arrayListFather = fatherAvg.getArrayList();
@@ -169,10 +146,9 @@ public class FeatureWindow implements Iterable<TemporalWindow>, Cloneable,
 
 	}
 
-	
 	/*
-	 * verifica se le code memorizzate hanno raggiunto
-	 * la loro dimensione massima
+	 * verifica se le code memorizzate hanno raggiunto la loro dimensione
+	 * massima
 	 */
 	public boolean temporalWindowsIsFull() {
 

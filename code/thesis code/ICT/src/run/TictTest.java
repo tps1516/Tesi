@@ -29,11 +29,14 @@ import windowStructure.TemporalWindow;
 import data.EuclideanDistance;
 import data.Network;
 import data.SensorPoint;
+import data.datavalue.NumericValue;
+import data.datavalue.Value;
 import data.feature.AutocorrelationI;
 import data.feature.Feature;
 import data.feature.ResubstitutionIndex;
 import data.feature.ResubstitutionIndexOnGetisOrd;
 import data.feature.GetisOrdIndex;
+import forecast.ForecastingModel;
 
 // completare deve prendere trainign and testing sets
 
@@ -172,7 +175,8 @@ public class TictTest {
 			SnapshotWeigth W = null;
 			SnapshotData snapTrain = null;
 			SnapshotData snapTest = null;
-			HashMap<Integer, SensorPoint> hm = null;
+			SnapshotData snapNetwork = null;
+			// HashMap<Integer, SensorPoint> hm = null;
 
 			try {
 
@@ -189,7 +193,7 @@ public class TictTest {
 
 					if (!inlineTrain.equals("@") || !inlineTest.equals("@"))
 						return;
-					
+
 					while (true) {
 						try {
 							// il primo snapshot contiene solo il network
@@ -203,12 +207,44 @@ public class TictTest {
 								if (snapTrain.size() == 0
 										|| snapTest.size() == 0)
 									continue;
+
+								snapTrain.sort();
 								network.createWork(snapTrain, schemaTrain,
 										TWSize);
-								hm = new HashMap<Integer, SensorPoint>();
+
+								ArrayList<SensorPoint> fusedNetwork = new ArrayList<SensorPoint>();
 								for (SensorPoint sp : snapTrain) {
-									hm.put(sp.getId(), null);
+									SensorPoint sensorPoint = new SensorPoint(
+											sp.getId());
+
+									for (Feature f : schemaTrain
+											.getSpatialList()) {
+										double value = ((double) sp.getMeasure(
+												f.getIndexMining()).getValue());
+										NumericValue nv = new NumericValue(
+												value, f.getIndexMining());
+										sensorPoint.addMeasure((Value) nv);
+									}
+
+									for (Feature f : schemaTrain
+											.getTargetList()) {
+										NumericValue nv = new NumericValue(
+												Double.MAX_VALUE,
+												f.getIndexMining());
+										sensorPoint.addMeasure((Value) nv);
+									}
+
+									fusedNetwork.add(sensorPoint);
 								}
+
+								snapNetwork = new SnapshotData(fusedNetwork);
+								snapNetwork.sort();
+
+								/*
+								 * hm = new HashMap<Integer, SensorPoint>(); for
+								 * (SensorPoint sp : snapTrain) {
+								 * hm.put(sp.getId(), null); }
+								 */
 							} else {
 								snapTrain = new SnapshotData(inputStreamTrain,
 										schemaTrain);
@@ -218,8 +254,10 @@ public class TictTest {
 								if (snapTrain.size() == 0
 										|| snapTest.size() == 0)
 									continue;
-								network.updateNetword(snapTrain, schemaTrain,
-										hm);
+								snapTrain.sort();
+								snapNetwork = snapTrain.mergeSnapshotData(
+										snapNetwork, schemaTrain);
+								network.updateNetwork(snapNetwork, schemaTrain);
 							}
 							if (W == null) {
 								/*
@@ -253,8 +291,10 @@ public class TictTest {
 										schemaTrain);
 								snapTest = new SnapshotData(inputStreamTest,
 										schemaTest, true);
-								network.updateNetword(snapTrain, schemaTrain,
-										hm);
+								snapTrain.sort();
+								snapNetwork = snapTrain.mergeSnapshotData(
+										snapNetwork, schemaTrain);
+								network.updateNetwork(snapNetwork, schemaTrain);
 							}
 
 							snapTrain.updateNull(W, schemaTrain);
@@ -276,6 +316,8 @@ public class TictTest {
 							outputReport.println("**** ID: "
 									+ snapTrain.getIdSnapshot());
 
+							
+							
 							if (tree == null)// first snapshot in the stream
 							{
 
@@ -336,6 +378,21 @@ public class TictTest {
 										.getTimeInMillis()
 										- timeBegin.getTimeInMillis());
 								System.out.println(tree);
+								
+								
+								
+								
+								if (tree.existVARModel()) {
+									/*
+									 * HashMap<Integer, ForecastingModel> hm =
+									 * tree .deriveForecastingModel(snapTrain);
+									 * 
+									 * for(Integer i : hm.keySet()){
+									 * System.out.println("ID SENSORE: " + i);
+									 * System.out.println(hm.get(i)); }
+									 */
+									
+								}
 								outputReport.println(tree.toString());
 								outputReport
 										.println("Computation time(milliseconds)="
@@ -376,7 +433,7 @@ public class TictTest {
 				} finally {
 					try {
 						inputStreamTrain.close();
-						
+
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -394,10 +451,10 @@ public class TictTest {
 		} finally {
 			outputReport.close();
 			VAROutput.closeFiles();
-			for(Integer i : network){
+			for (Integer i : network) {
 				System.out.println(i);
 				System.out.print(network.getTemporalWindow(i));
-				
+
 			}
 		}
 

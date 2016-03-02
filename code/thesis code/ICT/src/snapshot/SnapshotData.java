@@ -31,8 +31,8 @@ public class SnapshotData implements Iterable<SensorPoint> {
 	private int idSnapshot;
 	private static int idSnapshotGenerator = 1;
 
-	private int numberOfSpatialFeatures = 2;
-	private int numberOfTargetFeatures = 1;
+	private static int numberOfSpatialFeatures = 2;
+	private static int numberOfTargetFeatures = 1;
 	private static int idSensorGenerator = 1;
 	static int idCode = 0;
 
@@ -275,6 +275,10 @@ public class SnapshotData implements Iterable<SensorPoint> {
 			throw new IOException("End Of Stream");
 	}
 
+	public SnapshotData(ArrayList<SensorPoint> data) {
+		this.data = data;
+	}
+
 	public SnapshotData(BufferedReader stream, SnapshotSchema schema,
 			boolean testingSnap) throws IOException {
 
@@ -321,8 +325,73 @@ public class SnapshotData implements Iterable<SensorPoint> {
 
 	}
 
+	private ArrayList<SensorPoint> getData() {
+		return (ArrayList<SensorPoint>) this.data;
+	}
+
+	public SnapshotData mergeSnapshotData(SnapshotData snap,
+			SnapshotSchema schema) {
+
+		ArrayList<SensorPoint> realData = this.getData();
+		ArrayList<SensorPoint> networkData = snap.getData();
+		ArrayList<SensorPoint> resultData = new ArrayList<SensorPoint>();
+
+		int j = 0;
+		for (int i = 0; i < realData.size(); i++) {
+			boolean flag = false;
+
+			if (realData.get(i).getId() == networkData.get(j).getId()) {
+				SensorPoint sp = new SensorPoint(realData.get(i).getId());
+				for (Feature f : schema.getSpatialList()) {
+					double value = ((double) realData.get(i)
+							.getMeasure(f.getIndexMining()).getValue());
+					NumericValue nv = new NumericValue(value,
+							f.getIndexMining());
+					sp.addMeasure((Value) nv);
+				}
+
+				for (Feature f : schema.getTargetList()) {
+					Double value = ((Double) realData.get(i)
+							.getMeasure(f.getIndexMining()).getValue());
+					if (value == null) {
+						sp.addMeasure(networkData.get(j).getMeasure(
+								f.getIndexMining()));
+					} else {
+						sp.addMeasure(realData.get(i).getMeasure(
+								f.getIndexMining()));
+					}
+				}
+
+				resultData.add(sp);
+				j = j + 1;
+			} else {
+				while (!flag) {
+					resultData.add(networkData.get(j));
+					j = j + 1;
+					if (realData.get(i).getId() == networkData.get(j).getId()) {
+						resultData.add(realData.get(i));
+						flag = true;
+						j = j + 1;
+					}
+				}
+			}
+		}
+
+		if (j != networkData.size()) {
+			for (int i = j; i < networkData.size(); i++) {
+				resultData.add(networkData.get(i));
+			}
+		}
+
+		return new SnapshotData(resultData);
+	}
+
 	public void sort(Feature f, int begin, int end) {
 		quicksort(f, begin, end);
+	}
+
+	public void sort() {
+		quicksort(0, this.data.size() - 1);
 	}
 
 	private int partition(Feature attribute, int inf, int sup) {
@@ -367,6 +436,42 @@ public class SnapshotData implements Iterable<SensorPoint> {
 
 	}
 
+	private int partition(int inf, int sup) {
+		int i, j;
+
+		i = inf;
+		j = sup;
+		int med = (inf + sup) / 2;
+		int x = data.get(med).getId();
+		swap(inf, med);
+
+		while (true) {
+			int xi = data.get(i).getId();
+
+			while (i <= sup && xi <= x) {
+				i++;
+				if (i <= sup)
+					xi = data.get(i).getId();
+
+			}
+
+			int xj = data.get(j).getId();
+			while (xj > x) {
+				j--;
+				xj = data.get(j).getId();
+
+			}
+
+			if (i < j) {
+				swap(i, j);
+			} else
+				break;
+		}
+		swap(inf, j);
+		return j;
+
+	}
+
 	// scambio esempio i con esempio j
 	private void swap(int i, int j) {
 		SensorPoint temp;
@@ -388,6 +493,23 @@ public class SnapshotData implements Iterable<SensorPoint> {
 			} else {
 				quicksort(attribute, pos + 1, sup);
 				quicksort(attribute, inf, pos - 1);
+			}
+		}
+
+	}
+
+	private void quicksort(int inf, int sup) {
+
+		if (sup >= inf) {
+
+			int pos;
+			pos = partition(inf, sup);
+			if ((pos - inf) < (sup - pos + 1)) {
+				quicksort(inf, pos - 1);
+				quicksort(pos + 1, sup);
+			} else {
+				quicksort(pos + 1, sup);
+				quicksort(inf, pos - 1);
 			}
 		}
 
