@@ -1,6 +1,6 @@
 TRAIN STREAM=EcoTexasTRAIN
 TEST STREAM=EcoTexasTEST
-W computation time (milliseconds):0
+W computation time (milliseconds):16
 **** ID: 2
 ID: 1: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=74.7
 Averages:
@@ -26,7 +26,7 @@ radiazionisolari: 0.0015
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=15
+Computation time(milliseconds)=64
 Leaves statisics
 number of leaves of the tree inherited from the past=0
 number of leaves of the tree after pruning=0
@@ -56,7 +56,7 @@ radiazionisolari: 0.0015 0.001375
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=16
+Computation time(milliseconds)=15
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=2
 number of leaves in the new tree=2
@@ -211,7 +211,7 @@ radiazionisolari: 0.0015 0.001375 0.0015714285714285713 0.0014285714285714288 0.
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=16
+Computation time(milliseconds)=0
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=2
 number of leaves in the new tree=2
@@ -242,7 +242,7 @@ radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=15
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=1
 number of leaves in the new tree=2
@@ -273,7 +273,7 @@ radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=31
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=1
 number of leaves in the new tree=2
@@ -304,7 +304,7 @@ radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=16
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=1
 number of leaves in the new tree=2
@@ -397,7 +397,7 @@ radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=16
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=1
 number of leaves in the new tree=2
@@ -428,7 +428,7 @@ radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=16
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=2
 number of leaves in the new tree=2
@@ -459,7 +459,7 @@ radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=16
+Computation time(milliseconds)=15
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=1
 number of leaves in the new tree=2
@@ -490,7 +490,7 @@ radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=16
 number of leaves of the tree inherited from the past=2
 number of leaves of the tree after pruning=2
 number of leaves in the new tree=2
@@ -706,7 +706,7 @@ radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=16
+Computation time(milliseconds)=0
 number of leaves of the tree inherited from the past=3
 number of leaves of the tree after pruning=2
 number of leaves in the new tree=3
@@ -752,7 +752,7 @@ radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4
 
 modello VAR non ancora avvalorato
 
-Computation time(milliseconds)=0
+Computation time(milliseconds)=32
 number of leaves of the tree inherited from the past=3
 number of leaves of the tree after pruning=2
 number of leaves in the new tree=3
@@ -948,7 +948,7 @@ RMSE: 1.6547032562629234E-4
 
 
 
-Computation time(milliseconds)=5485
+Computation time(milliseconds)=23534
 number of leaves of the tree inherited from the past=3
 number of leaves of the tree after pruning=2
 number of leaves in the new tree=3
@@ -1144,7 +1144,7 @@ RMSE: 1.6857919377754287E-4
 
 
 
-Computation time(milliseconds)=4765
+Computation time(milliseconds)=18251
 number of leaves of the tree inherited from the past=3
 number of leaves of the tree after pruning=3
 number of leaves in the new tree=3

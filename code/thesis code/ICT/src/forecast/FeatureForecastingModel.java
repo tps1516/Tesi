@@ -1,20 +1,22 @@
 package forecast;
 
-
-
+import snapshot.SnapshotSchema;
 import data.feature.Feature;
 
-public abstract class FeatureForecastingModel{
+public abstract class FeatureForecastingModel {
 	protected Feature feature;
-	
-	protected FeatureForecastingModel(Feature f){
-		this.feature=f;
+
+	protected FeatureForecastingModel(Feature f) {
+		this.feature = f;
 	}
-	 
+
 	public abstract String toString();
-	
-	public Feature getFeature(){
+
+	public Feature getFeature() {
 		return this.feature;
 	}
+
+	public abstract Double forecasting(double[][] timeSeries)
+			throws NotForecastingException;
 
 }

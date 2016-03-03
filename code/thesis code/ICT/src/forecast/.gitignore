@@ -7,3 +7,5 @@
 /RecordVAR.class
 /ForecastingModel.class
 /ForecastingModelIndex.class
+/NotForecastingException.class
+/Forecasting.class

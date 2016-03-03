@@ -3,6 +3,7 @@ package varUtility;
 import java.util.ArrayList;
 
 import forecast.FeatureVARForecastingModel;
+import forecast.NotForecastingException;
 import forecast.RecordVAR;
 
 /*
@@ -64,7 +65,12 @@ public class RMSEUtility {
 			 * effettuo la predizione del valore utilizzando la matrice ridotta
 			 * appena estrapolata
 			 */
-			predicted = predict(reducedMatrix, VARModel);
+			try {
+				predicted = VARModel.forecasting(reducedMatrix);
+			} catch (NotForecastingException e) {
+				e.printStackTrace();
+			}
+			// predicted = predict(reducedMatrix, VARModel);
 
 			/*
 			 * estraggo il valore reale dalla timesiries corrispondente al

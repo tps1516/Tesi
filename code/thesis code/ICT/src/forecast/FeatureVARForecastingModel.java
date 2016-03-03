@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.io.Serializable;
 import java.util.Iterator;
 
+import snapshot.SnapshotSchema;
 import varUtility.RMSEUtility;
 import data.feature.Feature;
 
@@ -85,4 +86,31 @@ public class FeatureVARForecastingModel extends FeatureForecastingModel
 	public Double getRMSE() {
 		return this.RMSE;
 	}
+
+	@Override
+	public Double forecasting(double[][] timeSeries)
+			throws NotForecastingException {
+		Double sum = 0.0;
+		Feature f;
+		int i;
+		int indexColumn;
+		Double value;
+		ArrayList<Double> coefficients;
+		for (RecordVAR record : this.equationModel) {
+			i = timeSeries.length - 1;
+			f = record.getFeature();
+			indexColumn = f.getFeatureIndex();
+			coefficients = record.getCoefficients();
+			for (Double coeff : coefficients) {
+				value = timeSeries[i][indexColumn];
+				if (value == Double.MAX_VALUE)
+					throw new NotForecastingException("Sensore non predicibile");
+				sum += value * coeff;
+				i = i - 1;
+			}
+		}
+		sum += this.coefficientsConst + this.coefficientsTrend;
+		return sum;
+	}
+
 }

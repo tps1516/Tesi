@@ -36,6 +36,7 @@ import data.feature.Feature;
 import data.feature.ResubstitutionIndex;
 import data.feature.ResubstitutionIndexOnGetisOrd;
 import data.feature.GetisOrdIndex;
+import forecast.Forecasting;
 import forecast.ForecastingModel;
 
 // completare deve prendere trainign and testing sets
@@ -69,6 +70,7 @@ public class TictTest {
 		String exogen;
 		String ic;
 		String type;
+		Integer nahead;
 
 		try {
 			timeGlobalBegin = new GregorianCalendar();
@@ -85,6 +87,7 @@ public class TictTest {
 			exogen = String.valueOf(args[9]);
 			ic = String.valueOf(args[10]);
 			type = String.valueOf(args[11]);
+			nahead = new Integer(args[12]);
 			/*
 			 * sampling=new String(args[5]); testType=new String(args[6]);
 			 * isSpatial=new Boolean(args[7]);
@@ -235,6 +238,7 @@ public class TictTest {
 
 								snapForecast = snapTrain
 										.createAndAvvalorateSnapForecast(schemaTrain);
+								snapForecast.sort();
 
 							} else {
 								snapTrain = new SnapshotData(inputStreamTrain,
@@ -246,7 +250,7 @@ public class TictTest {
 										|| snapTest.size() == 0)
 									continue;
 								snapTrain.sort();
-
+								snapForecast.sort();
 								snapNetwork = snapTrain.mergeSnapshotData(
 										snapForecast, schemaTrain);
 								network.updateNetwork(snapNetwork, schemaTrain);
@@ -371,13 +375,21 @@ public class TictTest {
 
 								if (tree.existVARModel()) {
 
-									HashMap<Integer, ForecastingModel> hm = tree
-											.deriveForecastingModel(snapNetwork);
-
-									for (Integer i : hm.keySet()) {
-										System.out.println("ID SENSORE: " + i);
-										System.out.println(hm.get(i));
-									}
+									/*
+									 * HashMap<Integer, ForecastingModel> hm =
+									 * tree
+									 * .deriveForecastingModel(snapNetwork);
+									 * 
+									 * for (Integer i : hm.keySet()) {
+									 * System.out.println("ID SENSORE: " + i);
+									 * System.out.println(hm.get(i)); }
+									 */
+									Forecasting forecast = new Forecasting(
+											nahead, schemaTrain, tree,
+											snapNetwork, network);
+									LinkedList<SnapshotData> res = forecast
+											.forecasting();
+									snapForecast=res.get(0);
 
 								}
 								outputReport.println(tree.toString());
