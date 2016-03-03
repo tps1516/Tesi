@@ -238,8 +238,6 @@ public class TictTest {
 
 								snapForecast = snapTrain
 										.createAndAvvalorateSnapForecast(schemaTrain);
-								snapForecast.sort();
-
 							} else {
 								snapTrain = new SnapshotData(inputStreamTrain,
 										schemaTrain);
@@ -250,7 +248,6 @@ public class TictTest {
 										|| snapTest.size() == 0)
 									continue;
 								snapTrain.sort();
-								snapForecast.sort();
 								snapNetwork = snapTrain.mergeSnapshotData(
 										snapForecast, schemaTrain);
 								network.updateNetwork(snapNetwork, schemaTrain);

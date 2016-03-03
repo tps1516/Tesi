@@ -37,6 +37,7 @@ public class Forecasting {
 		}
 		HashMap<Integer, ForecastingModel> VARModels = tree
 				.deriveForecastingModel(data);
+		data.sort();
 		double[] forecast;
 		SensorForecast sensorForecast = new SensorForecast(schema);
 		for (SensorPoint sp : data) {
@@ -49,7 +50,9 @@ public class Forecasting {
 					for (int indexNAhead = i; indexNAhead < this.nahead; indexNAhead++) {
 						SensorPoint spF = createSP(sp, null);
 						addInHM(i, spF);
+						i=i+1;
 					}
+					break;
 				}
 				SensorPoint spF = createSP(sp, forecast);
 				addInHM(i, spF);
