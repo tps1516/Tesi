@@ -767,16 +767,20 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 			SplittingNode node = (SplittingNode) this.root;
 			Feature featureSplit = node.getSplitFeature();
 			data.sort(featureSplit, begin, end);
-			for (int i = begin; i < end; i++) {
+			for (int i = begin; i <= end; i++) {
 				/*
 				 * controllo se il valore per quella feature per quel sensore
 				 * point è maggiore della soglia
 				 */
 				if (((Double) data.getSensorPoint(i)
-						.getMeasure(featureSplit.getIndexMining()).getValue()) <= node
+						.getMeasure(featureSplit.getIndexMining()).getValue()) > node
 						.getSplitThereshld()) {
-					res(tree.leftSubTree, data, begin, i, hm);
-					res(tree.rightsubTree, data, i+1, end, hm);
+					res(tree.leftSubTree, data, begin, i-1, hm);
+					res(tree.rightsubTree, data, i, end, hm);
+					break;
+				}
+				if(i==end){
+					res(tree.rightsubTree, data, begin, end, hm);
 				}
 			}
 		} else {
@@ -786,6 +790,8 @@ public class Tree implements Serializable, Comparable<Tree>, Iterable<Node> {
 						((LeafNode) tree.root).getVARModel());
 			}
 		}
+		//CONTROLLO SE TUTTE LE ISTANZE RICADONO IN UN NODO
+		
 	}
 
 	public boolean existVARModel() {

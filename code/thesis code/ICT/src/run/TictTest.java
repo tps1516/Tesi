@@ -136,6 +136,10 @@ public class TictTest {
 		else
 			autoCorrelation = new ResubstitutionIndex();
 
+		/*
+		 * Crea la stringa per la denominazione del file di output .report
+		 * (/output/stream/report)
+		 */
 		String name = "TWSize_" + TWSize + "_Type_"
 				+ rParameters.get(index.type) + "_ic_"
 				+ rParameters.get(index.ic);
@@ -149,10 +153,15 @@ public class TictTest {
 		SnapshotSchema schemaTrain = null, schemaTest = null;
 
 		try {
-
+			/*
+			 * Inizio del software, qui passerà solamente una volta, la prima
+			 */
 			Tree tree = null;
 			double b = Double.MAX_VALUE;
 			try {
+				/*
+				 * Creerà il primo schema del dataset.
+				 */
 				schemaTrain = new SnapshotSchema(config + ".ini");
 
 				configStr = "";
@@ -175,11 +184,19 @@ public class TictTest {
 			SnapshotWeigth W = null;
 			SnapshotData snapTrain = null;
 			SnapshotData snapTest = null;
+			/*
+			 * E' lo snapshotData che si occuperà di tenere traccia dei sensori
+			 * attivi e inattivi in ogni snapshot
+			 */
 			SnapshotData snapNetwork = null;
-			// HashMap<Integer, SensorPoint> hm = null;
+			/*
+			 * E' lo snapshotData che si preoccuperà di tenere traccia del
+			 * forecast su ogni sensore, per ogni snapshot. Finché non ci sarà
+			 * una previsione, rimarrà avvalorato a Double.MAX_VALUE.
+			 */
+			SnapshotData snapForecast = null;
 
 			try {
-
 				inputStreamTrain = new BufferedReader(new FileReader(streamName
 						+ "TRAIN.arff"));
 				inputStreamTest = new BufferedReader(new FileReader(streamName
@@ -199,6 +216,10 @@ public class TictTest {
 							// il primo snapshot contiene solo il network
 
 							if (snapTrain == null) {
+								/*
+								 * Entrerà solo una volta, la prima, leggerà il
+								 * network e creerà lo snapshot di network.
+								 */
 								snapTrain = new SnapshotData(inputStreamTrain,
 										schemaTrain);
 
@@ -212,39 +233,9 @@ public class TictTest {
 								network.createWork(snapTrain, schemaTrain,
 										TWSize);
 
-								ArrayList<SensorPoint> fusedNetwork = new ArrayList<SensorPoint>();
-								for (SensorPoint sp : snapTrain) {
-									SensorPoint sensorPoint = new SensorPoint(
-											sp.getId());
+								snapForecast = snapTrain
+										.createAndAvvalorateSnapForecast(schemaTrain);
 
-									for (Feature f : schemaTrain
-											.getSpatialList()) {
-										double value = ((double) sp.getMeasure(
-												f.getIndexMining()).getValue());
-										NumericValue nv = new NumericValue(
-												value, f.getIndexMining());
-										sensorPoint.addMeasure((Value) nv);
-									}
-
-									for (Feature f : schemaTrain
-											.getTargetList()) {
-										NumericValue nv = new NumericValue(
-												Double.MAX_VALUE,
-												f.getIndexMining());
-										sensorPoint.addMeasure((Value) nv);
-									}
-
-									fusedNetwork.add(sensorPoint);
-								}
-
-								snapNetwork = new SnapshotData(fusedNetwork);
-								snapNetwork.sort();
-
-								/*
-								 * hm = new HashMap<Integer, SensorPoint>(); for
-								 * (SensorPoint sp : snapTrain) {
-								 * hm.put(sp.getId(), null); }
-								 */
 							} else {
 								snapTrain = new SnapshotData(inputStreamTrain,
 										schemaTrain);
@@ -255,8 +246,9 @@ public class TictTest {
 										|| snapTest.size() == 0)
 									continue;
 								snapTrain.sort();
+
 								snapNetwork = snapTrain.mergeSnapshotData(
-										snapNetwork, schemaTrain);
+										snapForecast, schemaTrain);
 								network.updateNetwork(snapNetwork, schemaTrain);
 							}
 							if (W == null) {
@@ -293,7 +285,7 @@ public class TictTest {
 										schemaTest, true);
 								snapTrain.sort();
 								snapNetwork = snapTrain.mergeSnapshotData(
-										snapNetwork, schemaTrain);
+										snapForecast, schemaTrain);
 								network.updateNetwork(snapNetwork, schemaTrain);
 							}
 
@@ -316,8 +308,6 @@ public class TictTest {
 							outputReport.println("**** ID: "
 									+ snapTrain.getIdSnapshot());
 
-							
-							
 							if (tree == null)// first snapshot in the stream
 							{
 
@@ -378,20 +368,17 @@ public class TictTest {
 										.getTimeInMillis()
 										- timeBegin.getTimeInMillis());
 								System.out.println(tree);
-								
-								
-								
-								
+
 								if (tree.existVARModel()) {
-									/*
-									 * HashMap<Integer, ForecastingModel> hm =
-									 * tree .deriveForecastingModel(snapTrain);
-									 * 
-									 * for(Integer i : hm.keySet()){
-									 * System.out.println("ID SENSORE: " + i);
-									 * System.out.println(hm.get(i)); }
-									 */
-									
+
+									HashMap<Integer, ForecastingModel> hm = tree
+											.deriveForecastingModel(snapNetwork);
+
+									for (Integer i : hm.keySet()) {
+										System.out.println("ID SENSORE: " + i);
+										System.out.println(hm.get(i));
+									}
+
 								}
 								outputReport.println(tree.toString());
 								outputReport
