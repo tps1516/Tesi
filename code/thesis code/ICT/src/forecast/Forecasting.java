@@ -56,13 +56,13 @@ public class Forecasting {
 				}
 				SensorPoint spF = createSP(sp, forecast);
 				addInHM(i, spF);
-				matrix = shiftData(matrix, forecast);
+				matrix = Forecasting.shiftData(matrix, forecast);
 			}
 		}
 		return returnResult();
 	}
 
-	private double[][] shiftData(double[][] matrix, double[] forecast) {
+	private static double[][] shiftData(double[][] matrix, double[] forecast) {
 		double[][] result = new double[matrix.length][matrix[0].length];
 		int i;
 		for (i = 1; i < matrix.length; i++)

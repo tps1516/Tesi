@@ -579,18 +579,8 @@ public abstract class Node implements Serializable {
 		featureAvgNode = new FeatureWindow(this, dim);
 	}
 
-	void updateFeatureAvgNode(ArrayList<Object> rParameters) {
-		featureAvgNode.updateAverages(this);
-		
-		if (this instanceof LeafNode ){
-			
-			if (this.featureAvgNode.temporalWindowsIsFull()) {
-				((LeafNode) this).learnVARModels(rParameters);
-			}
-			
-		}
-		
-		
+	void updateFeatureAvgNode() {
+		featureAvgNode.updateAverages(this);	
 	}
 
 	
@@ -616,16 +606,8 @@ public abstract class Node implements Serializable {
 		}
 	}
 
-	void insLastOfFather(ArrayList<Object> rParameters) {
+	void insLastOfFather() {
 		featureAvgNode.insLastOfFather(father.getFeatureAvgNode());
-		
-		if (this instanceof LeafNode ){
-			
-			if (this.featureAvgNode.temporalWindowsIsFull()) {
-				((LeafNode) this).learnVARModels(rParameters);
-			}
-			
-		}
 	}
 
 }

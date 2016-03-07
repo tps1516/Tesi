@@ -14,7 +14,7 @@ public class TemporalWindow<Double> extends CircularFifoQueue<Double> implements
 	 */
 	private int windowMaxSize;
 	
-	private String featureName;
+	private String feature;
 	private TemporalWindow(int dim){
 		super(dim);
 	}
@@ -26,7 +26,7 @@ public class TemporalWindow<Double> extends CircularFifoQueue<Double> implements
 	 */
 	TemporalWindow(Feature f, int dim){
 		super(dim);
-		this.featureName=f.getName();
+		this.feature=f.getName();
 		windowMaxSize=dim;
 	}
 	
@@ -60,7 +60,7 @@ public class TemporalWindow<Double> extends CircularFifoQueue<Double> implements
 	
 	
 	public String toString(){
-		String s=this.featureName+ ": ";
+		String s=this.feature+ ": ";
 		
 		for (Double d: this){
 			s=s+d + " ";
@@ -76,7 +76,7 @@ public class TemporalWindow<Double> extends CircularFifoQueue<Double> implements
 		for(Double d: this){
 			t.add(d);
 		};
-		t.featureName=this.featureName;
+		t.feature=this.feature;
 		t.windowMaxSize=this.windowMaxSize;
 		return t;
 	}

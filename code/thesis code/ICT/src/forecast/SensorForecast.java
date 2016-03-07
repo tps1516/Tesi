@@ -10,7 +10,7 @@ public class SensorForecast {
 		this.schema = schema;
 	}
 
-	public double[] sensorForecasting(double[][] timeSeries,
+	double[] sensorForecasting(double[][] timeSeries,
 			ForecastingModel VARModel) {
 		double[] result = new double[schema.getTargetList().size()];
 		Double value = 0.0;

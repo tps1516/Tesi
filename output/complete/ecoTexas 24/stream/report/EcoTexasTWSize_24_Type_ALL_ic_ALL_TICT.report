@@ -1,0 +1,3684 @@
+TRAIN STREAM=EcoTexasTRAIN
+W computation time (milliseconds):0
+**** ID: 2
+(ozono<=74.7)
+(ozono>74.7)
+
+Computation time(milliseconds)=32
+Leaves statisics
+number of leaves of the tree inherited from the past=0
+number of leaves of the tree after pruning=0
+number of leaves in the new tree=2
+**** ID: 3
+(ozono<=74.7)
+(ozono>74.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 4
+(ozono<=74.7)
+(ozono>74.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 5
+(ozono<=74.7)
+(ozono>74.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 6
+(ozono<=74.7)
+(ozono>74.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 7
+(ozono<=74.7)
+(ozono>74.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 8
+(ozono<=74.7)
+(ozono>74.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 9
+(ozono<=76.4)
+(ozono>76.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 10
+(velocitavento<=6.8)
+(velocitavento>6.8)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 11
+(ozono<=80.2)
+(ozono>80.2)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 12
+(velocitavento<=9.5)
+(velocitavento>9.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 13
+(velocitavento<=9.5)
+(velocitavento>9.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 14
+(radiazionisolari<=0.993)
+(radiazionisolari>0.993)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 15
+(radiazionisolari<=0.993)
+(radiazionisolari>0.993)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 16
+(ozono<=85.2)
+(ozono>85.2)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 17
+(ozono<=85.2)
+(ozono>85.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 18
+(ozono<=85.2)
+(ozono>85.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 19
+(ozono<=85.2)
+(ozono>85.2)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 20
+(ozono<=80.5)
+(ozono>80.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 21
+(ozono<=80.5)
+(ozono>80.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 22
+(ozono<=80.5)(ozono<=77.0)
+(ozono<=80.5)(ozono>77.0)
+(ozono>80.5)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 23
+(ozono<=80.5)(tempreatura<=23.0)
+(ozono<=80.5)(tempreatura>23.0)
+(ozono>80.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 24
+(ozono<=80.5)(ozono<=76.8)
+(ozono<=80.5)(ozono>76.8)
+(ozono>80.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 25
+(ozono<=80.5)(radiazionisolari<=0.0)
+(ozono<=80.5)(radiazionisolari>0.0)
+(ozono>80.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 26
+(ozono<=80.5)(radiazionisolari<=0.0)
+(ozono<=80.5)(radiazionisolari>0.0)
+(ozono>80.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 27
+(ozono<=80.5)(radiazionisolari<=0.0)
+(ozono<=80.5)(radiazionisolari>0.0)
+(ozono>80.5)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 28
+(velocitavento<=8.4)
+(velocitavento>8.4)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 29
+(velocitavento<=7.8)
+(velocitavento>7.8)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 30
+(ozono<=76.9)
+(ozono>76.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 31
+(ozono<=76.9)
+(ozono>76.9)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 32
+(ozono<=76.7)
+(ozono>76.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 33
+(ozono<=78.1)
+(ozono>78.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 34
+(ozono<=78.8)
+(ozono>78.8)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 35
+(ozono<=80.0)
+(ozono>80.0)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 36
+(radiazionisolari<=0.834)
+(radiazionisolari>0.834)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 37
+(ozono<=84.0)
+(ozono>84.0)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 38
+(ozono<=84.0)
+(ozono>84.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 39
+(ozono<=84.0)
+(ozono>84.0)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 40
+(ozono<=84.0)
+(ozono>84.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 41
+(ozono<=84.0)
+(ozono>84.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 42
+(ozono<=84.0)
+(ozono>84.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 43
+(ozono<=84.0)
+(ozono>84.0)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 44
+(ozono<=84.0)
+(ozono>84.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 45
+(ozono<=84.0)(ozono<=78.1)
+(ozono<=84.0)(ozono>78.1)
+(ozono>84.0)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 46
+(ozono<=79.1)
+(ozono>79.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 47
+(ozono<=79.1)
+(ozono>79.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 48
+(ozono<=79.1)
+(ozono>79.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 49
+(ozono<=79.1)(ozono<=76.8)
+(ozono<=79.1)(ozono>76.8)
+(ozono>79.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 50
+(ozono<=79.1)(velocitavento<=4.9)
+(ozono<=79.1)(velocitavento>4.9)
+(ozono>79.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 51
+(ozono<=79.1)(radiazionisolari<=0.0)
+(ozono<=79.1)(radiazionisolari>0.0)
+(ozono>79.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 52
+(ozono<=79.1)(radiazionisolari<=0.0)
+(ozono<=79.1)(radiazionisolari>0.0)
+(ozono>79.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 53
+(ozono<=79.1)(radiazionisolari<=0.0)
+(ozono<=79.1)(radiazionisolari>0.0)
+(ozono>79.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 54
+(ozono<=79.1)(radiazionisolari<=0.0)
+(ozono<=79.1)(radiazionisolari>0.0)
+(ozono>79.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 55
+(ozono<=79.1)(radiazionisolari<=0.004)
+(ozono<=79.1)(radiazionisolari>0.004)
+(ozono>79.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 56
+(ozono<=79.1)(tempreatura<=16.0)
+(ozono<=79.1)(tempreatura>16.0)
+(ozono>79.1)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 57
+(ozono<=79.1)
+(ozono>79.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 58
+(radiazionisolari<=0.379)
+(radiazionisolari>0.379)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 59
+(tempreatura<=28.0)
+(tempreatura>28.0)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 60
+(radiazionisolari<=0.686)
+(radiazionisolari>0.686)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 61
+(velocitavento<=8.0)
+(velocitavento>8.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 62
+(velocitavento<=9.7)
+(velocitavento>9.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 63
+(velocitavento<=9.8)
+(velocitavento>9.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 64
+(radiazionisolari<=0.843)
+(radiazionisolari>0.843)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 65
+(velocitavento<=10.2)
+(velocitavento>10.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 66
+(velocitavento<=10.2)
+(velocitavento>10.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 67
+(velocitavento<=9.2)
+(velocitavento>9.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 68
+(ozono<=83.51)
+(ozono>83.51)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 69
+(ozono<=83.51)(velocitavento<=8.1)
+(ozono<=83.51)(velocitavento>8.1)
+(ozono>83.51)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 70
+(ozono<=80.0)
+(ozono>80.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 71
+(ozono<=80.0)(ozono<=78.1)
+(ozono<=80.0)(ozono>78.1)
+(ozono>80.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 72
+(ozono<=80.0)(ozono<=78.1)
+(ozono<=80.0)(ozono>78.1)
+(ozono>80.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 73
+(ozono<=80.0)(radiazionisolari<=0.0)
+(ozono<=80.0)(radiazionisolari>0.0)
+(ozono>80.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 74
+(ozono<=80.0)(radiazionisolari<=0.0)
+(ozono<=80.0)(radiazionisolari>0.0)
+(ozono>80.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 75
+(ozono<=80.0)(tempreatura<=27.0)
+(ozono<=80.0)(tempreatura>27.0)
+(ozono>80.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 76
+(ozono<=80.0)(tempreatura<=25.0)
+(ozono<=80.0)(tempreatura>25.0)
+(ozono>80.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 77
+(ozono<=80.0)(radiazionisolari<=0.0)
+(ozono<=80.0)(radiazionisolari>0.0)
+(ozono>80.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 78
+(ozono<=80.0)(radiazionisolari<=0.0)
+(ozono<=80.0)(radiazionisolari>0.0)
+(ozono>80.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 79
+(ozono<=80.0)(radiazionisolari<=0.006)
+(ozono<=80.0)(radiazionisolari>0.006)
+(ozono>80.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 80
+(ozono<=80.0)(tempreatura<=25.0)
+(ozono<=80.0)(tempreatura>25.0)
+(ozono>80.0)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 81
+(ozono<=80.0)(tempreatura<=26.0)
+(ozono<=80.0)(tempreatura>26.0)
+(ozono>80.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 82
+(ozono<=80.0)
+(ozono>80.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 83
+(tempreatura<=30.0)
+(tempreatura>30.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 84
+(velocitavento<=11.9)
+(velocitavento>11.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 85
+(velocitavento<=12.4)
+(velocitavento>12.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 86
+(velocitavento<=12.7)
+(velocitavento>12.7)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 87
+(velocitavento<=12.8)
+(velocitavento>12.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 88
+(velocitavento<=12.2)
+(velocitavento>12.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 89
+(velocitavento<=12.2)
+(velocitavento>12.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 90
+(radiazionisolari<=0.616)
+(radiazionisolari>0.616)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 91
+(ozono<=87.5)
+(ozono>87.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 92
+(ozono<=85.6)
+(ozono>85.6)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 93
+(tempreatura<=26.0)
+(tempreatura>26.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 94
+(velocitavento<=7.9)
+(velocitavento>7.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 95
+(ozono<=78.8)
+(ozono>78.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 96
+(ozono<=77.8)
+(ozono>77.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 97
+(tempreatura<=28.0)
+(tempreatura>28.0)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 98
+(tempreatura<=28.0)
+(tempreatura>28.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 99
+(ozono<=77.1)
+(ozono>77.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 100
+(ozono<=77.1)
+(ozono>77.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 101
+(ozono<=77.1)
+(ozono>77.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 102
+(ozono<=77.1)(velocitavento<=5.2)
+(ozono<=77.1)(velocitavento>5.2)
+(ozono>77.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 103
+(ozono<=77.1)(velocitavento<=6.2)
+(ozono<=77.1)(velocitavento>6.2)
+(ozono>77.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 104
+(ozono<=77.1)(velocitavento<=6.7)
+(ozono<=77.1)(velocitavento>6.7)
+(ozono>77.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 105
+(ozono<=77.1)
+(ozono>77.1)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 106
+(velocitavento<=7.9)
+(velocitavento>7.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 107
+(velocitavento<=8.4)
+(velocitavento>8.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 108
+(ozono<=83.1)
+(ozono>83.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 109
+(ozono<=84.8)
+(ozono>84.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 110
+(radiazionisolari<=1.278)
+(radiazionisolari>1.278)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 111
+(radiazionisolari<=1.183)
+(radiazionisolari>1.183)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 112
+(velocitavento<=9.0)
+(velocitavento>9.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 113
+(radiazionisolari<=0.889)
+(radiazionisolari>0.889)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 114
+(velocitavento<=8.7)
+(velocitavento>8.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 115
+(velocitavento<=8.7)
+(velocitavento>8.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 116
+(radiazionisolari<=0.042)
+(radiazionisolari>0.042)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 117
+(ozono<=79.7)
+(ozono>79.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 118
+(ozono<=79.7)(velocitavento<=6.1)
+(ozono<=79.7)(velocitavento>6.1)
+(ozono>79.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 119
+(ozono<=79.7)(velocitavento<=6.3)
+(ozono<=79.7)(velocitavento>6.3)
+(ozono>79.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 120
+(ozono<=79.7)(velocitavento<=5.7)
+(ozono<=79.7)(velocitavento>5.7)
+(ozono>79.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 121
+(ozono<=79.7)(velocitavento<=5.2)
+(ozono<=79.7)(velocitavento>5.2)
+(ozono>79.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 122
+(tempreatura<=19.0)
+(tempreatura>19.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 123
+(tempreatura<=17.0)
+(tempreatura>17.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 124
+(ozono<=76.2)
+(ozono>76.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 125
+(tempreatura<=15.0)
+(tempreatura>15.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 126
+(tempreatura<=15.0)
+(tempreatura>15.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 127
+(ozono<=75.6)
+(ozono>75.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 128
+(ozono<=76.3)
+(ozono>76.3)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 129
+(ozono<=78.6)
+(ozono>78.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 130
+(radiazionisolari<=0.471)
+(radiazionisolari>0.471)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 131
+(radiazionisolari<=0.732)
+(radiazionisolari>0.732)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 132
+(radiazionisolari<=0.932)
+(radiazionisolari>0.932)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 133
+(tempreatura<=29.0)
+(tempreatura>29.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 134
+(velocitavento<=9.8)
+(velocitavento>9.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 135
+(radiazionisolari<=1.048)
+(radiazionisolari>1.048)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 136
+(ozono<=87.8)
+(ozono>87.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 137
+(ozono<=87.8)
+(ozono>87.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 138
+(ozono<=87.8)
+(ozono>87.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 139
+(ozono<=87.8)(tempreatura<=27.0)
+(ozono<=87.8)(tempreatura>27.0)
+(ozono>87.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 140
+(radiazionisolari<=0.064)
+(radiazionisolari>0.064)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 141
+(radiazionisolari<=0.001)
+(radiazionisolari>0.001)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 142
+(ozono<=79.0)
+(ozono>79.0)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 143
+(ozono<=79.0)(ozono<=76.8)
+(ozono<=79.0)(ozono>76.8)
+(ozono>79.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 144
+(ozono<=79.0)
+(ozono>79.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 145
+(ozono<=79.0)(velocitavento<=6.3)
+(ozono<=79.0)(velocitavento>6.3)
+(ozono>79.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 146
+(ozono<=79.0)(velocitavento<=6.3)
+(ozono<=79.0)(velocitavento>6.3)
+(ozono>79.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 147
+(ozono<=79.0)(velocitavento<=6.3)
+(ozono<=79.0)(velocitavento>6.3)
+(ozono>79.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 148
+(ozono<=79.0)(velocitavento<=6.3)
+(ozono<=79.0)(velocitavento>6.3)
+(ozono>79.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 149
+(ozono<=79.0)(velocitavento<=4.8)
+(ozono<=79.0)(velocitavento>4.8)
+(ozono>79.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 150
+(ozono<=79.0)(velocitavento<=5.0)
+(ozono<=79.0)(velocitavento>5.0)
+(ozono>79.0)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 151
+(ozono<=79.0)(velocitavento<=4.8)
+(ozono<=79.0)(velocitavento>4.8)
+(ozono>79.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 152
+(ozono<=79.0)(tempreatura<=12.0)
+(ozono<=79.0)(tempreatura>12.0)
+(ozono>79.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 153
+(ozono<=79.0)
+(ozono>79.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 154
+(radiazionisolari<=0.417)
+(radiazionisolari>0.417)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 155
+(radiazionisolari<=0.702)
+(radiazionisolari>0.702)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 156
+(radiazionisolari<=0.702)
+(radiazionisolari>0.702)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 157
+(radiazionisolari<=0.702)
+(radiazionisolari>0.702)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 158
+(radiazionisolari<=0.88)
+(radiazionisolari>0.88)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 159
+(radiazionisolari<=0.88)
+(radiazionisolari>0.88)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 160
+(velocitavento<=7.0)
+(velocitavento>7.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 161
+(tempreatura<=23.0)
+(tempreatura>23.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 162
+(tempreatura<=23.0)
+(tempreatura>23.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 163
+(radiazionisolari<=0.167)
+(radiazionisolari>0.167)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 164
+(velocitavento<=6.0)
+(velocitavento>6.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 165
+(ozono<=79.4)
+(ozono>79.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 166
+(ozono<=79.4)(velocitavento<=7.6)
+(ozono<=79.4)(velocitavento>7.6)
+(ozono>79.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 167
+(ozono<=79.4)(velocitavento<=6.8)
+(ozono<=79.4)(velocitavento>6.8)
+(ozono>79.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 168
+(ozono<=79.4)(velocitavento<=7.0)
+(ozono<=79.4)(velocitavento>7.0)
+(ozono>79.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 169
+(ozono<=79.4)(radiazionisolari<=0.0)
+(ozono<=79.4)(radiazionisolari>0.0)
+(ozono>79.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 170
+(ozono<=79.4)(velocitavento<=5.8)
+(ozono<=79.4)(velocitavento>5.8)
+(ozono>79.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 171
+(ozono<=79.4)(radiazionisolari<=0.0)
+(ozono<=79.4)(radiazionisolari>0.0)
+(ozono>79.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 172
+(velocitavento<=4.2)
+(velocitavento>4.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 173
+(velocitavento<=3.6)
+(velocitavento>3.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 174
+(velocitavento<=3.6)
+(velocitavento>3.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 175
+(velocitavento<=3.6)
+(velocitavento>3.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 176
+(radiazionisolari<=0.102)
+(radiazionisolari>0.102)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 177
+(tempreatura<=10.0)
+(tempreatura>10.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 178
+(velocitavento<=6.0)
+(velocitavento>6.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 179
+(tempreatura<=23.0)
+(tempreatura>23.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 180
+(tempreatura<=28.0)
+(tempreatura>28.0)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 181
+(tempreatura<=31.0)
+(tempreatura>31.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 182
+(radiazionisolari<=1.069)
+(radiazionisolari>1.069)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 183
+(radiazionisolari<=1.069)
+(radiazionisolari>1.069)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 184
+(radiazionisolari<=0.911)
+(radiazionisolari>0.911)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 185
+(ozono<=88.4)
+(ozono>88.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 186
+(radiazionisolari<=0.521)
+(radiazionisolari>0.521)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 187
+(radiazionisolari<=0.282)
+(radiazionisolari>0.282)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 188
+(radiazionisolari<=0.072)
+(radiazionisolari>0.072)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 189
+(ozono<=82.6)
+(ozono>82.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 190
+(ozono<=82.6)
+(ozono>82.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 191
+(ozono<=78.9)
+(ozono>78.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 192
+(ozono<=78.9)
+(ozono>78.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 193
+(ozono<=78.9)(velocitavento<=9.4)
+(ozono<=78.9)(velocitavento>9.4)
+(ozono>78.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 194
+(ozono<=78.9)(tempreatura<=20.0)
+(ozono<=78.9)(tempreatura>20.0)
+(ozono>78.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 195
+(ozono<=78.9)(tempreatura<=20.0)
+(ozono<=78.9)(tempreatura>20.0)
+(ozono>78.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 196
+(ozono<=78.9)(tempreatura<=20.0)
+(ozono<=78.9)(tempreatura>20.0)
+(ozono>78.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 197
+(ozono<=78.9)(tempreatura<=20.0)
+(ozono<=78.9)(tempreatura>20.0)
+(ozono>78.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 198
+(ozono<=78.9)(tempreatura<=20.0)
+(ozono<=78.9)(tempreatura>20.0)
+(ozono>78.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 199
+(ozono<=78.9)(tempreatura<=20.0)
+(ozono<=78.9)(tempreatura>20.0)
+(ozono>78.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 200
+(ozono<=78.9)(tempreatura<=20.0)
+(ozono<=78.9)(tempreatura>20.0)
+(ozono>78.9)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 201
+(ozono<=78.9)(tempreatura<=20.0)
+(ozono<=78.9)(tempreatura>20.0)
+(ozono>78.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 202
+(velocitavento<=11.1)
+(velocitavento>11.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 203
+(radiazionisolari<=0.849)
+(radiazionisolari>0.849)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 204
+(velocitavento<=12.9)
+(velocitavento>12.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 205
+(radiazionisolari<=1.075)
+(radiazionisolari>1.075)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 206
+(velocitavento<=12.5)
+(velocitavento>12.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 207
+(velocitavento<=12.1)
+(velocitavento>12.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 208
+(velocitavento<=11.8)
+(velocitavento>11.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 209
+(velocitavento<=12.2)
+(velocitavento>12.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 210
+(velocitavento<=12.7)
+(velocitavento>12.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 211
+(tempreatura<=28.0)
+(tempreatura>28.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 212
+(tempreatura<=25.0)
+(tempreatura>25.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 213
+(tempreatura<=23.0)
+(tempreatura>23.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 214
+(tempreatura<=21.0)
+(tempreatura>21.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 215
+(tempreatura<=20.0)
+(tempreatura>20.0)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 216
+(tempreatura<=20.0)
+(tempreatura>20.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 217
+(tempreatura<=20.0)
+(tempreatura>20.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 218
+(tempreatura<=19.0)
+(tempreatura>19.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 219
+(tempreatura<=18.0)
+(tempreatura>18.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 220
+(velocitavento<=6.7)
+(velocitavento>6.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 221
+(ozono<=75.5)
+(ozono>75.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 222
+(velocitavento<=6.2)
+(velocitavento>6.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 223
+(tempreatura<=18.0)
+(tempreatura>18.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 224
+(tempreatura<=18.0)
+(tempreatura>18.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 225
+(tempreatura<=18.0)
+(tempreatura>18.0)(ozono<=73.9)
+(tempreatura>18.0)(ozono>73.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 226
+(tempreatura<=25.0)
+(tempreatura>25.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 227
+(velocitavento<=6.81)
+(velocitavento>6.81)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 228
+(velocitavento<=7.1)
+(velocitavento>7.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 229
+(radiazionisolari<=1.184)
+(radiazionisolari>1.184)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 230
+(radiazionisolari<=1.269)
+(radiazionisolari>1.269)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 231
+(ozono<=86.2)
+(ozono>86.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 232
+(radiazionisolari<=1.054)
+(radiazionisolari>1.054)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 233
+(radiazionisolari<=0.888)
+(radiazionisolari>0.888)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 234
+(tempreatura<=38.0)
+(tempreatura>38.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 235
+(tempreatura<=35.0)
+(tempreatura>35.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 236
+(radiazionisolari<=0.066)
+(radiazionisolari>0.066)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 237
+(ozono<=79.8)
+(ozono>79.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 238
+(ozono<=79.8)(tempreatura<=23.0)
+(ozono<=79.8)(tempreatura>23.0)
+(ozono>79.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 239
+(ozono<=79.8)(velocitavento<=6.4)
+(ozono<=79.8)(velocitavento>6.4)
+(ozono>79.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 240
+(ozono<=79.8)(velocitavento<=5.9)
+(ozono<=79.8)(velocitavento>5.9)
+(ozono>79.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 241
+(ozono<=79.8)(tempreatura<=19.0)
+(ozono<=79.8)(tempreatura>19.0)
+(ozono>79.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 242
+(ozono<=79.8)(tempreatura<=19.0)
+(ozono<=79.8)(tempreatura>19.0)
+(ozono>79.8)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 243
+(ozono<=76.4)
+(ozono>76.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 244
+(velocitavento<=4.2)
+(velocitavento>4.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 245
+(tempreatura<=14.0)
+(tempreatura>14.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 246
+(tempreatura<=12.0)
+(tempreatura>12.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 247
+(ozono<=75.7)
+(ozono>75.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 248
+(ozono<=76.8)
+(ozono>76.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 249
+(ozono<=78.5)
+(ozono>78.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 250
+(radiazionisolari<=0.5)
+(radiazionisolari>0.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 251
+(ozono<=82.2)
+(ozono>82.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 252
+(tempreatura<=29.0)
+(tempreatura>29.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 253
+(velocitavento<=9.9)
+(velocitavento>9.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 254
+(velocitavento<=11.0)
+(velocitavento>11.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 255
+(velocitavento<=11.1)
+(velocitavento>11.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 256
+(ozono<=86.8)
+(ozono>86.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 257
+(ozono<=87.4)
+(ozono>87.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 258
+(radiazionisolari<=0.59)
+(radiazionisolari>0.59)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 259
+(tempreatura<=25.0)
+(tempreatura>25.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 260
+(tempreatura<=25.0)
+(tempreatura>25.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 261
+(velocitavento<=6.9)
+(velocitavento>6.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 262
+(velocitavento<=7.5)
+(velocitavento>7.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 263
+(velocitavento<=7.5)
+(velocitavento>7.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 264
+(velocitavento<=5.8)
+(velocitavento>5.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 265
+(velocitavento<=5.8)
+(velocitavento>5.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 266
+(velocitavento<=4.0)
+(velocitavento>4.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 267
+(tempreatura<=13.0)
+(tempreatura>13.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 268
+(tempreatura<=13.0)
+(tempreatura>13.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 269
+(tempreatura<=14.0)
+(tempreatura>14.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 270
+(tempreatura<=14.0)
+(tempreatura>14.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 271
+(tempreatura<=11.0)
+(tempreatura>11.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 272
+(ozono<=75.4)
+(ozono>75.4)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 273
+(ozono<=78.1)
+(ozono>78.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 274
+(tempreatura<=25.0)
+(tempreatura>25.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 275
+(radiazionisolari<=0.802)
+(radiazionisolari>0.802)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 276
+(velocitavento<=6.6)
+(velocitavento>6.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 277
+(tempreatura<=37.0)
+(tempreatura>37.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 278
+(tempreatura<=37.0)
+(tempreatura>37.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 279
+(tempreatura<=37.0)
+(tempreatura>37.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 280
+(tempreatura<=37.0)
+(tempreatura>37.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 281
+(tempreatura<=37.0)(velocitavento<=8.3)
+(tempreatura<=37.0)(velocitavento>8.3)
+(tempreatura>37.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 282
+(tempreatura<=37.0)(tempreatura<=25.0)
+(tempreatura<=37.0)(tempreatura>25.0)
+(tempreatura>37.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 283
+(ozono<=74.8)
+(ozono>74.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 284
+(ozono<=74.8)(velocitavento<=9.0)
+(ozono<=74.8)(velocitavento>9.0)
+(ozono>74.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 285
+(ozono<=70.8)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 286
+(ozono<=70.8)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 287
+(ozono<=70.8)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 288
+(ozono<=70.8)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 289
+(ozono<=70.8)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 290
+(ozono<=70.8)(radiazionisolari<=0.0)
+(ozono<=70.8)(radiazionisolari>0.0)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 291
+(ozono<=70.8)(tempreatura<=24.0)
+(ozono<=70.8)(tempreatura>24.0)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 292
+(ozono<=70.8)(ozono<=63.2)
+(ozono<=70.8)(ozono>63.2)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 293
+(ozono<=70.8)(ozono<=63.2)
+(ozono<=70.8)(ozono>63.2)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 294
+(ozono<=70.8)(ozono<=63.2)
+(ozono<=70.8)(ozono>63.2)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 295
+(ozono<=70.8)(ozono<=63.2)
+(ozono<=70.8)(ozono>63.2)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 296
+(ozono<=70.8)(ozono<=63.2)
+(ozono<=70.8)(ozono>63.2)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 297
+(ozono<=70.8)(ozono<=63.2)
+(ozono<=70.8)(ozono>63.2)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 298
+(ozono<=70.8)(ozono<=63.2)
+(ozono<=70.8)(ozono>63.2)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 299
+(ozono<=70.8)(ozono<=63.2)
+(ozono<=70.8)(ozono>63.2)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 300
+(ozono<=70.8)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 301
+(ozono<=70.8)
+(ozono>70.8)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 302
+(radiazionisolari<=0.772)
+(radiazionisolari>0.772)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 303
+(radiazionisolari<=0.772)
+(radiazionisolari>0.772)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 304
+(radiazionisolari<=0.772)
+(radiazionisolari>0.772)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 305
+(radiazionisolari<=0.772)
+(radiazionisolari>0.772)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 306
+(velocitavento<=7.6)
+(velocitavento>7.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 307
+(ozono<=73.0)
+(ozono>73.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 308
+(tempreatura<=38.0)
+(tempreatura>38.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 309
+(tempreatura<=32.0)
+(tempreatura>32.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 310
+(tempreatura<=26.0)
+(tempreatura>26.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 311
+(tempreatura<=24.0)
+(tempreatura>24.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 312
+(tempreatura<=22.0)
+(tempreatura>22.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 313
+(velocitavento<=3.0)
+(velocitavento>3.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 314
+(velocitavento<=3.0)
+(velocitavento>3.0)(ozono<=60.6)
+(velocitavento>3.0)(ozono>60.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 315
+(velocitavento<=3.0)
+(velocitavento>3.0)(ozono<=60.6)
+(velocitavento>3.0)(ozono>60.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=3
+
+
+**** ID: 316
+(tempreatura<=17.0)
+(tempreatura>17.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 317
+(velocitavento<=4.1)
+(velocitavento>4.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 318
+(ozono<=58.1)
+(ozono>58.1)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 319
+(velocitavento<=4.6)
+(velocitavento>4.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 320
+(tempreatura<=18.0)
+(tempreatura>18.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 321
+(ozono<=61.6)
+(ozono>61.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 322
+(tempreatura<=35.0)
+(tempreatura>35.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 323
+(radiazionisolari<=1.076)
+(radiazionisolari>1.076)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 324
+(radiazionisolari<=1.274)
+(radiazionisolari>1.274)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 325
+(radiazionisolari<=1.274)
+(radiazionisolari>1.274)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 326
+(tempreatura<=47.0)
+(tempreatura>47.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 327
+(velocitavento<=8.2)
+(velocitavento>8.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 328
+(tempreatura<=52.0)
+(tempreatura>52.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 329
+(tempreatura<=52.0)
+(tempreatura>52.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 330
+(tempreatura<=52.0)
+(tempreatura>52.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 331
+(tempreatura<=52.0)
+(tempreatura>52.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 332
+(tempreatura<=51.0)
+(tempreatura>51.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 333
+(ozono<=71.5)
+(ozono>71.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 334
+(ozono<=71.5)
+(ozono>71.5)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 335
+(tempreatura<=32.0)
+(tempreatura>32.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 336
+(velocitavento<=3.5)
+(velocitavento>3.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 337
+(velocitavento<=3.5)
+(velocitavento>3.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 338
+(ozono<=63.3)
+(ozono>63.3)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 339
+(ozono<=63.3)
+(ozono>63.3)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 340
+(ozono<=63.3)(velocitavento<=3.7)
+(ozono<=63.3)(velocitavento>3.7)
+(ozono>63.3)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 341
+(ozono<=63.3)(ozono<=58.5)
+(ozono<=63.3)(ozono>58.5)
+(ozono>63.3)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 342
+(tempreatura<=18.0)
+(tempreatura>18.0)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 343
+(tempreatura<=18.0)
+(tempreatura>18.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 344
+(tempreatura<=18.0)
+(tempreatura>18.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 345
+(ozono<=65.2)
+(ozono>65.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 346
+(radiazionisolari<=0.791)
+(radiazionisolari>0.791)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 347
+(radiazionisolari<=1.055)
+(radiazionisolari>1.055)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 348
+(tempreatura<=51.0)
+(tempreatura>51.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 349
+(tempreatura<=51.0)
+(tempreatura>51.0)(velocitavento<=6.5)
+(tempreatura>51.0)(velocitavento>6.5)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 350
+(velocitavento<=7.2)
+(velocitavento>7.2)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 351
+(tempreatura<=58.0)
+(tempreatura>58.0)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 352
+(tempreatura<=58.0)
+(tempreatura>58.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 353
+(tempreatura<=58.0)
+(tempreatura>58.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 354
+(tempreatura<=58.0)
+(tempreatura>58.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 355
+(tempreatura<=58.0)
+(tempreatura>58.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 356
+(tempreatura<=54.0)
+(tempreatura>54.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 357
+(tempreatura<=45.0)
+(tempreatura>45.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 358
+(velocitavento<=2.9)
+(velocitavento>2.9)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 359
+(tempreatura<=31.0)
+(tempreatura>31.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 360
+(tempreatura<=31.0)
+(tempreatura>31.0)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=2
+
+
+**** ID: 361
+(velocitavento<=2.6)
+(velocitavento>2.6)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+

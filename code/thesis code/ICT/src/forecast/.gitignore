@@ -10,3 +10,5 @@
 /NotForecastingException.class
 /Forecasting.class
 /SensorForecast.class
+/OutputForecast.class
+/OutputReport.class

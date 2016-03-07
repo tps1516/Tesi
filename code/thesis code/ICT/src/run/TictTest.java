@@ -33,11 +33,13 @@ import data.datavalue.NumericValue;
 import data.datavalue.Value;
 import data.feature.AutocorrelationI;
 import data.feature.Feature;
+import data.feature.MoranIndex;
 import data.feature.ResubstitutionIndex;
 import data.feature.ResubstitutionIndexOnGetisOrd;
 import data.feature.GetisOrdIndex;
 import forecast.Forecasting;
 import forecast.ForecastingModel;
+import forecast.OutputReport;
 
 // completare deve prendere trainign and testing sets
 
@@ -49,66 +51,116 @@ public class TictTest {
 	 */
 	public static void main(String[] args) throws IOException {
 		PrintStream outputReport;
+		PrintStream outputComputationTime;
 
-		String streamName = "";// "soace_ga_training_5XY.arff";
-		String config = "";// "gasd.ini";
+		String streamName = "";// ".arff";
+		String config = ""; // ".ini"
 
-		GregorianCalendar timeGlobalBegin;
-		GregorianCalendar timeGlobalEnd;
-
+		/*
+		 * raggio per il calcolo dell'autocorrelazione
+		 */
 		float bperc = .1f;
+
+		/*
+		 * stream dei sensori, tiene traccia per ogni sensore dei valori assunti
+		 * da essi per ogni feature
+		 */
 		Network network = new Network();
+
+		/*
+		 * numero di split
+		 */
 		Integer splitNumber = 20; // random split identifier
-		float centroidPercentage = .2f;
-		String sampling = "quadtree";
-		String testType = "target";
+
+		/*
+		 * metrica per il calocolo dell'autocorrelazione
+		 */
 		String isSpatial = "GO";
+
+		String testType = "target";
+
+		/*
+		 * dimensione massima della finestra temporale quando è piena è
+		 * possibile iniziare il forecasting
+		 */
 		Integer TWSize = 0;
+
+		/*
+		 * path dello script R.exe
+		 */
 		String rPath;
+
+		/*
+		 * parametri utilizzati per la costruzione del modello VAR
+		 */
 		String lagMax;
 		String season;
 		String exogen;
 		String ic;
 		String type;
+
+		/*
+		 * numero di forecast da effettuare
+		 */
 		Integer nahead;
 
-		try {
-			timeGlobalBegin = new GregorianCalendar();
-			streamName = "dataset/" + args[0];// "soace_ga_training_5XY.arff";
-			config = "dataset/" + args[1];// "gasd.ini";
+		OutputReport outputForecastReport;
 
+		/*
+		 * vado a leggere i parametri in input al software
+		 */
+		try {
+
+			streamName = "dataset/" + args[0];// ".arff";
+			config = "dataset/" + args[1];// ".ini";
 			splitNumber = new Integer(args[2]); // random split identifier
 			bperc = new Float(args[3]);
-			centroidPercentage = new Float(args[4]);
-			TWSize = new Integer(args[5]);
-			rPath = String.valueOf(args[6]);
-			lagMax = String.valueOf(args[7]);
-			season = String.valueOf(args[8]);
-			exogen = String.valueOf(args[9]);
-			ic = String.valueOf(args[10]);
-			type = String.valueOf(args[11]);
-			nahead = new Integer(args[12]);
-			/*
-			 * sampling=new String(args[5]); testType=new String(args[6]);
-			 * isSpatial=new Boolean(args[7]);
-			 */
+			TWSize = new Integer(args[4]);
+			rPath = String.valueOf(args[5]);
+			lagMax = String.valueOf(args[6]);
+			season = String.valueOf(args[7]);
+			exogen = String.valueOf(args[8]);
+			ic = String.valueOf(args[9]);
+			type = String.valueOf(args[10]);
+			nahead = new Integer(args[11]);
 		} catch (IndexOutOfBoundsException e) {
 			String report = "TICT@KDDE.UNIBA.IT\n";
 			report += "author = Annalisa Appice\n\n";
 			report += "run jar by using the input parameters:\n";
-			report += "streamfile configfile numSplits bandwidthPercentage samplingPercentage\n";
-			report += "streamfileTRAIN.arff and streamfileTEST are stored in a local directory named \'dataset\'\n";
-			report += "the first snapshot of both training and testing streams contain the network structure\n";
-			report += "nummSplit=20 (default)\n";
-			report += "bandwidthPercentage: real value in ]0,1]\n";
-			report += "samplingPercentage: real value in ]0,1]\n";
+			report += "streamfile configfile numSplits bandwidthPercentage \n";
+			report += "TWsize rPath lagMax season exogen ic type nahead \n";
+			report += "streamfileTRAIN.arff is stored in a local directory named \'dataset\'\n";
+			report += "the first snapshot contain the network structure\n";
+			report += "nummSplit=20 (default)\nTWSize>0 ";
+			report += "rPath=where RScript.exe is located on your computer\n";
+			report += "lagMax>0 && lagMax < TWSize-2\n";
+			report += "season>0 && season < 13 or NULL\n";
+			report += "exogen=matrix of exogen variables or NULL\n";
+			report += "ic=AIC or ic=HQ or ic=SC or ic=FPE or ic=ALL\n";
+			report += "criteria used for VAR model's construction\n";
+			report += "type=const or type=trend or type=both or type=none or type=ALL\n";
+			report += "type of deterministic regressor for VAR model's construction\n";
+			report += "nahead>0, number of focast";
 			report += "Reports are created in the local directory named \'output\'\n";
 
 			System.out.println(report);
 			return;
 
 		}
+		String dataName = args[0];
 
+		/*
+		 * Inizializzo il file per la stampa del costo in tempo delle operazioni
+		 */
+		outputComputationTime = new PrintStream(new FileOutputStream(
+				"output/stream/report/ComputationTime/" + dataName + TWSize
+						+ "_" + ic + "_" + type + "_CTime.csv"));
+		outputComputationTime.print(";Learn Tree;Learn VAR Model;Forecast\n");
+
+		/*
+		 * inizializzo l'arrayList che memorizza i parametri per la costruzione
+		 * del modello var
+		 */
 		ArrayList<Object> rParameters = new ArrayList<Object>();
 		ParametersRForecastIndex index = new ParametersRForecastIndex();
 		rParameters.add(index.rPath, rPath);
@@ -119,6 +171,11 @@ public class TictTest {
 		rParameters.add(index.type, type);
 		rParameters.add(index.TWSize, TWSize);
 
+		/*
+		 * effettuo un controllo sui parametri e nel caso in cui non venga
+		 * superato cattura e gestisco l'eccezione fermando l'esecuzione del
+		 * software
+		 */
 		try {
 			ParametersChecker checker = new ParametersChecker(TWSize - 2);
 			checker.check(rParameters);
@@ -127,8 +184,23 @@ public class TictTest {
 			return;
 		}
 
+		/*
+		 * inizializzo nella classe RVar l'oggetto che contiene tutti i
+		 * possibili valori assumibili da ic
+		 */
 		RVar.initializedAcceptableIc();
+
+		/*
+		 * inizializzo nella classe RVar l'oggetto che contiene tutti i
+		 * possibili valori assumibili da type
+		 */
 		RVar.initializedAcceptableType();
+
+		/*
+		 * costruisco tutte le possibili configurazioni per la costruzione del
+		 * modello VAR, dipendentemente dai parametri assunti da ic e type in
+		 * input
+		 */
 		RVar.loadCombinations(rParameters);
 
 		String configStr = "";
@@ -151,9 +223,10 @@ public class TictTest {
 				"output/stream/report/" + args[0] + name + "_TICT.report"));
 
 		outputReport.println("TRAIN STREAM=" + args[0] + "TRAIN");
-		outputReport.println("TEST STREAM=" + args[0] + "TEST");
 
-		SnapshotSchema schemaTrain = null, schemaTest = null;
+		outputForecastReport = new OutputReport(nahead, rParameters, dataName);
+
+		SnapshotSchema schema = null;
 
 		try {
 			/*
@@ -165,12 +238,11 @@ public class TictTest {
 				/*
 				 * Creerà il primo schema del dataset.
 				 */
-				schemaTrain = new SnapshotSchema(config + ".ini");
+				schema = new SnapshotSchema(config + ".ini");
 
 				configStr = "";
-				for (Feature g : schemaTrain.getTargetList())
+				for (Feature g : schema.getTargetList())
 					configStr += g.getName() + ";";
-				schemaTest = new SnapshotSchema(config + ".ini");
 
 			} catch (IOException e) {
 				System.out.println(e);
@@ -182,75 +254,69 @@ public class TictTest {
 				return;
 			}
 
-			BufferedReader inputStreamTrain;
-			BufferedReader inputStreamTest;
+			BufferedReader inputStream;
 			SnapshotWeigth W = null;
-			SnapshotData snapTrain = null;
-			SnapshotData snapTest = null;
+
+			/*
+			 * snapshotData corrente
+			 */
+			SnapshotData snapData = null;
+
 			/*
 			 * E' lo snapshotData che si occuperà di tenere traccia dei sensori
 			 * attivi e inattivi in ogni snapshot
 			 */
 			SnapshotData snapNetwork = null;
+
 			/*
 			 * E' lo snapshotData che si preoccuperà di tenere traccia del
-			 * forecast su ogni sensore, per ogni snapshot. Finché non ci sarà
-			 * una previsione, rimarrà avvalorato a Double.MAX_VALUE.
+			 * forecast con nahead=1 effettuato su ogni sensore, per ogni
+			 * snapshot. Finché non ci sarà una previsione, rimarrà avvalorato a
+			 * Double.MAX_VALUE.
 			 */
 			SnapshotData snapForecast = null;
 
 			try {
-				inputStreamTrain = new BufferedReader(new FileReader(streamName
+				inputStream = new BufferedReader(new FileReader(streamName
 						+ "TRAIN.arff"));
-				inputStreamTest = new BufferedReader(new FileReader(streamName
-						+ "TEST.arff"));
 
 				String out = "";
 
 				try {
-					String inlineTrain = inputStreamTrain.readLine();
-					String inlineTest = inputStreamTest.readLine();
+					String inline = inputStream.readLine();
 
-					if (!inlineTrain.equals("@") || !inlineTest.equals("@"))
+					if (!inline.equals("@"))
 						return;
 
 					while (true) {
 						try {
 							// il primo snapshot contiene solo il network
 
-							if (snapTrain == null) {
+							if (snapData == null) {
 								/*
 								 * Entrerà solo una volta, la prima, leggerà il
 								 * network e creerà lo snapshot di network.
 								 */
-								snapTrain = new SnapshotData(inputStreamTrain,
-										schemaTrain);
+								snapData = new SnapshotData(inputStream,
+										schema);
 
-								snapTest = new SnapshotData(inputStreamTest,
-										schemaTest, true);
-								if (snapTrain.size() == 0
-										|| snapTest.size() == 0)
+								if (snapData.size() == 0)
 									continue;
 
-								snapTrain.sort();
-								network.createWork(snapTrain, schemaTrain,
-										TWSize);
+								snapData.sort();
+								network.createWork(snapData, schema, TWSize);
 
-								snapForecast = snapTrain
-										.createAndAvvalorateSnapForecast(schemaTrain);
+								snapForecast = snapData.initialize(schema);
 							} else {
-								snapTrain = new SnapshotData(inputStreamTrain,
-										schemaTrain);
+								snapData = new SnapshotData(inputStream,
+										schema);
 
-								snapTest = new SnapshotData(inputStreamTest,
-										schemaTest, true);
-								if (snapTrain.size() == 0
-										|| snapTest.size() == 0)
+								if (snapData.size() == 0)
 									continue;
-								snapTrain.sort();
-								snapNetwork = snapTrain.mergeSnapshotData(
-										snapForecast, schemaTrain);
-								network.updateNetwork(snapNetwork, schemaTrain);
+								snapData.sort();
+								snapNetwork = snapData.mergeSnapshotData(
+										snapForecast, schema);
+								network.updateNetwork(snapNetwork, schema);
 							}
 							if (W == null) {
 								/*
@@ -258,16 +324,16 @@ public class TictTest {
 								 * dove vengono calcolate le medie degli RMSE
 								 */
 								VAROutput.inizializedOutputFiles(rParameters,
-										schemaTrain, args[0]);
+										schema, args[0]);
 								GregorianCalendar timeBegin = new GregorianCalendar();
 								b = SnapshotWeigth.maxDist(
-										snapTrain,
-										new EuclideanDistance(snapTrain
+										snapData,
+										new EuclideanDistance(snapData
 												.getSpatialFeaturesSize()));
 								W = new DynamicSnapshotWeight(b * bperc);
 								W.updateSnapshotWeigth(
-										snapTrain,
-										new EuclideanDistance(snapTrain
+										snapData,
+										new EuclideanDistance(snapData
 												.getSpatialFeaturesSize()));
 
 								GregorianCalendar timeEnd = new GregorianCalendar();
@@ -280,44 +346,46 @@ public class TictTest {
 										+ args[0] + ".wmodel";
 								W.salva(nomeFile);
 
-								snapTrain = new SnapshotData(inputStreamTrain,
-										schemaTrain);
-								snapTest = new SnapshotData(inputStreamTest,
-										schemaTest, true);
-								snapTrain.sort();
-								snapNetwork = snapTrain.mergeSnapshotData(
-										snapForecast, schemaTrain);
-								network.updateNetwork(snapNetwork, schemaTrain);
+								snapData = new SnapshotData(inputStream,
+										schema);
+
+								snapData.sort();
+								snapNetwork = snapData.mergeSnapshotData(
+										snapForecast, schema);
+								network.updateNetwork(snapNetwork, schema);
 							}
 
-							snapTrain.updateNull(W, schemaTrain);
+							snapData.updateNull(W, schema);
 
 							GregorianCalendar timeBegin = new GregorianCalendar();
 							java.util.Date currentTimeBegin = timeBegin
 									.getTime();
 
 							if (!isSpatial.equals("GO")
-									&& schemaTrain.getTargetList().size() > 1)
-								snapTrain.scaledSchema(schemaTrain);
+									&& schema.getTargetList().size() > 1)
+								snapData.scaledSchema(schema);
 
 							if (autoCorrelation instanceof ResubstitutionIndexOnGetisOrd)
-								snapTrain.updateGetisAndOrd(W, schemaTrain);
+								snapData.updateGetisAndOrd(W, schema);
 							else
-								snapTrain.scaledSchema(schemaTrain);
+								snapData.scaledSchema(schema);
 							System.out.println("**** ID: "
-									+ snapTrain.getIdSnapshot());
+									+ snapData.getIdSnapshot());
 							outputReport.println("**** ID: "
-									+ snapTrain.getIdSnapshot());
+									+ snapData.getIdSnapshot());
 
+							
+							if (snapData.getIdSnapshot() == 82)
+								return;
+							
 							if (tree == null)// first snapshot in the stream
 							{
 
 								timeBegin = new GregorianCalendar();
 
-								tree = new Tree(snapTrain, schemaTrain, W,
-										autoCorrelation, splitNumber,
-										centroidPercentage, sampling, testType,
-										TWSize, rParameters);
+								tree = new Tree(snapData, schema, W,
+										autoCorrelation, splitNumber, testType,
+										TWSize);
 
 								GregorianCalendar timeEnd = new GregorianCalendar();
 								System.out.println(tree);
@@ -326,7 +394,17 @@ public class TictTest {
 
 								tree.setComputationTime(time);
 
-								outputReport.println(tree.toString());
+								outputReport.println(tree
+										.symbolicClusterDescription(""));
+
+								// inizia tempo
+								GregorianCalendar timeBeginVARModel = new GregorianCalendar();
+								tree.learnVARModel(rParameters);
+								// finisci tempo
+								GregorianCalendar timeEndVARModel = new GregorianCalendar();
+								long learnVARModelTime = timeEndVARModel
+										.getTimeInMillis()
+										- timeBeginVARModel.getTimeInMillis();
 								outputReport
 										.println("Computation time(milliseconds)="
 												+ time);
@@ -346,8 +424,14 @@ public class TictTest {
 												+ newLeaves);
 
 								tree.salva("output/stream/model/" + args[0]
-										+ name + snapTrain.getIdSnapshot()
+										+ name + snapData.getIdSnapshot()
 										+ "TICT.model");
+								outputComputationTime.print(snapData
+										.getIdSnapshot()
+										+ ";"
+										+ tree.getComputationTime()
+										+ ";"
+										+ learnVARModelTime + ";0\n");
 
 							} else {
 
@@ -355,41 +439,63 @@ public class TictTest {
 								pastLeaves = tree.countLeaves();
 								timeBegin = new GregorianCalendar();
 								currentTimeBegin = timeBegin.getTime();
-								tree.prune(snapTrain, schemaTrain, W,
-										autoCorrelation);
+								tree.prune(snapData, schema, W, autoCorrelation);
 								afterPruningLeaves = tree.countLeaves();
-								tree.drift(snapTrain, schemaTrain, W,
-										autoCorrelation, splitNumber,
-										centroidPercentage, sampling, testType,
-										rParameters);
+								tree.drift(snapData, schema, W,
+										autoCorrelation, splitNumber, testType);
 
 								GregorianCalendar timeEnd = new GregorianCalendar();
 
 								tree.setComputationTime(timeEnd
 										.getTimeInMillis()
 										- timeBegin.getTimeInMillis());
+
+								GregorianCalendar timeBeginVARModel = new GregorianCalendar();
+								tree.learnVARModel(rParameters);
+								GregorianCalendar timeEndVARModel = new GregorianCalendar();
+								long learnVARModelTime = timeEndVARModel
+										.getTimeInMillis()
+										- timeBeginVARModel.getTimeInMillis();
+								long forecastTime = 0;
 								System.out.println(tree);
 
+								GregorianCalendar timeBeginForecast = new GregorianCalendar();
 								if (tree.existVARModel()) {
 
 									/*
-									 * HashMap<Integer, ForecastingModel> hm =
-									 * tree
-									 * .deriveForecastingModel(snapNetwork);
-									 * 
+									HashMap<Integer, ForecastingModel> hm = tree
+											.deriveForecastingModel(snapNetwork);
+											*/
+
+									Forecasting forecast = new Forecasting(
+											nahead, schema, tree, snapNetwork,
+											network);
+									LinkedList<SnapshotData> res = forecast
+											.forecasting();
+									GregorianCalendar timeEndForecast = new GregorianCalendar();
+									forecastTime = timeEndForecast
+											.getTimeInMillis()
+											- timeBeginForecast
+													.getTimeInMillis();
+									snapForecast = res.get(0);
+									outputForecastReport.addForecast(res);
+
+									/*
 									 * for (Integer i : hm.keySet()) {
 									 * System.out.println("ID SENSORE: " + i);
 									 * System.out.println(hm.get(i)); }
 									 */
-									Forecasting forecast = new Forecasting(
-											nahead, schemaTrain, tree,
-											snapNetwork, network);
-									LinkedList<SnapshotData> res = forecast
-											.forecasting();
-									snapForecast=res.get(0);
 
+								} else {
+								
+									GregorianCalendar timeEndForecast = new GregorianCalendar();
+									forecastTime = timeEndForecast
+											.getTimeInMillis()
+											- timeBeginForecast
+													.getTimeInMillis();
 								}
-								outputReport.println(tree.toString());
+								outputReport.println(tree
+										.symbolicClusterDescription(""));
 								outputReport
 										.println("Computation time(milliseconds)="
 												+ (timeEnd.getTimeInMillis() - timeBegin
@@ -409,12 +515,23 @@ public class TictTest {
 								outputReport.println("\n");
 
 								tree.salva("output/stream/model/" + args[0]
-										+ name + snapTrain.getIdSnapshot()
+										+ name + snapData.getIdSnapshot()
 										+ "TICT.model");
 
-								VAROutput.printAndReset(schemaTrain, String
-										.valueOf(snapTrain.getIdSnapshot()),
+								/*
+								 * scriviamo i file di output per le statische
+								 */
+								VAROutput.printAndReset(schema, String
+										.valueOf(snapData.getIdSnapshot()),
 										tree);
+								outputComputationTime.print(snapData
+										.getIdSnapshot()
+										+ ";"
+										+ tree.getComputationTime()
+										+ ";"
+										+ learnVARModelTime
+										+ ";"
+										+ forecastTime + "\n");
 							}
 
 						} catch (EOFException e) {
@@ -428,7 +545,7 @@ public class TictTest {
 
 				} finally {
 					try {
-						inputStreamTrain.close();
+						inputStream.close();
 
 					} catch (IOException e) {
 						// TODO Auto-generated catch block

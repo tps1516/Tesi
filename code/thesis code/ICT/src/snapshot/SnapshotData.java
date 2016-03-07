@@ -39,97 +39,6 @@ public class SnapshotData implements Iterable<SensorPoint> {
 		idSnapshotGenerator = 1;
 	}
 
-	/*
-	 * Skip inactive nodes
-	 */
-	public SnapshotData(BufferedReader stream, SnapshotSchema schema,
-			Set<Integer> inactive) throws IOException {
-		String inLine = stream.readLine(); // prima tupla
-
-		numberOfSpatialFeatures = schema.getSpatialList().size();
-		numberOfTargetFeatures = schema.getTargetList().size();
-
-		Set<Integer> idSet = new TreeSet<Integer>();
-		schema.reset();
-		// System.out.println(schema);
-
-		while (inLine != null && !inLine.equals("@")) {
-
-			String str[] = inLine.split(",");
-
-			SensorPoint sp;
-			if (schema.getKey() != null) {
-				Integer idKey = new Integer(str[schema.getKey()
-						.getIndexStream()]);
-				if (idSet.contains(idKey)) {
-					System.out.println("DUPLICATE:" + inLine);
-					inLine = stream.readLine(); // skip line
-
-					continue;
-				}
-				if (inactive.contains(idKey)) {
-					System.out.println("inactive:" + inLine);
-					inLine = stream.readLine(); // skip line
-
-					continue;
-				}
-				sp = new SensorPoint(idKey);
-				idSet.add(idKey);
-			} else
-				sp = new SensorPoint(idSensorGenerator++);
-
-			for (SpatialFeature sf : schema.getSpatialList()) {
-				int indexStream = sf.getIndexStream();
-				int indexMining = sf.getIndexMining();
-				sp.addMeasure(new NumericValue(new Double(str[indexStream]),
-						indexMining));
-				sf.setMax(new Double(str[indexStream])); // update max
-				sf.setMin(new Double(str[indexStream])); // update min
-				sf.setMean(new Double(str[indexStream])); // update mean
-			}
-
-			for (Feature f : schema.getTargetList()) {
-				int indexStream = f.getIndexStream();
-				int indexMining = f.getIndexMining();
-				if (f instanceof NumericFeature) {
-
-					if (!str[indexStream].equals("?")) {
-						sp.addMeasure(new NumericValue(new Double(
-								str[indexStream]), indexMining));
-
-						((NumericFeature) f)
-								.setMax(new Double(str[indexStream])); // update
-																		// max
-						((NumericFeature) f)
-								.setMin(new Double(str[indexStream])); // update
-																		// min
-						((NumericFeature) f).setMean(new Double(
-								str[indexStream])); // update mean
-					} else
-						sp.addMeasure(new NumericValue(null, indexMining));
-
-				} else if (f instanceof CategoricalFeature) {
-
-					if (!str[indexStream].equals("?")) {
-						sp.addMeasure(new CategoricalValue(str[indexStream],
-								indexMining));
-						((CategoricalFeature) f).addCategory(str[indexStream]);
-					} else
-						sp.addMeasure(new CategoricalValue(null, indexMining));
-				}
-			}
-
-			data.add(sp);
-			inLine = stream.readLine();
-
-		}
-		// System.out.println(schema);
-		if (inLine == null) {
-			// System.out.println(SnapshotData.idSnapshotGenerator);
-			// throw new EOFException();
-		}
-	}
-
 	private boolean inputSnaphot(BufferedReader stream, SnapshotSchema schema)
 			throws IOException {
 		String inLine = stream.readLine(); // prima tupla
@@ -265,16 +174,18 @@ public class SnapshotData implements Iterable<SensorPoint> {
 			throw new IOException("End Of Stream");
 	}
 
-	public SnapshotData(ArrayList<SensorPoint> data) {
-		this.data = data;
+	public SnapshotData(BufferedReader stream, SnapshotSchema schema, boolean b)
+			throws IOException {
+
+		idSnapshot = idSnapshotGenerator++;
+		boolean flag = inputSnaphot(stream, schema);
+		idSnapshotGenerator = idSnapshotGenerator - 1;
+		if (!flag)
+			throw new IOException("End Of Stream");
 	}
 
-	public SnapshotData(BufferedReader stream, SnapshotSchema schema,
-			boolean testingSnap) throws IOException {
-
-		idSnapshot = idSnapshotGenerator - 1;
-		inputSnaphot(stream, schema);
-
+	public SnapshotData(ArrayList<SensorPoint> data) {
+		this.data = data;
 	}
 
 	public SensorPoint getSensorPoint(int index) {
@@ -517,8 +428,7 @@ public class SnapshotData implements Iterable<SensorPoint> {
 		return data.iterator();
 	}
 
-	public SnapshotData createAndAvvalorateSnapForecast(
-			SnapshotSchema schemaTrain) {
+	public SnapshotData initialize(SnapshotSchema schemaTrain) {
 		/*
 		 * Crea lo snapshot completo (reale + previsto), assegnando valore
 		 * Double.MAX_VALUE a tutti le feature di tutti i SensorPoint
@@ -548,4 +458,64 @@ public class SnapshotData implements Iterable<SensorPoint> {
 		return snapNetwork;
 	}
 
+	public LinkedList<Double> computeRMSE(SnapshotData snap,
+			SnapshotSchema schema) {
+		LinkedList<Double> res = new LinkedList<Double>();
+
+		for (Feature f : schema.getTargetList()) {
+			res.add(0.0);
+		}
+
+		ArrayList<SensorPoint> realData = this.getData();
+		ArrayList<SensorPoint> forecastedData = snap.getData();
+		Double prev = 0.0;
+		int j = 0;
+		for (SensorPoint spReal : this) {
+			boolean flag = false;
+
+			if (spReal.getId() == forecastedData.get(j).getId()) {
+				for (Feature f : schema.getTargetList()) {
+					Double dif = Math.pow(
+							(Double) ((Double) spReal.getMeasure(
+									f.getIndexMining()).getValue())
+									- ((Double) forecastedData.get(j)
+											.getMeasure(f.getIndexMining())
+											.getValue()), 2);
+					prev = res.get(f.getFeatureIndex());
+					res.set(f.getFeatureIndex(), dif + prev);
+				}
+
+				j = j + 1;
+
+			} else {
+				while (!flag) {
+					j = j + 1;
+					System.out.print(" SNAP : " + this.idSnapshot + "\n i: "
+							+ spReal.getId() + " j: " + j);
+					if (spReal.getId() == forecastedData.get(j).getId()) {
+						for (Feature f : schema.getTargetList()) {
+							Double dif = Math.pow((Double) ((Double) spReal
+									.getMeasure(f.getIndexMining()).getValue())
+									- ((Double) forecastedData.get(j)
+											.getMeasure(f.getIndexMining())
+											.getValue()), 2);
+							prev = res.get(f.getFeatureIndex());
+							res.set(f.getFeatureIndex(), dif + prev);
+						}
+						flag = true;
+						j = j + 1;
+					}
+				}
+			}
+		}
+		int i = 0;
+		for (Double d : res) {
+			prev = res.get(i);
+			prev /= this.size();
+			prev = Math.sqrt(prev);
+			res.set(i, prev);
+			i = i + 1;
+		}
+		return res;
+	}
 }

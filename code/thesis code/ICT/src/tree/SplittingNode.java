@@ -1,6 +1,7 @@
 package tree;
 
 import java.io.Serializable;
+
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -8,7 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
 
-import javax.management.RuntimeErrorException;
 
 import snapshot.SnapshotData;
 import snapshot.SnapshotSchema;
@@ -18,16 +18,14 @@ import data.SensorPoint;
 import data.datavalue.NumericValue;
 import data.datavalue.Value;
 import data.feature.AutocorrelationI;
-import data.feature.CategoricalFeature;
 import data.feature.Feature;
 import data.feature.GetisOrdIndex;
 import data.feature.MoranIndex;
-import data.feature.NumericFeature;
 
 
 import data.feature.ResubstitutionIndex;
 import data.feature.ResubstitutionIndexOnGetisOrd;
-import data.feature.SpatialResubstitutionIndex;
+
 
 class SplitPoint {
 	Feature f;
@@ -246,16 +244,10 @@ public class SplittingNode extends Node {
 		
 		
 		
-		
-		//new annalisa
-		//List<TreeSet<SplitPoint>> splitMap=new LinkedList<TreeSet<SplitPoint>>();
-		
-		
-		//TreeSet<SplitPoint> splitMap=new TreeSet<SplitPoint>(new ComparatorAutocorrelationDesc());
-		
+	
 		
 		TreeSet<SplitPoint> splitMap;
-		if(a  instanceof GetisOrdIndex || a instanceof ResubstitutionIndex || a instanceof SpatialResubstitutionIndex || a instanceof ResubstitutionIndexOnGetisOrd)
+		if(a  instanceof GetisOrdIndex || a instanceof ResubstitutionIndex || a instanceof ResubstitutionIndexOnGetisOrd)
 				splitMap=new TreeSet<SplitPoint>(new ComparatorAutocorrelationDesc());
 		else
 			splitMap=new TreeSet<SplitPoint>(new ComparatorAutocorrelationAsc());

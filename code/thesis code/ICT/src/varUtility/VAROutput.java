@@ -19,7 +19,7 @@ public class VAROutput {
 	private static HashMap<String, PrintStream> RMSEFilesOutput;
 	private static HashMap<String, PrintStream> VARParametersFeatureFilesOutput;
 	public static HashMap<String, HashMap<String,Double>> counterRMSE;
-	public static PrintStream RMSEOptimalFileOutput;
+	private static PrintStream RMSEOptimalFileOutput;
 
 	public static void inizializedOutputFiles(ArrayList<Object> rParameters,
 			SnapshotSchema schema, String dataset) {
@@ -32,46 +32,15 @@ public class VAROutput {
 		counterRMSE = new HashMap<String, HashMap<String,Double>>();
 		ArrayList<Double> counterRMSEFeature;
 
-		/*
-		for (VARParameter vp : RVar.getVARParameters()) {
-
-			FileOutputStream outputRMSE = null;
-			try {
-				outputRMSE = new FileOutputStream("output/R/RMSE/outputRMSE_"
-						+ dataset + "_" + rParameters.get(index.TWSize) + "_"
-						+ vp.toString() + ".csv");
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
-
-			countRMSE = new PrintStream(outputRMSE);
-			counterRMSEFeature = new ArrayList<Double>(schema.getTargetList()
-					.size());
-			countRMSE.print(";");
-			
-			
-			for (Feature f : schema.getTargetList()) {
-				countRMSE.print(f.getName() + ";");
-				counterRMSEFeature.add(f.getFeatureIndex(), 0.0);
-			}
-			counterRMSE.put(vp.toString(), counterRMSEFeature);
-			RMSEFilesOutput.put(vp.toString(), countRMSE);
-		}
-*/
 		FileOutputStream outputVARParameters = null;
 		FileOutputStream outputOptimalRMSE=null;
 		try {
 			 outputOptimalRMSE = new FileOutputStream("output/R/RMSE/output_Optimal_RMSE_"+ dataset+"_.csv");
 		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		RMSEOptimalFileOutput= new PrintStream(outputOptimalRMSE);
 		RMSEOptimalFileOutput.print(";");
-		
-		
-		
-		
 		
 		for (Feature f : schema.getTargetList()) {
 			
