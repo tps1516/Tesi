@@ -37,10 +37,6 @@ public abstract class Node implements Serializable {
 
 	private Node father;
 	private int depth = 0;
-	
-
-	// List<SensorPoint> centroid;
-	// MBR mbr;
 
 	public Node(SnapshotSchema schema, int beginExampleIndex,
 			int endExampleIndex, int depth, Node father) {

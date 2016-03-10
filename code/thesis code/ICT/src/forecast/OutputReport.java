@@ -15,13 +15,13 @@ public class OutputReport {
 	private ArrayList<PrintStream> output;
 
 	public OutputReport(int nahead, ArrayList<Object> rParameters,
-			String dataset) {
+			String dataset,String outputPath) {
 		output = new ArrayList<PrintStream>();
 		ParametersRForecastIndex index = new ParametersRForecastIndex();
 		
 		for (int i = 1; i <= nahead; i++) {
 			try {
-				FileOutputStream outputFile = new FileOutputStream(
+				FileOutputStream outputFile = new FileOutputStream(outputPath+
 						"output/stream/forecast/" + dataset + "_nahead_" + i
 								+ "_" + rParameters.get(index.TWSize) + "_"
 								+ rParameters.get(index.ic) + "_"

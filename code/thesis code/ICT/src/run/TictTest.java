@@ -36,7 +36,6 @@ import data.feature.Feature;
 import data.feature.MoranIndex;
 import data.feature.ResubstitutionIndex;
 import data.feature.ResubstitutionIndexOnGetisOrd;
-import data.feature.GetisOrdIndex;
 import forecast.Forecasting;
 import forecast.ForecastingModel;
 import forecast.OutputReport;
@@ -52,7 +51,9 @@ public class TictTest {
 	public static void main(String[] args) throws IOException {
 		PrintStream outputReport;
 		PrintStream outputComputationTime;
+		PrintStream outputClustering;
 
+		String filesPath = "";
 		String streamName = "";// ".arff";
 		String config = ""; // ".ini"
 
@@ -111,8 +112,9 @@ public class TictTest {
 		 */
 		try {
 
-			streamName = "dataset/" + args[0];// ".arff";
-			config = "dataset/" + args[1];// ".ini";
+			filesPath = String.valueOf(args[12]) + "/";
+			streamName = filesPath+"dataset/" + args[0];// ".arff";
+			config = filesPath+"dataset/" + args[1];// ".ini";
 			splitNumber = new Integer(args[2]); // random split identifier
 			bperc = new Float(args[3]);
 			TWSize = new Integer(args[4]);
@@ -123,6 +125,7 @@ public class TictTest {
 			ic = String.valueOf(args[9]);
 			type = String.valueOf(args[10]);
 			nahead = new Integer(args[11]);
+			
 		} catch (IndexOutOfBoundsException e) {
 			String report = "TICT@KDDE.UNIBA.IT\n";
 			report += "author = Annalisa Appice\n\n";
@@ -152,10 +155,15 @@ public class TictTest {
 		/*
 		 * Inizializzo il file per la stampa del costo in tempo delle operazioni
 		 */
-		outputComputationTime = new PrintStream(new FileOutputStream(
-				"output/stream/report/ComputationTime/" + dataName + TWSize
-						+ "_" + ic + "_" + type + "_CTime.csv"));
+		outputComputationTime = new PrintStream(new FileOutputStream(filesPath
+				+ "output/stream/report/ComputationTime/" + dataName + TWSize
+				+ "_" + ic + "_" + type + "_CTime.csv"));
 		outputComputationTime.print(";Learn Tree;Learn VAR Model;Forecast\n");
+
+		outputClustering = new PrintStream(new FileOutputStream(filesPath
+				+ "output/stream/report/clustering/" + dataName
+				+ "_NumberOfCluster.csv"));
+		outputClustering.print(";Number of Cluster\n");
 
 		/*
 		 * inizializzo l'arrayList che memorizza i parametri per la costruzione
@@ -219,12 +227,13 @@ public class TictTest {
 				+ rParameters.get(index.type) + "_ic_"
 				+ rParameters.get(index.ic);
 
-		outputReport = new PrintStream(new FileOutputStream(
-				"output/stream/report/" + args[0] + name + "_TICT.report"));
+		outputReport = new PrintStream(new FileOutputStream(filesPath
+				+ "output/stream/report/" + args[0] + name + "_TICT.report"));
 
 		outputReport.println("TRAIN STREAM=" + args[0] + "TRAIN");
 
-		outputForecastReport = new OutputReport(nahead, rParameters, dataName);
+		outputForecastReport = new OutputReport(nahead, rParameters, dataName,
+				filesPath);
 
 		SnapshotSchema schema = null;
 
@@ -297,8 +306,7 @@ public class TictTest {
 								 * Entrerà solo una volta, la prima, leggerà il
 								 * network e creerà lo snapshot di network.
 								 */
-								snapData = new SnapshotData(inputStream,
-										schema);
+								snapData = new SnapshotData(inputStream, schema);
 
 								if (snapData.size() == 0)
 									continue;
@@ -308,8 +316,7 @@ public class TictTest {
 
 								snapForecast = snapData.initialize(schema);
 							} else {
-								snapData = new SnapshotData(inputStream,
-										schema);
+								snapData = new SnapshotData(inputStream, schema);
 
 								if (snapData.size() == 0)
 									continue;
@@ -324,7 +331,7 @@ public class TictTest {
 								 * dove vengono calcolate le medie degli RMSE
 								 */
 								VAROutput.inizializedOutputFiles(rParameters,
-										schema, args[0]);
+										schema, dataName, filesPath);
 								GregorianCalendar timeBegin = new GregorianCalendar();
 								b = SnapshotWeigth.maxDist(
 										snapData,
@@ -342,12 +349,12 @@ public class TictTest {
 												+ (timeEnd.getTimeInMillis() - timeBegin
 														.getTimeInMillis()));
 
-								String nomeFile = "output/stream/weight/"
-										+ args[0] + ".wmodel";
+								String nomeFile = filesPath
+										+ "output/stream/weight/" + args[0]
+										+ ".wmodel";
 								W.salva(nomeFile);
 
-								snapData = new SnapshotData(inputStream,
-										schema);
+								snapData = new SnapshotData(inputStream, schema);
 
 								snapData.sort();
 								snapNetwork = snapData.mergeSnapshotData(
@@ -374,10 +381,15 @@ public class TictTest {
 							outputReport.println("**** ID: "
 									+ snapData.getIdSnapshot());
 
-							
-							if (snapData.getIdSnapshot() == 82)
+							if (snapData.getIdSnapshot() == 101) {
+								System.out.println("END");
+								outputReport.close();
+								VAROutput.closeFiles();
+								outputClustering.close();
+								outputComputationTime.close();
 								return;
-							
+							}
+
 							if (tree == null)// first snapshot in the stream
 							{
 
@@ -396,7 +408,8 @@ public class TictTest {
 
 								outputReport.println(tree
 										.symbolicClusterDescription(""));
-
+								outputClustering.print(snapData.getIdSnapshot()
+										+ ";" + tree.countLeaves() + "\n");
 								// inizia tempo
 								GregorianCalendar timeBeginVARModel = new GregorianCalendar();
 								tree.learnVARModel(rParameters);
@@ -423,8 +436,9 @@ public class TictTest {
 										.println("number of leaves in the new tree="
 												+ newLeaves);
 
-								tree.salva("output/stream/model/" + args[0]
-										+ name + snapData.getIdSnapshot()
+								tree.salva(filesPath + "output/stream/model/"
+										+ args[0] + name
+										+ snapData.getIdSnapshot()
 										+ "TICT.model");
 								outputComputationTime.print(snapData
 										.getIdSnapshot()
@@ -445,7 +459,8 @@ public class TictTest {
 										autoCorrelation, splitNumber, testType);
 
 								GregorianCalendar timeEnd = new GregorianCalendar();
-
+								outputClustering.print(snapData.getIdSnapshot()
+										+ ";" + tree.countLeaves() + "\n");
 								tree.setComputationTime(timeEnd
 										.getTimeInMillis()
 										- timeBegin.getTimeInMillis());
@@ -463,9 +478,10 @@ public class TictTest {
 								if (tree.existVARModel()) {
 
 									/*
-									HashMap<Integer, ForecastingModel> hm = tree
-											.deriveForecastingModel(snapNetwork);
-											*/
+									 * HashMap<Integer, ForecastingModel> hm =
+									 * tree
+									 * .deriveForecastingModel(snapNetwork);
+									 */
 
 									Forecasting forecast = new Forecasting(
 											nahead, schema, tree, snapNetwork,
@@ -487,7 +503,7 @@ public class TictTest {
 									 */
 
 								} else {
-								
+
 									GregorianCalendar timeEndForecast = new GregorianCalendar();
 									forecastTime = timeEndForecast
 											.getTimeInMillis()
@@ -514,8 +530,9 @@ public class TictTest {
 
 								outputReport.println("\n");
 
-								tree.salva("output/stream/model/" + args[0]
-										+ name + snapData.getIdSnapshot()
+								tree.salva(filesPath + "output/stream/model/"
+										+ args[0] + name
+										+ snapData.getIdSnapshot()
 										+ "TICT.model");
 
 								/*
@@ -563,12 +580,10 @@ public class TictTest {
 			e.printStackTrace();
 		} finally {
 			outputReport.close();
-			VAROutput.closeFiles();
-			for (Integer i : network) {
-				System.out.println(i);
-				System.out.print(network.getTemporalWindow(i));
+			//VAROutput.closeFiles();
+			outputClustering.close();
+			outputComputationTime.close();
 
-			}
 		}
 
 	}

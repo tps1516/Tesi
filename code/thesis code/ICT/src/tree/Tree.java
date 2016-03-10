@@ -295,7 +295,17 @@ public class Tree implements Serializable, Iterable<Node> {
 			AutocorrelationI a, int beginExampleIndex, int endExampleIndex,
 			int minExamples, int splits, String testType) {
 		if (beginExampleIndex == -1 || endExampleIndex == -1) {
-			root.insLastOfFather();
+			if (root instanceof LeafNode) {
+				root.insLastOfFather();
+			} else {
+				root.insLastOfFather();
+				root = new LeafNode(root.getSchema(),
+						root.getBeginExampleIndex(), root.getEndExampleIndex(),
+						root.getDepth(), root.getFather(),
+						root.getFeatureAvgNode());
+				this.leftSubTree = null;
+				this.rightsubTree = null;
+			}
 			return;
 		}
 		if (root instanceof SplittingNode) {

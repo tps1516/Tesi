@@ -19,7 +19,7 @@ import data.datavalue.NumericValue;
 import data.datavalue.Value;
 import data.feature.AutocorrelationI;
 import data.feature.Feature;
-import data.feature.GetisOrdIndex;
+
 import data.feature.MoranIndex;
 
 
@@ -247,7 +247,7 @@ public class SplittingNode extends Node {
 	
 		
 		TreeSet<SplitPoint> splitMap;
-		if(a  instanceof GetisOrdIndex || a instanceof ResubstitutionIndex || a instanceof ResubstitutionIndexOnGetisOrd)
+		if(a instanceof ResubstitutionIndex || a instanceof ResubstitutionIndexOnGetisOrd)
 				splitMap=new TreeSet<SplitPoint>(new ComparatorAutocorrelationDesc());
 		else
 			splitMap=new TreeSet<SplitPoint>(new ComparatorAutocorrelationAsc());
