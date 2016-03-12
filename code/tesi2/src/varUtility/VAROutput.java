@@ -119,7 +119,8 @@ public class VAROutput {
 		 * avvalorato
 		 */
 		int counterSensorWithVARModel = (int) resultComputation.get(2);
-
+		if (counterSensorWithVARModel==0) counterSensorWithVARModel=1;
+		
 		RMSEOptimalFileOutput.print("\n" + idSnapshot + ";");
 
 		for (Feature f : schema.getTargetList()) {

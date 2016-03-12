@@ -31,7 +31,7 @@ import forecast.Forecasting;
 import forecast.ForecastingModel;
 import forecast.OutputReport;
 
-public class TictTest {
+public class run {
 
 	/**
 	 * @param args
@@ -82,8 +82,8 @@ public class TictTest {
 		 */
 		try {
 			filesPath = String.valueOf(args[10]) + "/";
-			streamName = "dataset/" + args[0];// ".arff";
-			config = "dataset/" + args[1];// ".ini";
+			streamName = filesPath+"dataset/" + args[0];// ".arff";
+			config =filesPath+ "dataset/" + args[1];// ".ini";
 			TWSize = new Integer(args[2]);
 			rPath = String.valueOf(args[3]);
 			lagMax = String.valueOf(args[4]);
@@ -121,7 +121,7 @@ public class TictTest {
 		 * Inizializzo il file per la stampa del costo in tempo delle operazioni
 		 */
 		outputComputationTime = new PrintStream(new FileOutputStream(
-				"output/stream/report/ComputationTime/" + dataName + TWSize
+				filesPath+"output/stream/report/ComputationTime/" + dataName + TWSize
 						+ "_" + ic + "_" + type + "_CTime.csv"));
 		outputComputationTime.print(";Learn VAR Model;Forecast\n");
 
@@ -272,6 +272,12 @@ public class TictTest {
 								System.out.println("ID Snapshot: " + snapData.getIdSnapshot());
 								if (snapData.size() == 0)
 									continue;
+								if (snapData.getIdSnapshot()==101){
+									System.out.println("END");
+									VAROutput.closeFiles();
+									outputComputationTime.close();
+									return;
+								}
 
 								snapData.sort();
 								snapNetwork = snapData.mergeSnapshotData(
@@ -286,6 +292,13 @@ public class TictTest {
 											.getTimeInMillis()
 											- timeBegin.getTimeInMillis();
 
+									
+									System.out.println("modelli VAR :");
+									for (int i: network){
+										System.out.println("ID SENSORE: " + i);
+										System.out.println(network.getVARModel(i));
+									}
+									
 									timeBegin = new GregorianCalendar();
 									Forecasting forecast = new Forecasting(
 											nahead, schema, snapNetwork,

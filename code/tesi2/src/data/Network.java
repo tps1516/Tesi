@@ -131,8 +131,10 @@ public class Network implements Iterable<Integer> {
 						f.getName(),
 						hmOptimalRMSEByFeature.get(f.getName())
 								+ fmodel.getRMSE());
-				counterSensorWithVARModel = counterSensorWithVARModel + 1;
+				
 			}
+			
+			counterSensorWithVARModel = counterSensorWithVARModel + 1;
 		}
 		ArrayList<Object> finalResult = new ArrayList<Object>();
 		finalResult.add(0, hmCombResult);
