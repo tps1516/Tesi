@@ -17,11 +17,7 @@ public class SensorForecast {
 		for (Feature f : schema.getTargetList()) {
 			FeatureForecastingModel fModel = VARModel
 					.getFeatureForecastingModel(f);
-			try {
 				value = fModel.forecasting(timeSeries);
-			} catch (NotForecastingException e) {
-				return null;
-			}
 			result[f.getFeatureIndex()] = value;
 		}
 		return result;

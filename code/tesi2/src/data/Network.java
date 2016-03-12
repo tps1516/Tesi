@@ -1,13 +1,19 @@
 package data;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import data.feature.Feature;
+import forecast.FeatureVARForecastingModel;
+import forecast.ForecastingModel;
+import forecast.NotForecastingModelException;
+import rForecast.RVar;
+import rForecast.VARParameter;
 import snapshot.SnapshotData;
 import snapshot.SnapshotSchema;
 import windowStructure.FeatureWindow;
-import windowStructure.TemporalWindow;
 
 /*
  * la classe ha la responsabilità di modellare il network
@@ -19,13 +25,13 @@ public class Network implements Iterable<Integer> {
 	 * le chiavi del map rappresentano gli id dei sensori nella rete mentre gli
 	 * oggetti associati alle chiavi sono le timeseries associate al sensore
 	 */
-	private Map<Integer, FeatureWindow> network;
+	private Map<Integer, RecordNetwork> network;
 
 	/*
 	 * costruttore della calsse istanzia il map
 	 */
 	public Network() {
-		network = new HashMap<Integer, FeatureWindow>();
+		network = new HashMap<Integer, RecordNetwork>();
 	}
 
 	/*
@@ -35,12 +41,9 @@ public class Network implements Iterable<Integer> {
 	 */
 	public void createWork(SnapshotData data, SnapshotSchema schema, int dim) {
 
-		/*
-		 * per ciascun sensore memorizzato nello snapshot memorizzo nell'hashMap
-		 * l'id del sensore associandoli una timeseries vuota (solo istanziata)
-		 */
 		for (SensorPoint sp : data) {
-			network.put(sp.getId(), new FeatureWindow(schema, dim));
+			network.put(sp.getId(), new RecordNetwork(new FeatureWindow(schema,
+					dim)));
 		}
 
 	}
@@ -52,21 +55,13 @@ public class Network implements Iterable<Integer> {
 	 */
 	public void updateNetwork(SnapshotData data, SnapshotSchema schema) {
 
-		/*
-		 * ciclo su tutti i sensori attivi nello snapshot in esame per
-		 * verificare se il sensore è attivo nello snapshto
-		 */
 		for (SensorPoint sp : data) {
 
-			/*
-			 * se il sensore è attivo recupero la sua timeseries e l'aggiorno
-			 * con i valori rilevati in questo istante setto la varibile flag a
-			 * true ed esco dal ciclo
-			 */
-
-			FeatureWindow tw = network.get(sp.getId());
-			tw.updateSensorFeature(sp, schema);
-			network.put(sp.getId(), tw);
+			RecordNetwork rn = network.get(sp.getId());
+			FeatureWindow timeseries = rn.getTimeseries();
+			timeseries.updateSensorFeature(sp, schema);
+			rn.setTimeSeries(timeseries);
+			network.put(sp.getId(), rn);
 
 		}
 	}
@@ -76,6 +71,74 @@ public class Network implements Iterable<Integer> {
 	}
 
 	public FeatureWindow getTemporalWindow(int i) {
-		return network.get(i);
+		return network.get(i).getTimeseries();
 	}
+
+	public ForecastingModel getVARModel(int i) {
+		return network.get(i).getVARModel();
+	}
+
+	public void learnVARModel(SnapshotSchema schema,
+			ArrayList<Object> rParameters) {
+
+		for (int i : this.network.keySet()) {
+
+			RecordNetwork rn = network.get(i);
+			double[][] dataset = rn.getTimeseries().exportInMatrixForm();
+			ForecastingModel vm;
+			try {
+				vm = new ForecastingModel(dataset, schema, rParameters);
+			} catch (NotForecastingModelException e) {
+				vm = null;
+			}
+			rn.setVARModel(vm);
+			network.put(i, rn);
+		}
+
+	}
+
+	public ArrayList<Object> countPar(SnapshotSchema schema) {
+		HashMap<String, HashMap<String, Integer>> hmCombResult = new HashMap<String, HashMap<String, Integer>>();
+		HashMap<String, Integer> counterByPar;
+		HashMap<String, Double> hmOptimalRMSEByFeature = new HashMap<String, Double>();
+		for (Feature f : schema.getTargetList()) {
+			counterByPar = new HashMap<String, Integer>();
+			for (VARParameter s : RVar.getVARParameters()) {
+				String par = s.toString();
+				counterByPar.put(par, 0);
+			}
+			hmCombResult.put(f.getName(), counterByPar);
+			hmOptimalRMSEByFeature.put(f.getName(), 0.0);
+		}
+
+		String pars;
+		int counterSensorWithVARModel = 0;
+		for (Integer i : this.network.keySet()) {
+
+			ForecastingModel model = network.get(i).getVARModel();
+
+			if (model == null)
+				continue;
+
+			for (Feature f : schema.getTargetList()) {
+				FeatureVARForecastingModel fmodel = (FeatureVARForecastingModel) model
+						.getFeatureForecastingModel(f);
+				pars = fmodel.getVARParameters();
+				hmCombResult.get(f.getName()).put(pars,
+						hmCombResult.get(f.getName()).get(pars) + 1);
+
+				hmOptimalRMSEByFeature.put(
+						f.getName(),
+						hmOptimalRMSEByFeature.get(f.getName())
+								+ fmodel.getRMSE());
+				counterSensorWithVARModel = counterSensorWithVARModel + 1;
+			}
+		}
+		ArrayList<Object> finalResult = new ArrayList<Object>();
+		finalResult.add(0, hmCombResult);
+		finalResult.add(1, hmOptimalRMSEByFeature);
+		finalResult.add(2, counterSensorWithVARModel);
+		return finalResult;
+	}
+
 }

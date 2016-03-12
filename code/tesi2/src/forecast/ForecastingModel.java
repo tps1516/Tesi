@@ -35,7 +35,14 @@ public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 	 * di input del modello VAR (type e ic)
 	 */
 	public ForecastingModel(double[][] dataset, SnapshotSchema schema,
-			ArrayList<Object> rParameters) {
+			ArrayList<Object> rParameters) throws NotForecastingModelException {
+		
+		try {
+			checkLearnVARModels(dataset);
+		
+		
+		
+		
 		HashMap<String, ArrayList<Object>> resultR;
 		HashMap<String, ForecastingModel> resultRToJava;
 		RForecast r = new RVar();
@@ -68,6 +75,9 @@ public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 		 * che minimizza il valore del RMSE
 		 */
 		setModels(opt.computeOptimalVARModel(resultRToJava, schema));
+		} catch (NotForecastingModelException e) {
+			throw new NotForecastingModelException();
+		}
 	}
 
 	/*
@@ -130,6 +140,18 @@ public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 				res[i][j] = conv[i][j];
 		return res;
 
+	}
+	
+	private void checkLearnVARModels(double [][] matrix) throws NotForecastingModelException{
+		int rows=matrix.length;
+		int columns= matrix[0].length;
+		double error=Double.MAX_VALUE;
+		for (int i=0; i<rows; i++){
+			for (int j=0; j<columns; j++){
+				if (matrix[i][j]==error)
+						throw new NotForecastingModelException();
+			}
+		}
 	}
 	
 }

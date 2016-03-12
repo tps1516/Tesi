@@ -36,28 +36,28 @@ public class Forecasting {
 			naheadToSnapData.put(i, null);
 		}
 		
-		data.sort();
+		//data.sort();
 		double[] forecast;
 		SensorForecast sensorForecast = new SensorForecast(schema);
 		for (SensorPoint sp : data) {
-			ForecastingModel VARModel = VARModels.get(sp.getId());
+			ForecastingModel VARModel = network.getVARModel(sp.getId());
+			if (VARModel==null){
+				for (int i = 0; i < this.nahead; i++) {
+					SensorPoint spF = createSP(sp, null);
+					addInHM(i, spF);
+				}
+			} else {
+			
 			double[][] matrix = network.getTemporalWindow(sp.getId())
 					.exportInMatrixForm();
 			for (int i = 0; i < this.nahead; i++) {
 				forecast = sensorForecast.sensorForecasting(matrix, VARModel);
-				if (forecast == null) {
-					for (int indexNAhead = i; indexNAhead < this.nahead; indexNAhead++) {
-						SensorPoint spF = createSP(sp, null);
-						addInHM(i, spF);
-						i=i+1;
-					}
-					break;
-				}
 				SensorPoint spF = createSP(sp, forecast);
 				addInHM(i, spF);
 				matrix = Forecasting.shiftData(matrix, forecast);
 			}
 		}
+	}
 		return returnResult();
 	}
 

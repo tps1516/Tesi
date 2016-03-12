@@ -88,7 +88,7 @@ public class SnapshotData implements Iterable<SensorPoint> {
 								str[indexStream]), indexMining));
 
 					} else
-						sp.addMeasure(new NumericValue(null, indexMining));
+						sp.addMeasure(new NumericValue(Double.MAX_VALUE, indexMining));
 
 				} else if (f instanceof CategoricalFeature) {
 

@@ -20,14 +20,15 @@ public class OptimalVARModel {
 		for (Feature f : schema.getTargetList()) {
 			min = Double.MAX_VALUE;
 			FeatureDefModel = null;
-			
+			HashMap<String, Double> hashRMSEFeatureByParameters = VAROutput.counterRMSE
+					.get(f.getName());
 			for (String comb : hm.keySet()) {
 				ForecastingModel model = hm.get(comb);
-				
-				if (model==null) {
-				
+
+				if (model == null) {
+					hashRMSEFeatureByParameters.put(comb, null);
 				} else {
-					
+
 					FeatureVARForecastingModel featureModel = (FeatureVARForecastingModel) model
 							.getFeatureForecastingModel(f);
 					if (featureModel.getRMSE() < min) {
@@ -35,16 +36,17 @@ public class OptimalVARModel {
 						FeatureDefModel = featureModel;
 					}
 
-				
-					
-				
-					
-					
+					Double precRMSE = hashRMSEFeatureByParameters.get(comb);
+
+					if (precRMSE != null) {
+						hashRMSEFeatureByParameters.put(comb, precRMSE
+								+ featureModel.getRMSE());
+					}
 				}
-				
-				
 			}
-		
+			VAROutput.counterRMSE.put(f.getName(), hashRMSEFeatureByParameters);
+			optModel.add(FeatureDefModel.getFeature().getFeatureIndex(),
+					FeatureDefModel);
 		}
 		return optModel;
 	}

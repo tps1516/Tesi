@@ -88,8 +88,7 @@ public class FeatureVARForecastingModel extends FeatureForecastingModel
 	}
 
 	@Override
-	public Double forecasting(double[][] timeSeries)
-			throws NotForecastingException {
+	public Double forecasting(double[][] timeSeries) {
 		Double sum = 0.0;
 		Feature f;
 		int i;
@@ -103,8 +102,6 @@ public class FeatureVARForecastingModel extends FeatureForecastingModel
 			coefficients = record.getCoefficients();
 			for (Double coeff : coefficients) {
 				value = timeSeries[i][indexColumn];
-				if (value.equals(Double.MAX_VALUE))
-					throw new NotForecastingException("Sensore non predicibile");
 				sum += value * coeff;
 				i = i - 1;
 			}

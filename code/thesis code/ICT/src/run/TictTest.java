@@ -580,9 +580,10 @@ public class TictTest {
 			e.printStackTrace();
 		} finally {
 			outputReport.close();
-			//VAROutput.closeFiles();
+			VAROutput.closeFiles();
 			outputClustering.close();
 			outputComputationTime.close();
+			outputForecastReport.closeFiles();
 
 		}
 

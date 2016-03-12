@@ -525,7 +525,7 @@ public class RVar extends RForecast {
 						 * tramite l'hashMap ausiliario recupero l'intera
 						 * feature in base al suo nome
 						 */
-						correlatedFeature.add((Feature)HM.get(adjfeature[i])).clone;
+						correlatedFeature.add((Feature)HM.get(adjfeature[i]));
 						
 						ArrayList<Double> coefficients = new ArrayList<Double>(
 								p);

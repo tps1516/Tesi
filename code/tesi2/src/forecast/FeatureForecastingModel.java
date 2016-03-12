@@ -16,7 +16,7 @@ public abstract class FeatureForecastingModel {
 		return this.feature;
 	}
 
-	public abstract Double forecasting(double[][] timeSeries)
-			throws NotForecastingException;
+	public abstract Double forecasting(double[][] timeSeries);
+			
 
 }
