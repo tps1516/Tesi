@@ -36,7 +36,7 @@ public class EvaluationRMSE {
 			type = String.valueOf(args[5]);
 			nahead = new Integer(args[6]);
 		} catch (IndexOutOfBoundsException e) {
-			String report = "authors = Giancaspro Corrado \n Mastropasqua Donato \n \n";
+			String report = "authors = Giancaspro Corrado & Mastropasqua Donato \n \n";
 			report += "run jar by using the input parameters:\n";
 			report += "streamfile configfile nAheadfileName\n";
 			report += "TWsize ic type nahead \n";

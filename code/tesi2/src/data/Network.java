@@ -87,7 +87,7 @@ public class Network implements Iterable<Integer> {
 			double[][] dataset = rn.getTimeseries().exportInMatrixForm();
 			ForecastingModel vm;
 			try {
-				vm = new ForecastingModel(dataset, schema, rParameters);
+				vm = new ForecastingModel(i,dataset, schema, rParameters);
 			} catch (NotForecastingModelException e) {
 				vm = null;
 			}
@@ -141,6 +141,18 @@ public class Network implements Iterable<Integer> {
 		finalResult.add(1, hmOptimalRMSEByFeature);
 		finalResult.add(2, counterSensorWithVARModel);
 		return finalResult;
+	}
+	
+	
+	
+	public String toString (){
+		String s="";
+		for (int i: network.keySet()){
+			s+= "\n"+ "id sensore " + i;
+			s+="\n" + network.get(i).getTimeseries();
+		}
+		
+		return s;
 	}
 
 }

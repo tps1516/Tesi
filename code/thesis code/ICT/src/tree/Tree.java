@@ -20,6 +20,7 @@ import javax.management.RuntimeErrorException;
 
 //import mbrModel.KNNModel;
 
+
 import data.DistanceI;
 import data.EuclideanDistance;
 import data.SensorPoint;
@@ -55,7 +56,7 @@ public class Tree implements Serializable, Iterable<Node> {
 			SnapshotWeigth weight, AutocorrelationI autocorrelation,
 			int numberOfSplits, String testType, int dim) {
 		learnTree(data, schema, weight, autocorrelation, 0, data.size() - 1,
-				(int) (Math.sqrt(data.size())) * 2, 1, numberOfSplits, null,
+				1, 1, numberOfSplits, null,
 				testType, dim);
 
 	}
@@ -71,7 +72,7 @@ public class Tree implements Serializable, Iterable<Node> {
 
 				} else if (f instanceof NumericFeature)
 					if (a.isMax(((NumericFeature) f).getAutocorrelation())) {
-						f.setStopTree(true);
+						//f.setStopTree(true);
 
 					} else
 
@@ -79,7 +80,7 @@ public class Tree implements Serializable, Iterable<Node> {
 				else {
 					// check if all label in the same class
 					if (((CategoricalFeature) f).getNumberOfClasses() == 1) {
-						f.setStopTree(true);
+					//	f.setStopTree(true);
 
 					} else
 						flag = false;
@@ -94,7 +95,7 @@ public class Tree implements Serializable, Iterable<Node> {
 	private void setLeaf(SnapshotSchema schema) {
 		for (Feature f : schema.getTargetList())
 			if (!f.getStopTree()) {
-				f.setStopTree(true);
+			//	f.setStopTree(true);
 
 			}
 
@@ -111,14 +112,14 @@ public class Tree implements Serializable, Iterable<Node> {
 
 				} else if (f instanceof NumericFeature)
 					if (((NumericFeature) f).getAutocorrelation() == 0.0) {
-						f.setStopTree(true);
+						//f.setStopTree(true);
 
 					} else
 						flag = false;
 				else {
 					// check if all label in the same class
 					if (((CategoricalFeature) f).getNumberOfClasses() == 1) {
-						f.setStopTree(true);
+					//	f.setStopTree(true);
 
 					} else
 						flag = false;
@@ -139,10 +140,13 @@ public class Tree implements Serializable, Iterable<Node> {
 		Node testRoot = new LeafNode(autocorrelation, data, schema, W,
 				beginIndex, endIndex, minimumExamples, depth, father);
 		if (isLeaf(autocorrelation, testRoot.getSchema(), minimumExamples)) {
+			if(beginIndex !=endIndex)
+				throw new RuntimeException("da togliere");
 
 			root = testRoot;
 			root.initializedFeatureAvgNode(dim);
 			root.updateFeatureAvgNode();
+			((LeafNode)root).sp=data.getSensorPoint(beginIndex).getId();
 		} else // split node
 		{
 			try {
@@ -151,7 +155,7 @@ public class Tree implements Serializable, Iterable<Node> {
 						minimumExamples, depth, numberOfSplits, father,
 						testType, dim);
 			} catch (SplitException e) {
-
+				((LeafNode)root).sp=data.getSensorPoint(beginIndex).getId();
 				setLeaf(testRoot.getSchema());
 				root = testRoot;
 				root.initializedFeatureAvgNode(dim);
@@ -286,7 +290,7 @@ public class Tree implements Serializable, Iterable<Node> {
 			SnapshotWeigth W, AutocorrelationI a, int splits, String testType) {
 		// tree pruning + incremental learning
 		this.learnDriftingTree(snap, W, a, 0, snap.size() - 1,
-				(int) Math.sqrt(snap.size()) * 2, splits, testType);
+				1, splits, testType);
 		// System.out.print("DRIFTED"+this);
 
 	}
@@ -310,8 +314,8 @@ public class Tree implements Serializable, Iterable<Node> {
 		}
 		if (root instanceof SplittingNode) {
 			root.updateFeatureAvgNode();
-			snap.sort(((SplittingNode) root).getSplitFeature(),
-					beginExampleIndex, endExampleIndex);
+			//snap.sort(((SplittingNode) root).getSplitFeature(),
+			//		beginExampleIndex, endExampleIndex);
 
 			{
 
@@ -333,20 +337,23 @@ public class Tree implements Serializable, Iterable<Node> {
 			for (Feature f : root.getSchema().getTargetList()) {
 				if (f.getStopTree() && f.getCountTuples() >= minExamples) {
 					reLearn = true;
-					f.setStopTree(false);
+				//	f.setStopTree(false);
 				}
 
 			}
-			if (reLearn && root.getBeginExampleIndex() != -1
+			/*if (reLearn && root.getBeginExampleIndex() != -1
 					&& root.endExampleIndex != -1)
 				this.learnTreeOnPreexistModel(snap, root.getSchema(), W, a,
 						root.getBeginExampleIndex(), root.endExampleIndex,
 						minExamples, root.getDepth(), splits, root.getFather(),
 						testType, root.getFeatureAvgNode());
-			else {
+			else {*/
+				int id = ((LeafNode)root).sp;
+				//SensorPoint realSP = snap.getSensorPoint(id);
+				root.update(snap, a, W, beginExampleIndex, endExampleIndex, id);
 				root.updateFeatureAvgNode();
 				setLeaf(root.getSchema());
-			}
+			//}
 			return;
 		}
 
@@ -355,11 +362,13 @@ public class Tree implements Serializable, Iterable<Node> {
 	private Map<Integer, ErrorStatistic> prune(SnapshotData snap,
 			SnapshotWeigth W, AutocorrelationI a, int begin, int end) {
 
-		root.update(snap, a, W, begin, end);
+	
+		
 		Map<Integer, ErrorStatistic> prunedE = root.estimateGetisAndOrdError(
 				snap, begin, end); // stima del getis and ord sui nuovi dati
 
-		if (root instanceof SplittingNode) {
+		
+		/*if (root instanceof SplittingNode) {
 			int midindex = begin;
 			Feature splitFeature = ((SplittingNode) root).getSplitFeature();
 			snap.sort(splitFeature, begin, end);
@@ -414,9 +423,9 @@ public class Tree implements Serializable, Iterable<Node> {
 				for (Integer f : unprunedE.keySet()) { // rendo foglie tutti gl
 														// iattributi
 					// pruning
-					root.getSchema().getTargetList()
-							.get(f - root.getSchema().getSpatialList().size())
-							.setStopTree(true);
+				//	root.getSchema().getTargetList()
+				//			.get(f - root.getSchema().getSpatialList().size())
+				//			.setStopTree(true);
 
 					outputE.put(f, prunedE.get(f));
 				}
@@ -430,7 +439,7 @@ public class Tree implements Serializable, Iterable<Node> {
 				return outputE;
 			} else
 				return unprunedE;
-		} else
+		} else*/
 			return prunedE;
 
 	}
@@ -687,7 +696,13 @@ public class Tree implements Serializable, Iterable<Node> {
 			SnapshotData data) {
 
 		HashMap<Integer, ForecastingModel> result = new HashMap<Integer, ForecastingModel>();
-		res(this, data, 0, data.size() - 1, result);
+		//res(this, data, 0, data.size() - 1, result);
+		for(Node n : this){
+			if(n instanceof LeafNode){
+				LeafNode node = (LeafNode)n;
+				result.put(node.sp, node.getVARModel());
+			}
+		}
 
 		return result;
 	}

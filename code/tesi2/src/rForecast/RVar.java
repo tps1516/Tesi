@@ -28,6 +28,7 @@ public class RVar extends RForecast {
 	private static LinkedList<String> acceptableIc;
 	private static LinkedList<String> acceptableType;
 	private HashMap<String, ArrayList<Object>> hashResult;
+	private int id;
 
 	public static LinkedList<VARParameter> getVARParameters() {
 		return VARParameters;
@@ -38,9 +39,9 @@ public class RVar extends RForecast {
 	 * funzioni VAR su tutte le combinazioni richieste e di restituire i
 	 * risultati ottenuti dalla sua chiamata
 	 */
-	public HashMap<String, ArrayList<Object>> RForecasting(double[][] dataset,
+	public HashMap<String, ArrayList<Object>> RForecasting(int id,double[][] dataset,
 			SnapshotSchema schema, ArrayList<Object> rParameters) {
-
+		this.id=id;
 		caller = new RCaller();
 		code = new RCode();
 		code.clear();
@@ -227,18 +228,32 @@ public class RVar extends RForecast {
 	 * per caricare il dataset su cui effettuare la funzione VAR
 	 */
 	private void loadData(double[][] dataset, SnapshotSchema s) {
-
-		code.addDoubleMatrix("dataset", dataset);
-		String dimnames = "dimnames(dataset) <- list (c (";
-		for (int i = 1; i < this.TWsize; i++)
-			dimnames += "\"t" + i + "\",";
-		dimnames += "\"t" + TWsize + "\"),c(";
-		for (int i = 0; i < s.getTargetList().size() - 1; i++)
-			dimnames += "\"" + s.getTargetList().get(i).getName() + "\",";
-		dimnames += "\""
-				+ s.getTargetList().get(s.getTargetList().size() - 1).getName()
-				+ "\"))";
-		code.addRCode(dimnames);
+		if (id==1){
+			code.addDoubleMatrix("dataset", dataset);
+			String dimnames = "dimnames(datasetx) <- list (c (";
+			for (int i = 1; i < this.TWsize; i++)
+				dimnames += "\"t" + i + "\",";
+			dimnames += "\"t" + TWsize + "\"),c(";
+			for (int i = 0; i < s.getTargetList().size() - 1; i++)
+				dimnames += "\"" + s.getTargetList().get(i).getName() + "\",";
+			dimnames += "\""
+					+ s.getTargetList().get(s.getTargetList().size() - 1).getName()
+					+ "\"))";
+			code.addRCode(dimnames);
+		} else {
+			code.addDoubleMatrix("dataset", dataset);
+			String dimnames = "dimnames(dataset) <- list (c (";
+			for (int i = 1; i < this.TWsize; i++)
+				dimnames += "\"t" + i + "\",";
+			dimnames += "\"t" + TWsize + "\"),c(";
+			for (int i = 0; i < s.getTargetList().size() - 1; i++)
+				dimnames += "\"" + s.getTargetList().get(i).getName() + "\",";
+			dimnames += "\""
+					+ s.getTargetList().get(s.getTargetList().size() - 1).getName()
+					+ "\"))";
+			code.addRCode(dimnames);
+		}
+		
 	}
 
 	/*

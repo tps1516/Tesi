@@ -34,7 +34,7 @@ public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 	 * rispetto al RMSE ottenuto variando le possibili combinazini sui parametri 
 	 * di input del modello VAR (type e ic)
 	 */
-	public ForecastingModel(double[][] dataset, SnapshotSchema schema,
+	public ForecastingModel(int id , double[][] dataset, SnapshotSchema schema,
 			ArrayList<Object> rParameters) throws NotForecastingModelException {
 		
 		try {
@@ -55,7 +55,7 @@ public class ForecastingModel implements Iterable<FeatureForecastingModel>,
 		 * al modello VAR mentre l elemento (arrayList<Object>) associato alla specifica
 		 * chaive è il risultato ottenuto per tale configurazione
 		 */
-		resultR = r.RForecasting(dataset, schema, rParameters);
+		resultR = r.RForecasting(id,dataset, schema, rParameters);
 		FromRToJava fRToJava = new FromRToJava();
 		
 		/*

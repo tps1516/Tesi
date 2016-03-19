@@ -505,8 +505,7 @@ public class SplittingNode extends Node {
 		
 	
 		boolean isLeaf=true; // VALUTARE SE MANTENERE IL PRE PRUNING
-		isLeaf=prepruning(trainingSet, W,beginExampleIndex,endExampleIndex,minExample,bestSplitPoint.midindex+1);
-		
+		//isLeaf=prepruning(trainingSet, W,beginExampleIndex,endExampleIndex,minExample,bestSplitPoint.midindex+1);
 		
 		if(bestSplitPoint.midindex==endExampleIndex)
 			throw new SplitException("False splitting node");
@@ -534,8 +533,9 @@ public class SplittingNode extends Node {
 			double prunedErr=prunedE.get(f.getIndexMining()).error/prunedE.get(f.getIndexMining()).countTuples;
 			if (adjustingFactor*prunedErr<=avge)
 			{
-				this.getSchema().getTargetList().get(f.getIndexMining()-getSchema().getSpatialList().size()).setStopTree(true);
-	//			System.out.println("Pre pruning");
+	//			this.getSchema().getTargetList().get(f.getIndexMining()-getSchema().getSpatialList().size()).setStopTree(true);
+	
+				//			System.out.println("Pre pruning");
 			}
 			else{
 				isLeaf=true;

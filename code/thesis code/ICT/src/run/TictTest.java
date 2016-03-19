@@ -453,8 +453,9 @@ public class TictTest {
 								pastLeaves = tree.countLeaves();
 								timeBegin = new GregorianCalendar();
 								currentTimeBegin = timeBegin.getTime();
-								tree.prune(snapData, schema, W, autoCorrelation);
+								//tree.prune(snapData, schema, W, autoCorrelation);
 								afterPruningLeaves = tree.countLeaves();
+								
 								tree.drift(snapData, schema, W,
 										autoCorrelation, splitNumber, testType);
 
@@ -466,6 +467,8 @@ public class TictTest {
 										- timeBegin.getTimeInMillis());
 
 								GregorianCalendar timeBeginVARModel = new GregorianCalendar();
+								System.out.println("------------------------------------------------");
+								System.out.println(tree);
 								tree.learnVARModel(rParameters);
 								GregorianCalendar timeEndVARModel = new GregorianCalendar();
 								long learnVARModelTime = timeEndVARModel

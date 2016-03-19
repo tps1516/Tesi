@@ -191,7 +191,7 @@ public class run {
 			 */
 			try {
 				/*
-				 * Creerà il primo schema del dataset.
+				 * Creerà lo schema del dataset.
 				 */
 				schema = new SnapshotSchema(config + ".ini");
 
@@ -274,7 +274,7 @@ public class run {
 									continue;
 								if (snapData.getIdSnapshot()==101){
 									System.out.println("END");
-									VAROutput.closeFiles();
+									//VAROutput.closeFiles();
 									outputComputationTime.close();
 									return;
 								}
@@ -283,7 +283,7 @@ public class run {
 								snapNetwork = snapData.mergeSnapshotData(
 										snapForecast, schema);
 								network.updateNetwork(snapNetwork, schema);
-
+								System.out.println(network);
 								if (snapData.getIdSnapshot() > TWSize) {
 									timeBegin = new GregorianCalendar();
 									network.learnVARModel(schema, rParameters);
@@ -303,11 +303,12 @@ public class run {
 									Forecasting forecast = new Forecasting(
 											nahead, schema, snapNetwork,
 											network);
+									LinkedList<SnapshotData> res = forecast
+											.forecasting();
 									timeEnd = new GregorianCalendar();
 									timeForecast = timeEnd.getTimeInMillis()
 											- timeBegin.getTimeInMillis();
-									LinkedList<SnapshotData> res = forecast
-											.forecasting();
+									snapForecast=res.get(0);
 									outputForecastReport.addForecast(res);
 								}
 								outputComputationTime.print(snapData
@@ -349,7 +350,7 @@ public class run {
 
 			e.printStackTrace();
 		} finally {
-			VAROutput.closeFiles();
+			//VAROutput.closeFiles();
 			outputComputationTime.close();
 			outputForecastReport.closeFiles();
 		}

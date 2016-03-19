@@ -1,1153 +1,818 @@
 TRAIN STREAM=EcoTexasTRAIN
-TEST STREAM=EcoTexasTEST
 W computation time (milliseconds):16
 **** ID: 2
-ID: 1: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=74.7
-Averages:
-tempreatura: 23.923076923076923 
-velocitavento: 5.5 
-ozono: 71.53846153846155 
-radiazionisolari: 8.076923076923079E-4 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 4: LEAF NODE. Figlio di: 1 --- [0:15]
-Averages:
-tempreatura: 23.923076923076923 
-velocitavento: 3.9937500000000004 
-ozono: 68.45 
-radiazionisolari: 3.75E-4 
-
-modello VAR non ancora avvalorato
-ID: 6: LEAF NODE. Figlio di: 1 --- [16:25]
-Averages:
-tempreatura: 23.923076923076923 
-velocitavento: 7.909999999999999 
-ozono: 76.47999999999999 
-radiazionisolari: 0.0015 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=64
+Computation time(milliseconds)=94
 Leaves statisics
 number of leaves of the tree inherited from the past=0
 number of leaves of the tree after pruning=0
-number of leaves in the new tree=2
+number of leaves in the new tree=26
 **** ID: 3
-ID: 1: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=74.7
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 
-velocitavento: 5.5 5.488461538461538 
-ozono: 71.53846153846155 71.04615384615387 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 4: LEAF NODE. Figlio di: 1 --- [0:17]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 
-velocitavento: 3.9937500000000004 4.872222222222224 
-ozono: 68.45 68.72777777777777 
-radiazionisolari: 3.75E-4 6.666666666666666E-4 
-
-modello VAR non ancora avvalorato
-ID: 6: LEAF NODE. Figlio di: 1 --- [18:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 
-velocitavento: 7.909999999999999 6.875 
-ozono: 76.47999999999999 76.26250000000002 
-radiazionisolari: 0.0015 0.001375 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=15
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 4
-ID: 1: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=74.7
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 
-
-ID: 4: LEAF NODE. Figlio di: 1 --- [0:18]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 
-velocitavento: 3.9937500000000004 4.872222222222224 4.621052631578948 
-ozono: 68.45 68.72777777777777 68.76315789473684 
-radiazionisolari: 3.75E-4 6.666666666666666E-4 6.842105263157895E-4 
-
-modello VAR non ancora avvalorato
-ID: 6: LEAF NODE. Figlio di: 1 --- [19:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 
-velocitavento: 7.909999999999999 6.875 6.471428571428571 
-ozono: 76.47999999999999 76.26250000000002 76.14285714285714 
-radiazionisolari: 0.0015 0.001375 0.0015714285714285713 
-
-modello VAR non ancora avvalorato
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
 Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 5
-ID: 1: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=74.7
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 4: LEAF NODE. Figlio di: 1 --- [0:18]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 
-velocitavento: 3.9937500000000004 4.872222222222224 4.621052631578948 4.621052631578947 
-ozono: 68.45 68.72777777777777 68.76315789473684 68.46842105263158 
-radiazionisolari: 3.75E-4 6.666666666666666E-4 6.842105263157895E-4 5.789473684210527E-4 
-
-modello VAR non ancora avvalorato
-ID: 6: LEAF NODE. Figlio di: 1 --- [19:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 
-velocitavento: 7.909999999999999 6.875 6.471428571428571 6.2857142857142865 
-ozono: 76.47999999999999 76.26250000000002 76.14285714285714 75.72857142857143 
-radiazionisolari: 0.0015 0.001375 0.0015714285714285713 0.0014285714285714288 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 6
-ID: 1: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=74.7
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 4: LEAF NODE. Figlio di: 1 --- [0:18]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 
-velocitavento: 3.9937500000000004 4.872222222222224 4.621052631578948 4.621052631578947 4.9 
-ozono: 68.45 68.72777777777777 68.76315789473684 68.46842105263158 68.54736842105262 
-radiazionisolari: 3.75E-4 6.666666666666666E-4 6.842105263157895E-4 5.789473684210527E-4 5.263157894736843E-4 
-
-modello VAR non ancora avvalorato
-ID: 6: LEAF NODE. Figlio di: 1 --- [19:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 
-velocitavento: 7.909999999999999 6.875 6.471428571428571 6.2857142857142865 6.785714285714286 
-ozono: 76.47999999999999 76.26250000000002 76.14285714285714 75.72857142857143 75.94285714285715 
-radiazionisolari: 0.0015 0.001375 0.0015714285714285713 0.0014285714285714288 0.001571428571428572 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
+Computation time(milliseconds)=1
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 7
-ID: 1: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=74.7
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 
-
-ID: 4: LEAF NODE. Figlio di: 1 --- [0:18]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 
-velocitavento: 3.9937500000000004 4.872222222222224 4.621052631578948 4.621052631578947 4.9 4.936842105263159 
-ozono: 68.45 68.72777777777777 68.76315789473684 68.46842105263158 68.54736842105262 68.67368421052632 
-radiazionisolari: 3.75E-4 6.666666666666666E-4 6.842105263157895E-4 5.789473684210527E-4 5.263157894736843E-4 0.006789473684210527 
-
-modello VAR non ancora avvalorato
-ID: 6: LEAF NODE. Figlio di: 1 --- [19:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 
-velocitavento: 7.909999999999999 6.875 6.471428571428571 6.2857142857142865 6.785714285714286 6.557142857142857 
-ozono: 76.47999999999999 76.26250000000002 76.14285714285714 75.72857142857143 75.94285714285715 76.14285714285714 
-radiazionisolari: 0.0015 0.001375 0.0015714285714285713 0.0014285714285714288 0.001571428571428572 0.005571428571428572 
-
-modello VAR non ancora avvalorato
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
 Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 8
-ID: 1: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=74.7
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 
-
-ID: 4: LEAF NODE. Figlio di: 1 --- [0:17]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 
-velocitavento: 3.9937500000000004 4.872222222222224 4.621052631578948 4.621052631578947 4.9 4.936842105263159 5.45 
-ozono: 68.45 68.72777777777777 68.76315789473684 68.46842105263158 68.54736842105262 68.67368421052632 68.89444444444445 
-radiazionisolari: 3.75E-4 6.666666666666666E-4 6.842105263157895E-4 5.789473684210527E-4 5.263157894736843E-4 0.006789473684210527 0.07100000000000001 
-
-modello VAR non ancora avvalorato
-ID: 6: LEAF NODE. Figlio di: 1 --- [18:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 
-velocitavento: 7.909999999999999 6.875 6.471428571428571 6.2857142857142865 6.785714285714286 6.557142857142857 7.1875 
-ozono: 76.47999999999999 76.26250000000002 76.14285714285714 75.72857142857143 75.94285714285715 76.14285714285714 76.67499999999998 
-radiazionisolari: 0.0015 0.001375 0.0015714285714285713 0.0014285714285714288 0.001571428571428572 0.005571428571428572 0.08237499999999999 
-
-modello VAR non ancora avvalorato
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
 Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 9
-ID: 27: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=76.4
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 30: LEAF NODE. Figlio di: 27 --- [0:15]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 14.6875 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 6.581250000000001 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 69.28125000000001 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 
-
-modello VAR non ancora avvalorato
-ID: 32: LEAF NODE. Figlio di: 27 --- [16:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 20.9 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 8.639999999999999 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 78.36999999999999 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=15
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 10
-ID: 35: SPLITTING NODE.  --- [0:25] --- SPLIT SU: velocitavento<=6.8
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 38: LEAF NODE. Figlio di: 35 --- [0:9]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 14.5 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 5.312999999999999 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 70.247 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.25529999999999997 
-
-modello VAR non ancora avvalorato
-ID: 39: LEAF NODE. Figlio di: 35 --- [10:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 24.5 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 9.85 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 77.16875 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.394625 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=31
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 11
-ID: 43: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=80.2
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 46: LEAF NODE. Figlio di: 43 --- [0:15]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 20.625 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 7.74375 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 72.6725 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.44200000000000006 
-
-modello VAR non ancora avvalorato
-ID: 48: LEAF NODE. Figlio di: 43 --- [16:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 30.4 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 11.2 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 82.71000000000001 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.6576000000000001 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=16
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 12
-ID: 51: SPLITTING NODE.  --- [0:25] --- SPLIT SU: velocitavento<=9.5
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 54: LEAF NODE. Figlio di: 51 --- [0:9]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 18.6 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 6.25 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 72.49000000000001 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.5085999999999999 
-
-modello VAR non ancora avvalorato
-ID: 55: LEAF NODE. Figlio di: 51 --- [10:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 33.0 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 12.041875 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 82.43562499999999 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.8583750000000001 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 13
-ID: 51: SPLITTING NODE.  --- [0:25] --- SPLIT SU: velocitavento<=9.5
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 54: LEAF NODE. Figlio di: 51 --- [0:9]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 18.6 23.2 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 6.25 6.34 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 72.49000000000001 74.27 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.5085999999999999 0.5035000000000001 
-
-modello VAR non ancora avvalorato
-ID: 55: LEAF NODE. Figlio di: 51 --- [10:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 33.0 34.8125 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 12.041875 12.85625 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 82.43562499999999 84.14375000000001 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.8583750000000001 0.9466250000000002 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
+Computation time(milliseconds)=3
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 14
-ID: 62: SPLITTING NODE.  --- [0:25] --- SPLIT SU: radiazionisolari<=0.993
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 65: LEAF NODE. Figlio di: 62 --- [0:15]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 29.125 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 9.490625 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 78.340625 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.6630625 
-
-modello VAR non ancora avvalorato
-ID: 67: LEAF NODE. Figlio di: 62 --- [16:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 38.1 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 14.189999999999998 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 87.67999999999999 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 1.1693 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=16
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 15
-ID: 62: SPLITTING NODE.  --- [0:25] --- SPLIT SU: radiazionisolari<=0.993
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 65: LEAF NODE. Figlio di: 62 --- [0:18]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 29.125 31.57894736842105 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 9.490625 10.3 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 78.340625 80.34210526315788 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.6630625 0.649578947368421 
-
-modello VAR non ancora avvalorato
-ID: 67: LEAF NODE. Figlio di: 62 --- [19:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 38.1 37.285714285714285 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 14.189999999999998 14.171428571428573 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 87.67999999999999 90.04285714285713 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 1.1693 1.1504285714285716 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=16
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 16
-ID: 72: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=85.2
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 75: LEAF NODE. Figlio di: 72 --- [0:15]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 29.8125 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 9.581249999999999 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 79.625 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.5705625 
-
-modello VAR non ancora avvalorato
-ID: 77: LEAF NODE. Figlio di: 72 --- [16:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 35.9 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 13.34 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 89.86000000000001 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.8600999999999999 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=15
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 17
-ID: 72: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=85.2
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 75: LEAF NODE. Figlio di: 72 --- [0:16]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 29.8125 28.470588235294116 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 9.581249999999999 9.41764705882353 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 79.625 80.14705882352942 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.5705625 0.4896470588235294 
-
-modello VAR non ancora avvalorato
-ID: 77: LEAF NODE. Figlio di: 72 --- [17:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 35.9 36.333333333333336 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 13.34 13.033333333333333 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 89.86000000000001 90.45555555555556 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.8600999999999999 0.7194444444444446 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=16
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 18
-ID: 72: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=85.2
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 75: LEAF NODE. Figlio di: 72 --- [0:17]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 29.8125 28.470588235294116 27.61111111111111 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 9.581249999999999 9.41764705882353 9.361111111111109 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 79.625 80.14705882352942 80.30555555555556 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.5705625 0.4896470588235294 0.36777777777777776 
-
-modello VAR non ancora avvalorato
-ID: 77: LEAF NODE. Figlio di: 72 --- [18:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 35.9 36.333333333333336 36.125 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 13.34 13.033333333333333 12.725 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 89.86000000000001 90.45555555555556 90.55 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.8600999999999999 0.7194444444444446 0.5075 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
+Computation time(milliseconds)=1
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 19
-ID: 72: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=85.2
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 
-
-ID: 75: LEAF NODE. Figlio di: 72 --- [0:18]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 29.8125 28.470588235294116 27.61111111111111 26.0 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 9.581249999999999 9.41764705882353 9.361111111111109 8.957894736842105 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 79.625 80.14705882352942 80.30555555555556 79.82631578947367 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.5705625 0.4896470588235294 0.36777777777777776 0.18331578947368424 
-
-modello VAR non ancora avvalorato
-ID: 77: LEAF NODE. Figlio di: 72 --- [19:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 35.9 36.333333333333336 36.125 36.42857142857143 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 13.34 13.033333333333333 12.725 13.214285714285714 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 89.86000000000001 90.45555555555556 90.55 89.39999999999999 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.8600999999999999 0.7194444444444446 0.5075 0.23485714285714288 
-
-modello VAR non ancora avvalorato
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
 Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 20
-ID: 86: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=80.5
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 26.346153846153847 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 9.488461538461536 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 80.76538461538462 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 
-
-ID: 89: LEAF NODE. Figlio di: 86 --- [0:15]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 
-
-modello VAR non ancora avvalorato
-ID: 91: LEAF NODE. Figlio di: 86 --- [16:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 33.3 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 11.17 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 85.41999999999999 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 
-
-modello VAR non ancora avvalorato
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
 Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=1
-number of leaves in the new tree=2
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 21
-ID: 86: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=80.5
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 26.346153846153847 24.23076923076923 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 9.488461538461536 8.734615384615385 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 80.76538461538462 79.2923076923077 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 
-
-ID: 89: LEAF NODE. Figlio di: 86 --- [0:18]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 
-
-modello VAR non ancora avvalorato
-ID: 91: LEAF NODE. Figlio di: 86 --- [19:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 33.3 32.142857142857146 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 11.17 11.157142857142858 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 85.41999999999999 84.67142857142856 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 
-
-modello VAR non ancora avvalorato
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
 Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=2
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 22
-ID: 86: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=80.5
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 26.346153846153847 24.23076923076923 23.692307692307693 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 9.488461538461536 8.734615384615385 8.996153846153845 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 80.76538461538462 79.2923076923077 78.3576923076923 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 6.923076923076924E-4 
-
-ID: 96: SPLITTING NODE. Figlio di: 86 --- [0:19] --- SPLIT SU: ozono<=77.0
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 
-
-ID: 91: LEAF NODE. Figlio di: 86 --- [20:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 33.3 32.142857142857146 30.666666666666668 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 11.17 11.157142857142858 10.583333333333334 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 85.41999999999999 84.67142857142856 83.03333333333335 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 6.923076923076924E-4 
-
-modello VAR non ancora avvalorato
-ID: 99: LEAF NODE. Figlio di: 96 --- [0:9]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 7.220000000000001 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 75.74 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 3.0000000000000003E-4 
-
-modello VAR non ancora avvalorato
-ID: 100: LEAF NODE. Figlio di: 96 --- [10:19]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 9.82 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 78.16999999999999 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 8.0E-4 
-
-modello VAR non ancora avvalorato
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
 Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=2
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 23
-ID: 86: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=80.5
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 26.346153846153847 24.23076923076923 23.692307692307693 22.615384615384617 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 9.488461538461536 8.734615384615385 8.996153846153845 8.073076923076924 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 80.76538461538462 79.2923076923077 78.3576923076923 77.63076923076923 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 6.923076923076924E-4 8.076923076923079E-4 
-
-ID: 104: SPLITTING NODE. Figlio di: 86 --- [0:22] --- SPLIT SU: tempreatura<=23.0
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 21.956521739130434 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 8.056521739130433 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 76.9086956521739 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 6.086956521739131E-4 
-
-ID: 91: LEAF NODE. Figlio di: 86 --- [23:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 33.3 32.142857142857146 30.666666666666668 27.666666666666668 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 11.17 11.157142857142858 10.583333333333334 8.200000000000001 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 85.41999999999999 84.67142857142856 83.03333333333335 83.16666666666666 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 6.923076923076924E-4 8.076923076923079E-4 
-
-modello VAR non ancora avvalorato
-ID: 107: LEAF NODE. Figlio di: 104 --- [0:12]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 17.153846153846153 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 8.056521739130433 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 76.9086956521739 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 6.086956521739131E-4 
-
-modello VAR non ancora avvalorato
-ID: 109: LEAF NODE. Figlio di: 104 --- [13:22]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 28.2 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 8.056521739130433 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 76.9086956521739 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 6.086956521739131E-4 
-
-modello VAR non ancora avvalorato
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
 Computation time(milliseconds)=0
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 24
-ID: 86: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=80.5
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 26.346153846153847 24.23076923076923 23.692307692307693 22.615384615384617 23.23076923076923 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 9.488461538461536 8.734615384615385 8.996153846153845 8.073076923076924 8.157692307692304 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 80.76538461538462 79.2923076923077 78.3576923076923 77.63076923076923 77.09615384615384 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 6.923076923076924E-4 8.076923076923079E-4 8.461538461538464E-4 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 113: SPLITTING NODE. Figlio di: 86 --- [0:23] --- SPLIT SU: ozono<=76.8
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 21.956521739130434 23.25 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 8.056521739130433 8.116666666666667 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 76.9086956521739 76.58333333333331 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 6.086956521739131E-4 7.499999999999999E-4 
-
-ID: 91: LEAF NODE. Figlio di: 86 --- [24:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 33.3 32.142857142857146 30.666666666666668 27.666666666666668 23.0 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 11.17 11.157142857142858 10.583333333333334 8.200000000000001 8.65 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 85.41999999999999 84.67142857142856 83.03333333333335 83.16666666666666 83.25 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 6.923076923076924E-4 8.076923076923079E-4 8.461538461538464E-4 
-
-modello VAR non ancora avvalorato
-ID: 116: LEAF NODE. Figlio di: 113 --- [0:10]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 21.956521739130434 23.25 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 8.056521739130433 6.863636363636363 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 76.9086956521739 75.14545454545454 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 6.086956521739131E-4 7.499999999999999E-4 
-
-modello VAR non ancora avvalorato
-ID: 118: LEAF NODE. Figlio di: 113 --- [11:23]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 21.956521739130434 23.25 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 8.056521739130433 9.176923076923076 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 76.9086956521739 77.8 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 6.086956521739131E-4 7.499999999999999E-4 
-
-modello VAR non ancora avvalorato
-
-Computation time(milliseconds)=32
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 25
-ID: 86: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=80.5
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 26.346153846153847 24.23076923076923 23.692307692307693 22.615384615384617 23.23076923076923 23.576923076923077 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 9.488461538461536 8.734615384615385 8.996153846153845 8.073076923076924 8.157692307692304 8.596153846153847 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 80.76538461538462 79.2923076923077 78.3576923076923 77.63076923076923 77.09615384615384 76.61538461538461 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 6.923076923076924E-4 8.076923076923079E-4 8.461538461538464E-4 8.846153846153848E-4 
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono<=62.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono<=62.6)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento<=2.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono<=62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono<=66.5)(ozono>62.5)(ozono>62.6)(velocitavento>2.0)(ozono>62.7)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura<=16.0)(ozono>66.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento<=7.9)(temperatura>16.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura<=17.0)(velocitavento>7.9)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura<=19.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura<=21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento<=3.5)(temperatura>21.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura<=23.0)(temperatura>17.0)(temperatura>19.0)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento<=3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento<=3.5)(velocitavento>3.2)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento<=4.5)(velocitavento>3.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento<=6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari<=0.001)(velocitavento>4.5)(velocitavento>6.5)
+(ozono<=77.0)(temperatura<=37.0)(temperatura<=30.0)(temperatura>23.0)(radiazionisolari>0.001)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura<=31.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura<=32.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari<=0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura<=33.0)(temperatura>31.0)(temperatura>32.0)(radiazionisolari>0.0)
+(ozono<=77.0)(temperatura<=37.0)(temperatura>30.0)(temperatura>33.0)
+(ozono<=77.0)(temperatura>37.0)
+(ozono>77.0)(temperatura<=16.0)
+(ozono>77.0)(temperatura>16.0)
 
-ID: 123: SPLITTING NODE. Figlio di: 86 --- [0:23] --- SPLIT SU: radiazionisolari<=0.0
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 21.956521739130434 23.25 23.583333333333332 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 8.056521739130433 8.116666666666667 8.666666666666668 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 76.9086956521739 76.58333333333331 76.1375 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 6.086956521739131E-4 7.499999999999999E-4 7.500000000000001E-4 
-
-ID: 91: LEAF NODE. Figlio di: 86 --- [24:25]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 33.3 32.142857142857146 30.666666666666668 27.666666666666668 23.0 23.5 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 11.17 11.157142857142858 10.583333333333334 8.200000000000001 8.65 7.75 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 85.41999999999999 84.67142857142856 83.03333333333335 83.16666666666666 83.25 82.35 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 6.923076923076924E-4 8.076923076923079E-4 8.461538461538464E-4 8.846153846153848E-4 
-
-MODELLO VAR: 
-MODELLO VAR:
-Feature: tempreatura
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 1.71053640675354 -1.80165706018419 1.49808119727697 -1.64293985501274
-velocitavento: 1.83051296459601 0.0434125030391054 0.0555029622855393 0.183806072571617
-ozono: -3.16174628962913 2.35036528705786 -3.16716987466831 4.16723501509778
-radiazionisolari: -2.49425274094486 7.42989206187525 12.5817234545044 -9.36156349512584
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.6040069017003337
-
-Feature: velocitavento
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.587899217841352 -1.13717589463872 0.869605234749345 -0.592082886750755
-velocitavento: -0.0764742283478762 1.54116753338187 -0.99244001780837 0.631247275820769
-ozono: -0.747282221054036 1.12004508810445 -1.7262461560561 1.44107075939601
-radiazionisolari: -1.60324354518155 -1.24830427502513 12.8894831422067 -8.25967890022776
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.05602294157027782
-
-Feature: ozono
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.466778345874568 -1.19232573459702 1.44685436768552 -1.24559220265705
-velocitavento: 0.895160132643566 1.66536139799549 -1.71004920209603 0.152009288739358
-ozono: -1.2146054339885 0.822123934925664 -1.6547372310576 3.13492297664202
-radiazionisolari: 2.7043157533661 0.0535418306275239 13.170169861703 -10.7067159128393
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.10523853073659506
-
-Feature: radiazionisolari
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.0182168259055469 -0.052589432641921 0.0338882566302461 -0.0142152608302493
-velocitavento: -0.0234707874668936 0.0580473126922203 0.0729469388064757 -0.078667073531121
-ozono: -1.34684565254851E-4 0.0573300066499544 -0.0946066075548918 0.0399855212118299
-radiazionisolari: 0.651599241445468 0.288692291901636 0.0499238321431786 -0.338830613975513
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 8.143697895612825E-5
-
-
-ID: 126: LEAF NODE. Figlio di: 123 --- [0:11]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 21.956521739130434 23.25 23.583333333333332 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 8.056521739130433 8.116666666666667 8.666666666666668 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 76.9086956521739 76.58333333333331 76.1375 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 6.086956521739131E-4 7.499999999999999E-4 0.0 
-
-MODELLO VAR: 
-MODELLO VAR:
-Feature: tempreatura
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 1.65246564954849 -2.3848988457207 0.220964870554192 1.32618664931725
-velocitavento: -3.89775410339727 6.01239122812512 1.5720742259488 -1.6823292552924
-ozono: -0.813816088471665 2.39717367521835 -1.56343247784801 -0.182602126943274
-radiazionisolari: 33.9706578003232 -21.0831360208139 -2.9495146573434 -9.87415731288989
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.23917033188065795
-
-Feature: velocitavento
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.0380143504986541 -0.386050803784202 -0.119024257587395 0.317464947691883
-velocitavento: -0.0598297191980065 0.673797054173137 1.06044752092401 -0.3120321402688
-ozono: 0.00644957541987647 0.23668798219761 0.0357454060133796 -0.271144939210842
-radiazionisolari: 3.81767640944444 3.22345726010046 -3.14971520063013 -3.54266500500729
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.022248289117097426
-
-Feature: ozono
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.477035531430786 -1.3040734254275 0.439036939580809 0.490571651398711
-velocitavento: -2.29451096313743 3.38917591769726 0.24775211912139 -1.55121588276594
-ozono: 0.387287573915182 1.29552859175576 -1.39864026375369 0.688658128873336
-radiazionisolari: 21.014465866295 -13.0624413006266 0.962927074157365 -3.55372229935233
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.13560296041751985
-
-Feature: radiazionisolari
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.0478336386947789 -0.0677514811004761 0.0261164244815263 -0.0632950319943948
-velocitavento: -0.166484976064747 0.0473722293072553 -0.0207311317248895 0.0117211080517949
-ozono: -0.0575802981412956 0.0617380720903008 -0.0890103190249551 0.113088990042325
-radiazionisolari: 0.925493444527547 0.294642950680461 1.04332360911641 -0.137510707221817
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 1.677709085463432E-4
-
-
-ID: 128: LEAF NODE. Figlio di: 123 --- [12:23]
-Averages:
-tempreatura: 23.923076923076923 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 21.956521739130434 23.25 23.583333333333332 
-velocitavento: 5.5 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 8.056521739130433 8.116666666666667 8.666666666666668 
-ozono: 71.53846153846155 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 76.9086956521739 76.58333333333331 76.1375 
-radiazionisolari: 8.076923076923079E-4 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 6.086956521739131E-4 7.499999999999999E-4 0.0015000000000000002 
-
-MODELLO VAR: 
-MODELLO VAR:
-Feature: tempreatura
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 1.65246564954849 -2.3848988457207 0.220964870554192 1.32618664931725
-velocitavento: -3.89775410339727 6.01239122812512 1.5720742259488 -1.6823292552924
-ozono: -0.813816088471665 2.39717367521835 -1.56343247784801 -0.182602126943274
-radiazionisolari: 33.9706578003232 -21.0831360208139 -2.9495146573434 -9.87415731288989
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.23917033188065795
-
-Feature: velocitavento
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.0380143504986541 -0.386050803784202 -0.119024257587395 0.317464947691883
-velocitavento: -0.0598297191980065 0.673797054173137 1.06044752092401 -0.3120321402688
-ozono: 0.00644957541987647 0.23668798219761 0.0357454060133796 -0.271144939210842
-radiazionisolari: 3.81767640944444 3.22345726010046 -3.14971520063013 -3.54266500500729
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.022248289117097426
-
-Feature: ozono
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.477035531430786 -1.3040734254275 0.439036939580809 0.490571651398711
-velocitavento: -2.29451096313743 3.38917591769726 0.24775211912139 -1.55121588276594
-ozono: 0.387287573915182 1.29552859175576 -1.39864026375369 0.688658128873336
-radiazionisolari: 21.014465866295 -13.0624413006266 0.962927074157365 -3.55372229935233
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.13560296041751985
-
-Feature: radiazionisolari
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.0475988812356527 -0.0675504841383327 0.0260259016962202 -0.0629504784761951
-velocitavento: -0.165376210302809 0.0470114129907339 -0.0196232178506702 0.0108326356828157
-ozono: -0.0574800148535248 0.0617355556478744 -0.0888222597305358 0.112654706547732
-radiazionisolari: 0.924540293177008 0.296863770968372 1.03425462858118 -0.137485922169894
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 1.6547032562629234E-4
-
-
-
-Computation time(milliseconds)=23534
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=2
-number of leaves in the new tree=3
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=26
+number of leaves of the tree after pruning=26
+number of leaves in the new tree=26
 
 
 **** ID: 26
-ID: 86: SPLITTING NODE.  --- [0:25] --- SPLIT SU: ozono<=80.5
-Averages:
-tempreatura: 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 26.346153846153847 24.23076923076923 23.692307692307693 22.615384615384617 23.23076923076923 23.576923076923077 23.73076923076923 
-velocitavento: 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 9.488461538461536 8.734615384615385 8.996153846153845 8.073076923076924 8.157692307692304 8.596153846153847 9.10769230769231 
-ozono: 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 80.76538461538462 79.2923076923077 78.3576923076923 77.63076923076923 77.09615384615384 76.61538461538461 76.11538461538461 
-radiazionisolari: 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 6.923076923076924E-4 8.076923076923079E-4 8.461538461538464E-4 8.846153846153848E-4 7.692307692307693E-4 
-
-ID: 123: SPLITTING NODE. Figlio di: 86 --- [0:23] --- SPLIT SU: radiazionisolari<=0.0
-Averages:
-tempreatura: 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 21.956521739130434 23.25 23.583333333333332 23.75 
-velocitavento: 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 8.056521739130433 8.116666666666667 8.666666666666668 8.995833333333335 
-ozono: 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 76.9086956521739 76.58333333333331 76.1375 75.67083333333333 
-radiazionisolari: 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 6.086956521739131E-4 7.499999999999999E-4 7.500000000000001E-4 6.666666666666666E-4 
-
-ID: 91: LEAF NODE. Figlio di: 86 --- [24:25]
-Averages:
-tempreatura: 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 33.3 32.142857142857146 30.666666666666668 27.666666666666668 23.0 23.5 23.5 
-velocitavento: 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 11.17 11.157142857142858 10.583333333333334 8.200000000000001 8.65 7.75 10.45 
-ozono: 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 85.41999999999999 84.67142857142856 83.03333333333335 83.16666666666666 83.25 82.35 81.44999999999999 
-radiazionisolari: 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 6.923076923076924E-4 8.076923076923079E-4 8.461538461538464E-4 8.846153846153848E-4 7.692307692307693E-4 
-
-MODELLO VAR: 
-MODELLO VAR:
-Feature: tempreatura
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.828225201828384 -1.17499655163009 1.47822915311949 -1.94001344968714
-velocitavento: 2.84876579006922 0.993431270796746 -1.29762251746629 1.28889323894684
-ozono: -2.31748688096884 1.02201781397061 -2.4585350193386 3.93164820631385
-radiazionisolari: -5.23911597730523 6.79910289615339 15.9305539082249 -10.2252571059068
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.3861841178840973
-
-Feature: velocitavento
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.351512752072717 -0.821894955856154 0.699184074015923 -0.575041038751062
-velocitavento: 0.368960324497601 1.3801108526625 -0.773628986009532 0.367971787156053
-ozono: -0.596994431882366 0.615664114333037 -1.43237189275595 1.49514141974068
-radiazionisolari: -1.24874320931446 -0.221859103953224 9.9710826602376 -6.0067730005367
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.05545045396200686
-
-Feature: ozono
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.143475048745326 -0.684754362153516 1.12822779569493 -1.17221648548804
-velocitavento: 1.59381826794758 1.22976277403665 -1.1095798360931 -0.497880490453512
-ozono: -1.04838595276488 0.0553494125986421 -1.19891402148528 3.26959285195099
-radiazionisolari: 3.75386243873026 2.07678712551283 7.20174969908929 -6.33826552456099
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.11505887573243616
-
-Feature: radiazionisolari
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: 0.0176320720204636 -0.0506988649225879 0.0322225407835993 -0.0134449189168857
-velocitavento: -0.0210680639960789 0.0545172461029803 0.0778689220819498 -0.0835333473816988
-ozono: -3.34894392293588E-4 0.0549633245785615 -0.0930958044116499 0.0410023590312811
-radiazionisolari: 0.660689172998361 0.300239789489206 0.0139517166216737 -0.314536898180106
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 8.177906686777203E-5
-
-
-ID: 126: LEAF NODE. Figlio di: 123 --- [0:12]
-Averages:
-tempreatura: 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 21.956521739130434 23.25 23.583333333333332 23.75 
-velocitavento: 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 8.056521739130433 8.116666666666667 8.666666666666668 8.995833333333335 
-ozono: 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 76.9086956521739 76.58333333333331 76.1375 75.67083333333333 
-radiazionisolari: 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 6.086956521739131E-4 7.499999999999999E-4 0.0 0.0 
-
-MODELLO VAR: 
-MODELLO VAR:
-Feature: tempreatura
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: -0.247726861782507 -0.0733501751046487 -0.765875371904892 1.54973924109248
-velocitavento: 0.76384413257938 2.2145670069157 2.84693220530341 -0.681431817073906
-ozono: 0.621057563114721 -0.0965080295877147 1.03862047268283 -1.91689439035072
-radiazionisolari: 22.0973331081764 -3.21734957327279 -21.7295948923696 -10.3389699098276
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.41189694388289666
-
-Feature: velocitavento
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: -0.421358800637017 0.193921310822206 -0.379834624670581 0.400695184726391
-velocitavento: 1.0809200849803 -0.249747858567654 1.40365560457027 -0.127059649102982
-ozono: 0.354688343805368 -0.381033655190172 0.69717703789935 -0.71565539718233
-radiazionisolari: 1.21597757069369 7.35829037169231 -8.20483872983267 -3.47916501346806
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.03392024607869794
-
-Feature: ozono
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: -0.639853283493925 0.364255214393749 -0.466580509973911 1.04921603907483
-velocitavento: 0.647545992310387 1.07759609325889 1.50958272650207 -1.79724363452852
-ozono: 1.25053515844366 -0.387904229317057 0.604829521242442 -0.700252897094875
-radiazionisolari: 17.9688126468215 -5.25830581016873 -17.6147873683695 -1.25245385607118
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.21579181347176127
-
-Feature: radiazionisolari
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: -0.00832554600433894 -0.0107699005551049 0.00886871413249064 -0.0723275408831129
-velocitavento: -0.0361110620490831 -0.0619673789861602 -0.0018136022161995 0.071843153917363
-ozono: -0.0159004349769098 -0.00399219707386733 -0.0294605814913674 0.075359857002495
-radiazionisolari: 0.430606897658064 0.921379999192634 0.764264473714348 -0.245487658768249
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 1.690485618088678E-4
-
-
-ID: 128: LEAF NODE. Figlio di: 123 --- [13:23]
-Averages:
-tempreatura: 22.03846153846154 20.307692307692307 18.076923076923077 16.692307692307693 14.076923076923077 13.807692307692308 17.076923076923077 20.653846153846153 24.384615384615383 27.46153846153846 30.346153846153847 32.57692307692308 33.11538461538461 32.15384615384615 31.192307692307693 30.23076923076923 28.807692307692307 22.0 21.31578947368421 21.6 21.956521739130434 23.25 23.583333333333332 23.75 
-velocitavento: 5.488461538461538 5.119230769230769 5.069230769230769 5.407692307692307 5.373076923076923 5.984615384615386 7.3730769230769235 8.105 9.073076923076922 9.814230769230768 10.349999999999998 11.298076923076922 11.342307692307692 11.026923076923076 10.669230769230769 10.396153846153847 10.103846153846153 8.4375 7.842105263157893 8.52 8.056521739130433 8.116666666666667 8.666666666666668 8.995833333333335 
-ozono: 71.04615384615387 70.74999999999999 70.42307692307692 70.53846153846153 70.68461538461538 71.28846153846155 72.77692307692308 74.50653846153844 76.5330769230769 78.61038461538462 80.34615384615384 81.93269230769229 82.95384615384614 83.56153846153846 83.71538461538464 83.45769230769231 82.40384615384616 77.85624999999999 77.31052631578946 76.955 76.9086956521739 76.58333333333331 76.1375 75.67083333333333 
-radiazionisolari: 8.846153846153848E-4 9.230769230769234E-4 8.076923076923079E-4 8.076923076923079E-4 0.006461538461538463 0.07450000000000001 0.21373076923076925 0.3410384615384615 0.5249230769230769 0.7238461538461538 0.7761923076923078 0.8577692307692307 0.7844230769230769 0.6819230769230769 0.5691923076923077 0.41076923076923066 0.19719230769230772 0.05603846153846155 0.0020769230769230773 5.5E-4 6.086956521739131E-4 7.499999999999999E-4 0.0015000000000000002 0.0014545454545454547 
-
-MODELLO VAR: 
-MODELLO VAR:
-Feature: tempreatura
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: -0.236831716955822 -0.0864628773471369 -0.760238200163072 1.55297902420266
-velocitavento: 0.741263376439076 2.24286598717027 2.84111010856631 -0.696626833658723
-ozono: 0.612478997526447 -0.0813325586581589 1.02483954785269 -1.91018673669081
-radiazionisolari: 22.2468032582364 -3.41346630559608 -21.6888273263485 -10.3118237974713
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.4097919979863889
-
-Feature: velocitavento
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: -0.420623415094001 0.193146621320792 -0.379545954976336 0.401890263452709
-velocitavento: 1.08024038884799 -0.246616717760255 1.40368417188532 -0.130111299055842
-ozono: 0.354047744303618 -0.379900959274077 0.6965915537164 -0.715918694623366
-radiazionisolari: 1.24262900601455 7.32648356392739 -8.21686439058144 -3.47197576335953
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.03388396029354298
-
-Feature: ozono
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: -0.630997089836837 0.353593722575844 -0.461996015512015 1.05182526852272
-velocitavento: 0.629170096076765 1.10056878772801 1.50483972537111 -1.80954468863369
-ozono: 1.24356354152943 -0.375571435411823 0.593619040655245 -0.69478275045976
-radiazionisolari: 18.0898991276934 -5.4172594430223 -17.5812821515513 -1.23052100071955
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 0.21440904650195858
-
-Feature: radiazionisolari
-equation: 
-Comb: none_FPE
-p= 4
-tempreatura: -0.00839055565107587 -0.0106190743201768 0.00870473731308168 -0.0716936717022943
-velocitavento: -0.0352289855379529 -0.0618870757571869 -5.33717988727327E-4 0.0702477413627899
-ozono: -0.0159261018575844 -0.00386072838789231 -0.0292456983593529 0.0748275835743593
-radiazionisolari: 0.434421891083331 0.918643485549568 0.751693984486822 -0.243617476990164
-Trend coefficients: 0.0
-Const coefficients: 0.0
-RMSE: 1.6857919377754287E-4
-
-
-
-Computation time(milliseconds)=18251
-number of leaves of the tree inherited from the past=3
-number of leaves of the tree after pruning=3
-number of leaves in the new tree=3
-
-
-**** ID: 27

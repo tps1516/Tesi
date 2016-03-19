@@ -348,10 +348,9 @@ public abstract class Node implements Serializable {
 			if (this.father != null)
 				str += "Figlio di: " + father.getIdNode();
 			str += " --- [" + this.getBeginExampleIndex() + ":"
-					+ this.getEndExampleIndex() + "]";
+					+ this.getEndExampleIndex() + "]"+ " id sensore: " +((LeafNode)this).sp;;
 			str += "\n" + "Averages:";
 			str += "\n" + featureAvgNode.toString();
-			
 			LeafNode leaf= (LeafNode) this;
 			if (leaf.getVARModel() != null) {
 				str += "\n" + "MODELLO VAR: ";
@@ -440,7 +439,8 @@ public abstract class Node implements Serializable {
 
 	// Update the node on the basis of the new snapshot
 	void update(SnapshotData trainingSet, AutocorrelationI a, SnapshotWeigth W,
-			int beginExampleIndex, int endExampleIndex) {
+			int beginExampleIndex, int endExampleIndex, int id) {
+		id=id-1;
 		this.beginExampleIndex = beginExampleIndex;
 		this.endExampleIndex = endExampleIndex;
 
@@ -450,11 +450,11 @@ public abstract class Node implements Serializable {
 		for (int i = beginExampleIndex; i <= endExampleIndex; i++) {
 			for (SpatialFeature sf : this.getSchema().getSpatialList()) {
 				int index = sf.getIndexMining();
-				sf.setMax((Double) trainingSet.getSensorPoint(i)
+				sf.setMax((Double) trainingSet.getSensorPoint(id)
 						.getMeasure(index).getValue()); // update max
-				sf.setMin((Double) trainingSet.getSensorPoint(i)
+				sf.setMin((Double) trainingSet.getSensorPoint(id)
 						.getMeasure(index).getValue()); // update min
-				sf.setMean((Double) trainingSet.getSensorPoint(i)
+				sf.setMean((Double) trainingSet.getSensorPoint(id)
 						.getMeasure(index).getValue());
 				; // update mean
 
@@ -465,22 +465,22 @@ public abstract class Node implements Serializable {
 			if (!f.getStopTree()) {
 				for (int i = beginExampleIndex; i <= endExampleIndex; i++) {
 					int index = f.getIndexMining();
-					if (!(trainingSet.getSensorPoint(i).getMeasure(index)
+					if (!(trainingSet.getSensorPoint(id).getMeasure(index)
 							.isNull())) {
 						if (f instanceof NumericFeature) {
 							((NumericFeature) f).setMin((Double) trainingSet
-									.getSensorPoint(i).getMeasure(index)
+									.getSensorPoint(id).getMeasure(index)
 									.getValue()); // update max
 							((NumericFeature) f).setMax((Double) trainingSet
-									.getSensorPoint(i).getMeasure(index)
+									.getSensorPoint(id).getMeasure(index)
 									.getValue()); // update min
 							((NumericFeature) f).setMean((Double) trainingSet
-									.getSensorPoint(i).getMeasure(index)
+									.getSensorPoint(id).getMeasure(index)
 									.getValue()); // update mean
 						} else if (f instanceof CategoricalFeature)
 							((CategoricalFeature) f)
 									.addCategory((String) trainingSet
-											.getSensorPoint(i)
+											.getSensorPoint(id)
 											.getMeasure(index).getValue());
 					}
 				}
@@ -512,28 +512,28 @@ public abstract class Node implements Serializable {
 					f.clear();
 					for (int i = beginExampleIndex; i <= endExampleIndex; i++) {
 						int index = f.getIndexMining();
-						if (!(trainingSet.getSensorPoint(i).getMeasure(index)
+						if (!(trainingSet.getSensorPoint(id).getMeasure(index)
 								.isNull())) {
 							if (f instanceof NumericFeature) {
 								((NumericFeature) f)
 										.setMin((Double) trainingSet
-												.getSensorPoint(i)
+												.getSensorPoint(id)
 												.getMeasure(index).getValue()); // update
 																				// max
 								((NumericFeature) f)
 										.setMax((Double) trainingSet
-												.getSensorPoint(i)
+												.getSensorPoint(id)
 												.getMeasure(index).getValue()); // update
 																				// min
 								((NumericFeature) f)
 										.setMean((Double) trainingSet
-												.getSensorPoint(i)
+												.getSensorPoint(id)
 												.getMeasure(index).getValue()); // update
 																				// mean
 							} else if (f instanceof CategoricalFeature)
 								((CategoricalFeature) f)
 										.addCategory((String) trainingSet
-												.getSensorPoint(i)
+												.getSensorPoint(id)
 												.getMeasure(index).getValue());
 						}
 					}

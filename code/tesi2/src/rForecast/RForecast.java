@@ -7,7 +7,7 @@ import snapshot.SnapshotSchema;
 
 public abstract class RForecast {
 
-	public abstract HashMap<String, ArrayList<Object>> RForecasting(
+	public abstract HashMap<String, ArrayList<Object>> RForecasting(int id,
 			double[][] dataset, SnapshotSchema schema,
 			ArrayList<Object> rParameters);
 }

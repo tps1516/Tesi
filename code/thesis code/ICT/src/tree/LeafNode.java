@@ -7,12 +7,14 @@ import snapshot.SnapshotData;
 import snapshot.SnapshotSchema;
 import snapshot.SnapshotWeigth;
 import windowStructure.FeatureWindow;
+import data.SensorPoint;
 import data.feature.AutocorrelationI;
 import forecast.ForecastingModel;
 
 public class LeafNode extends Node {
 
 	private ForecastingModel VARModel;
+	public int sp;
 
 	public LeafNode(AutocorrelationI a, SnapshotData trainingSet,
 			SnapshotSchema schema, SnapshotWeigth W, int beginExampleIndex,
@@ -24,7 +26,7 @@ public class LeafNode extends Node {
 
 	void learnVARModels(ArrayList<Object> rParameters) {
 		double[][] dataset = super.featureAvgNode.exportInMatrixForm();
-		this.VARModel = new ForecastingModel(dataset, this.getSchema(),
+		this.VARModel = new ForecastingModel(sp,dataset, this.getSchema(),
 				rParameters);
 	}
 
