@@ -1,0 +1,1194 @@
+TRAIN STREAM=ecotexasTRAIN
+W computation time (milliseconds):0
+**** ID: 2
+(ozono<=75.7)(temperatura<=23.0)
+(ozono<=75.7)(temperatura>23.0)(temperatura<=30.0)
+(ozono<=75.7)(temperatura>23.0)(temperatura>30.0)
+(ozono>75.7)
+
+Computation time(milliseconds)=15
+Leaves statisics
+number of leaves of the tree inherited from the past=0
+number of leaves of the tree after pruning=0
+number of leaves in the new tree=4
+**** ID: 3
+(ozono<=75.7)(radiazionisolari<=0.0)
+(ozono<=75.7)(radiazionisolari>0.0)
+(ozono>75.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 4
+(ozono<=75.7)(radiazionisolari<=0.0)
+(ozono<=75.7)(radiazionisolari>0.0)
+(ozono>75.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 5
+(ozono<=75.7)(radiazionisolari<=0.0)
+(ozono<=75.7)(radiazionisolari>0.0)(radiazionisolari<=0.001)
+(ozono<=75.7)(radiazionisolari>0.0)(radiazionisolari>0.001)
+(ozono>75.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 6
+(ozono<=75.7)(radiazionisolari<=0.0)
+(ozono<=75.7)(radiazionisolari>0.0)
+(ozono>75.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 7
+(ozono<=75.7)(ozono<=64.830859375)
+(ozono<=75.7)(ozono>64.830859375)(ozono<=70.01582031250001)
+(ozono<=75.7)(ozono>64.830859375)(ozono>70.01582031250001)(radiazionisolari<=0.004823242187500001)
+(ozono<=75.7)(ozono>64.830859375)(ozono>70.01582031250001)(radiazionisolari>0.004823242187500001)
+(ozono>75.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=5
+
+
+**** ID: 8
+(ozono<=75.7)(ozono<=64.830859375)
+(ozono<=75.7)(ozono>64.830859375)(ozono<=70.01582031250001)
+(ozono<=75.7)(ozono>64.830859375)(ozono>70.01582031250001)(ozono<=73.5826171875)
+(ozono<=75.7)(ozono>64.830859375)(ozono>70.01582031250001)(ozono>73.5826171875)
+(ozono>75.7)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=4
+number of leaves in the new tree=5
+
+
+**** ID: 9
+(ozono<=75.7)(temperatura<=10.7635498046875)
+(ozono<=75.7)(temperatura>10.7635498046875)
+(ozono>75.7)(temperatura<=18.4451904296875)
+(ozono>75.7)(temperatura>18.4451904296875)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 10
+(ozono<=75.7)(temperatura<=10.7635498046875)
+(ozono<=75.7)(temperatura>10.7635498046875)
+(ozono>75.7)(temperatura<=20.316375732421875)
+(ozono>75.7)(temperatura>20.316375732421875)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 11
+(radiazionisolari<=0.6292861328124999)(velocitavento<=6.153368759155274)
+(radiazionisolari<=0.6292861328124999)(velocitavento>6.153368759155274)(velocitavento<=8.012603149414062)
+(radiazionisolari<=0.6292861328124999)(velocitavento>6.153368759155274)(velocitavento>8.012603149414062)
+(radiazionisolari>0.6292861328124999)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=4
+
+
+**** ID: 12
+(ozono<=82.95501022338867)(ozono<=81.15522764205933)(temperatura<=13.193410873413086)
+(ozono<=82.95501022338867)(ozono<=81.15522764205933)(temperatura>13.193410873413086)(ozono<=78.06789875030518)
+(ozono<=82.95501022338867)(ozono<=81.15522764205933)(temperatura>13.193410873413086)(ozono>78.06789875030518)
+(ozono<=82.95501022338867)(ozono>81.15522764205933)
+(ozono>82.95501022338867)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=5
+
+
+**** ID: 13
+(ozono<=82.95501022338867)(radiazionisolari<=0.5505433959960937)
+(ozono<=82.95501022338867)(radiazionisolari>0.5505433959960937)
+(ozono>82.95501022338867)(velocitavento<=11.736411786079406)
+(ozono>82.95501022338867)(velocitavento>11.736411786079406)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 14
+(ozono<=82.95501022338867)(radiazionisolari<=0.6971358489990234)
+(ozono<=82.95501022338867)(radiazionisolari>0.6971358489990234)
+(ozono>82.95501022338867)(velocitavento<=11.736411786079406)
+(ozono>82.95501022338867)(velocitavento>11.736411786079406)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 15
+(ozono<=82.95501022338867)(radiazionisolari<=0.6971358489990234)
+(ozono<=82.95501022338867)(radiazionisolari>0.6971358489990234)
+(ozono>82.95501022338867)(velocitavento<=11.736411786079406)
+(ozono>82.95501022338867)(velocitavento>11.736411786079406)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=4
+number of leaves in the new tree=4
+
+
+**** ID: 16
+(ozono<=82.95501022338867)(velocitavento<=5.815677463263272)
+(ozono<=82.95501022338867)(velocitavento>5.815677463263272)
+(ozono>82.95501022338867)(velocitavento<=11.736411786079406)
+(ozono>82.95501022338867)(velocitavento>11.736411786079406)(ozono<=86.46388675868512)
+(ozono>82.95501022338867)(velocitavento>11.736411786079406)(ozono>86.46388675868512)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=5
+
+
+**** ID: 17
+(ozono<=82.95501022338867)(velocitavento<=5.1615311610512435)
+(ozono<=82.95501022338867)(velocitavento>5.1615311610512435)
+(ozono>82.95501022338867)(velocitavento<=11.736411786079406)
+(ozono>82.95501022338867)(velocitavento>11.736411786079406)(ozono<=85.6659716896713)
+(ozono>82.95501022338867)(velocitavento>11.736411786079406)(ozono>85.6659716896713)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=5
+
+
+**** ID: 18
+(ozono<=82.95501022338867)(velocitavento<=8.555816213530488)
+(ozono<=82.95501022338867)(velocitavento>8.555816213530488)
+(ozono>82.95501022338867)(velocitavento<=11.736411786079406)
+(ozono>82.95501022338867)(velocitavento>11.736411786079406)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 19
+(ozono<=82.95501022338867)(velocitavento<=8.555816213530488)
+(ozono<=82.95501022338867)(velocitavento>8.555816213530488)
+(ozono>82.95501022338867)(velocitavento<=9.985139150160832)
+(ozono>82.95501022338867)(velocitavento>9.985139150160832)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 20
+(ozono<=82.95501022338867)(velocitavento<=8.555816213530488)
+(ozono<=82.95501022338867)(velocitavento>8.555816213530488)(ozono<=78.49732213672395)
+(ozono<=82.95501022338867)(velocitavento>8.555816213530488)(ozono>78.49732213672395)
+(ozono>82.95501022338867)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 21
+(ozono<=82.95501022338867)(velocitavento<=8.555816213530488)(ozono<=77.41610041839922)
+(ozono<=82.95501022338867)(velocitavento<=8.555816213530488)(ozono>77.41610041839922)
+(ozono<=82.95501022338867)(velocitavento>8.555816213530488)(ozono<=78.49732213672395)
+(ozono<=82.95501022338867)(velocitavento>8.555816213530488)(ozono>78.49732213672395)
+(ozono>82.95501022338867)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=4
+number of leaves in the new tree=5
+
+
+**** ID: 22
+(ozono<=81.26971442022204)(ozono<=78.21787393363311)(temperatura<=20.300186358683277)
+(ozono<=81.26971442022204)(ozono<=78.21787393363311)(temperatura>20.300186358683277)
+(ozono<=81.26971442022204)(ozono>78.21787393363311)
+(ozono>81.26971442022204)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=4
+
+
+**** ID: 23
+(ozono<=81.26971442022204)(velocitavento<=6.4345190758029505)
+(ozono<=81.26971442022204)(velocitavento>6.4345190758029505)(velocitavento<=8.885818257347887)
+(ozono<=81.26971442022204)(velocitavento>6.4345190758029505)(velocitavento>8.885818257347887)
+(ozono>81.26971442022204)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 24
+(ozono<=81.26971442022204)(ozono<=75.59935093468555)
+(ozono<=81.26971442022204)(ozono>75.59935093468555)(ozono<=77.6038431578753)
+(ozono<=81.26971442022204)(ozono>75.59935093468555)(ozono>77.6038431578753)
+(ozono>81.26971442022204)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 25
+(ozono<=81.26971442022204)(radiazionisolari<=1.0443862860483933E4)
+(ozono<=81.26971442022204)(radiazionisolari>1.0443862860483933E4)
+(ozono>81.26971442022204)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 26
+(ozono<=77.52272607005325)(radiazionisolari<=3.059621074316965E5)
+(ozono<=77.52272607005325)(radiazionisolari>3.059621074316965E5)
+(ozono>77.52272607005325)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=3
+
+
+**** ID: 27
+(ozono<=77.52272607005325)(radiazionisolari<=6.33332094821526E6)
+(ozono<=77.52272607005325)(radiazionisolari>6.33332094821526E6)
+(ozono>77.52272607005325)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 28
+(ozono<=77.52272607005325)(radiazionisolari<=1.583330237053815E6)
+(ozono<=77.52272607005325)(radiazionisolari>1.583330237053815E6)
+(ozono>77.52272607005325)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 29
+(ozono<=77.52272607005325)(radiazionisolari<=4.1826388398646944E7)
+(ozono<=77.52272607005325)(radiazionisolari>4.1826388398646944E7)
+(ozono>77.52272607005325)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 30
+(ozono<=77.52272607005325)(radiazionisolari<=1.1328543970634542E7)
+(ozono<=77.52272607005325)(radiazionisolari>1.1328543970634542E7)
+(ozono>77.52272607005325)
+
+Computation time(milliseconds)=32
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 31
+(ozono<=77.52272607005325)(velocitavento<=6.39627770354992)
+(ozono<=77.52272607005325)(velocitavento>6.39627770354992)
+(ozono>77.52272607005325)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 32
+(ozono<=77.52272607005325)(velocitavento<=6.39627770354992)
+(ozono<=77.52272607005325)(velocitavento>6.39627770354992)(velocitavento<=9.227680656870358)
+(ozono<=77.52272607005325)(velocitavento>6.39627770354992)(velocitavento>9.227680656870358)
+(ozono>77.52272607005325)
+
+Computation time(milliseconds)=3
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 33
+(ozono<=77.52272607005325)(velocitavento<=6.39627770354992)
+(ozono<=77.52272607005325)(velocitavento>6.39627770354992)(velocitavento<=8.858915648001744)
+(ozono<=77.52272607005325)(velocitavento>6.39627770354992)(velocitavento>8.858915648001744)
+(ozono>77.52272607005325)(temperatura<=21.288067573374086)
+(ozono>77.52272607005325)(temperatura>21.288067573374086)
+
+Computation time(milliseconds)=4
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=5
+
+
+**** ID: 34
+(ozono<=77.52272607005325)(radiazionisolari<=0.19546875047443166)
+(ozono<=77.52272607005325)(radiazionisolari>0.19546875047443166)
+(ozono>77.52272607005325)(velocitavento<=11.652877267976203)
+(ozono>77.52272607005325)(velocitavento>11.652877267976203)
+
+Computation time(milliseconds)=5
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 35
+(ozono<=77.52272607005325)(ozono<=73.04323455445028)
+(ozono<=77.52272607005325)(ozono>73.04323455445028)
+(ozono>77.52272607005325)(ozono<=82.59265870180538)(temperatura<=23.104929983754054)
+(ozono>77.52272607005325)(ozono<=82.59265870180538)(temperatura>23.104929983754054)
+(ozono>77.52272607005325)(ozono>82.59265870180538)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=5
+
+
+**** ID: 36
+(ozono<=84.24816467545133)(ozono<=75.78580863861258)
+(ozono<=84.24816467545133)(ozono>75.78580863861258)(velocitavento<=14.274383041349326)(temperatura<=27.51590872920365)
+(ozono<=84.24816467545133)(ozono>75.78580863861258)(velocitavento<=14.274383041349326)(temperatura>27.51590872920365)
+(ozono<=84.24816467545133)(ozono>75.78580863861258)(velocitavento>14.274383041349326)
+(ozono>84.24816467545133)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=5
+
+
+**** ID: 37
+(ozono<=84.24816467545133)(velocitavento<=6.013511389250007)
+(ozono<=84.24816467545133)(velocitavento>6.013511389250007)(velocitavento<=7.896609063141476)
+(ozono<=84.24816467545133)(velocitavento>6.013511389250007)(velocitavento>7.896609063141476)
+(ozono>84.24816467545133)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 38
+(ozono<=84.24816467545133)(velocitavento<=6.013511389250007)
+(ozono<=84.24816467545133)(velocitavento>6.013511389250007)(velocitavento<=7.896609063141476)
+(ozono<=84.24816467545133)(velocitavento>6.013511389250007)(velocitavento>7.896609063141476)
+(ozono>84.24816467545133)(ozono<=86.58684850185259)
+(ozono>84.24816467545133)(ozono>86.58684850185259)
+
+Computation time(milliseconds)=1
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=4
+number of leaves in the new tree=5
+
+
+**** ID: 39
+(ozono<=84.24816467545133)(ozono<=79.53668124430405)
+(ozono<=84.24816467545133)(ozono>79.53668124430405)
+(ozono>84.24816467545133)(ozono<=87.8274668982491)
+(ozono>84.24816467545133)(ozono>87.8274668982491)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 40
+(ozono<=84.24816467545133)(ozono<=79.53668124430405)
+(ozono<=84.24816467545133)(ozono>79.53668124430405)
+(ozono>84.24816467545133)(ozono<=88.78186672456226)
+(ozono>84.24816467545133)(ozono>88.78186672456226)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 41
+(ozono<=84.24816467545133)(ozono<=79.53668124430405)
+(ozono<=84.24816467545133)(ozono>79.53668124430405)
+(ozono>84.24816467545133)(temperatura<=33.972547857107806)
+(ozono>84.24816467545133)(temperatura>33.972547857107806)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 42
+(ozono<=84.24816467545133)(radiazionisolari<=0.2923759074211193)
+(ozono<=84.24816467545133)(radiazionisolari>0.2923759074211193)
+(ozono>84.24816467545133)(radiazionisolari<=0.5942590105533658)
+(ozono>84.24816467545133)(radiazionisolari>0.5942590105533658)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 43
+(ozono<=84.24816467545133)(velocitavento<=4.6059548445998635)
+(ozono<=84.24816467545133)(velocitavento>4.6059548445998635)
+(ozono>84.24816467545133)(temperatura<=26.69203650080871)
+(ozono>84.24816467545133)(temperatura>26.69203650080871)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 44
+(ozono<=84.24816467545133)(ozono<=79.36945344417397)
+(ozono<=84.24816467545133)(ozono>79.36945344417397)(ozono<=81.39240546138572)
+(ozono<=84.24816467545133)(ozono>79.36945344417397)(ozono>81.39240546138572)
+(ozono>84.24816467545133)(temperatura<=26.69203650080871)
+(ozono>84.24816467545133)(temperatura>26.69203650080871)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=5
+
+
+**** ID: 45
+(ozono<=84.24816467545133)(velocitavento<=5.085604806656848)
+(ozono<=84.24816467545133)(velocitavento>5.085604806656848)(velocitavento<=7.1070617863602)
+(ozono<=84.24816467545133)(velocitavento>5.085604806656848)(velocitavento>7.1070617863602)
+(ozono>84.24816467545133)(temperatura<=26.69203650080871)
+(ozono>84.24816467545133)(temperatura>26.69203650080871)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=5
+
+
+**** ID: 46
+(ozono<=82.45782357629984)(velocitavento<=4.871401201664211)
+(ozono<=82.45782357629984)(velocitavento>4.871401201664211)(radiazionisolari<=0.007989721796521979)
+(ozono<=82.45782357629984)(velocitavento>4.871401201664211)(radiazionisolari>0.007989721796521979)
+(ozono>82.45782357629984)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=4
+
+
+**** ID: 47
+(ozono<=80.69416910829536)(ozono<=78.59651775264321)
+(ozono<=80.69416910829536)(ozono>78.59651775264321)
+(ozono>80.69416910829536)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=3
+
+
+**** ID: 48
+(ozono<=80.69416910829536)(ozono<=78.82354227707384)
+(ozono<=80.69416910829536)(ozono>78.82354227707384)
+(ozono>80.69416910829536)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 49
+(ozono<=80.69416910829536)(ozono<=78.84535357129819)
+(ozono<=80.69416910829536)(ozono>78.84535357129819)
+(ozono>80.69416910829536)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 50
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura<=18.0791247988291)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura>18.0791247988291)
+(ozono<=80.69416910829536)(ozono>78.0575789923256)
+(ozono>80.69416910829536)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 51
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura<=18.0791247988291)(temperatura<=6.7706714767213)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura<=18.0791247988291)(temperatura>6.7706714767213)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura>18.0791247988291)
+(ozono<=80.69416910829536)(ozono>78.0575789923256)
+(ozono>80.69416910829536)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=4
+number of leaves in the new tree=5
+
+
+**** ID: 52
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura<=13.564181801345253)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura>13.564181801345253)(temperatura<=20.06009404335363)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura>13.564181801345253)(temperatura>20.06009404335363)
+(ozono<=80.69416910829536)(ozono>78.0575789923256)
+(ozono>80.69416910829536)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=5
+
+
+**** ID: 53
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura<=13.564181801345253)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura>13.564181801345253)(radiazionisolari<=4.637102915410213E7)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura>13.564181801345253)(radiazionisolari>4.637102915410213E7)
+(ozono<=80.69416910829536)(ozono>78.0575789923256)
+(ozono>80.69416910829536)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=4
+number of leaves in the new tree=5
+
+
+**** ID: 54
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura<=13.564181801345253)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura>13.564181801345253)(radiazionisolari<=4.637102915410213E7)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura>13.564181801345253)(radiazionisolari>4.637102915410213E7)
+(ozono<=80.69416910829536)(ozono>78.0575789923256)
+(ozono>80.69416910829536)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=5
+number of leaves in the new tree=5
+
+
+**** ID: 55
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura<=13.564181801345253)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura>13.564181801345253)(temperatura<=17.392454768205976)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura>13.564181801345253)(temperatura>17.392454768205976)
+(ozono<=80.69416910829536)(ozono>78.0575789923256)
+(ozono>80.69416910829536)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=4
+number of leaves in the new tree=5
+
+
+**** ID: 56
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura<=13.564181801345253)(radiazionisolari<=0.03131250626361336)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura<=13.564181801345253)(radiazionisolari>0.03131250626361336)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura>13.564181801345253)(temperatura<=17.392454768205976)
+(ozono<=80.69416910829536)(ozono<=78.0575789923256)(temperatura>13.564181801345253)(temperatura>17.392454768205976)
+(ozono<=80.69416910829536)(ozono>78.0575789923256)
+(ozono>80.69416910829536)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=5
+number of leaves in the new tree=6
+
+
+**** ID: 57
+(ozono<=80.69416910829536)(ozono<=78.80370028386697)(temperatura<=18.712028423012875)
+(ozono<=80.69416910829536)(ozono<=78.80370028386697)(temperatura>18.712028423012875)
+(ozono<=80.69416910829536)(ozono>78.80370028386697)
+(ozono>80.69416910829536)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=6
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 58
+(ozono<=80.69416910829536)(temperatura<=21.582578304880947)(velocitavento<=6.337386749148087)
+(ozono<=80.69416910829536)(temperatura<=21.582578304880947)(velocitavento>6.337386749148087)
+(ozono<=80.69416910829536)(temperatura>21.582578304880947)
+(ozono>80.69416910829536)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 59
+(ozono<=80.69416910829536)(temperatura<=21.582578304880947)
+(ozono<=80.69416910829536)(temperatura>21.582578304880947)
+(ozono>80.69416910829536)(temperatura<=28.575977863903574)
+(ozono>80.69416910829536)(temperatura>28.575977863903574)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 60
+(ozono<=80.69416910829536)(temperatura<=21.582578304880947)
+(ozono<=80.69416910829536)(temperatura>21.582578304880947)
+(ozono>80.69416910829536)(radiazionisolari<=0.6967932129138473)
+(ozono>80.69416910829536)(radiazionisolari>0.6967932129138473)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 61
+(ozono<=80.69416910829536)
+(ozono>80.69416910829536)(velocitavento<=8.384585112797065)
+(ozono>80.69416910829536)(velocitavento>8.384585112797065)(temperatura<=28.979223239419348)
+(ozono>80.69416910829536)(velocitavento>8.384585112797065)(temperatura>28.979223239419348)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 62
+(ozono<=88.18455350773162)(ozono<=83.98553328718666)(ozono<=82.37669681709914)
+(ozono<=88.18455350773162)(ozono<=83.98553328718666)(ozono>82.37669681709914)
+(ozono<=88.18455350773162)(ozono>83.98553328718666)
+(ozono>88.18455350773162)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=4
+
+
+**** ID: 63
+(ozono<=88.18455350773162)(ozono<=83.84638332179665)(ozono<=82.31917420427479)
+(ozono<=88.18455350773162)(ozono<=83.84638332179665)(ozono>82.31917420427479)
+(ozono<=88.18455350773162)(ozono>83.84638332179665)
+(ozono>88.18455350773162)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 64
+(ozono<=88.18455350773162)(velocitavento<=10.143509142387455)
+(ozono<=88.18455350773162)(velocitavento>10.143509142387455)(velocitavento<=11.910412605137104)
+(ozono<=88.18455350773162)(velocitavento>10.143509142387455)(velocitavento>11.910412605137104)
+(ozono>88.18455350773162)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 65
+(ozono<=88.18455350773162)(velocitavento<=10.143509142387455)
+(ozono<=88.18455350773162)(velocitavento>10.143509142387455)(temperatura<=24.677442806028406)
+(ozono<=88.18455350773162)(velocitavento>10.143509142387455)(temperatura>24.677442806028406)
+(ozono>88.18455350773162)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 66
+(ozono<=88.18455350773162)(velocitavento<=10.143509142387455)
+(ozono<=88.18455350773162)(velocitavento>10.143509142387455)(temperatura<=23.81289648656673)
+(ozono<=88.18455350773162)(velocitavento>10.143509142387455)(temperatura>23.81289648656673)
+(ozono>88.18455350773162)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 67
+(ozono<=88.18455350773162)(ozono<=82.09391804094342)
+(ozono<=88.18455350773162)(ozono>82.09391804094342)
+(ozono>88.18455350773162)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 68
+(temperatura<=23.9471460176261)
+(temperatura>23.9471460176261)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 69
+(ozono<=83.97066654561186)
+(ozono>83.97066654561186)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 70
+(ozono<=81.89266663640296)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 71
+(ozono<=81.89266663640296)(ozono<=77.90121641806343)
+(ozono<=81.89266663640296)(ozono>77.90121641806343)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 72
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(ozono<=77.33556574395493)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(ozono>77.33556574395493)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 73
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura<=28.537141426345993)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura>28.537141426345993)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 74
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(radiazionisolari<=0.0010232351584700157)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(radiazionisolari>0.0010232351584700157)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 75
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(radiazionisolari<=7.807312760405705E6)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(radiazionisolari>7.807312760405705E6)(velocitavento<=8.708108293253341)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(radiazionisolari>7.807312760405705E6)(velocitavento>8.708108293253341)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=5
+
+
+**** ID: 76
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(radiazionisolari<=1.9518281901014263E6)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(radiazionisolari>1.9518281901014263E6)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 77
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura<=25.854801141085634)(temperatura<=22.869169590396165)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura<=25.854801141085634)(temperatura>22.869169590396165)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura>25.854801141085634)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=5
+
+
+**** ID: 78
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura<=26.548054392807614)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura>26.548054392807614)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 79
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(radiazionisolari<=0.005250028065160324)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(radiazionisolari>0.005250028065160324)(radiazionisolari<=0.006000027756889337)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(radiazionisolari>0.005250028065160324)(radiazionisolari>0.006000027756889337)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=5
+
+
+**** ID: 80
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura<=21.971550412627824)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura>21.971550412627824)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 81
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura<=24.291020392583995)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura>24.291020392583995)(ozono<=74.18246060330442)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura>24.291020392583995)(ozono>74.18246060330442)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=5
+
+
+**** ID: 82
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura<=28.242176468407404)
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)(temperatura>28.242176468407404)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 83
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)(temperatura<=27.848344353906256)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)(temperatura>27.848344353906256)
+(ozono>81.89266663640296)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 84
+(ozono<=81.89266663640296)(ozono<=78.35030410451586)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)(velocitavento<=11.819375976124148)
+(ozono<=81.89266663640296)(ozono>78.35030410451586)(velocitavento>11.819375976124148)
+(ozono>81.89266663640296)(velocitavento<=12.446364428433231)
+(ozono>81.89266663640296)(velocitavento>12.446364428433231)(ozono<=82.86717897865569)
+(ozono>81.89266663640296)(velocitavento>12.446364428433231)(ozono>82.86717897865569)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=6
+
+
+**** ID: 85
+(ozono<=88.85620223489146)(velocitavento<=15.01323287994872)
+(ozono<=88.85620223489146)(velocitavento>15.01323287994872)
+(ozono>88.85620223489146)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=6
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=3
+
+
+**** ID: 86
+(ozono<=88.85620223489146)(velocitavento<=12.922778079693096)
+(ozono<=88.85620223489146)(velocitavento>12.922778079693096)
+(ozono>88.85620223489146)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 87
+(ozono<=88.85620223489146)(velocitavento<=13.862951678520934)
+(ozono<=88.85620223489146)(velocitavento>13.862951678520934)
+(ozono>88.85620223489146)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 88
+(ozono<=88.85620223489146)(velocitavento<=13.862951678520934)
+(ozono<=88.85620223489146)(velocitavento>13.862951678520934)
+(ozono>88.85620223489146)(ozono<=92.28621129652743)
+(ozono>88.85620223489146)(ozono>92.28621129652743)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 89
+(ozono<=88.85620223489146)(velocitavento<=13.862951678520934)(temperatura<=31.324425865320777)
+(ozono<=88.85620223489146)(velocitavento<=13.862951678520934)(temperatura>31.324425865320777)
+(ozono<=88.85620223489146)(velocitavento>13.862951678520934)
+(ozono>88.85620223489146)(velocitavento<=12.267416994038612)
+(ozono>88.85620223489146)(velocitavento>12.267416994038612)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=5
+
+
+**** ID: 90
+(ozono<=88.85620223489146)(velocitavento<=13.862951678520934)(temperatura<=32.5811064663302)
+(ozono<=88.85620223489146)(velocitavento<=13.862951678520934)(temperatura>32.5811064663302)
+(ozono<=88.85620223489146)(velocitavento>13.862951678520934)
+(ozono>88.85620223489146)(velocitavento<=11.766854248509652)
+(ozono>88.85620223489146)(velocitavento>11.766854248509652)
+
+Computation time(milliseconds)=1
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=5
+
+
+**** ID: 91
+(ozono<=88.85620223489146)(velocitavento<=13.862951678520934)(temperatura<=32.89527661658255)
+(ozono<=88.85620223489146)(velocitavento<=13.862951678520934)(temperatura>32.89527661658255)
+(ozono<=88.85620223489146)(velocitavento>13.862951678520934)
+(ozono>88.85620223489146)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=3
+number of leaves in the new tree=4
+
+
+**** ID: 92
+(temperatura<=25.97268261071498)
+(temperatura>25.97268261071498)(ozono<=79.60546335383123)
+(temperatura>25.97268261071498)(ozono>79.60546335383123)(ozono<=84.37025844254835)
+(temperatura>25.97268261071498)(ozono>79.60546335383123)(ozono>84.37025844254835)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=4
+
+
+**** ID: 93
+(temperatura<=25.97268261071498)
+(temperatura>25.97268261071498)(ozono<=78.3357354123085)
+(temperatura>25.97268261071498)(ozono>78.3357354123085)(ozono<=81.27719865833078)
+(temperatura>25.97268261071498)(ozono>78.3357354123085)(ozono>81.27719865833078)(ozono<=85.08707485086691)
+(temperatura>25.97268261071498)(ozono>78.3357354123085)(ozono>81.27719865833078)(ozono>85.08707485086691)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=5
+
+
+**** ID: 94
+(temperatura<=25.97268261071498)
+(temperatura>25.97268261071498)(ozono<=78.15893385307712)
+(temperatura>25.97268261071498)(ozono>78.15893385307712)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=3
+
+
+**** ID: 95
+(ozono<=81.79919217817917)
+(ozono>81.79919217817917)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=3
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=2
+
+
+**** ID: 96
+(ozono<=81.63388380438494)(temperatura<=24.91133810941782)
+(ozono<=81.63388380438494)(temperatura>24.91133810941782)(ozono<=77.6456437374647)
+(ozono<=81.63388380438494)(temperatura>24.91133810941782)(ozono>77.6456437374647)
+(ozono>81.63388380438494)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=2
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=4
+
+
+**** ID: 97
+(ozono<=81.63388380438494)(velocitavento<=10.148732697391456)(velocitavento<=6.621381207090647)
+(ozono<=81.63388380438494)(velocitavento<=10.148732697391456)(velocitavento>6.621381207090647)
+(ozono<=81.63388380438494)(velocitavento>10.148732697391456)
+(ozono>81.63388380438494)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=4
+
+
+**** ID: 98
+(ozono<=81.63388380438494)(velocitavento<=10.148732697391456)(velocitavento<=6.621381207090647)
+(ozono<=81.63388380438494)(velocitavento<=10.148732697391456)(velocitavento>6.621381207090647)(radiazionisolari<=4.25945796168891E5)
+(ozono<=81.63388380438494)(velocitavento<=10.148732697391456)(velocitavento>6.621381207090647)(radiazionisolari>4.25945796168891E5)
+(ozono<=81.63388380438494)(velocitavento>10.148732697391456)
+(ozono>81.63388380438494)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=4
+number of leaves of the tree after pruning=4
+number of leaves in the new tree=5
+
+
+**** ID: 99
+(ozono<=81.63388380438494)(velocitavento<=7.850248274979096)(velocitavento<=6.6020695471345)
+(ozono<=81.63388380438494)(velocitavento<=7.850248274979096)(velocitavento>6.6020695471345)
+(ozono<=81.63388380438494)(velocitavento>7.850248274979096)(velocitavento<=9.846863683910565)
+(ozono<=81.63388380438494)(velocitavento>7.850248274979096)(velocitavento>9.846863683910565)
+(ozono>81.63388380438494)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=5
+
+
+**** ID: 100
+(ozono<=77.58868755651176)(velocitavento<=8.08671592097764)(velocitavento<=4.700891095643152)
+(ozono<=77.58868755651176)(velocitavento<=8.08671592097764)(velocitavento>4.700891095643152)(velocitavento<=6.094872065484715)
+(ozono<=77.58868755651176)(velocitavento<=8.08671592097764)(velocitavento>4.700891095643152)(velocitavento>6.094872065484715)
+(ozono<=77.58868755651176)(velocitavento>8.08671592097764)
+(ozono>77.58868755651176)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=5
+number of leaves of the tree after pruning=1
+number of leaves in the new tree=5
+
+
+**** ID: 101
