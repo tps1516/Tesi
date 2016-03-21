@@ -95,6 +95,8 @@ public class TictTest {
 		Integer nahead;
 
 		OutputReport outputForecastReport;
+		
+		boolean autocorrelation= true;
 
 		/*
 		 * vado a leggere i parametri in input al software
@@ -114,6 +116,7 @@ public class TictTest {
 			ic = String.valueOf(args[9]);
 			type = String.valueOf(args[10]);
 			nahead = new Integer(args[11]);
+			autocorrelation= new Boolean(args[12]);
 			
 		} catch (IndexOutOfBoundsException e) {
 			String report = "TICT@KDDE.UNIBA.IT\n";
@@ -140,7 +143,13 @@ public class TictTest {
 
 		}
 		String dataName = args[0];
-
+		
+		if (autocorrelation){
+			isSpatial="GO";
+		} else {
+			isSpatial="VAR";
+		}
+		
 		/*
 		 * Inizializzo il file per la stampa del costo in tempo delle operazioni
 		 */

@@ -10,6 +10,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.LinkedList;
+
 import rForecast.InvalidForecastParametersException;
 import rForecast.ParametersChecker;
 import rForecast.ParametersRForecastIndex;
@@ -88,7 +89,7 @@ public class TictTest {
 		String ic;
 		String type;
 		String substitutionWith;
-
+		boolean autocorrelation=false;
 		/*
 		 * numero di forecast da effettuare
 		 */
@@ -115,6 +116,7 @@ public class TictTest {
 			type = String.valueOf(args[10]);
 			nahead = new Integer(args[11]);
 			substitutionWith = String.valueOf(args[13]);
+			autocorrelation = new Boolean(args[14]);
 		} catch (IndexOutOfBoundsException e) {
 			String report = "TICT@KDDE.UNIBA.IT\n";
 			report += "author = Annalisa Appice\n\n";
@@ -140,6 +142,14 @@ public class TictTest {
 
 		}
 		String dataName = args[0];
+		
+
+		
+		if (autocorrelation){
+			isSpatial="GO";
+		} else {
+			isSpatial="VAR";
+		}
 
 		/*
 		 * Inizializzo il file per la stampa del costo in tempo delle operazioni
