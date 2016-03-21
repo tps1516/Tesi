@@ -1,0 +1,15 @@
+/FeatureForecastingModel.class
+/VARForecastingModel.class
+/FeatureVARForecastingModel.class
+/FeatureVARForecastingModel$Record.class
+/FeatureVARForecastingModel$FeatureVarForecastingIterator.class
+/FeatureVARForecastingModel$RecordVAR.class
+/RecordVAR.class
+/ForecastingModel.class
+/ForecastingModelIndex.class
+/NotForecastingException.class
+/Forecasting.class
+/SensorForecast.class
+/OutputForecast.class
+/OutputReport.class
+/NotForecastingModelException.class
