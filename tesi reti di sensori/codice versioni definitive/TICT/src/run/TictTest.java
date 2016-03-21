@@ -369,11 +369,15 @@ public class TictTest {
 							if (!isSpatial.equals("GO")
 									&& schema.getTargetList().size() > 1)
 								snapData.scaledSchema(schema);
+							
 
 							if (autoCorrelation instanceof ResubstitutionIndexOnGetisOrd)
 								snapData.updateGetisAndOrd(W, schema);
+							
 							else
 								snapData.scaledSchema(schema);
+								
+								
 							System.out.println("**** ID: "
 									+ snapData.getIdSnapshot());
 							outputReport.println("**** ID: "
