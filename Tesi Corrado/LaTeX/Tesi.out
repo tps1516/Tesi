@@ -1,0 +1,30 @@
+\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Scenario applicativo}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Obiettivi e contributi}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{Stato dell'arte}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Smoothing}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.1.1}{Exponential Smoothing}{section.2.1}% 6
+\BOOKMARK [1][-]{section.2.2}{Vector Autoregressive Model}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.1}{Modelli teorici}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.2}{Implementazione in R}{section.2.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Clustering}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.3.1}{Clustering Interpolativo}{section.2.3}% 11
+\BOOKMARK [1][-]{section.2.4}{VARForecaster 1.0/2.0}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{VARForecaster 2.1/2.2}{}% 13
+\BOOKMARK [1][-]{section.3.1}{VARForecaster 2.1}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.1.1}{Diagrammi di classe}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.2}{Diagrammi di sequenza}{section.3.1}% 16
+\BOOKMARK [1][-]{section.3.2}{VARForecaster 2.2}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.2.1}{Diagrammi di classe}{section.3.2}% 18
+\BOOKMARK [2][-]{subsection.3.2.2}{Diagrammi di sequenza}{section.3.2}% 19
+\BOOKMARK [0][-]{chapter.4}{Analisi sperimentale}{}% 20
+\BOOKMARK [1][-]{section.4.1}{Obiettivi e metriche}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.2}{Dati}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.3}{Risultati}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.3.1}{EcoTexas}{section.4.3}% 24
+\BOOKMARK [2][-]{subsection.4.3.2}{UnitedStatesPacific}{section.4.3}% 25
+\BOOKMARK [0][-]{chapter.5}{Conclusioni}{}% 26
+\BOOKMARK [0][-]{chapter.6}{Appendice}{}% 27
+\BOOKMARK [1][-]{section.6.1}{Guida per l\220esecuzione di VARForecaster 2.1/2.2}{chapter.6}% 28
+\BOOKMARK [0][-]{chapter.7}{Bibliografia}{}% 29
+\BOOKMARK [0][-]{chapter.8}{Ringraziamenti}{}% 30
