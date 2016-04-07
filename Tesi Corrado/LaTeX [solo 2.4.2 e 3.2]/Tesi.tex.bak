@@ -13,7 +13,6 @@
 {\vfill\null}
 \usepackage{float}
 \renewcommand\labelenumi{(\theenumi)}
-
 \begin{document}
 
 \begin{abstract}
@@ -506,7 +505,7 @@ Il clustering interpolativo (o \textit{interpolative clustering}) è una forma d
 In \cite{donato} sono presentate due versioni del sistema che, avuto in input un insieme di sensori (definito in seguito \textit{dataset}), tramite applicazione del modello VAR effettuano predizione di quelli che potrebbero essere i valori assunti da tali sensori nel futuro. 
 
 
-\subsection{VARForecaster1.0}
+\subsection{VARForecaster 1.0}
 I sensori effettuano rilevazioni periodicamente e questo porta ad avere un flusso di dati multi-variato, rappresentato, per ogni istante di tempo, attraverso uno snapshot e l'insieme degli snapshot compone il dataset. 
 
 La versione VARForecaster 1.0 è caratterizzata dall'apprendimento di un modello VAR per ogni sensore appartenente alla rete, utilizzando come dati di training la serie storia multi-variata, la quale contiene le rilevazioni effettuate dal sensore.
@@ -560,12 +559,13 @@ Ogni cluster $C_{i0}$, $C_{i1}$, $\dots$, $C_{ir}$ è associato ad un nodo $n_{i
 
 
 \subsubsection{Fasi di apprendimento del modello VAR e predizione}
+
 \chapter{VARForecaster 2.1/2.2}
 In questo capitolo sono descritte le versioni dell'algoritmo (descritto nel par. 2.4) progettate ed implementate in questo lavoro di tesi. 
 
 Si ricorda che (come descritto nel par. 1.1) l'algoritmo è stato esteso al fine di calcolare gli aggregati dei dati in tempo reale (media o mediana) piuttosto che ricorrere ad approssimazione degli stessi e utilizzare un meccanismo di smoothing esponenziale per determinare il modello di clustering sulla base dei valori geofisici attesi nella rete all'istante {\bfseries t+1} piuttosto che sulla base dei valori osservati all'istante {\bfseries t}. La motivazione è l'identificazione di una soluzione che realizza il miglior bilanciamento tra accuratezza e efficienza.
 \section{VARForecaster 2.1}
-L'albero è costruito in maniera incrementale, ovvero, ad ogni nuovo snapshot di dati all'interno dello stream, l'algoritmo controlla che le condizioni di split in base alle quali è stato costruito il modello di clustering all'istante t-1 siano compatibili con i dati raccolti all'istante t.
+L'albero è costruito in maniera incrementale (par. 2.4), ovvero, ad ogni nuovo snapshot di dati all'interno dello stream, l'algoritmo controlla che le condizioni di split in base alle quali è stato costruito il modello di clustering all'istante t-1 siano compatibili con i dati raccolti all'istante t.
 
 A tale scopo, per ogni nuovo snapshot, l'albero è aggiornato eseguendo una fase di pruning e poi di ri-apprendimento dell'albero sulla base dei nuovi valori ricevuti. 
 
@@ -605,7 +605,7 @@ Nel momento in cui si prova a definire un'aggregato multi-variato per un cluster
 \item Presenza di outliers;
 \end{itemize}
 Sono di seguito descritte le modalità secondo le quali è stato possibile risolvere entrambi i problemi.
-\subsubsection{Sensori Inattivi}
+\subsubsection{Sensori inattivi}
 Nel calcolo della media, come specificato in precedenza, vengono considerate tutte le rilevazioni presenti all'interno della finestra temporale associata al sensore. 
 
 Se tale sensore in passato, anche per un singolo istante temporale \textit{$t_{x}$}, non ha effettuato alcuna rilevazione, nella struttura dati \textit{Feature Window} ad esso associata, per l'istante \textit{$t_{x}$}, è salvato il valore massimo che Java permette per rappresentare una variabile di tipo Double (di seguito definito come \textit{"MAX-VALUE"}).
@@ -696,6 +696,49 @@ Queste modifiche sono esplicitate chiaramente, nella seguente sotto-sezione, dai
 
 \newpage
 \section{VARForecaster 2.2}
+In questa versione del sistema VARForecaster 2.0 ai dati viene applicato, per la costruzione dell'albero (e per il suo apprendimento incrementale), un'algoritmo di smoothing esponenziale. 
+
+Si è pensato a questa modifica in quanto, adattare al meglio la costruzione dell'albero in previsione dei valori futuri assunti mediamente da ciascuna feature all'interno dei cluster, potrebbe migliorare l'accuratezza con un basso costo in termini di costi computazionali in tempo.
+
+L'albero, nelle versioni 2.0 e 2.1, viene appreso su ogni snapshot ricevuto in input all'istante temporale \textit{t} mentre in questa versione è appreso sulla previsione effettuata sui dati avuti nell'istante \textit{t-1} tramite l'utilizzo della tecnica di smoothing esponenziale. 
+
+Per effettuare tale operazioni si sono rese necessarie alcune modifiche alla struttura del sistema che possono essere riassunte in 2 fasi:
+\begin{enumerate}
+\item creazione dello snapshot previsto attraverso lo smoothing esponenziale (in seguito def. \textit{snapSmoot});
+\item apprendimento incrementale del \textit{CT};
+\end{enumerate}
+Nei successivi paragrafi sono descritte entrambe le fasi con particolare attenzione alle modifiche effettuate.
+\subsubsection{Creazione dello \textit{snapSmoot}}
+La fase di creazione dello \textit{snapSmoot} avviene ogni qualvolta si processa un nuovo snapshot. Tale fase si preoccupa di leggere lo snapshot dell'istante temporale \textit{t} in esame, precedentemente ricevuto in input, e processarlo al fine di produrre uno snapshot di previsioni di quelli che potrebbero essere i valori assunti da ciascuna feature di ciascuna istanza presente al suo interno. 
+
+Questo processo si compone di due casistiche:
+\begin{itemize}
+\item si tratta del primo istante temporale contenente i valori rilevati dai sensori;
+\item è un istante temporale successivo al primo, quindi abbiamo già applicato lo smoothing in precedenza.
+\end{itemize}
+
+Nel caso in cui sia stia analizzando il primo istante temporale, il sistema si preoccupa di clonare tutti i sensori ricevuti in input nello \textit{snapSmoot}. Questo è dovuto al fatto che il passo base per il calcolo dello smoothing esponenziale è ottenuto con la copia dei dati ricevuti in ingresso. 
+
+Nel caso in cui invece si stia analizzando un istante temporale successivo al primo, il sistema ha la responsabilità di trovare, tra i sensori presenti nello \textit{snapSmoot} di \textit{t-1}, i sensori che nell'istante temporale \textit{t} hanno effettivamente effettuato una rilevazione e combinarli applicando il metodo di \textit{smoothing esponenziale di Brown}.
+
+\subsubsection{Sensori inattivi nella creazione dello \textit{snapSmoot}}
+Come nel caso della versione VARForecaster 2.1, i sensori inattivi rappresentano un eventuale problematica da dover gestire. 
+
+Come precedentemente specificato, il sistema deve trovare tra i sensori presenti nello \textit{snapSmoot} di \textit{t-1} quelli che hanno effettivamente rilevato dei dati nell'istante temporale \textit{t} in considerazione. Ciò implica due conseguenze: 
+\begin{enumerate}
+\item potrebbero esserci sensori presenti all'interno di \textit{snapSmoot} ma non presenti all'interno dello snapshot attuale;
+\item potrebbero esserci sensori presenti nello snapshot attuale ma non presenti nello \textit{snapSmoot}.
+\end{enumerate}
+Per la gestione di (1) è stato scelto di ignorare tali sensori in quanto il processo di smoothing, prendendo in considerazione gli istanti temporali precedenti a \textit{t} avrebbe un valore mancante, il quale condizionerebbe tutto il meccanismo.
+
+Per la gestione di (2), per lo stesso motivo sopracitato, si è preferito far ripartire il processo di smoothing dal "passo base" e quindi di clonare il sensore reale.
+\subsubsection{Apprendimento incrementale del \textit{CT}}
+In questa fase di progetto si è fatta molta attenzione a distinguere due processi: 
+\begin{itemize}
+\item aggiornamento dei dati relativi ai cluster
+\item costruzione dell'albero
+\end{itemize}
+Per aggiornamento dei dati relativi ai cluster si intende quella fase in cui vengono aggiornati, per ogni nodo, relativamente al cluster a cui fanno riferimento, i valori delle feature di ogni sensore. Questo vuol dire che i dati presenti in ogni nodo sono riferiti ai valori realmente rilevati dai sensori che ricadono in quel cluster e non a que
 \newpage
 \subsection{Diagrammi di classe}
 \newpage

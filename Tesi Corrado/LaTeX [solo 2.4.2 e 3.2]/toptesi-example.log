@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.31)  7 APR 2016 12:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.31)  7 APR 2016 16:07
 entering extended mode
 **./toptesi-example.tex
 (toptesi-example.tex
@@ -585,7 +585,7 @@ Package rerunfilecheck Info: File `toptesi-example.out' has not changed.
 Here is how much of TeX's memory you used:
  7502 strings out of 493634
  109088 string characters out of 3133199
- 296912 words of memory out of 3000000
+ 296918 words of memory out of 3000000
  10769 multiletter control sequences out of 15000+200000
  50359 words of font info for 44 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -596,7 +596,7 @@ ts/type1/public/lm/lmbx12.pfb><C:/Users/PC-Corrado/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/PC-Corrado/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/PC-Corrado/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb>
-Output written on toptesi-example.pdf (1 page, 160407 bytes).
+Output written on toptesi-example.pdf (1 page, 160478 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)

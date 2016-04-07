@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.31)  7 APR 2016 12:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.31)  7 APR 2016 18:42
 entering extended mode
 **./Tesi.tex
 (Tesi.tex
@@ -587,24 +587,24 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 ) (Tesi.aux)
 \openout1 = `Tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Info: Redefining \it@ocap on input line 17.
-LaTeX Info: Redefining \it@ccap on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Info: Redefining \it@ocap on input line 16.
+LaTeX Info: Redefining \it@ccap on input line 16.
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 17.
+Package hyperref Info: Link coloring OFF on input line 16.
 
 ("C:\Users\PC-Corrado\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\name
 ref.sty"
@@ -616,9 +616,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count121
 )
-LaTeX Info: Redefining \ref on input line 17.
-LaTeX Info: Redefining \pageref on input line 17.
-LaTeX Info: Redefining \nameref on input line 17.
+LaTeX Info: Redefining \ref on input line 16.
+LaTeX Info: Redefining \pageref on input line 16.
+LaTeX Info: Redefining \nameref on input line 16.
  (Tesi.out) (Tesi.out)
 \@outlinefile=\write3
 \openout3 = `Tesi.out'.
@@ -659,20 +659,20 @@ df.mkii"
 ]
 Capitolo 1.
 [7] [8] [9]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 62.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 61.
 
 ("C:\Users\PC-Corrado\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.f
 d"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
  [10]
 Capitolo 2.
 [11
 
 ] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 345.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 344.
 
 
 ("C:\Users\PC-Corrado\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.f
@@ -682,51 +682,51 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 File: VAR/select.jpg Graphic file (type jpg)
 
 <use VAR/select.jpg>
-Package pdftex.def Info: VAR/select.jpg used on input line 390.
+Package pdftex.def Info: VAR/select.jpg used on input line 389.
 (pdftex.def)             Requested size: 390.0pt x 124.2529pt.
  [24pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.392 \newpage
+l.391 \newpage
                <./VAR/select.jpg>]
 <VAR/fVAR.jpg, id=338, 342.5297pt x 40.65187pt>
 File: VAR/fVAR.jpg Graphic file (type jpg)
  <use VAR/fVAR.jpg>
-Package pdftex.def Info: VAR/fVAR.jpg used on input line 419.
+Package pdftex.def Info: VAR/fVAR.jpg used on input line 418.
 (pdftex.def)             Requested size: 390.0pt x 46.28902pt.
 
 <VAR/fVARo.jpg, id=340, 630.10406pt x 454.69875pt>
 File: VAR/fVARo.jpg Graphic file (type jpg)
  <use VAR/fVARo.jpg>
-Package pdftex.def Info: VAR/fVARo.jpg used on input line 430.
+Package pdftex.def Info: VAR/fVARo.jpg used on input line 429.
 (pdftex.def)             Requested size: 390.0pt x 281.43158pt.
  [25pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.432 
+l.431 
        <./VAR/fVAR.jpg>] [26pdfTeX warning (ext4): destination with the same id
 entifier (name{figure.2.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.441 \newpage
+l.440 \newpage
                <./VAR/fVARo.jpg>]
 <clustering/dendrogram.png, id=358, 431.36156pt x 294.34969pt>
 File: clustering/dendrogram.png Graphic file (type png)
 
 <use clustering/dendrogram.png>
-Package pdftex.def Info: clustering/dendrogram.png used on input line 473.
+Package pdftex.def Info: clustering/dendrogram.png used on input line 472.
 (pdftex.def)             Requested size: 312.00119pt x 212.90623pt.
  [27] [28pdfTeX warning (ext4): destination with the same identifier (name{figu
 re.2.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.484 \begin{center}
+l.483 \begin{center}
                      <./clustering/dendrogram.png>] [29] [30] [31] [32]
 Capitolo 3.
 [33
@@ -775,39 +775,39 @@ Overfull \hbox (6.46977pt too wide) in paragraph at lines 693--694
 -guente sotto-sezione,
  []
 
-[40] [41] [42] [43] [44]
+[40] [41] [42] [43] [44] [45] [46]
 Capitolo 4.
-[45
+[47
 
-] [46] [47] [48] [49] [50]
+] [48] [49] [50] [51] [52]
 Capitolo 5.
-[51
+[53
 
-] [52
+] [54
 
 ]
 Capitolo 6.
-[53] [54
+[55] [56
 
 ]
 Capitolo 7.
-[55] [56
+[57] [58
 
-] [57] [58]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 769.
- [59
+] [59] [60]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 813.
+ [61
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 769.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 813.
  (Tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 769.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 769.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 813.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 813.
 Package rerunfilecheck Info: File `Tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 07C0B7CABF618F9501ECBBF6FD12ED10;2118.
+(rerunfilecheck)             Checksum: 96444F7A134F0B9C9DEB80BE0AC069E5;2119.
  ) 
 Here is how much of TeX's memory you used:
- 7734 strings out of 493634
- 110233 string characters out of 3133199
+ 7743 strings out of 493634
+ 110307 string characters out of 3133199
  209464 words of memory out of 3000000
  10859 multiletter control sequences out of 15000+200000
  16669 words of font info for 41 fonts, out of 3000000 for 9000
@@ -839,9 +839,9 @@ rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/PC-Corrado
 :/Users/PC-Corrado/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmsy6.pfb><C:/Users/PC-Corrado/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Tesi.pdf (59 pages, 962745 bytes).
+Output written on Tesi.pdf (61 pages, 972784 bytes).
 PDF statistics:
- 1020 PDF objects out of 1200 (max. 8388607)
- 149 named destinations out of 1000 (max. 500000)
+ 1048 PDF objects out of 1200 (max. 8388607)
+ 158 named destinations out of 1000 (max. 500000)
  287 words of extra memory for PDF output out of 10000 (max. 10000000)
 
