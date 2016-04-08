@@ -1,0 +1,57 @@
+\select@language {italian}
+\select@language {italian}
+\contentsline {chapter}{\numberline {1}Introduzione}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Scenario applicativo}{8}{section.1.1}
+\contentsline {section}{\numberline {1.2}Obiettivi e contributi}{10}{section.1.2}
+\contentsline {chapter}{\numberline {2}Stato dell'arte}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Smoothing}{11}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Exponential Smoothing}{13}{subsection.2.1.1}
+\contentsline {subsubsection}{Metodo di Brown}{13}{section*.3}
+\contentsline {subsubsection}{Metodo di Holt}{14}{section*.4}
+\contentsline {subsubsection}{Metodo di Winters}{15}{section*.5}
+\contentsline {section}{\numberline {2.2}Vector Autoregressive Model}{17}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Modelli teorici}{18}{subsection.2.2.1}
+\contentsline {subsubsection}{Reduced form}{18}{section*.6}
+\contentsline {subsubsection}{Structural form}{19}{section*.7}
+\contentsline {subsubsection}{Companion form}{20}{section*.8}
+\contentsline {subsection}{\numberline {2.2.2}Implementazione in R}{22}{subsection.2.2.2}
+\contentsline {subsubsection}{VARSelect}{23}{section*.9}
+\contentsline {subsubsection}{VAR}{25}{section*.10}
+\contentsline {section}{\numberline {2.3}Clustering}{27}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Clustering partizionale}{27}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Clustering gerarchico}{27}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Clustering concettuale e interpolativo}{29}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}VARForecaster 1.0/2.0}{30}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}VARForecaster 1.0}{30}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}VARForecaster 2.0}{31}{subsection.2.4.2}
+\contentsline {subsubsection}{Fasi di apprendimento e modifica incrementale del CT}{32}{section*.11}
+\contentsline {subsubsection}{Fasi di apprendimento del modello VAR e predizione}{33}{section*.12}
+\contentsline {chapter}{\numberline {3}VARForecaster 2.1/2.2}{35}{chapter.3}
+\contentsline {section}{\numberline {3.1}VARForecaster 2.1}{35}{section.3.1}
+\contentsline {subsubsection}{Aggregazione in tempo reale}{36}{section*.13}
+\contentsline {subsubsection}{Problematiche}{36}{section*.14}
+\contentsline {subsubsection}{Sensori inattivi}{37}{section*.15}
+\contentsline {subsubsection}{Presenza di outliers}{37}{section*.16}
+\contentsline {subsubsection}{Caso limite}{38}{section*.17}
+\contentsline {subsubsection}{Conseguenze}{38}{section*.18}
+\contentsline {subsection}{\numberline {3.1.1}Progettazione}{40}{subsection.3.1.1}
+\contentsline {subsubsection}{Diagramma dei package}{40}{section*.19}
+\contentsline {subsubsection}{Diagrammi delle classi}{41}{section*.20}
+\contentsline {subsubsection}{Diagrammi di sequenza}{43}{section*.21}
+\contentsline {section}{\numberline {3.2}VARForecaster 2.2}{44}{section.3.2}
+\contentsline {subsubsection}{Creazione dello \textit {snapSmoot}}{44}{section*.22}
+\contentsline {subsubsection}{Sensori inattivi nella creazione dello \textit {snapSmoot}}{45}{section*.23}
+\contentsline {subsubsection}{Apprendimento incrementale del \textit {CT}}{45}{section*.24}
+\contentsline {subsubsection}{Metodo scelto e parametrizzazione}{46}{section*.25}
+\contentsline {subsection}{\numberline {3.2.1}Diagrammi di classe}{47}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Diagrammi di sequenza}{48}{subsection.3.2.2}
+\contentsline {chapter}{\numberline {4}Analisi sperimentale}{49}{chapter.4}
+\contentsline {section}{\numberline {4.1}Obiettivi e metriche}{50}{section.4.1}
+\contentsline {section}{\numberline {4.2}Dati}{51}{section.4.2}
+\contentsline {section}{\numberline {4.3}Risultati}{52}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}EcoTexas}{53}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}UnitedStatesPacific}{54}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}Conclusioni}{55}{chapter.5}
+\contentsline {chapter}{\numberline {6}Appendice}{57}{chapter.6}
+\contentsline {section}{\numberline {6.1}Guida per l\IeC {\textquoteright }esecuzione di VARForecaster 2.1/2.2}{57}{section.6.1}
+\contentsline {chapter}{\numberline {7}Bibliografia}{59}{chapter.7}
