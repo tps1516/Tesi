@@ -1,0 +1,30 @@
+\select@language {italian}
+\select@language {italian}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Esempio di utilizzo della funzione VARSelect}}{24}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Esempio di utilizzo della funzione VAR}}{25}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Output della funzione in fig.~\ref {fVAR}}}{26}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Dendrogramma}}{28}{figure.2.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces RealAggregate Package Diagram}}{40}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces RealAggregate Tree Class Diagram}}{41}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces RealAggregate Forecast Class Diagram}}{43}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Run VARForecaster 2.1}}{45}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Riapprendimento \textit {CT} VARForecaster 2.1}}{46}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Apprendimento aggregato con media}}{47}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Apprendimento aggregato con mediana}}{48}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Apprendimento modello VAR VARForecaster 2.1}}{49}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Exponential Smoothing Class Diagram}}{53}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Tree Class Diagram VARForecaster 2.2}}{55}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Run VARForecaster 2.2}}{57}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Apprendimento CT VARForecaster 2.2}}{58}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Potatura VARForecaster 2.2}}{59}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Riapprendimento CT 1/2 VARForecaster 2.2}}{60}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Riapprendimento CT 2/2 VARForecaster 2.2}}{61}{figure.3.15}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Algoritmo per lo smoothing esponenziale}}{62}{figure.3.16}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Algoritmo per lo smoothing del singolo sensore}}{63}{figure.3.17}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
