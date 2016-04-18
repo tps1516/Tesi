@@ -1,0 +1,2132 @@
+TRAIN STREAM=UnitedStatesPacificTRAIN
+W computation time (milliseconds):47
+**** ID: 2
+(pres<=1015.8)
+(pres>1015.8)(wind<=10.6)(wind<=7.1)(wind<=6.6)(temp<=39.8)
+(pres>1015.8)(wind<=10.6)(wind<=7.1)(wind<=6.6)(temp>39.8)
+(pres>1015.8)(wind<=10.6)(wind<=7.1)(wind>6.6)
+(pres>1015.8)(wind<=10.6)(wind>7.1)(wind<=8.8)
+(pres>1015.8)(wind<=10.6)(wind>7.1)(wind>8.8)(dewp<=24.1)
+(pres>1015.8)(wind<=10.6)(wind>7.1)(wind>8.8)(dewp>24.1)
+(pres>1015.8)(wind>10.6)
+
+Computation time(milliseconds)=78
+Leaves statisics
+number of leaves of the tree inherited from the past=0
+number of leaves of the tree after pruning=0
+number of leaves in the new tree=8
+**** ID: 3
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(dewp<=15.459999999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(dewp>15.459999999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(dewp<=20.480000000000004)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(dewp>20.480000000000004)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=47
+number of leaves of the tree inherited from the past=8
+number of leaves of the tree after pruning=2
+number of leaves in the new tree=11
+
+
+**** ID: 4
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind<=9.336)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind>9.336)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.0)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.0)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=11
+number of leaves of the tree after pruning=9
+number of leaves in the new tree=13
+
+
+**** ID: 5
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind<=9.201600000000001)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind>9.201600000000001)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.9032)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.9032)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=11
+number of leaves in the new tree=13
+
+
+**** ID: 6
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind<=9.1016)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind>9.1016)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.8688)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.8688)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=11
+number of leaves in the new tree=13
+
+
+**** ID: 7
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind<=9.676704)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind>9.676704)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.841280000000001)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.841280000000001)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=11
+number of leaves in the new tree=13
+
+
+**** ID: 8
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind<=9.676704)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind>9.676704)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.76288)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.76288)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 9
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind<=9.11284736)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind>9.11284736)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=11
+number of leaves in the new tree=13
+
+
+**** ID: 10
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind<=9.187708416)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind>9.187708416)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 11
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind<=9.7216825856)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind>9.7216825856)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 12
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind<=9.89937967104)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)(wind>9.89937967104)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>6.763999999999999)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 13
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=11
+number of leaves in the new tree=13
+
+
+**** ID: 14
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.737727999999999)(wind<=11.174109218816001)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.737727999999999)(wind>11.174109218816001)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.68)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 15
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.737727999999999)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.2979620011213)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 16
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp<=17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(temp>17.36)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.2979620011213)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 17
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)(wind<=12.548631648852378)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)(wind>12.548631648852378)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.2979620011213)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 18
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)(wind<=12.292019844399103)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)(wind>12.292019844399103)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.2979620011213)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 19
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.2979620011213)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=12
+
+
+**** ID: 20
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.2979620011213)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=12
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=12
+
+
+**** ID: 21
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.383939972049546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.383939972049546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.2979620011213)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=12
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=14
+
+
+**** ID: 22
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.383939972049546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.383939972049546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.2979620011213)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.724109510475776)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=14
+
+
+**** ID: 23
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.074218389937837)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.074218389937837)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.2979620011213)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 24
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.074218389937837)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.074218389937837)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.2979620011213)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 25
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.074218389937837)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.074218389937837)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.2979620011213)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.2979620011213)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=14
+
+
+**** ID: 26
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.211275165890772)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.211275165890772)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 27
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.933800262641313)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.933800262641313)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 28
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres<=1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres>1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.933800262641313)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.933800262641313)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 29
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres<=1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres>1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.895506868276069)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.895506868276069)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=15
+
+
+**** ID: 30
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres<=1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres>1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.884661261499442)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.884661261499442)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=15
+
+
+**** ID: 31
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres<=1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres>1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.850796756899665)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.850796756899665)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=15
+
+
+**** ID: 32
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres<=1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres>1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.74222948354763)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.74222948354763)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=15
+
+
+**** ID: 33
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres<=1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres>1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.74222948354763)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.74222948354763)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=15
+number of leaves in the new tree=15
+
+
+**** ID: 34
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres<=1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres>1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.643951606963636)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.643951606963636)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=15
+
+
+**** ID: 35
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres<=1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres>1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)(wind<=9.454153135512508)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)(wind>9.454153135512508)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.643951606963636)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.643951606963636)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=15
+number of leaves in the new tree=16
+
+
+**** ID: 36
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres<=1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres>1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.643951606963636)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.643951606963636)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=16
+number of leaves of the tree after pruning=15
+number of leaves in the new tree=15
+
+
+**** ID: 37
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres<=1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres>1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.643951606963636)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.643951606963636)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=15
+number of leaves in the new tree=15
+
+
+**** ID: 38
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres<=1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)(pres>1018.6327769703079)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.643951606963636)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.643951606963636)(wind<=11.046231571427533)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.643951606963636)(wind>11.046231571427533)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.487394237574199)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=15
+number of leaves in the new tree=16
+
+
+**** ID: 39
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7878568639724)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.643951606963636)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.643951606963636)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.5591528321162)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=16
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=15
+
+
+**** ID: 40
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.5591528321162)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=13
+
+
+**** ID: 41
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)(wind<=12.570415442477728)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)(wind>12.570415442477728)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.5591528321162)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 42
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)(wind<=12.570415442477728)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)(wind>12.570415442477728)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.5591528321162)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=14
+
+
+**** ID: 43
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)(wind<=12.570415442477728)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)(wind>12.570415442477728)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.5591528321162)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=14
+
+
+**** ID: 44
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)(wind<=12.570415442477728)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)(wind>12.570415442477728)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.5591528321162)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=14
+
+
+**** ID: 45
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.547057632074308)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.547057632074308)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)(wind<=12.570415442477728)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)(wind>12.570415442477728)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.5591528321162)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=15
+
+
+**** ID: 46
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.368234579244586)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.368234579244586)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.5591528321162)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 47
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.260940747546751)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.260940747546751)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.5591528321162)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind<=9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)(wind>9.665006204151371)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 48
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.260940747546751)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.260940747546751)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.5591528321162)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 49
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.185795705519261)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.185795705519261)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.5591528321162)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.5591528321162)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 50
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.23926847286586)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.23926847286586)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=15
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 51
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.880048065713751)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.880048065713751)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 52
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres<=1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres>1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.880048065713751)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.880048065713751)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 53
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres<=1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres>1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.880048065713751)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.880048065713751)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=14
+
+
+**** ID: 54
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres<=1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres>1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.849249194083415)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.849249194083415)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 55
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres<=1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres>1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.829549516450049)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.829549516450049)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=15
+
+
+**** ID: 56
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres<=1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres>1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.809035970662023)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.809035970662023)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=15
+
+
+**** ID: 57
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres<=1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres>1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.810637825922019)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.810637825922019)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=15
+
+
+**** ID: 58
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres<=1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres>1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.810637825922019)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.810637825922019)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=15
+number of leaves in the new tree=15
+
+
+**** ID: 59
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres<=1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres>1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.810637825922019)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.810637825922019)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=15
+number of leaves in the new tree=15
+
+
+**** ID: 60
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres<=1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres>1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.810637825922019)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.810637825922019)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=15
+number of leaves in the new tree=15
+
+
+**** ID: 61
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres<=1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)(pres>1018.7424090441157)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.810637825922019)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.810637825922019)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.3025199260081965)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=15
+number of leaves in the new tree=15
+
+
+**** ID: 62
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.810637825922019)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.810637825922019)(wind<=11.350075197343696)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.810637825922019)(wind>11.350075197343696)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 63
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.8976095671806)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=11.644190703756788)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>11.644190703756788)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.7397065429826)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(pres<=1021.435683045258)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(pres>1021.435683045258)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=15
+
+
+**** ID: 64
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.7397065429826)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=12
+
+
+**** ID: 65
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)(wind<=12.666286715189546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)(wind>12.666286715189546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.7397065429826)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=12
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 66
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)(wind<=12.666286715189546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)(wind>12.666286715189546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.7397065429826)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=13
+
+
+**** ID: 67
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)(wind<=12.666286715189546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)(wind>12.666286715189546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.7397065429826)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=13
+
+
+**** ID: 68
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)(wind<=12.666286715189546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)(wind>12.666286715189546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.7397065429826)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=13
+
+
+**** ID: 69
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.66000829532895)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.66000829532895)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)(wind<=12.666286715189546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)(wind>12.666286715189546)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.7397065429826)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 70
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.556420327026672)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.556420327026672)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.7397065429826)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 71
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.440883195324094)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.440883195324094)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.7397065429826)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=14
+
+
+**** ID: 72
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.384529917194456)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.384529917194456)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.7397065429826)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 73
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.178017075074631)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.178017075074631)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.7397065429826)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.7397065429826)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 74
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.178017075074631)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.178017075074631)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=13
+
+
+**** ID: 75
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.178017075074631)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.178017075074631)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=13
+
+
+**** ID: 76
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.03845168821612)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.03845168821612)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=13
+
+
+**** ID: 77
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.03845168821612)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.03845168821612)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=13
+
+
+**** ID: 78
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=14
+
+
+**** ID: 79
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=14
+
+
+**** ID: 80
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=14
+
+
+**** ID: 81
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=14
+
+
+**** ID: 82
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)(wind<=9.338744475209847)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)(wind>9.338744475209847)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=15
+
+
+**** ID: 83
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)(wind<=9.338744475209847)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)(wind>9.338744475209847)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=15
+number of leaves in the new tree=15
+
+
+**** ID: 84
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind<=8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)(wind>8.810539999938676)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=14
+
+
+**** ID: 85
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)(dewp<=20.21992716843456)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)(dewp>20.21992716843456)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=14
+
+
+**** ID: 86
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)(dewp<=20.21992716843456)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)(dewp>20.21992716843456)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind<=6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(wind>6.657082927601783)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=14
+number of leaves in the new tree=14
+
+
+**** ID: 87
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=9.784984752884615)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)(dewp<=20.21992716843456)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>9.784984752884615)(dewp>20.21992716843456)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.1132100328673)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.1132100328673)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(pres<=1021.5011842136487)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)(pres>1021.5011842136487)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=14
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=15
+
+
+**** ID: 88
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.7406362628235)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.1132100328673)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.1132100328673)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=15
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=12
+
+
+**** ID: 89
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.1132100328673)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.1132100328673)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=16
+number of leaves of the tree inherited from the past=12
+number of leaves of the tree after pruning=11
+number of leaves in the new tree=11
+
+
+**** ID: 90
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.1132100328673)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.1132100328673)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=11
+number of leaves of the tree after pruning=11
+number of leaves in the new tree=11
+
+
+**** ID: 91
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.1132100328673)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.1132100328673)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=11
+number of leaves of the tree after pruning=11
+number of leaves in the new tree=11
+
+
+**** ID: 92
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.1132100328673)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.1132100328673)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=11
+number of leaves of the tree after pruning=11
+number of leaves in the new tree=11
+
+
+**** ID: 93
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.780511703780405)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.780511703780405)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.1132100328673)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.1132100328673)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=11
+number of leaves of the tree after pruning=11
+number of leaves in the new tree=12
+
+
+**** ID: 94
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.780511703780405)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.780511703780405)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.1132100328673)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.1132100328673)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=12
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=12
+
+
+**** ID: 95
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.6999804875925)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.6999804875925)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.379929190394485)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.379929190394485)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.1132100328673)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.1132100328673)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=12
+number of leaves of the tree after pruning=11
+number of leaves in the new tree=13
+
+
+**** ID: 96
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.6999804875925)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.6999804875925)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.379929190394485)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.379929190394485)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.1132100328673)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.1132100328673)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=13
+
+
+**** ID: 97
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.6999804875925)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.6999804875925)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.379929190394485)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.379929190394485)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres<=1019.1132100328673)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)(pres>1019.1132100328673)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=13
+number of leaves in the new tree=13
+
+
+**** ID: 98
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.6999804875925)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.6999804875925)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.379929190394485)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.379929190394485)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind<=10.70780387328)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)(wind>10.70780387328)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=13
+number of leaves of the tree after pruning=12
+number of leaves in the new tree=12
+
+
+**** ID: 99
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.6999804875925)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.6999804875925)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.17022675405158)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.17022675405158)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=12
+number of leaves of the tree after pruning=10
+number of leaves in the new tree=11
+
+
+**** ID: 100
+(pres<=1015.8)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres<=1019.6999804875925)
+(pres>1015.8)(dewp<=25.060000000000002)(temp<=24.32)(pres>1019.6999804875925)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind<=10.17022675405158)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp<=28.94)(wind>10.17022675405158)
+(pres>1015.8)(dewp<=25.060000000000002)(temp>24.32)(temp>28.94)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp<=27.659999999999997)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind<=8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp<=35.36)(dewp>27.659999999999997)(wind>8.35199965184)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp<=44.86)
+(pres>1015.8)(dewp>25.060000000000002)(dewp>35.36)(dewp>44.86)
+
+Computation time(milliseconds)=0
+number of leaves of the tree inherited from the past=11
+number of leaves of the tree after pruning=11
+number of leaves in the new tree=11
+
+
+**** ID: 101

@@ -1,0 +1,23 @@
+pack1 <- require(MASS)
+pack2 <- require(sandwich)
+pack3 <- require(base)
+pack4 <- require(zoo)
+pack5 <- require(strucchange)
+pack6 <- require(lmtest)
+pack7 <- require(urca)
+pack8 <- require(vars)
+pack8 <- require(Runiversal)
+dataset<-matrix(c(1.0, 2.0, 15.0, 2.0, 10.0, 11.0, 11.0, 20.476190476190474, 11.857142857142858, 1.0, 1.0, 11.0, 1.0, 2.0, 15.0, 2.0, 10.0, 11.0, 11.0, 20.476190476190474, 11.857142857142858, 1.0, 1.0, 11.0), byrow=TRUE, nrow=12, ncol=2);
+dimnames(dataset) <- list (c ("t1","t2","t3","t4","t5","t6","t7","t8","t9","t10","t11","t12"),c("attr1","attr2"))
+varNuova<-VARselect(dataset, lag.max = 2, type = "none", season = NULL, exogen = NULL)
+orderp <- as.numeric(varNuova$selection[1])
+var <- VAR(dataset, p = orderp, type = "none", ic = "AIC")
+dataframe <- data.frame(var$varresult$attr1$coefficients)
+nomifeature <- dimnames(dataframe)
+attr1_nomifeature <- nomifeature[[1]]
+attr1_coeff <- as.numeric(var$varresult$attr1$coefficients)
+dataframe <- data.frame(var$varresult$attr2$coefficients)
+nomifeature <- dimnames(dataframe)
+attr2_nomifeature <- nomifeature[[1]]
+attr2_coeff <- as.numeric(var$varresult$attr2$coefficients)
+result <- list (attr1_f = attr1_nomifeature, attr1_c = attr1_coeff, attr2_f = attr2_nomifeature, attr2_c = attr2_coeff, p = var$p)
