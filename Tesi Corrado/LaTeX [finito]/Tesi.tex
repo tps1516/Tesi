@@ -1441,7 +1441,7 @@ Per la versione VARForecaster 2.2 le configurazioni possibili sono:
 \item Apprendimento dell'albero con algoritmo di smoothing utilizzando un $ \alpha = 0.6$, calcolo dell'aggregato con la media e varianza.
 \end{enumerate}
 
-Per le metriche \textit{(1)} e \textit{(2)} i risultati sono stati analizzati attributo per attributo. Le tabelle sono organizzate in base ai livelli $\alpha$ Ogni tabella, inoltre, include le seguenti quattro colonne:
+Per le metriche \textit{(1)} e \textit{(2)} i risultati sono stati analizzati attributo per attributo. Le tabelle sono organizzate in base ai livelli $\alpha$. Ogni tabella, inoltre, include le seguenti quattro colonne:
 
 \begin{enumerate}
 \item Calcolo dell'aggregato con utilizzo della mediana e indice di autocorrelazione spaziale Getis and Ord;
@@ -2460,7 +2460,7 @@ Le tabelle sopra riportate indicano che, con un ahead = 1 c'è una certa incerte
 
 Per la metrica appena utilizzata si sono considerate solo le configurazioni che differiscono nel tipo di indice di autocorrelazione spaziale utilizzato, in quanto la funzione utilizzata per il calcolo dell'aggregato non influisce sul numero di cluster generati durante il ri-apprendimento del \textit{CT}.
 
-\newpage
+\medskip
 
 \textbf{Metrica 4: Tempo medio di computazione per la costruzione(/riapprendimento) del \textit{CT}.}
 
@@ -2531,10 +2531,10 @@ Per la metrica appena utilizzata si sono considerate solo le configurazioni che 
 \caption{Ecotexas VARForecaster 2.2 - Metrica \textit{(6)}}
 \end{table}
 
-Analizzando i risultati ottenuti per le metriche \textit{(4)}, \textit{(5)} e \textit{(6)} si nota che la fase che comporta maggior costi computazionali in termini di tempo è la fase di apprendimento del modello VAR, ovvero la metrica \textit{(5)}. Considerando tale metrica come la più importante si può notare che la configurazione migliore è quella con $\alpha$ = 0,5.
+Analizzando i risultati ottenuti per le metriche \textit{(4)}, \textit{(5)} e \textit{(6)} si nota che la fase che comporta maggior costi computazionali in termini di tempo è la fase di apprendimento del modello VAR, ovvero quella descritta dalla metrica \textit{(5)}. Considerando tale metrica come la più importante si può notare che la configurazione migliore è quella con $\alpha$ = 0,5.
 
 \newpage
-\subsubsection{Confronto}
+\subsubsection{Analisi comparativa}
 Dovendo valutare il rapporto tra accuratezza e efficienza della computazione realizzato con VARForecaster si confrontano le prestazioni di VARForecaster 2.1 e VARForecaster 2.2 con quelle di VARForecaster 1.0 e VARForecaster 2.0 (\cite{donato}). \\
 Si rende necessaria quindi un'analisi comparativa sulla base delle previsioni effettuate dai 4 sistemi, mettendo a paragone gli \textit{RMSE} delle previsioni, istante per istante, attributo per attributo.
 
@@ -2566,17 +2566,17 @@ Attributo: Temperatura \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{6,349867} & 9,533298 & 7,948522 & 9,09935\\
+\textbf{ahead 1} & \textbf{6,349867} & 9,533298 & \textit{7,948522} & 9,09935\\
 \hline
-\textbf{ahead 2} & \textbf{10,67049} & 15,26119 & 11,49216 & 12,0037\\ 
+\textbf{ahead 2} & \textbf{10,67049} & 15,26119 & \textit{11,49216} & 12,0037\\ 
 \hline
-\textbf{ahead 3} & 14,77069 & 19,70191 & 13,85234 & \textbf{13,53915}\\
+\textbf{ahead 3} & 14,77069 & 19,70191 & 13,85234 & \textit{\textbf{13,53915}}\\
 \hline
-\textbf{ahead 4} & 18,22525 & 24,57004 & 14,87442 & \textbf{14,42594}\\ 
+\textbf{ahead 4} & 18,22525 & 24,57004 & 14,87442 & \textit{\textbf{14,42594}}\\ 
 \hline
-\textbf{ahead 5} & 20,90827 & 33,05593 & 15,52931 & \textbf{15,03058}\\
+\textbf{ahead 5} & 20,90827 & 33,05593 & 15,52931 & \textit{\textbf{15,03058}}\\
 \hline
-\textbf{ahead 6} & 23,45926 & 41,86216 & 16,64003 & \textbf{15,5948}\\ 
+\textbf{ahead 6} & 23,45926 & 41,86216 & 16,64003 & \textit{\textbf{15,5948}}\\ 
 \hline
 \end{tabular} \\
 \caption{Confronto versioni Ecotexas - Metrica \textit{(1)}, temperatura}
@@ -2592,17 +2592,17 @@ Attributo: Velocità del vento \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{2,796956} & 3,482482 & 3,04784 & 2,9068\\
+\textbf{ahead 1} & \textbf{2,796956} & 3,482482 & 3,04784 & \textit{2,9068}\\
 \hline
-\textbf{ahead 2} & 4,135592 & 6,938546 & \textbf{4,121688} & 4,247564\\ 
+\textbf{ahead 2} & 4,135592 & 6,938546 & \textit{\textbf{4,121688}} & 4,247564\\ 
 \hline
-\textbf{ahead 3} & 5,260249 & 13,28893 & 5,153598 & \textbf{5,137302}\\
+\textbf{ahead 3} & 5,260249 & 13,28893 & 5,153598 & \textit{\textbf{5,137302}}\\
 \hline
-\textbf{ahead 4} & 6,105931 & 28,04672 & \textbf{5,828} & 5,90867 \\ 
+\textbf{ahead 4} & 6,105931 & 28,04672 & \textit{\textbf{5,828}} & 5,90867 \\ 
 \hline
-\textbf{ahead 5} & 6,619951 & 70,26142 & \textbf{6,319675} & 6,590004 \\
+\textbf{ahead 5} & 6,619951 & 70,26142 & \textit{\textbf{6,319675}} & 6,590004 \\
 \hline
-\textbf{ahead 6} & 7,171572 & 198,5273 & \textbf{6,481377} & 7,022727 \\
+\textbf{ahead 6} & 7,171572 & 198,5273 & \textit{\textbf{6,481377}} & 7,022727 \\
 \hline
 \end{tabular} \\
 \caption{Confronto versioni Ecotexas - Metrica \textit{(1)}, velocità del vento}
@@ -2618,17 +2618,17 @@ Attributo: Ozono \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{1,505395} & 4,10809 & 2,427748 & 2,537652\\
+\textbf{ahead 1} & \textbf{1,505395} & 4,10809 & \textit{2,427748} & 2,537652\\
 \hline
-\textbf{ahead 2} & \textbf{2,783558} & 10,10761 & 4,385498 & 4,466039 \\
+\textbf{ahead 2} & \textbf{2,783558} & 10,10761 & \textit{4,385498} & 4,466039 \\
 \hline
-\textbf{ahead 3} & \textbf{4,15487} & 23,3362 & 6,199482 & 6,182669 \\
+\textbf{ahead 3} & \textbf{4,15487} & 23,3362 & 6,199482 & \textit{6,182669} \\
 \hline
-\textbf{ahead 4} & \textbf{5,346249} & 58,43988 & 7,752754 & 7,838081 \\
+\textbf{ahead 4} & \textbf{5,346249} & 58,43988 & \textit{7,752754} & 7,838081 \\
 \hline
-\textbf{ahead 5} & \textbf{6,469884} & 171,1001 & 8,988501 & 9,002074 \\
+\textbf{ahead 5} & \textbf{6,469884} & 171,1001 & \textit{8,988501} & 9,002074 \\
 \hline
-\textbf{ahead 6} & \textbf{7,234199} & 562,7042 & 9,906673 & 9,959309 \\ 
+\textbf{ahead 6} & \textbf{7,234199} & 562,7042 & \textit{9,906673} & 9,959309 \\ 
 \hline
 \end{tabular} \\
 \caption{Confronto versioni Ecotexas - Metrica \textit{(1)}, ozono}
@@ -2644,17 +2644,17 @@ Attributo: Radiazioni solari \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{0,198269} & 0,211488 & 0,258383 & 0,274211\\
+\textbf{ahead 1} & \textbf{0,198269} & \textit{0,211488} & 0,258383 & 0,274211\\
 \hline
-\textbf{ahead 2} & \textbf{0,300611} & 0,347483 & 0,461626 & 0,502178\\ 
+\textbf{ahead 2} & \textbf{0,300611} & \textit{0,347483} & 0,461626 & 0,502178\\ 
 \hline
-\textbf{ahead 3} & \textbf{0,401465} & 0,461639 & 0,641239 & 0,661818\\
+\textbf{ahead 3} & \textbf{0,401465} & \textit{0,461639} & 0,641239 & 0,661818\\
 \hline
-\textbf{ahead 4} & \textbf{0,484554} & 0,565454 & 0,744024 & 0,745413\\ 
+\textbf{ahead 4} & \textbf{0,484554} & \textit{0,565454} & 0,744024 & 0,745413\\ 
 \hline
-\textbf{ahead 5} & \textbf{0,56724} & 0,671419 & 0,790287 & 0,788487\\
+\textbf{ahead 5} & \textbf{0,56724} & \textit{0,671419} & 0,790287 & 0,788487\\
 \hline
-\textbf{ahead 6} & \textbf{0,621341} & 0,786026 & 0,808239 & 0,833666\\ 
+\textbf{ahead 6} & \textbf{0,621341} & \textit{0,786026} & 0,808239 & 0,833666\\ 
 \hline
 \end{tabular} \\
 \caption{Confronto versioni Ecotexas - Metrica \textit{(1)}, radiazioni solari}
@@ -2675,17 +2675,17 @@ Attributo: Temperatura \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{1,445445} & 3,573893 & 2,529772 & 4,118029\\
+\textbf{ahead 1} & \textbf{1,445445} & 3,573893 & \textit{2,529772} & 4,118029\\
 \hline
-\textbf{ahead 2} & \textbf{2,374922} & 7,539562 & 3,811666 & 4,752247\\ 
+\textbf{ahead 2} & \textbf{2,374922} & 7,539562 & \textit{3,811666} & 4,752247\\ 
 \hline
-\textbf{ahead 3} & \textbf{3,271102} & 13,458024 & 4,746114 & 4,448051\\
+\textbf{ahead 3} & \textbf{3,271102} & 13,458024 & 4,746114 & \textit{4,448051}\\
 \hline
-\textbf{ahead 4} & 4,740449 & 22,039755 & 5,066172 & \textbf{4,567702}\\ 
+\textbf{ahead 4} & 4,740449 & 22,039755 & 5,066172 & \textit{\textbf{4,567702}}\\ 
 \hline
-\textbf{ahead 5} & 6,479320 & 38,115992 & 6,327062 & \textbf{4,502047}\\
+\textbf{ahead 5} & 6,479320 & 38,115992 & 6,327062 & \textit{\textbf{4,502047}}\\
 \hline
-\textbf{ahead 6} & 8,679025 & 63,271299 & 7,59633 & \textbf{5,005777}\\ 
+\textbf{ahead 6} & 8,679025 & 63,271299 & 7,59633 & \textit{\textbf{5,005777}}\\ 
 \hline
 \end{tabular} \\
 \caption{Confronto versioni Ecotexas - Metrica \textit{(2)}, temperatura}
@@ -2701,17 +2701,17 @@ Attributo: Velocità del vento \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{0,795525} & 1,452338 & 1,051378 & 0,95298\\
+\textbf{ahead 1} & \textbf{0,795525} & 1,452338 & 1,051378 & \textit{0,95298}\\
 \hline
-\textbf{ahead 2} & \textbf{0,861215} & 5,254555 & 1,340969 & 1,267171\\ 
+\textbf{ahead 2} & \textbf{0,861215} & 5,254555 & 1,340969 & \textit{1,267171}\\ 
 \hline
-\textbf{ahead 3} & \textbf{1,266828} & 15,638930 & 1,661901 & 1,66224\\
+\textbf{ahead 3} & \textbf{1,266828} & 15,638930 & \textit{1,661901} & 1,66224\\
 \hline
-\textbf{ahead 4} & \textbf{1,703228} & 48,722899 & 1,859191 & 1,986398\\ 
+\textbf{ahead 4} & \textbf{1,703228} & 48,722899 & \textit{1,859191} & 1,986398\\ 
 \hline
-\textbf{ahead 5} & \textbf{1,388394} & 155,621286 & 2,258222 & 2,352991\\
+\textbf{ahead 5} & \textbf{1,388394} & 155,621286 & \textit{2,258222} & 2,352991\\
 \hline
-\textbf{ahead 6} & \textbf{1,700507} & 518,118711 & 2,412196 & 2,674071\\ 
+\textbf{ahead 6} & \textbf{1,700507} & 518,118711 & \textit{2,412196} & 2,674071\\ 
 \hline
 \end{tabular} \\
 \caption{Confronto versioni Ecotexas - Metrica \textit{(2)}, velocità del vento}
@@ -2727,17 +2727,17 @@ Attributo: Ozono \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{0,478407} & 2,053972 & 0,704212 & 0,862032\\
+\textbf{ahead 1} & \textbf{0,478407} & 2,053972 & \textit{0,704212} & 0,862032\\
 \hline
-\textbf{ahead 2} & \textbf{1,003515} & 7,730475 & 1,055576 & 1,508812\\ 
+\textbf{ahead 2} & \textbf{1,003515} & 7,730475 & \textit{1,055576} & 1,508812\\ 
 \hline
-\textbf{ahead 3} & 1,760290 & 33,825650 & \textbf{1,487432} & 1,964188\\
+\textbf{ahead 3} & 1,760290 & 33,825650 & \textit{\textbf{1,487432}} & 1,964188\\
 \hline
-\textbf{ahead 4} & 2,628319 & 123,897500 & \textbf{2,047489} & 2,353101\\ 
+\textbf{ahead 4} & 2,628319 & 123,897500 & \textit{\textbf{2,047489}} & 2,353101\\ 
 \hline
-\textbf{ahead 5} & 3,413358 & 458,971607 & 2,833415 & \textbf{2,600296}\\
+\textbf{ahead 5} & 3,413358 & 458,971607 & 2,833415 & \textit{\textbf{2,600296}}\\
 \hline
-\textbf{ahead 6} & 3,881410 & 1741,403078 & 3,706639 & \textbf{3,086139}\\ 
+\textbf{ahead 6} & 3,881410 & 1741,403078 & 3,706639 & \textit{\textbf{3,086139}}\\ 
 \hline
 \end{tabular} \\
 \caption{Confronto versioni Ecotexas - Metrica \textit{(2)}, ozono}
@@ -2753,17 +2753,17 @@ Attributo: Radiazioni solari \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{0,068651} & 0,082365 & 0,097816 & 0,119538\\
+\textbf{ahead 1} & \textbf{0,068651} & \textit{0,082365} & 0,097816 & 0,119538\\
 \hline
-\textbf{ahead 2} & \textbf{0,097834} & 0,118442 & 0,198805 & 0,241406\\ 
+\textbf{ahead 2} & \textbf{0,097834} & \textit{0,118442} & 0,198805 & 0,241406\\ 
 \hline
-\textbf{ahead 3} & \textbf{0,142673} & 0,197752 & 0,293015 & 0,282696\\
+\textbf{ahead 3} & \textbf{0,142673} & \textit{0,197752} & 0,293015 & 0,282696\\
 \hline
-\textbf{ahead 4} & \textbf{0,193042} & 0,299747 & 0,341056 & 0,263775\\ 
+\textbf{ahead 4} & \textbf{0,193042} & 0,299747 & 0,341056 & \textit{0,263775}\\ 
 \hline
-\textbf{ahead 5} & 0,276917 & 0,438443 & 0,342398 & \textbf{0,25328}\\
+\textbf{ahead 5} & 0,276917 & 0,438443 & 0,342398 & \textit{\textbf{0,25328}}\\
 \hline
-\textbf{ahead 6} & 0,468938 & 0,652807 & \textbf{0,097816} & 0,298092\\ 
+\textbf{ahead 6} & 0,468938 & 0,652807 & \textit{\textbf{0,097816}} & 0,298092\\ 
 \hline
 \end{tabular} \\
 \caption{Confronto versioni Ecotexas - Metrica \textit{(2)}, radiazioni solari}
@@ -2823,6 +2823,8 @@ Attributo: Radiazioni solari \\
 \caption{Confronto versioni Ecotexas - Metrica \textit{(6)}}
 \end{table}
 
+\newpage
+
 Viene di seguito presentato un sommario, un istante di predizione alla volta, di quelle che sono le occorrenze delle migliori configurazioni.
 
 \medskip
@@ -2842,7 +2844,7 @@ Viene di seguito presentato un sommario, un istante di predizione alla volta, di
 \textbf{Occorrenze} & \textbf{8} & 0 & 0 & 0 & 4 & 0 & 0 & 0 & 4 & 0 & 0 & 0\\
 \hline
 \end{tabular}
-\caption{Sommario confronto ahead 1}
+\caption{Ecotexas - Sommario confronto ahead 1}
 \end{table}
 
 \medskip
@@ -2860,7 +2862,7 @@ Viene di seguito presentato un sommario, un istante di predizione alla volta, di
 \textbf{Occrrenze} & \textbf{7} & 0 & 1 & 0 & 3 & 0 & 1 & 0 & 4 & 0 & 0 & 0 \\
 \hline
 \end{tabular}
-\caption{Sommario confronto ahead 2}
+\caption{Ecotexas - Sommario confronto ahead 2}
 \end{table}
 
 \medskip
@@ -2878,7 +2880,7 @@ Viene di seguito presentato un sommario, un istante di predizione alla volta, di
 \textbf{Occorrenze} & \textbf{5} & 0 & 1 & 2 & 2 & 0 & 0 & 2 & 3 & 0 & 1 & 0\\
 \hline
 \end{tabular}
-\caption{Sommario confronto ahead 3}
+\caption{Ecotexas - Sommario confronto ahead 3}
 \end{table}
 
 \medskip
@@ -2896,7 +2898,7 @@ Viene di seguito presentato un sommario, un istante di predizione alla volta, di
 \textbf{Occorrenze} & \textbf{4} & 0 & 2 & 2 & 2 & 0 & 1 & 1 & 2 & 0 & 1 & 1\\
 \hline
 \end{tabular}
-\caption{Sommario confronto ahead 4}
+\caption{Ecotexas - Sommario confronto ahead 4}
 \end{table}
 
 \medskip
@@ -2914,7 +2916,7 @@ Viene di seguito presentato un sommario, un istante di predizione alla volta, di
 \textbf{Occorrenze} & 3 & 0 & 1 & \textbf{4} & 2 & 0 & 1 & 1 & 1 & 0 & 0 & 3\\
 \hline
 \end{tabular}
-\caption{Sommario confronto ahead 5}
+\caption{Ecotexas - Sommario confronto ahead 5}
 \end{table}
 
 \newpage
@@ -2932,9 +2934,122 @@ Viene di seguito presentato un sommario, un istante di predizione alla volta, di
 \textbf{Occorrenze} & \textbf{3} & 0 & 2 & \textbf{3} & 2 & 0 & 1 & 1 & 1 & 0 & 1 & 2\\
 \hline
 \end{tabular}
-\caption{Sommario confronto ahead 6}
+\caption{Ecotexas - Sommario confronto ahead 6}
 \end{table} 
 
+Viene di seguito mostrato un sommario, un'istante di predizione alla volta, di quelle che sono le occorrenze delle configurazioni \textit{2}, \textit{3} e \textit{4}.
+
+\medskip
+
+\medskip
+\textbf{Ahead = 1}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{3}{|c|}{\textbf{Totale}} & \multicolumn{3}{|c|}{\textbf{Metrica 1}} & \multicolumn{3}{|c|}{\textbf{Metrica 2}} \\
+\hline
+\textbf{Configurazioni} & 2 & \textbf{3} & 4 & 2 & 3 & 4 & 2 & 3 & 4 \\
+\hline
+\textbf{Occorrenze} & 2 & \textbf{4} & 2 & 1 & 2 & 1 & 1 & 2 & 1 \\
+\hline
+\end{tabular}
+\caption{Ecotexas - Confronto \textit{2}-\textit{3}-\textit{4} ahead 1}
+\end{table}
+
+\medskip
+\textbf{Ahead = 2}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{3}{|c|}{\textbf{Totale}} & \multicolumn{3}{|c|}{\textbf{Metrica 1}} & \multicolumn{3}{|c|}{\textbf{Metrica 2}} \\
+\hline
+\textbf{Configurazioni} & 2 & \textbf{3} & 4 & 2 & 3 & 4 & 2 & 3 & 4 \\
+\hline
+\textbf{Occorrenze} & 2 & \textbf{5} & 1 & 1 & 3 & 0 & 1 & 2 & 1 \\
+\hline
+\end{tabular}
+\caption{Ecotexas - Confronto \textit{2}-\textit{3}-\textit{4} ahead 2}
+\end{table}
+
+\medskip
+\textbf{Ahead = 3}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{3}{|c|}{\textbf{Totale}} & \multicolumn{3}{|c|}{\textbf{Metrica 1}} & \multicolumn{3}{|c|}{\textbf{Metrica 2}} \\
+\hline
+\textbf{Configurazioni} & 2 & 3 & \textbf{4} & 2 & 3 & 4 & 2 & 3 & 4 \\
+\hline
+\textbf{Occorrenze} & 2 & 2 & \textbf{4} & 1 & 0 & 3 & 1 & 2 & 1 \\
+\hline
+\end{tabular}
+\caption{Ecotexas - Confronto \textit{2}-\textit{3}-\textit{4} ahead 3}
+\end{table}
+
+\medskip
+\textbf{Ahead = 4}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{3}{|c|}{\textbf{Totale}} & \multicolumn{3}{|c|}{\textbf{Metrica 1}} & \multicolumn{3}{|c|}{\textbf{Metrica 2}} \\
+\hline
+\textbf{Configurazioni} & 2 & \textbf{3} & 4 & 2 & 3 & 4 & 2 & 3 & 4 \\
+\hline
+\textbf{Occorrenze} & 1 & \textbf{5} & 3 & 1 & 3 & 1 & 0 & 2 & 2 \\
+\hline
+\end{tabular}
+\caption{Ecotexas - Confronto \textit{2}-\textit{3}-\textit{4} ahead 4}
+\end{table}
+
+\medskip
+\textbf{Ahead = 5}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{3}{|c|}{\textbf{Totale}} & \multicolumn{3}{|c|}{\textbf{Metrica 1}} & \multicolumn{3}{|c|}{\textbf{Metrica 2}} \\
+\hline
+\textbf{Configurazioni} & 2 & 3 & \textbf{4} & 2 & 3 & 4 & 2 & 3 & 4 \\
+\hline
+\textbf{Occorrenze} & 1 & 3 & \textbf{4} & 1 & 2 & 1 & 0 & 1 & 3 \\
+\hline
+\end{tabular}
+\caption{Ecotexas - Confronto \textit{2}-\textit{3}-\textit{4} ahead 5}
+\end{table}
+
+\medskip
+\textbf{Ahead = 6}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{3}{|c|}{\textbf{Totale}} & \multicolumn{3}{|c|}{\textbf{Metrica 1}} & \multicolumn{3}{|c|}{\textbf{Metrica 2}} \\
+\hline
+\textbf{Configurazioni} & 2 & 3 & \textbf{4} & 2 & 3 & 4 & 2 & 3 & 4 \\
+\hline
+\textbf{Occorrenze} & 1 & 3 & \textbf{4} & 1 & 1 & 2 & 0 & 2 & 2 \\
+\hline
+\end{tabular}
+\caption{Ecotexas - Confronto \textit{2}-\textit{3}-\textit{4} ahead 6}
+\end{table}
+
+In termini di accuratezza la configurazione \textit{1} è in assoluto la migliore, ma dovendo ridurre i tempi di computazione, la configurazione migliore tra quelle che utilizzando il \textit{CT} è la \textit{3} con 22 occorrenze, contro le 18 occorrenze della configurazione \textit{4} e le 9 della configurazione \textit{2}.
 \newpage
 
 Vengono ora riportati dei grafici in cui è rappresentata la serie degli RMSE, per ogni istante di previsione, per ogni attributo del dataset. 
@@ -4768,7 +4883,7 @@ Per la metrica appena utilizzata si sono considerate solo le configurazioni che 
 Considerando quindi tale metrica come la più importante si nota che la configurazione migliore sia la \textit{(11)}, ovvero calcolo dell'aggregato con l'utilizzo della mediana, varianza e $\alpha$ = 0,6.
 
 \newpage
-\subsubsection{Confronto}
+\subsubsection{Analisi comparativa}
 Come già fatto per il dataset Ecotexas si confrontano ora le quattro versioni di VARForecaster.
 
 Le configurazioni scelte sono:
@@ -4799,17 +4914,17 @@ Attributo: dewp \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{0,19254} & 9,11275 & 4,57026 & 5,15736\\
+\textbf{ahead 1} & \textbf{0,19254} & 9,11275 & \textit{4,57026} & 5,15736\\
 \hline
-\textbf{ahead 2} & \textbf{0,27882} & 12,75803 & 8,9822 & 9,46835\\
+\textbf{ahead 2} & \textbf{0,27882} & 12,75803 & \textit{8,9822} & 9,46835\\
 \hline
-\textbf{ahead 3} & \textbf{0,36631} & 16,7066 & 10,6661 & 11,68703\\
+\textbf{ahead 3} & \textbf{0,36631} & 16,7066 & \textit{10,6661} & 11,68703\\
 \hline
-\textbf{ahead 4} & \textbf{0,45923} & 19,82154 & 13,1286 & 14,61657\\
+\textbf{ahead 4} & \textbf{0,45923} & 19,82154 & \textit{13,1286} & 14,61657\\
 \hline
-\textbf{ahead 5} & \textbf{0,54424} & 25,26356 & 15,46501& 18,08502\\
+\textbf{ahead 5} & \textbf{0,54424} & 25,26356 & \textit{15,46501} & 18,08502\\
 \hline
-\textbf{ahead 6} & \textbf{0,61244} & 28,92174 & 17,87788 & 21,01571\\
+\textbf{ahead 6} & \textbf{0,61244} & 28,92174 & \textit{17,87788} & 21,01571\\
 \hline
 \end{tabular} \\
 \caption{Confronto versioni UnitedStatesPacific - Metrica \textit{(1)}, dewp}
@@ -4825,17 +4940,17 @@ Attributo: pres \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{0,15183} & 20,9581 & 3,50544 & 3,59517\\
+\textbf{ahead 1} & \textbf{0,15183} & 20,9581 & \textit{3,50544} & 3,59517\\
 \hline
-\textbf{ahead 2} & \textbf{0,22942} & 26,16235 & 6,21739 & 6,24176\\
+\textbf{ahead 2} & \textbf{0,22942} & 26,16235 & \textit{6,21739} & 6,24176\\
 \hline
-\textbf{ahead 3} & \textbf{0,28681} & 32,79224 & 7,80243 & 4,603795\\
+\textbf{ahead 3} & \textbf{0,28681} & 32,79224 & 7,80243 & \textit{4,603795}\\
 \hline
-\textbf{ahead 4} & \textbf{0,35256} & 26,51011 & 9,42102 & 9,65899\\
+\textbf{ahead 4} & \textbf{0,35256} & 26,51011 & \textit{9,42102} & 9,65899\\
 \hline
-\textbf{ahead 5} & \textbf{0,40153} & 29,97785 & 11,24487 & 11,15838\\
+\textbf{ahead 5} & \textbf{0,40153} & 29,97785 & 11,24487 & \textit{11,15838}\\
 \hline
-\textbf{ahead 6} & \textbf{0,43316} & 30,67951 & 11,85886 & 11,10552\\
+\textbf{ahead 6} & \textbf{0,43316} & 30,67951 & 11,85886 & \textit{11,10552}\\
 \hline
 \end{tabular} \\
 \caption{Confronto versioni UnitedStatesPacific - Metrica \textit{(1)}, pres}
@@ -4851,17 +4966,17 @@ Attributo: temp \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{0,3505} & 13,02318 & 10,82273 & 11,31821\\
+\textbf{ahead 1} & \textbf{0,3505} & 13,02318 & \textit{10,82273} & 11,31821\\
 \hline
-\textbf{ahead 2} & \textbf{0,57859} & 22,25021 & 18,33721 & 16,83391\\
+\textbf{ahead 2} & \textbf{0,57859} & 22,25021 & 18,33721 & \textit{16,83391}\\
 \hline
-\textbf{ahead 3} & \textbf{0,77298} & 33,95598 & 22,9628 & 23,4737\\
+\textbf{ahead 3} & \textbf{0,77298} & 33,95598 & \textit{22,9628} & 23,4737\\
 \hline
-\textbf{ahead 4} & \textbf{1,01631} & 45,75858 & 28,9879 & 30,15269\\
+\textbf{ahead 4} & \textbf{1,01631} & 45,75858 & \textit{28,9879} & 30,15269\\
 \hline
-\textbf{ahead 5} & \textbf{1,30843} & 67,39782 & 35,12572 & 36,96072\\
+\textbf{ahead 5} & \textbf{1,30843} & 67,39782 & \textit{35,12572} & 36,96072\\
 \hline
-\textbf{ahead 6} & \textbf{1,63676} & 84,61902 & 41,29017 & 42,52642\\
+\textbf{ahead 6} & \textbf{1,63676} & 84,61902 & \textit{41,29017} & 42,52642\\
 \hline
 \end{tabular} \\
 \caption{Confronto versioni UnitedStatesPacific - Metrica \textit{(1)}, temp}
@@ -4877,17 +4992,17 @@ Attributo:wind \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{0,18614} & 8,67965 & 4,38076 & 4,65493\\
+\textbf{ahead 1} & \textbf{0,18614} & 8,67965 & \textit{4,38076} & 4,65493\\
 \hline
-\textbf{ahead 2} & \textbf{0,24849} & 12,57051 & 7,80411 & 4,35038\\
+\textbf{ahead 2} & \textbf{0,24849} & 12,57051 & 7,80411 & \textit{4,35038}\\
 \hline
-\textbf{ahead 3} & \textbf{0,29466} & 14,37436 & 8,44543 & 8,42298\\
+\textbf{ahead 3} & \textbf{0,29466} & 14,37436 & 8,44543 & \textit{8,42298}\\
 \hline
-\textbf{ahead 4} & \textbf{0,36357} & 13,95103 & 9,52957 & 9,68644\\
+\textbf{ahead 4} & \textbf{0,36357} & 13,95103 & \textit{9,52957} & 9,68644\\
 \hline
-\textbf{ahead 5} & \textbf{0,45136} & 19,2071 & 11,75549 & 11,75522\\
+\textbf{ahead 5} & \textbf{0,45136} & 19,2071 & 11,75549 & \textit{11,75522}\\
 \hline
-\textbf{ahead 6} & \textbf{0,54107} & 22,73368 & 12,72086 & 12,20324\\
+\textbf{ahead 6} & \textbf{0,54107} & 22,73368 & 12,72086 & \textit{12,20324}\\
 \hline
 \end{tabular} \\
 \caption{Confronto versioni UnitedStatesPacific - Metrica \textit{(1)}, wind}
@@ -4908,17 +5023,17 @@ Attributo: dewp \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{0,01911} & 1,96836 & 1,56471 & 1,75402\\
+\textbf{ahead 1} & \textbf{0,01911} & 1,96836 & \textit{1,56471} & 1,75402\\
 \hline
-\textbf{ahead 2} & \textbf{0,02325} & 3,29959 & 2,65384 & 3,22088\\
+\textbf{ahead 2} & \textbf{0,02325} & 3,29959 & \textit{2,65384} & 3,22088\\
 \hline
-\textbf{ahead 3} & \textbf{0,02536} & 5,9615 & 3,41018 & 4,255782\\
+\textbf{ahead 3} & \textbf{0,02536} & 5,9615 & \textit{3,41018} & 4,255782\\
 \hline
-\textbf{ahead 4} & \textbf{0,03935} & 8,31374 & 4,49271 & 5,47233\\
+\textbf{ahead 4} & \textbf{0,03935} & 8,31374 & \textit{4,49271} & 5,47233\\
 \hline
-\textbf{ahead 5} & \textbf{0,06463} & 11,46343 & 6,16542 & 8,28887\\
+\textbf{ahead 5} & \textbf{0,06463} & 11,46343 & \textit{6,16542} & 8,28887\\
 \hline
-\textbf{ahead 6} & \textbf{0,15830} & 11,50392 & 9,84278 & 12,47698\\
+\textbf{ahead 6} & \textbf{0,15830} & 11,50392 & \textit{9,84278} & 12,47698\\
 \hline
 \end{tabular} \\
 \caption{Confronto versioni UnitedStatesPacific - Metrica \textit{(2)}, dewp}
@@ -4934,17 +5049,17 @@ Attributo: pres \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{0,01} & 16,55916 & 1,17519 & 1,19107\\
+\textbf{ahead 1} & \textbf{0,01} & 16,55916 & \textit{1,17519} & 1,19107\\
 \hline
-\textbf{ahead 2} & \textbf{0,01638} & 19,29772 & 1,75573 & 2,07719\\
+\textbf{ahead 2} & \textbf{0,01638} & 19,29772 & \textit{1,75573} & 2,07719\\
 \hline
-\textbf{ahead 3} & \textbf{0,02372} & 19,16658 & 2,72991 & 2,48429\\
+\textbf{ahead 3} & \textbf{0,02372} & 19,16658 & 2,72991 & \textit{2,48429}\\
 \hline
-\textbf{ahead 4} & \textbf{0,0328} & 13,70279 & 3,5497 & 2,75254\\
+\textbf{ahead 4} & \textbf{0,0328} & 13,70279 & 3,5497 & \textit{2,75254}\\
 \hline
-\textbf{ahead 5} & \textbf{0,04307} & 19,46501 & 6,70423 & 2,92172\\
+\textbf{ahead 5} & \textbf{0,04307} & 19,46501 & 6,70423 & \textit{2,92172}\\
 \hline
-\textbf{ahead 6} & \textbf{0,05737} & 24,47743 & 8,51059 & 2,81822\\
+\textbf{ahead 6} & \textbf{0,05737} & 24,47743 & 8,51059 & \textit{2,81822}\\
 \hline
 \end{tabular} \\
 \caption{Confronto versioni UnitedStatesPacific - Metrica \textit{(2)}, pres}
@@ -4960,17 +5075,17 @@ Attributo: temp \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{0,04131} & 2,91821 & 4,61221 & 5,73471\\
+\textbf{ahead 1} & \textbf{0,04131} & \textit{2,91821} & 4,61221 & 5,73471\\
 \hline
-\textbf{ahead 2} & \textbf{0,0587} & 5,93493 & 5,97245 & 6,83391\\
+\textbf{ahead 2} & \textbf{0,0587} & \textit{5,93493} & 5,97245 & 6,83391\\
 \hline
-\textbf{ahead 3} & \textbf{0,08112} & 12,18992 & 8,71251 & 8,92986\\
+\textbf{ahead 3} & \textbf{0,08112} & 12,18992 & \textit{8,71251} & 8,92986\\
 \hline
-\textbf{ahead 4} & \textbf{0,18223} & 20,90112 & 12,4755 & 12,12332\\
+\textbf{ahead 4} & \textbf{0,18223} & 20,90112 & 12,4755 & \textit{12,12332}\\
 \hline
-\textbf{ahead 5} & \textbf{0,48962} & 37,36295 & 8,23943 & 14,16961\\
+\textbf{ahead 5} & \textbf{0,48962} & 37,36295 & \textit{8,23943} & 14,16961\\
 \hline
-\textbf{ahead 6} & \textbf{1,33161} & 43,77230 & 29,11351 & 18,19872\\
+\textbf{ahead 6} & \textbf{1,33161} & 43,77230 & 29,11351 & \textit{18,19872}\\
 \hline
 \end{tabular} \\
 \caption{Confronto versioni UnitedStatesPacific - Metrica \textit{(2)}, temp}
@@ -4986,17 +5101,17 @@ Attributo: wind \\
 \hline
 & 1 & 2 & 3 & 4 \\
 \hline
-\textbf{ahead 1} & \textbf{0,1636} & 4,90684 & 2,16056 & 2,97208\\
+\textbf{ahead 1} & \textbf{0,1636} & 4,90684 & \textit{2,16056} & 2,97208\\
 \hline
-\textbf{ahead 2} & \textbf{0,0197} & 6,16824 & 3,63488 & 4,35038\\
+\textbf{ahead 2} & \textbf{0,0197} & 6,16824 & \textit{3,63488} & 4,35038\\
 \hline
-\textbf{ahead 3} & \textbf{0,02097} & 5,23054 & 3,80555 & 4,0707\\
+\textbf{ahead 3} & \textbf{0,02097} & 5,23054 & \textit{3,80555} & 4,0707\\
 \hline
-\textbf{ahead 4} & \textbf{0,0363} & 3,33298 & 4,99517 & 5,82675\\
+\textbf{ahead 4} & \textbf{0,0363} & \textit{3,33298} & 4,99517 & 5,82675\\
 \hline
-\textbf{ahead 5} & \textbf{0,08810} & 5,36416 & 5,47922 & 5,05873\\
+\textbf{ahead 5} & \textbf{0,08810} & 5,36416 & 5,47922 & \textit{5,05873}\\
 \hline
-\textbf{ahead 6} & \textbf{0,26560} & 7,63341 & 7,00446 & 4,37529\\
+\textbf{ahead 6} & \textbf{0,26560} & 7,63341 & 7,00446 & \textit{4,37529}\\
 \hline
 \end{tabular} \\
 \caption{Confronto versioni UnitedStatesPacific - Metrica \textit{(2)}, wind}
@@ -5056,8 +5171,116 @@ Attributo: wind \\
 \caption{Confronto versioni UnitedStatesPacific - Metrica \textit{(6)}}
 \end{table}
 
-Viene di seguito presentato un sommario, un istante di predizione alla volta, di quelle che sono le occorrenze delle migliori configurazioni.
+\newpage
 
+Viene di seguito presentato un sommario, un istante di predizione alla volta, di quelle che sono le occorrenze delle migliori configurazioni tra la \textit{2}, \textit{3} e \textit{4}.
+
+\medskip
+\textbf{Ahead = 1}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{3}{|c|}{\textbf{Totale}} & \multicolumn{3}{|c|}{\textbf{Metrica 1}} & \multicolumn{3}{|c|}{\textbf{Metrica 2}} \\
+\hline
+\textbf{Configurazioni} & 2 & \textbf{3} & 4 & 2 & 3 & 4 & 2 & 3 & 4 \\
+\hline
+\textbf{Occorrenze} & 1 & \textbf{7} & 0 & 0 & 4 & 0 & 1 & 3 & 0 \\
+\hline
+\end{tabular}
+\caption{UnitedStatesPacific - Confronto \textit{2}-\textit{3}-\textit{4} ahead 1}
+\end{table}
+
+\medskip
+\textbf{Ahead = 2}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{3}{|c|}{\textbf{Totale}} & \multicolumn{3}{|c|}{\textbf{Metrica 1}} & \multicolumn{3}{|c|}{\textbf{Metrica 2}} \\
+\hline
+\textbf{Configurazioni} & 2 & \textbf{3} & 4 & 2 & 3 & 4 & 2 & 3 & 4 \\
+\hline
+\textbf{Occorrenze} & 1 & \textbf{5} & 2 & 0 & 2 & 2 & 1 & 3 & 2 \\
+\hline
+\end{tabular}
+\caption{UnitedStatesPacific - Confronto \textit{2}-\textit{3}-\textit{4} ahead 2}
+\end{table}
+
+\medskip
+\textbf{Ahead = 3}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{3}{|c|}{\textbf{Totale}} & \multicolumn{3}{|c|}{\textbf{Metrica 1}} & \multicolumn{3}{|c|}{\textbf{Metrica 2}} \\
+\hline
+\textbf{Configurazioni} & 2 & \textbf{3} & 4 & 2 & 3 & 4 & 2 & 3 & 4 \\
+\hline
+\textbf{Occorrenze} & 0 & \textbf{5} & 3 & 0 & 2 & 2 & 0 & 3 & 1 \\
+\hline
+\end{tabular}
+\caption{UnitedStatesPacific - Confronto \textit{2}-\textit{3}-\textit{4} ahead 3}
+\end{table}
+
+\medskip
+\textbf{Ahead = 4}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{3}{|c|}{\textbf{Totale}} & \multicolumn{3}{|c|}{\textbf{Metrica 1}} & \multicolumn{3}{|c|}{\textbf{Metrica 2}} \\
+\hline
+\textbf{Configurazioni} & 2 & \textbf{3} & 4 & 2 & 3 & 4 & 2 & 3 & 4 \\
+\hline
+\textbf{Occorrenze} & 1 & \textbf{5} & 2 & 0 & 4 & 0 & 1 & 1 & 2 \\
+\hline
+\end{tabular}
+\caption{UnitedStatesPacific - Confronto \textit{2}-\textit{3}-\textit{4} ahead 4}
+\end{table}
+
+\medskip
+\textbf{Ahead = 5}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{3}{|c|}{\textbf{Totale}} & \multicolumn{3}{|c|}{\textbf{Metrica 1}} & \multicolumn{3}{|c|}{\textbf{Metrica 2}} \\
+\hline
+\textbf{Configurazioni} & 2 & \textbf{3} & \textbf{4} & 2 & 3 & 4 & 2 & 3 & 4 \\
+\hline
+\textbf{Occorrenze} & 0 & \textbf{4} & \textbf{4} & 0 & 2 & 2 & 0 & 2 & 2 \\
+\hline
+\end{tabular}
+\caption{UnitedStatesPacific - Confronto \textit{2}-\textit{3}-\textit{4} ahead 5}
+\end{table}
+
+\medskip
+\textbf{Ahead = 6}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{3}{|c|}{\textbf{Totale}} & \multicolumn{3}{|c|}{\textbf{Metrica 1}} & \multicolumn{3}{|c|}{\textbf{Metrica 2}} \\
+\hline
+\textbf{Configurazioni} & 2 & 3 & \textbf{4} & 2 & 3 & 4 & 2 & 3 & 4 \\
+\hline
+\textbf{Occorrenze} & 0 & 3 & \textbf{5} & 0 & 2 & 2 & 0 & 1 & 3 \\
+\hline
+\end{tabular}
+\caption{UnitedStatesPacific - Confronto \textit{2}-\textit{3}-\textit{4} ahead 6}
+\end{table}
+
+Come in occasione del dataset Ecotexas, in termini di accuratezza la configurazione 1 è la migliore, ma dovendo migliorare l'efficienza del software, si è nella condizione di scegliere una tra le tre configurazioni che utilizzando il clustering per effettuare predizione.
+
+Tra le tre configurazioni basate sul \textit{CT} la migliore è la \textit{3} con 29 occorrenze, segue la \textit{4} con 16 occorrenze ed infine la \textit{2} con 3 occorrenze.
+\newpage
 Vengono ora riportati dei grafici in cui è rappresentata la serie degli RMSE, per ogni istante di previsione, per ogni attributo del dataset. 
 
 \medskip
@@ -5356,7 +5579,7 @@ La versione VARForecaster 1.0 invece, è nettamente più accurata.
 Valutando invece l'efficienza, si nota, dalla Tab. 4.132 alla Tab. 4.134, che il versione VARForecaster 2.2 è quella con il costo computazione in tempo minore.
 
 \chapter{Conclusioni}
-Questo lavoro di tesi, come descritto nel cap. 1, mira a ridurre il trade-off tra accuratezza ed efficienza presentato nelle versioni del software VARForecaster in \cite{donato}. Per cercare di raggiungere questo obiettivo è stato deciso di:
+Questo lavoro di tesi, come descritto nel cap. 1, mira a realizzare un appropriato compromesso tra accuratezza ed efficienza presentato nelle versioni del software VARForecaster in \cite{donato}. Per cercare di raggiungere questo obiettivo è stato deciso di:
 \begin{itemize}
 \item modificare il modo in cui viene calcolato l'aggregato associato ad ogni cluster, nel momento in esso viene creato nella fase di ri-apprendimento del \textit{CT}. Infatti si è passato dal copiare l'aggregato dal cluster padre, quindi dando un forte peso alle rilevazioni effettuate dai sensori che ricadevano nel cluster negli istanti precedenti a \textit{t}, al calcolare tale oggetto attraverso l'utilizzo delle funzioni di media o di mediana, a discrezione dell'utente, e di conseguenza far si che l'aggregato rispecchi i valori presenti all'interno delle serie temporali dei sensori attualmente ricadenti nel cluster;
 \item applicare una funzione di smoothing esponenziale, nello specifico il \textit{metodo di Bolt}, a diversi livelli di $\alpha$. Si è provato infatti a dare maggior peso alle precedenti rilevazioni di \textit{t}, associando ad esse un peso specifico maggiore, ad assegnare lo stesso peso alle rilevazioni precedenti a \textit{t} e ai valori rilevati in \textit{t}, oppure a valorizzare maggiormente le rilevazioni di \textit{t} a discapito delle precedenti.
@@ -5494,6 +5717,28 @@ Per la versione VARForecaster 2.2, oltre che il comando \textit{java -jar VARFor
       
   \end{thebibliography}
 \chapter*{Ringraziamenti}
+Nonostante abbia delle palesi difficoltà nell'esprimere a fondo le emozioni non sono molte le occasioni che mi permettono di farlo pubblicamente.
+
+Di conseguenza intendo ringraziare innanzitutto la mia relatrice, la Dott.ssa Annalisa Appice, per il supporto dimostrato durante l'intero percorso di tesi e le ore passate a curare con estrema professionalità l'intero lavoro svolto. Mi ha insegnato molte cose, dall'essere più caparbio e convinto delle mie conoscenze, all'essere più preciso e dettagliato nelle scelte da assumere in ogni fase di vita del progetto.
+
+Ringrazio la mia famiglia per avermi supportato in questo percorso e aver fatto si che tutto procedesse per il verso giusto, infondendomi serenità e calma nei momenti difficili.
+
+Un forte e sentito ringraziamento va ai miei nonni i quali da lassù sono convinto mi abbiano sempre accompagno e mostrato la strada giusta da prendere.
+
+Un ringraziamento dovuto va ai miei colleghi di corso, Donato, compagno di mille esami, liti, decisioni, ripensamenti e avventure in quel del DIB, Paki, tanto puntiglioso e borioso quanto disponibile e giocoso, Stefano, amico e collega del quale ricorderò con estremo piacere la sua campagna per gli esami preparati e i pranzi fin troppo abbondanti, Peppo, senza del quale io e Donato staremmo ancora decidendo quale database utilizzare, Alessandro, punto di riferimento nel momento in cui le cose diventavano troppo complicate.
+
+Ringrazio inoltre tutti gli altri colleghi senza il quale questo percorso sarebbe divenuto il triplo più difficile.
+
+Un altro ringraziamento sento di doverlo spendere verso la Sig.ra Anita Ungari, responsabile della biblioteca del mio dipartimento, e il Sig. Giacomo Zuccaro, per l'estrema disponibilità a risolvere problemi, comunicati a volte anche attraversi mezzi poco formali. 
+
+Un altro ringraziamento va alla mamma di Donato, senza la quale avremmo mangiato molte più focacce e molti meno involtini.
+
+Un ringraziamento va in ultimo, non certo per ordine d'importanza, alla mia ragazza, Marina, la quale mi è sempre stata accanto nei momenti bui, mi ha aiutato a rialzarmi e mi ha accompagnato in questa lunga strada tortuosa che mi sta portando alla laurea. Grazie di cuore. 
+
+FTW.
+
+
+
 
 
 

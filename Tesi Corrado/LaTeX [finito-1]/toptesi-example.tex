@@ -1,0 +1,96 @@
+% !TEX encoding = IsoLatin
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 1.o Esempio con la classe toptesi
+\documentclass[b5paper,10pt,twoside,cucitura]{toptesi}
+\usepackage{lipsum}
+\usepackage{url}
+\usepackage{xcolor}
+%\documentclass[twoside,cucitura,pdfa]{toptesi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 2.o Esempio con la classe toptesi
+% \documentclass[11pt,twoside,oldstyle,autoretitolo,classica,greek]{toptesi}
+% \usepackage[or]{teubner}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commentare la riga seguente se si � specificata l'opzione "pdfa"
+\usepackage{hyperref}
+
+\hypersetup{%
+    pdfpagemode={UseOutlines},
+    bookmarksopen,
+    pdfstartview={FitH},
+    colorlinks,
+    linkcolor={black},
+    citecolor={black},
+    urlcolor={black}
+  }
+
+\usepackage[latin1]{inputenc}% per macchine Linux/Mac/UNIX/Windows; meglio utf8
+\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1.5} 
+
+%
+\ateneo{Universit{\`a} degli Studi di Bari}
+\nomeateneo{ALDO MORO}
+\TesiDiLaurea{Tesi di laurea}
+\Materia{Metodi avanzati di programmazione}
+\titolo{Apprendimento incrementale di cluster spazio temporali per la costruzione del modello VAR}% per la laurea quinquennale e il dottorato
+\corsodilaurea{Informatica e Tecnologie per la Produzione del Software}% per la laurea
+
+%%%%%%% Trucco per inserire la matricola sotto il nome di ogni candidato
+\candidato{\tabular{@{}l@{}}Donato Mastropasqua\\Matricola: 573658\endtabular}% per tutti i percorsi
+\relatore{Dott.ssa\ Annalisa Appice}
+\secondorelatore{Prof.\ Donato Malerba}
+
+
+
+%%%%%%%%%% Trucco per far scrivere Laureando/a/i/e al posto di "Candidato/a/i/e"
+%\def\Candidato{Laureando:}
+%\def\Candidati{Laureandi:}
+%\def\Candidata{Laureanda:}
+%\def\Candidate{Laureande:}
+
+%\sedutadilaurea{Agosto 1615}% per la laurea quinquennale; oppure:
+\sedutadilaurea{\textsc{Anno~accademico} 2014-2015}% per la laurea magistrale
+\logosede{uniba} % auxiliary ShareLaTeX logo
+
+%
+%\chapterbib %solo per vedere che cosa succede; e' preferibile comporre una sola bibliografia
+%\AdvisorName{Supervisors}
+\newtheorem{osservazione}{Osservazione}% Standard LaTeX
+
+%\setbindingcorrection{3mm}
+
+\begin{document}\errorcontextlines=9% debugging
+
+{
+
+\expandafter\ifx\csname Stilerieste\endcsname\relax
+    \frontespizio
+\else
+    \paginavuota
+    \begin{dedica}
+        A mio padre
+
+        \textdagger\ A mio nonno Pino
+    \end{dedica}
+    \tomo
+\fi
+
+\expandafter\ifx\csname StileTrieste\endcsname\relax
+\else
+    \begin{citazioni}
+        \textit{testo testo testo\\testo testo testo}
+
+        [\textsc{G.\ Leopardi}, Operette Morali]
+
+        \textgreek{>all'a p'anta <o k'eraunos d'' >oiak'izei}
+
+        [Eraclito, fr.\ D-K 134]
+    \end{citazioni}
+
+\fi
+
+\end{document}

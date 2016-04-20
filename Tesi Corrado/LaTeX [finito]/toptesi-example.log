@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.31)  19 APR 2016 00:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.31)  20 APR 2016 12:47
 entering extended mode
 **./toptesi-example.tex
 (toptesi-example.tex
@@ -12,9 +12,9 @@ es
 ls"
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 
-("C:\Users\PC-Corrado\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.c
+("C:\Users\PC-Corrado\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.c
 lo"
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -492,13 +492,6 @@ df.mkii"
 \makeMPintoPDFobject=\count116
 \everyMPtoPDFconversion=\toks18
 )
-Package TOPtesi Info: Margin width recalculation on input line 66.
-Package TOPtesi Info: Before:
-(TOPtesi)             oddsidemargin  -0.73163pt
-(TOPtesi)             evensidemargin -0.73163pt on input line 66.
-Package TOPtesi Info: After:
-(TOPtesi)             oddsidemargin  19.18529pt
-(TOPtesi)             evensidemargin -20.64854pt on input line 66.
 \AtBeginShipoutBox=\box29
 Package hyperref Info: Link coloring ON on input line 66.
 
@@ -524,7 +517,7 @@ LaTeX Info: Redefining \nameref on input line 66.
 File: uniba.jpg Graphic file (type jpg)
  <use uniba.jpg>
 Package pdftex.def Info: uniba.jpg used on input line 71.
-(pdftex.def)             Requested size: 72.9287pt x 71.53836pt.
+(pdftex.def)             Requested size: 87.01685pt x 85.35826pt.
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 71.
 
 ("C:\Users\PC-Corrado\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
@@ -550,19 +543,19 @@ LaTeX Font Info:    Try loading font information for OMX+lmex on input line 71.
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 71.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 71.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 71.
-LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 71.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 71.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 71.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 71.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 71.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 71.
 
-Overfull \vbox (3.68199pt too high) has occurred while \output is active []
+Overfull \vbox (6.82202pt too high) has occurred while \output is active []
 
 
 [1{C:/Users/PC-Corrado/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
@@ -583,20 +576,20 @@ Package rerunfilecheck Info: File `toptesi-example.out' has not changed.
 ### simple group (level 1) entered at line 68 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 7502 strings out of 493634
- 109088 string characters out of 3133199
- 296919 words of memory out of 3000000
- 10769 multiletter control sequences out of 15000+200000
- 50359 words of font info for 44 fonts, out of 3000000 for 9000
+ 7500 strings out of 493634
+ 109105 string characters out of 3133199
+ 296847 words of memory out of 3000000
+ 10770 multiletter control sequences out of 15000+200000
+ 50712 words of font info for 45 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 39i,13n,35p,805b,373s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,13n,35p,805b,371s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/PC-Corrado/AppData/Local/Programs/MiKTeX 2.9/fonts/en
 c/dvips/lm/lm-ec.enc}<C:/Users/PC-Corrado/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/lm/lmbx12.pfb><C:/Users/PC-Corrado/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/PC-Corrado/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/PC-Corrado/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb>
-Output written on toptesi-example.pdf (1 page, 161089 bytes).
+Output written on toptesi-example.pdf (1 page, 161466 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)

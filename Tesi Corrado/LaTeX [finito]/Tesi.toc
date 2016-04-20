@@ -53,12 +53,12 @@
 \contentsline {subsection}{\numberline {4.3.1}Ecotexas}{71}{subsection.4.3.1}
 \contentsline {subsubsection}{VARForecaster 2.1}{71}{section*.29}
 \contentsline {subsubsection}{VARForecaster 2.2}{78}{section*.30}
-\contentsline {subsubsection}{Confronto}{97}{section*.31}
+\contentsline {subsubsection}{Analisi comparativa}{96}{section*.31}
 \contentsline {subsection}{\numberline {4.3.2}UnitedStatesPacific}{112}{subsection.4.3.2}
 \contentsline {subsubsection}{VARForecaster 2.1}{112}{section*.32}
 \contentsline {subsubsection}{VARForecaster 2.2}{119}{section*.33}
-\contentsline {subsubsection}{Confronto}{137}{section*.34}
-\contentsline {chapter}{\numberline {5}Conclusioni}{150}{chapter.5}
-\contentsline {chapter}{\numberline {6}Appendice}{152}{chapter.6}
-\contentsline {section}{\numberline {6.1}Guida per l\IeC {\textquoteright }esecuzione di VARForecaster 2.1/2.2}{152}{section.6.1}
-\contentsline {chapter}{Bibliografia}{156}{chapter*.37}
+\contentsline {subsubsection}{Analisi comparativa}{137}{section*.34}
+\contentsline {chapter}{\numberline {5}Conclusioni}{152}{chapter.5}
+\contentsline {chapter}{\numberline {6}Appendice}{154}{chapter.6}
+\contentsline {section}{\numberline {6.1}Guida per l\IeC {\textquoteright }esecuzione di VARForecaster 2.1/2.2}{154}{section.6.1}
+\contentsline {chapter}{Bibliografia}{158}{chapter*.37}

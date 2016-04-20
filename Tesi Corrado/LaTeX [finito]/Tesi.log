@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.31)  18 APR 2016 23:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.31)  20 APR 2016 16:12
 entering extended mode
 **./Tesi.tex
 (Tesi.tex
@@ -684,7 +684,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 348.
 ("C:\Users\PC-Corrado\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.f
 d"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [26] [27] <VAR/select.jpg, id=781, 510.40688pt x 162.6075pt>
+) [26] [27] <VAR/select.jpg, id=805, 510.40688pt x 162.6075pt>
 File: VAR/select.jpg Graphic file (type jpg)
 
 <use VAR/select.jpg>
@@ -697,13 +697,13 @@ Package pdftex.def Info: VAR/select.jpg used on input line 393.
                                                   \fi \fi 
 l.395 \newpage
                <./VAR/select.jpg>]
-<VAR/fVAR.jpg, id=788, 342.5297pt x 40.65187pt>
+<VAR/fVAR.jpg, id=812, 342.5297pt x 40.65187pt>
 File: VAR/fVAR.jpg Graphic file (type jpg)
  <use VAR/fVAR.jpg>
 Package pdftex.def Info: VAR/fVAR.jpg used on input line 422.
 (pdftex.def)             Requested size: 390.0pt x 46.28902pt.
 
-<VAR/fVARo.jpg, id=790, 630.10406pt x 454.69875pt>
+<VAR/fVARo.jpg, id=814, 630.10406pt x 454.69875pt>
 File: VAR/fVARo.jpg Graphic file (type jpg)
  <use VAR/fVARo.jpg>
 Package pdftex.def Info: VAR/fVARo.jpg used on input line 433.
@@ -721,7 +721,7 @@ entifier (name{figure.2.3}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.444 \newpage
                <./VAR/fVARo.jpg>]
-<clustering/dendrogram.png, id=806, 431.36156pt x 294.34969pt>
+<clustering/dendrogram.png, id=830, 431.36156pt x 294.34969pt>
 File: clustering/dendrogram.png Graphic file (type png)
 
 <use clustering/dendrogram.png>
@@ -739,7 +739,7 @@ Capitolo 3.
 [39
 
 ] [40] [41] [42] [43]
-<RealAggregate/Package_Diagram.jpg, id=896, 960.58875pt x 455.7025pt>
+<RealAggregate/Package_Diagram.jpg, id=920, 960.58875pt x 455.7025pt>
 File: RealAggregate/Package_Diagram.jpg Graphic file (type jpg)
 
 <use RealAggregate/Package_Diagram.jpg>
@@ -753,7 +753,7 @@ Package pdftex.def Info: RealAggregate/Package_Diagram.jpg used on input line 6
                                                   \fi \fi 
 l.699 \newpage
                <./RealAggregate/Package_Diagram.jpg>]
-<RealAggregate/Tree_Class_Diagram.jpg, id=903, 2228.325pt x 1277.77374pt>
+<RealAggregate/Tree_Class_Diagram.jpg, id=927, 2228.325pt x 1277.77374pt>
 File: RealAggregate/Tree_Class_Diagram.jpg Graphic file (type jpg)
 
 <use RealAggregate/Tree_Class_Diagram.jpg>
@@ -783,7 +783,7 @@ Overfull \hbox (6.46977pt too wide) in paragraph at lines 720--721
  []
 
 [46]
-<RealAggregate/Forecast_Class_Diagram.jpg, id=914, 1436.36626pt x 639.38875pt>
+<RealAggregate/Forecast_Class_Diagram.jpg, id=938, 1436.36626pt x 639.38875pt>
 File: RealAggregate/Forecast_Class_Diagram.jpg Graphic file (type jpg)
 
 <use RealAggregate/Forecast_Class_Diagram.jpg>
@@ -806,7 +806,7 @@ Overfull \vbox (47.86018pt too high) has occurred while \output is active []
                                                   \fi \fi 
 l.730 
        <./RealAggregate/Forecast_Class_Diagram.jpg>] [48]
-<RealAggregate/run.jpg, id=924, 1457.445pt x 2125.9425pt>
+<RealAggregate/run.jpg, id=948, 1457.445pt x 2125.9425pt>
 File: RealAggregate/run.jpg Graphic file (type jpg)
 
 <use RealAggregate/run.jpg>
@@ -819,7 +819,7 @@ Package pdftex.def Info: RealAggregate/run.jpg used on input line 746.
                                                   \fi \fi 
 l.748 \newpage
                <./RealAggregate/run.jpg>]
-<RealAggregate/learnTreeOnPrexistModel.jpg, id=931, 1462.46375pt x 1805.74625pt
+<RealAggregate/learnTreeOnPrexistModel.jpg, id=955, 1462.46375pt x 1805.74625pt
 >
 File: RealAggregate/learnTreeOnPrexistModel.jpg Graphic file (type jpg)
  <use RealAggregate/learnTreeOnPrexistModel.jpg>
@@ -833,7 +833,7 @@ t line 755.
                                                   \fi \fi 
 l.757 \newpage
                <./RealAggregate/learnTreeOnPrexistModel.jpg>]
-<RealAggregate/Avg.jpg, id=936, 902.37125pt x 1095.09125pt>
+<RealAggregate/Avg.jpg, id=960, 902.37125pt x 1095.09125pt>
 File: RealAggregate/Avg.jpg Graphic file (type jpg)
 
 <use RealAggregate/Avg.jpg>
@@ -846,7 +846,7 @@ Package pdftex.def Info: RealAggregate/Avg.jpg used on input line 764.
                                                   \fi \fi 
 l.766 \newpage
                <./RealAggregate/Avg.jpg>]
-<RealAggregate/Median.jpg, id=941, 901.3675pt x 1095.09125pt>
+<RealAggregate/Median.jpg, id=965, 901.3675pt x 1095.09125pt>
 File: RealAggregate/Median.jpg Graphic file (type jpg)
 
 <use RealAggregate/Median.jpg>
@@ -859,7 +859,7 @@ Package pdftex.def Info: RealAggregate/Median.jpg used on input line 773.
                                                   \fi \fi 
 l.775 \newpage
                <./RealAggregate/Median.jpg>]
-<RealAggregate/Var.jpg, id=946, 886.31125pt x 594.22pt>
+<RealAggregate/Var.jpg, id=970, 886.31125pt x 594.22pt>
 File: RealAggregate/Var.jpg Graphic file (type jpg)
 
 <use RealAggregate/Var.jpg>
@@ -872,7 +872,7 @@ Package pdftex.def Info: RealAggregate/Var.jpg used on input line 782.
                                                   \fi \fi 
 l.784 \newpage
                <./RealAggregate/Var.jpg>] [54] [55] [56]
-<Smoothing/Snapshot_Class_Diagram.jpg, id=972, 1315.91624pt x 614.295pt>
+<Smoothing/Snapshot_Class_Diagram.jpg, id=996, 1315.91624pt x 614.295pt>
 File: Smoothing/Snapshot_Class_Diagram.jpg Graphic file (type jpg)
 
 <use Smoothing/Snapshot_Class_Diagram.jpg>
@@ -892,7 +892,7 @@ Overfull \hbox (32.5236pt too wide) in paragraph at lines 866--866
 l.871 Q
        ueste modifiche interessano la classe \textit{SnapshotData} e sono ne...
  <./Smoothing/Snapshot_Class_Diagram.jpg>] [58]
-<Smoothing/Tree_Class_Diagram.jpg, id=983, 2229.32875pt x 1278.7775pt>
+<Smoothing/Tree_Class_Diagram.jpg, id=1007, 2229.32875pt x 1278.7775pt>
 File: Smoothing/Tree_Class_Diagram.jpg Graphic file (type jpg)
 
 <use Smoothing/Tree_Class_Diagram.jpg>
@@ -915,7 +915,7 @@ Overfull \vbox (47.8374pt too high) has occurred while \output is active []
                                                   \fi \fi 
 l.885 \newpage
                <./Smoothing/Tree_Class_Diagram.jpg>] [60]
-<Smoothing/run.jpg, id=993, 1530.71875pt x 2291.56125pt>
+<Smoothing/run.jpg, id=1017, 1530.71875pt x 2291.56125pt>
 File: Smoothing/run.jpg Graphic file (type jpg)
 
 <use Smoothing/run.jpg>
@@ -928,7 +928,7 @@ Package pdftex.def Info: Smoothing/run.jpg used on input line 898.
                                                   \fi \fi 
 l.900 \newpage
                <./Smoothing/run.jpg>]
-<Smoothing/learnCT.jpg, id=1000, 1821.80624pt x 1194.4625pt>
+<Smoothing/learnCT.jpg, id=1024, 1821.80624pt x 1194.4625pt>
 File: Smoothing/learnCT.jpg Graphic file (type jpg)
 
 <use Smoothing/learnCT.jpg>
@@ -950,7 +950,7 @@ Overfull \vbox (47.8335pt too high) has occurred while \output is active []
                                                   \fi \fi 
 l.909 \newpage
                <./Smoothing/learnCT.jpg>]
-<Smoothing/prune.jpg, id=1005, 875.27pt x 744.7825pt>
+<Smoothing/prune.jpg, id=1029, 875.27pt x 744.7825pt>
 File: Smoothing/prune.jpg Graphic file (type jpg)
 
 <use Smoothing/prune.jpg>
@@ -963,7 +963,7 @@ Package pdftex.def Info: Smoothing/prune.jpg used on input line 916.
                                                   \fi \fi 
 l.918 \newpage
                <./Smoothing/prune.jpg>]
-<Smoothing/drift.jpg, id=1010, 1099.10625pt x 1400.23125pt>
+<Smoothing/drift.jpg, id=1034, 1099.10625pt x 1400.23125pt>
 File: Smoothing/drift.jpg Graphic file (type jpg)
 
 <use Smoothing/drift.jpg>
@@ -976,7 +976,7 @@ Package pdftex.def Info: Smoothing/drift.jpg used on input line 925.
                                                   \fi \fi 
 l.927 \newpage
                <./Smoothing/drift.jpg>]
-<Smoothing/learnTreeOnPreexistModel.jpg, id=1015, 1462.46375pt x 1805.74625pt>
+<Smoothing/learnTreeOnPreexistModel.jpg, id=1039, 1462.46375pt x 1805.74625pt>
 File: Smoothing/learnTreeOnPreexistModel.jpg Graphic file (type jpg)
 
 <use Smoothing/learnTreeOnPreexistModel.jpg>
@@ -999,7 +999,7 @@ Overfull \vbox (48.51566pt too high) has occurred while \output is active []
                                                   \fi \fi 
 l.936 \newpage
                <./Smoothing/learnTreeOnPreexistModel.jpg>]
-<Smoothing/computeSmoothing.jpg, id=1020, 673.51625pt x 1368.11125pt>
+<Smoothing/computeSmoothing.jpg, id=1044, 673.51625pt x 1368.11125pt>
 File: Smoothing/computeSmoothing.jpg Graphic file (type jpg)
 
 <use Smoothing/computeSmoothing.jpg>
@@ -1017,7 +1017,7 @@ Overfull \vbox (68.59723pt too high) has occurred while \output is active []
                                                   \fi \fi 
 l.945 \newpage
                <./Smoothing/computeSmoothing.jpg>]
-<Smoothing/sensorSmoothing.jpg, id=1025, 342.27875pt x 424.58624pt>
+<Smoothing/sensorSmoothing.jpg, id=1049, 342.27875pt x 424.58624pt>
 File: Smoothing/sensorSmoothing.jpg Graphic file (type jpg)
 
 <use Smoothing/sensorSmoothing.jpg>
@@ -1495,20 +1495,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 2437--2438
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2463 \newpage
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{table.4.50}) has been already used, duplicate ignored
+l.2464 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.50}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2463 \newpage
-               ] [95]
+l.2464 
+       ]
 Overfull \hbox (89.62843pt too wide) in paragraph at lines 2465--2466
 []\T1/cmr/bx/n/12 Metrica 4: Tempo me-dio di com-pu-ta-zione per la co-stru-zio
 ne(/riapprendimento)
  []
 
-[96pdfTeX warning (ext4): destination with the same identifier (name{table.4.51
+[95pdfTeX warning (ext4): destination with the same identifier (name{table.4.51
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1531,7 +1531,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2561--2562
 
  []
 
-[97pdfTeX warning (ext4): destination with the same identifier (name{table.4.54
+[96pdfTeX warning (ext4): destination with the same identifier (name{table.4.54
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1552,7 +1552,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2639--2640
 
  []
 
-[98pdfTeX warning (ext4): destination with the same identifier (name{table.4.55
+[97pdfTeX warning (ext4): destination with the same identifier (name{table.4.55
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1590,7 +1590,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2748--2749
 
  []
 
-[99pdfTeX warning (ext4): destination with the same identifier (name{table.4.58
+[98pdfTeX warning (ext4): destination with the same identifier (name{table.4.58
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1614,83 +1614,119 @@ Overfull \hbox (89.62843pt too wide) in paragraph at lines 2774--2775
 ne(/riapprendimento)
  []
 
-[100pdfTeX warning (ext4): destination with the same identifier (name{table.4.6
-1}) has been already used, duplicate ignored
+[99pdfTeX warning (ext4): destination with the same identifier (name{table.4.61
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2847 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-4.62}) has been already used, duplicate ignored
+l.2826 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.62}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2847 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-4.63}) has been already used, duplicate ignored
+l.2826 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.63}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2847 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-4.64}) has been already used, duplicate ignored
+l.2826 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.64}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2847 
-       ] [101pdfTeX warning (ext4): destination with the same identifier (name{
-table.4.65}) has been already used, duplicate ignored
+l.2826 \newpage
+               ] [100pdfTeX warning (ext4): destination with the same identifie
+r (name{table.4.65}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2920 \newpage
+l.2922 \newpage
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{table.4.66}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2920 \newpage
+l.2922 \newpage
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{table.4.67}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2920 \newpage
+l.2922 \newpage
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{table.4.68}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2920 \newpage
+l.2922 \newpage
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{table.4.69}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2920 \newpage
-               ] [102pdfTeX warning (ext4): destination with the same identifie
+l.2922 \newpage
+               ] [101pdfTeX warning (ext4): destination with the same identifie
 r (name{table.4.70}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2938 \newpage
+l.3033 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.71}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3033 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.72}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3033 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.73}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3033 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.74}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3033 
+       ] [102pdfTeX warning (ext4): destination with the same identifier (name{
+table.4.75}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3053 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.76}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3053 \newpage
                ]
-<sperimentazioni/ecotexas/Grafici/Ahead1/Temperatura.jpg, id=1212, 646.66594pt 
+<sperimentazioni/ecotexas/Grafici/Ahead1/Temperatura.jpg, id=1236, 646.66594pt 
 x 272.51813pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead1/Temperatura.jpg Graphic file (typ
 e jpg)
  <use sperimentazioni/ecotexas/Grafici/Ahead1/Temperatura.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead1/Temperatura.jp
-g used on input line 2960.
+g used on input line 3075.
 (pdftex.def)             Requested size: 312.00119pt x 131.485pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead2/Temperatura.jpg, id=1213, 646.66594pt 
+<sperimentazioni/ecotexas/Grafici/Ahead2/Temperatura.jpg, id=1237, 646.66594pt 
 x 274.02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead2/Temperatura.jpg Graphic file (typ
 e jpg)
  <use sperimentazioni/ecotexas/Grafici/Ahead2/Temperatura.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead2/Temperatura.jp
-g used on input line 2973.
+g used on input line 3088.
 (pdftex.def)             Requested size: 312.00119pt x 132.21144pt.
 
 [103pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
@@ -1698,49 +1734,49 @@ g used on input line 2973.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2976 \newpage
+l.3091 \newpage
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{figure.4.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2976 \newpage
+l.3091 \newpage
                 <./sperimentazioni/ecotexas/Grafici/Ahead1/Temperatura.jpg> <./
 sperimentazioni/ecotexas/Grafici/Ahead2/Temperatura.jpg>]
-<sperimentazioni/ecotexas/Grafici/Ahead3/Temperatura.jpg, id=1219, 648.17157pt 
+<sperimentazioni/ecotexas/Grafici/Ahead3/Temperatura.jpg, id=1243, 648.17157pt 
 x 274.02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead3/Temperatura.jpg Graphic file (typ
 e jpg)
  <use sperimentazioni/ecotexas/Grafici/Ahead3/Temperatura.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead3/Temperatura.jp
-g used on input line 2986.
+g used on input line 3101.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead4/Temperatura.jpg, id=1220, 648.17157pt 
+<sperimentazioni/ecotexas/Grafici/Ahead4/Temperatura.jpg, id=1244, 648.17157pt 
 x 274.02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead4/Temperatura.jpg Graphic file (typ
 e jpg)
  <use sperimentazioni/ecotexas/Grafici/Ahead4/Temperatura.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead4/Temperatura.jp
-g used on input line 2997.
+g used on input line 3112.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead5/Temperatura.jpg, id=1221, 648.17157pt 
+<sperimentazioni/ecotexas/Grafici/Ahead5/Temperatura.jpg, id=1245, 648.17157pt 
 x 274.02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead5/Temperatura.jpg Graphic file (typ
 e jpg)
  <use sperimentazioni/ecotexas/Grafici/Ahead5/Temperatura.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead5/Temperatura.jp
-g used on input line 3008.
+g used on input line 3123.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead6/Temperatura.jpg, id=1222, 648.17157pt 
+<sperimentazioni/ecotexas/Grafici/Ahead6/Temperatura.jpg, id=1246, 648.17157pt 
 x 274.02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead6/Temperatura.jpg Graphic file (typ
 e jpg)
  <use sperimentazioni/ecotexas/Grafici/Ahead6/Temperatura.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead6/Temperatura.jp
-g used on input line 3019.
+g used on input line 3134.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
 [104pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
@@ -1748,235 +1784,235 @@ g used on input line 3019.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3020 \end{figure}
+l.3135 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3020 \end{figure}
+l.3135 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3020 \end{figure}
+l.3135 \end{figure}
                     <./sperimentazioni/ecotexas/Grafici/Ahead3/Temperatura.jpg>
  <./sperimentazioni/ecotexas/Grafici/Ahead4/Temperatura.jpg> <./sperimentazioni
 /ecotexas/Grafici/Ahead5/Temperatura.jpg>]
-<sperimentazioni/ecotexas/Grafici/Ahead1/Vento.jpg, id=1227, 647.41875pt x 272.
+<sperimentazioni/ecotexas/Grafici/Ahead1/Vento.jpg, id=1251, 647.41875pt x 272.
 51813pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead1/Vento.jpg Graphic file (type jpg)
 
  <use sperimentazioni/ecotexas/Grafici/Ahead1/Vento.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead1/Vento.jpg used
- on input line 3034.
+ on input line 3149.
 (pdftex.def)             Requested size: 312.00119pt x 131.33115pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead2/Vento.jpg, id=1228, 647.41875pt x 274.
+<sperimentazioni/ecotexas/Grafici/Ahead2/Vento.jpg, id=1252, 647.41875pt x 274.
 02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead2/Vento.jpg Graphic file (type jpg)
 
  <use sperimentazioni/ecotexas/Grafici/Ahead2/Vento.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead2/Vento.jpg used
- on input line 3045.
+ on input line 3160.
 (pdftex.def)             Requested size: 312.00119pt x 132.05673pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead3/Vento.jpg, id=1229, 648.17157pt x 274.
+<sperimentazioni/ecotexas/Grafici/Ahead3/Vento.jpg, id=1253, 648.17157pt x 274.
 02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead3/Vento.jpg Graphic file (type jpg)
 
  <use sperimentazioni/ecotexas/Grafici/Ahead3/Vento.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead3/Vento.jpg used
- on input line 3056.
+ on input line 3171.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
  [105pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3057 \end{figure}
+l.3172 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3057 \end{figure}
+l.3172 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3057 \end{figure}
+l.3172 \end{figure}
                     <./sperimentazioni/ecotexas/Grafici/Ahead6/Temperatura.jpg>
  <./sperimentazioni/ecotexas/Grafici/Ahead1/Vento.jpg> <./sperimentazioni/ecote
 xas/Grafici/Ahead2/Vento.jpg>]
-<sperimentazioni/ecotexas/Grafici/Ahead4/Vento.jpg, id=1234, 648.17157pt x 274.
+<sperimentazioni/ecotexas/Grafici/Ahead4/Vento.jpg, id=1258, 648.17157pt x 274.
 02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead4/Vento.jpg Graphic file (type jpg)
 
  <use sperimentazioni/ecotexas/Grafici/Ahead4/Vento.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead4/Vento.jpg used
- on input line 3067.
+ on input line 3182.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead5/Vento.jpg, id=1235, 648.17157pt x 274.
+<sperimentazioni/ecotexas/Grafici/Ahead5/Vento.jpg, id=1259, 648.17157pt x 274.
 02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead5/Vento.jpg Graphic file (type jpg)
 
  <use sperimentazioni/ecotexas/Grafici/Ahead5/Vento.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead5/Vento.jpg used
- on input line 3078.
+ on input line 3193.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead6/Vento.jpg, id=1236, 648.17157pt x 274.
+<sperimentazioni/ecotexas/Grafici/Ahead6/Vento.jpg, id=1260, 648.17157pt x 274.
 02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead6/Vento.jpg Graphic file (type jpg)
 
  <use sperimentazioni/ecotexas/Grafici/Ahead6/Vento.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead6/Vento.jpg used
- on input line 3089.
+ on input line 3204.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
  [106pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3090 \end{figure}
+l.3205 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3090 \end{figure}
+l.3205 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3090 \end{figure}
+l.3205 \end{figure}
                     <./sperimentazioni/ecotexas/Grafici/Ahead3/Vento.jpg> <./sp
 erimentazioni/ecotexas/Grafici/Ahead4/Vento.jpg> <./sperimentazioni/ecotexas/Gr
 afici/Ahead5/Vento.jpg>]
-<sperimentazioni/ecotexas/Grafici/Ahead1/Ozono.jpg, id=1241, 648.17157pt x 274.
+<sperimentazioni/ecotexas/Grafici/Ahead1/Ozono.jpg, id=1265, 648.17157pt x 274.
 02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead1/Ozono.jpg Graphic file (type jpg)
 
  <use sperimentazioni/ecotexas/Grafici/Ahead1/Ozono.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead1/Ozono.jpg used
- on input line 3102.
+ on input line 3217.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead2/Ozono.jpg, id=1242, 648.17157pt x 274.
+<sperimentazioni/ecotexas/Grafici/Ahead2/Ozono.jpg, id=1266, 648.17157pt x 274.
 02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead2/Ozono.jpg Graphic file (type jpg)
 
  <use sperimentazioni/ecotexas/Grafici/Ahead2/Ozono.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead2/Ozono.jpg used
- on input line 3113.
+ on input line 3228.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead3/Ozono.jpg, id=1243, 648.17157pt x 274.
+<sperimentazioni/ecotexas/Grafici/Ahead3/Ozono.jpg, id=1267, 648.17157pt x 274.
 02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead3/Ozono.jpg Graphic file (type jpg)
 
  <use sperimentazioni/ecotexas/Grafici/Ahead3/Ozono.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead3/Ozono.jpg used
- on input line 3124.
+ on input line 3239.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
  [107pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3125 \end{figure}
+l.3240 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3125 \end{figure}
+l.3240 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3125 \end{figure}
+l.3240 \end{figure}
                     <./sperimentazioni/ecotexas/Grafici/Ahead6/Vento.jpg> <./sp
 erimentazioni/ecotexas/Grafici/Ahead1/Ozono.jpg> <./sperimentazioni/ecotexas/Gr
 afici/Ahead2/Ozono.jpg>]
-<sperimentazioni/ecotexas/Grafici/Ahead4/Ozono.jpg, id=1248, 648.17157pt x 274.
+<sperimentazioni/ecotexas/Grafici/Ahead4/Ozono.jpg, id=1272, 648.17157pt x 274.
 02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead4/Ozono.jpg Graphic file (type jpg)
 
  <use sperimentazioni/ecotexas/Grafici/Ahead4/Ozono.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead4/Ozono.jpg used
- on input line 3135.
+ on input line 3250.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead5/Ozono.jpg, id=1249, 648.17157pt x 274.
+<sperimentazioni/ecotexas/Grafici/Ahead5/Ozono.jpg, id=1273, 648.17157pt x 274.
 02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead5/Ozono.jpg Graphic file (type jpg)
 
  <use sperimentazioni/ecotexas/Grafici/Ahead5/Ozono.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead5/Ozono.jpg used
- on input line 3146.
+ on input line 3261.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead6/Ozono.jpg, id=1250, 648.17157pt x 274.
+<sperimentazioni/ecotexas/Grafici/Ahead6/Ozono.jpg, id=1274, 648.17157pt x 274.
 02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead6/Ozono.jpg Graphic file (type jpg)
 
  <use sperimentazioni/ecotexas/Grafici/Ahead6/Ozono.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead6/Ozono.jpg used
- on input line 3157.
+ on input line 3272.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
  [108pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .15}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3158 \end{figure}
+l.3273 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3158 \end{figure}
+l.3273 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.17}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3158 \end{figure}
+l.3273 \end{figure}
                     <./sperimentazioni/ecotexas/Grafici/Ahead3/Ozono.jpg> <./sp
 erimentazioni/ecotexas/Grafici/Ahead4/Ozono.jpg> <./sperimentazioni/ecotexas/Gr
 afici/Ahead5/Ozono.jpg>]
-<sperimentazioni/ecotexas/Grafici/Ahead1/Radiazioni.jpg, id=1255, 648.17157pt x
+<sperimentazioni/ecotexas/Grafici/Ahead1/Radiazioni.jpg, id=1279, 648.17157pt x
  274.02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead1/Radiazioni.jpg Graphic file (type
  jpg)
  <use sperimentazioni/ecotexas/Grafici/Ahead1/Radiazioni.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead1/Radiazioni.jpg
- used on input line 3170.
+ used on input line 3285.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead2/Radiazioni.jpg, id=1256, 648.17157pt x
+<sperimentazioni/ecotexas/Grafici/Ahead2/Radiazioni.jpg, id=1280, 648.17157pt x
  274.02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead2/Radiazioni.jpg Graphic file (type
  jpg)
  <use sperimentazioni/ecotexas/Grafici/Ahead2/Radiazioni.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead2/Radiazioni.jpg
- used on input line 3181.
+ used on input line 3296.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead3/Radiazioni.jpg, id=1257, 648.17157pt x
+<sperimentazioni/ecotexas/Grafici/Ahead3/Radiazioni.jpg, id=1281, 648.17157pt x
  274.02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead3/Radiazioni.jpg Graphic file (type
  jpg)
  <use sperimentazioni/ecotexas/Grafici/Ahead3/Radiazioni.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead3/Radiazioni.jpg
- used on input line 3192.
+ used on input line 3307.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
 [109pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
@@ -1984,47 +2020,47 @@ Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead3/Radiazioni.jpg
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3193 \end{figure}
+l.3308 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.19}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3193 \end{figure}
+l.3308 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.20}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3193 \end{figure}
+l.3308 \end{figure}
                     <./sperimentazioni/ecotexas/Grafici/Ahead6/Ozono.jpg> <./sp
 erimentazioni/ecotexas/Grafici/Ahead1/Radiazioni.jpg> <./sperimentazioni/ecotex
 as/Grafici/Ahead2/Radiazioni.jpg>]
-<sperimentazioni/ecotexas/Grafici/Ahead4/Radiazioni.jpg, id=1263, 648.17157pt x
+<sperimentazioni/ecotexas/Grafici/Ahead4/Radiazioni.jpg, id=1287, 648.17157pt x
  274.02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead4/Radiazioni.jpg Graphic file (type
  jpg)
  <use sperimentazioni/ecotexas/Grafici/Ahead4/Radiazioni.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead4/Radiazioni.jpg
- used on input line 3203.
+ used on input line 3318.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead5/Radiazioni.jpg, id=1264, 648.17157pt x
+<sperimentazioni/ecotexas/Grafici/Ahead5/Radiazioni.jpg, id=1288, 648.17157pt x
  274.02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead5/Radiazioni.jpg Graphic file (type
  jpg)
  <use sperimentazioni/ecotexas/Grafici/Ahead5/Radiazioni.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead5/Radiazioni.jpg
- used on input line 3214.
+ used on input line 3329.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
-<sperimentazioni/ecotexas/Grafici/Ahead6/Radiazioni.jpg, id=1265, 648.17157pt x
+<sperimentazioni/ecotexas/Grafici/Ahead6/Radiazioni.jpg, id=1289, 648.17157pt x
  274.02374pt>
 File: sperimentazioni/ecotexas/Grafici/Ahead6/Radiazioni.jpg Graphic file (type
  jpg)
  <use sperimentazioni/ecotexas/Grafici/Ahead6/Radiazioni.jpg>
 Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead6/Radiazioni.jpg
- used on input line 3225.
+ used on input line 3340.
 (pdftex.def)             Requested size: 312.00119pt x 131.90202pt.
 
 [110pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
@@ -2032,19 +2068,19 @@ Package pdftex.def Info: sperimentazioni/ecotexas/Grafici/Ahead6/Radiazioni.jpg
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3226 \end{figure}
+l.3341 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.22}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3226 \end{figure}
+l.3341 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.23}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3226 \end{figure}
+l.3341 \end{figure}
                     <./sperimentazioni/ecotexas/Grafici/Ahead3/Radiazioni.jpg> 
 <./sperimentazioni/ecotexas/Grafici/Ahead4/Radiazioni.jpg> <./sperimentazioni/e
 cotexas/Grafici/Ahead5/Radiazioni.jpg>] [111pdfTeX warning (ext4): destination 
@@ -2053,999 +2089,1044 @@ gnored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3231 \newpage
+l.3346 \newpage
                 <./sperimentazioni/ecotexas/Grafici/Ahead6/Radiazioni.jpg>]
 [112pdfTeX warning (ext4): destination with the same identifier (name{table.4.7
-1}) has been already used, duplicate ignored
+7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3275 \newpage
+l.3390 \newpage
                ]
-Overfull \hbox (16.47769pt too wide) in paragraph at lines 3282--3298
+Overfull \hbox (16.47769pt too wide) in paragraph at lines 3397--3413
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3279--3300
+Underfull \hbox (badness 10000) in paragraph at lines 3394--3415
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3304--3305
+Underfull \hbox (badness 10000) in paragraph at lines 3419--3420
 
  []
 
 
-Overfull \hbox (16.47769pt too wide) in paragraph at lines 3308--3324
+Overfull \hbox (16.47769pt too wide) in paragraph at lines 3423--3439
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3330--3331
+Underfull \hbox (badness 10000) in paragraph at lines 3445--3446
 
  []
 
 
-Overfull \hbox (16.47769pt too wide) in paragraph at lines 3334--3350
+Overfull \hbox (16.47769pt too wide) in paragraph at lines 3449--3465
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3356--3357
+Underfull \hbox (badness 10000) in paragraph at lines 3471--3472
 
  []
 
 
-Overfull \hbox (16.47769pt too wide) in paragraph at lines 3360--3377
+Overfull \hbox (16.47769pt too wide) in paragraph at lines 3475--3492
  [][] 
  []
 
 [113pdfTeX warning (ext4): destination with the same identifier (name{table.4.7
+8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3493 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.4.79}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3493 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.4.80}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3493 \end{table}
+                  ] [114pdfTeX warning (ext4): destination with the same identi
+fier (name{table.4.81}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3494 \newpage
+               ]
+Underfull \hbox (badness 10000) in paragraph at lines 3501--3502
+
+ []
+
+
+Overfull \hbox (16.47769pt too wide) in paragraph at lines 3505--3521
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3527--3528
+
+ []
+
+
+Overfull \hbox (16.47769pt too wide) in paragraph at lines 3531--3547
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3553--3554
+
+ []
+
+
+Overfull \hbox (16.47769pt too wide) in paragraph at lines 3557--3573
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3579--3580
+
+ []
+
+
+Overfull \hbox (16.47769pt too wide) in paragraph at lines 3583--3600
+ [][] 
+ []
+
+[115pdfTeX warning (ext4): destination with the same identifier (name{table.4.8
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3378 \end{table}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{table.4.73}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3378 \end{table}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{table.4.74}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3378 \end{table}
-                  ] [114pdfTeX warning (ext4): destination with the same identi
-fier (name{table.4.75}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3379 \newpage
-               ]
-Underfull \hbox (badness 10000) in paragraph at lines 3386--3387
-
- []
-
-
-Overfull \hbox (16.47769pt too wide) in paragraph at lines 3390--3406
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3412--3413
-
- []
-
-
-Overfull \hbox (16.47769pt too wide) in paragraph at lines 3416--3432
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3438--3439
-
- []
-
-
-Overfull \hbox (16.47769pt too wide) in paragraph at lines 3442--3458
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3464--3465
-
- []
-
-
-Overfull \hbox (16.47769pt too wide) in paragraph at lines 3468--3485
- [][] 
- []
-
-[115pdfTeX warning (ext4): destination with the same identifier (name{table.4.7
-6}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3486 \end{table}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{table.4.77}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3486 \end{table}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{table.4.78}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3486 \end{table}
-                  ] [116pdfTeX warning (ext4): destination with the same identi
-fier (name{table.4.79}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3487 \newpage
-               ] [117pdfTeX warning (ext4): destination with the same identifie
-r (name{table.4.80}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3598 \end{table}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{table.4.81}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3598 \end{table}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{table.4.82}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3598 \end{table}
+l.3601 \end{table}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{table.4.83}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3598 \end{table}
+l.3601 \end{table}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{table.4.84}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3598 \end{table}
+l.3601 \end{table}
+                  ] [116pdfTeX warning (ext4): destination with the same identi
+fier (name{table.4.85}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3602 \newpage
+               ] [117pdfTeX warning (ext4): destination with the same identifie
+r (name{table.4.86}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3713 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.4.87}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3713 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.4.88}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3713 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.4.89}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3713 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.4.90}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3713 \end{table}
                   ]
-Overfull \hbox (89.62843pt too wide) in paragraph at lines 3606--3607
+Overfull \hbox (89.62843pt too wide) in paragraph at lines 3721--3722
 []\T1/cmr/bx/n/12 Metrica 4: Tempo me-dio di com-pu-ta-zione per la co-stru-zio
 ne(/riapprendimento)
  []
 
-[118pdfTeX warning (ext4): destination with the same identifier (name{table.4.8
+[118pdfTeX warning (ext4): destination with the same identifier (name{table.4.9
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3773 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.92}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3773 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.93}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3773 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.94}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.3773 \newpage
+               ] [119]
+Underfull \hbox (badness 10000) in paragraph at lines 3808--3809
+
+ []
+
+[120pdfTeX warning (ext4): destination with the same identifier (name{table.4.9
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3658 \newpage
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{table.4.86}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3658 \newpage
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{table.4.87}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3658 \newpage
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{table.4.88}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3658 \newpage
-               ] [119]
-Underfull \hbox (badness 10000) in paragraph at lines 3693--3694
-
- []
-
-[120pdfTeX warning (ext4): destination with the same identifier (name{table.4.8
-9}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3719 \newpage
+l.3834 \newpage
                ]
-Underfull \hbox (badness 10000) in paragraph at lines 3773--3774
+Underfull \hbox (badness 10000) in paragraph at lines 3888--3889
 
  []
 
 [121pdfTeX warning (ext4): destination with the same identifier (name{table.4.9
-0}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3824 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-4.91}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3824 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-4.92}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3824 
-       ]
-Underfull \hbox (badness 10000) in paragraph at lines 3853--3854
-
- []
-
-[122pdfTeX warning (ext4): destination with the same identifier (name{table.4.9
-3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3904 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-4.94}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3904 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-4.95}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.3904 
-       ]
-Underfull \hbox (badness 10000) in paragraph at lines 3934--3935
-
- []
-
-[123pdfTeX warning (ext4): destination with the same identifier (name{table.4.9
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3985 
+l.3939 
        pdfTeX warning (ext4): destination with the same identifier (name{table.
 4.97}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3985 
+l.3939 
        pdfTeX warning (ext4): destination with the same identifier (name{table.
 4.98}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3985 
-       ] [124pdfTeX warning (ext4): destination with the same identifier (name{
-table.4.99}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4011 \newpage
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{table.4.100}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4011 \newpage
-               ]
-Underfull \hbox (badness 10000) in paragraph at lines 4017--4018
+l.3939 
+       ]
+Underfull \hbox (badness 10000) in paragraph at lines 3968--3969
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4097--4098
-
- []
-
-[125pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
-01}) has been already used, duplicate ignored
+[122pdfTeX warning (ext4): destination with the same identifier (name{table.4.9
+9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4098 
+l.4019 
        pdfTeX warning (ext4): destination with the same identifier (name{table.
-4.102}) has been already used, duplicate ignored
+4.100}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4098 
+l.4019 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.101}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4019 
+       ]
+Underfull \hbox (badness 10000) in paragraph at lines 4049--4050
+
+ []
+
+[123pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+02}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4100 
        pdfTeX warning (ext4): destination with the same identifier (name{table.
 4.103}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4098 
+l.4100 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.104}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4100 
+       ] [124pdfTeX warning (ext4): destination with the same identifier (name{
+table.4.105}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4126 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.106}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4126 \newpage
+               ]
+Underfull \hbox (badness 10000) in paragraph at lines 4132--4133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4212--4213
+
+ []
+
+[125pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+07}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4213 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.108}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4213 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.109}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4213 
        ]
-Underfull \hbox (badness 10000) in paragraph at lines 4177--4178
+Underfull \hbox (badness 10000) in paragraph at lines 4292--4293
 
  []
 
 [126pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
-04}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4201 \end{table}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{table.4.105}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4201 \end{table}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{table.4.106}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4201 \end{table}
-                  ] [127pdfTeX warning (ext4): destination with the same identi
-fier (name{table.4.107}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4255 \newpage
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{table.4.108}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4255 \newpage
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{table.4.109}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4255 \newpage
-               ]
-Underfull \hbox (badness 10000) in paragraph at lines 4257--4258
-
- []
-
-[128pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4368 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-4.111}) has been already used, duplicate ignored
+l.4316 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.4.111}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4368 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-4.112}) has been already used, duplicate ignored
+l.4316 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.4.112}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4368 
-       ]
-Underfull \hbox (badness 10000) in paragraph at lines 4369--4370
-
- []
-
-[129pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
-13}) has been already used, duplicate ignored
+l.4316 \end{table}
+                  ] [127pdfTeX warning (ext4): destination with the same identi
+fier (name{table.4.113}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4371 \newpage
+l.4370 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.114}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4370 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.115}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4370 \newpage
                ]
-Overfull \hbox (20.48364pt too wide) in paragraph at lines 4378--4416
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 4372--4373
+
  []
 
-[130pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
-14}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4420 \newpage
-               ]
-Overfull \hbox (20.48364pt too wide) in paragraph at lines 4428--4466
- [][] 
- []
-
-[131pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
-15}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4470 \newpage
-               ]
-Overfull \hbox (20.48364pt too wide) in paragraph at lines 4478--4516
- [][] 
- []
-
-[132pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+[128pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
 16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4520 \newpage
-               ]
-Overfull \hbox (20.48364pt too wide) in paragraph at lines 4528--4566
- [][] 
- []
-
-[133pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
-17}) has been already used, duplicate ignored
+l.4483 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.117}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4570 \newpage
-               ]
-Overfull \hbox (20.48364pt too wide) in paragraph at lines 4578--4616
- [][] 
- []
-
-[134pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
-18}) has been already used, duplicate ignored
+l.4483 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.118}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4620 \newpage
-               ]
-Overfull \hbox (20.48364pt too wide) in paragraph at lines 4627--4665
- [][] 
+l.4483 
+       ]
+Underfull \hbox (badness 10000) in paragraph at lines 4484--4485
+
  []
 
-[135pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+[129pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
 19}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4695 \newpage
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{table.4.120}) has been already used, duplicate ignored
+l.4486 \newpage
+               ]
+Overfull \hbox (20.48364pt too wide) in paragraph at lines 4493--4531
+ [][] 
+ []
+
+[130pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+20}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4695 \newpage
+l.4535 \newpage
                ]
-Overfull \hbox (89.62843pt too wide) in paragraph at lines 4697--4698
-[]\T1/cmr/bx/n/12 Metrica 4: Tempo me-dio di com-pu-ta-zione per la co-stru-zio
-ne(/riapprendimento)
+Overfull \hbox (20.48364pt too wide) in paragraph at lines 4543--4581
+ [][] 
  []
 
-[136pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+[131pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
 21}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4770 \newpage
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{table.4.122}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4770 \newpage
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{table.4.123}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.4770 \newpage
+l.4585 \newpage
                ]
-Underfull \hbox (badness 10000) in paragraph at lines 4794--4795
-
+Overfull \hbox (20.48364pt too wide) in paragraph at lines 4593--4631
+ [][] 
  []
 
-[137pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+[132pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+22}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4635 \newpage
+               ]
+Overfull \hbox (20.48364pt too wide) in paragraph at lines 4643--4681
+ [][] 
+ []
+
+[133pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+23}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4685 \newpage
+               ]
+Overfull \hbox (20.48364pt too wide) in paragraph at lines 4693--4731
+ [][] 
+ []
+
+[134pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
 24}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4818 \newpage
+l.4735 \newpage
                ]
-Underfull \hbox (badness 10000) in paragraph at lines 4820--4821
-
+Overfull \hbox (20.48364pt too wide) in paragraph at lines 4742--4780
+ [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4846--4847
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4872--4873
-
- []
-
-[138pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+[135pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
 25}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4897 \newpage
+l.4810 \newpage
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{table.4.126}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4897 \newpage
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{table.4.127}) has been already used, duplicate ignored
+l.4810 \newpage
+               ]
+Overfull \hbox (89.62843pt too wide) in paragraph at lines 4812--4813
+[]\T1/cmr/bx/n/12 Metrica 4: Tempo me-dio di com-pu-ta-zione per la co-stru-zio
+ne(/riapprendimento)
+ []
+
+[136pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+27}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4897 \newpage
+l.4885 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.128}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4885 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.129}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4885 \newpage
                ]
-Underfull \hbox (badness 10000) in paragraph at lines 4903--4904
+Underfull \hbox (badness 10000) in paragraph at lines 4909--4910
+
+ []
+
+[137pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+30}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4933 \newpage
+               ]
+Underfull \hbox (badness 10000) in paragraph at lines 4935--4936
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4929--4930
+Underfull \hbox (badness 10000) in paragraph at lines 4961--4962
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4955--4956
+Underfull \hbox (badness 10000) in paragraph at lines 4987--4988
+
+ []
+
+[138pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
+31}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.5012 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.132}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.5012 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.133}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.5012 \newpage
+               ]
+Underfull \hbox (badness 10000) in paragraph at lines 5018--5019
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4981--4982
+Underfull \hbox (badness 10000) in paragraph at lines 5044--5045
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5070--5071
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5096--5097
 
  []
 
 [139pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
-28}) has been already used, duplicate ignored
+34}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5003 \end{table}
+l.5118 \end{table}
                   pdfTeX warning (ext4): destination with the same identifier (
-name{table.4.129}) has been already used, duplicate ignored
+name{table.4.135}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5003 \end{table}
+l.5118 \end{table}
                   pdfTeX warning (ext4): destination with the same identifier (
-name{table.4.130}) has been already used, duplicate ignored
+name{table.4.136}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5003 \end{table}
+l.5118 \end{table}
                   ]
-Overfull \hbox (89.62843pt too wide) in paragraph at lines 5007--5008
+Overfull \hbox (89.62843pt too wide) in paragraph at lines 5122--5123
 []\T1/cmr/bx/n/12 Metrica 4: Tempo me-dio di com-pu-ta-zione per la co-stru-zio
 ne(/riapprendimento)
  []
 
 [140pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
-31}) has been already used, duplicate ignored
+37}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5068 \item i
-              n verde la versione VARForecaster 2.0;pdfTeX warning (ext4): dest
-ination with the same identifier (name{table.4.132}) has been already used, dup
-licate ignored
+l.5174 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.138}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5068 \item i
-              n verde la versione VARForecaster 2.0;pdfTeX warning (ext4): dest
-ination with the same identifier (name{table.4.133}) has been already used, dup
-licate ignored
+l.5174 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.139}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5068 \item i
-              n verde la versione VARForecaster 2.0;pdfTeX warning (ext4): dest
-ination with the same identifier (name{table.4.134}) has been already used, dup
-licate ignored
+l.5174 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.4.140}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5068 \item i
-              n verde la versione VARForecaster 2.0;]
-<sperimentazioni/united/Grafici/Ahead1/1.jpg, id=1424, 648.92438pt x 274.02374p
+l.5174 \newpage
+               ] [141pdfTeX warning (ext4): destination with the same identifie
+r (name{table.4.141}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.5279 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.142}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.5279 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.143}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.5279 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.144}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.5279 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+4.145}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.5279 
+       ] [142pdfTeX warning (ext4): destination with the same identifier (name{
+table.4.146}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.5283 \newpage
+               ]
+<sperimentazioni/united/Grafici/Ahead1/1.jpg, id=1456, 648.92438pt x 274.02374p
 t>
 File: sperimentazioni/united/Grafici/Ahead1/1.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead1/1.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead1/1.jpg used on in
-put line 5083.
+put line 5306.
 (pdftex.def)             Requested size: 312.00119pt x 131.7515pt.
 
-<sperimentazioni/united/Grafici/Ahead2/1.jpg, id=1425, 648.92438pt x 274.77657p
+<sperimentazioni/united/Grafici/Ahead2/1.jpg, id=1457, 648.92438pt x 274.77657p
 t>
 File: sperimentazioni/united/Grafici/Ahead2/1.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead2/1.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead2/1.jpg used on in
-put line 5096.
+put line 5319.
 (pdftex.def)             Requested size: 312.00119pt x 132.11345pt.
- [141pdfTeX warning (ext4): destination with the same identifier (name{figure.4
+ [143pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .25}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5099 \newpage
+l.5322 \newpage
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{figure.4.26}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5099 \newpage
+l.5322 \newpage
                 <./sperimentazioni/united/Grafici/Ahead1/1.jpg> <./sperimentazi
 oni/united/Grafici/Ahead2/1.jpg>]
-<sperimentazioni/united/Grafici/Ahead3/1.jpg, id=1430, 648.92438pt x 274.77657p
+<sperimentazioni/united/Grafici/Ahead3/1.jpg, id=1462, 648.92438pt x 274.77657p
 t>
 File: sperimentazioni/united/Grafici/Ahead3/1.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead3/1.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead3/1.jpg used on in
-put line 5109.
+put line 5332.
 (pdftex.def)             Requested size: 312.00119pt x 132.11345pt.
 
-<sperimentazioni/united/Grafici/Ahead4/1.jpg, id=1431, 648.92438pt x 274.77657p
+<sperimentazioni/united/Grafici/Ahead4/1.jpg, id=1463, 648.92438pt x 274.77657p
 t>
 File: sperimentazioni/united/Grafici/Ahead4/1.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead4/1.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead4/1.jpg used on in
-put line 5120.
+put line 5343.
 (pdftex.def)             Requested size: 312.00119pt x 132.11345pt.
 
-<sperimentazioni/united/Grafici/Ahead5/1.jpg, id=1432, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead5/1.jpg, id=1464, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead5/1.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead5/1.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead5/1.jpg used on in
-put line 5131.
+put line 5354.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead6/1.jpg, id=1433, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead6/1.jpg, id=1465, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead6/1.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead6/1.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead6/1.jpg used on in
-put line 5142.
+put line 5365.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
- [142pdfTeX warning (ext4): destination with the same identifier (name{figure.4
+ [144pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .27}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5143 \end{figure}
+l.5366 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.28}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5143 \end{figure}
+l.5366 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.29}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5143 \end{figure}
+l.5366 \end{figure}
                     <./sperimentazioni/united/Grafici/Ahead3/1.jpg> <./sperimen
 tazioni/united/Grafici/Ahead4/1.jpg> <./sperimentazioni/united/Grafici/Ahead5/1
 .jpg>]
-<sperimentazioni/united/Grafici/Ahead1/2.jpg, id=1438, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead1/2.jpg, id=1470, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead1/2.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead1/2.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead1/2.jpg used on in
-put line 5157.
+put line 5380.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead2/2.jpg, id=1439, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead2/2.jpg, id=1471, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead2/2.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead2/2.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead2/2.jpg used on in
-put line 5168.
+put line 5391.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead3/2.jpg, id=1440, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead3/2.jpg, id=1472, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead3/2.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead3/2.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead3/2.jpg used on in
-put line 5179.
+put line 5402.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
- [143pdfTeX warning (ext4): destination with the same identifier (name{figure.4
+ [145pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .30}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5180 \end{figure}
+l.5403 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.31}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5180 \end{figure}
+l.5403 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.32}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5180 \end{figure}
+l.5403 \end{figure}
                     <./sperimentazioni/united/Grafici/Ahead6/1.jpg> <./sperimen
 tazioni/united/Grafici/Ahead1/2.jpg> <./sperimentazioni/united/Grafici/Ahead2/2
 .jpg>]
-<sperimentazioni/united/Grafici/Ahead4/2.jpg, id=1445, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead4/2.jpg, id=1478, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead4/2.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead4/2.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead4/2.jpg used on in
-put line 5190.
+put line 5413.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead5/2.jpg, id=1446, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead5/2.jpg, id=1479, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead5/2.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead5/2.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead5/2.jpg used on in
-put line 5201.
+put line 5424.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead6/2.jpg, id=1447, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead6/2.jpg, id=1480, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead6/2.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead6/2.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead6/2.jpg used on in
-put line 5212.
+put line 5435.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
- [144pdfTeX warning (ext4): destination with the same identifier (name{figure.4
+ [146pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .33}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5213 \end{figure}
+l.5436 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.34}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5213 \end{figure}
+l.5436 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.35}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5213 \end{figure}
+l.5436 \end{figure}
                     <./sperimentazioni/united/Grafici/Ahead3/2.jpg> <./sperimen
 tazioni/united/Grafici/Ahead4/2.jpg> <./sperimentazioni/united/Grafici/Ahead5/2
 .jpg>]
-<sperimentazioni/united/Grafici/Ahead1/3.jpg, id=1452, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead1/3.jpg, id=1485, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead1/3.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead1/3.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead1/3.jpg used on in
-put line 5225.
+put line 5448.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead2/3.jpg, id=1453, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead2/3.jpg, id=1486, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead2/3.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead2/3.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead2/3.jpg used on in
-put line 5236.
+put line 5459.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead3/3.jpg, id=1454, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead3/3.jpg, id=1487, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead3/3.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead3/3.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead3/3.jpg used on in
-put line 5247.
+put line 5470.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
- [145pdfTeX warning (ext4): destination with the same identifier (name{figure.4
+ [147pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .36}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5248 \end{figure}
+l.5471 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.37}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5248 \end{figure}
+l.5471 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.38}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5248 \end{figure}
+l.5471 \end{figure}
                     <./sperimentazioni/united/Grafici/Ahead6/2.jpg> <./sperimen
 tazioni/united/Grafici/Ahead1/3.jpg> <./sperimentazioni/united/Grafici/Ahead2/3
 .jpg>]
-<sperimentazioni/united/Grafici/Ahead4/3.jpg, id=1460, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead4/3.jpg, id=1492, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead4/3.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead4/3.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead4/3.jpg used on in
-put line 5258.
+put line 5481.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead5/3.jpg, id=1461, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead5/3.jpg, id=1493, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead5/3.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead5/3.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead5/3.jpg used on in
-put line 5269.
+put line 5492.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead6/3.jpg, id=1462, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead6/3.jpg, id=1494, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead6/3.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead6/3.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead6/3.jpg used on in
-put line 5280.
+put line 5503.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
- [146pdfTeX warning (ext4): destination with the same identifier (name{figure.4
+ [148pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .39}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5281 \end{figure}
+l.5504 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.40}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5281 \end{figure}
+l.5504 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.41}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5281 \end{figure}
+l.5504 \end{figure}
                     <./sperimentazioni/united/Grafici/Ahead3/3.jpg> <./sperimen
 tazioni/united/Grafici/Ahead4/3.jpg> <./sperimentazioni/united/Grafici/Ahead5/3
 .jpg>]
-<sperimentazioni/united/Grafici/Ahead1/4.jpg, id=1467, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead1/4.jpg, id=1499, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead1/4.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead1/4.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead1/4.jpg used on in
-put line 5293.
+put line 5516.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead2/4.jpg, id=1468, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead2/4.jpg, id=1500, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead2/4.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead2/4.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead2/4.jpg used on in
-put line 5304.
+put line 5527.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead3/4.jpg, id=1469, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead3/4.jpg, id=1501, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead3/4.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead3/4.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead3/4.jpg used on in
-put line 5315.
+put line 5538.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
- [147pdfTeX warning (ext4): destination with the same identifier (name{figure.4
+ [149pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .42}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5316 \end{figure}
+l.5539 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.43}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5316 \end{figure}
+l.5539 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.44}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5316 \end{figure}
+l.5539 \end{figure}
                     <./sperimentazioni/united/Grafici/Ahead6/3.jpg> <./sperimen
 tazioni/united/Grafici/Ahead1/4.jpg> <./sperimentazioni/united/Grafici/Ahead2/4
 .jpg>]
-<sperimentazioni/united/Grafici/Ahead4/4.jpg, id=1474, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead4/4.jpg, id=1506, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead4/4.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead4/4.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead4/4.jpg used on in
-put line 5326.
+put line 5549.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead5/4.jpg, id=1475, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead5/4.jpg, id=1507, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead5/4.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead5/4.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead5/4.jpg used on in
-put line 5337.
+put line 5560.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
 
-<sperimentazioni/united/Grafici/Ahead6/4.jpg, id=1476, 648.92438pt x 275.52937p
+<sperimentazioni/united/Grafici/Ahead6/4.jpg, id=1508, 648.92438pt x 275.52937p
 t>
 File: sperimentazioni/united/Grafici/Ahead6/4.jpg Graphic file (type jpg)
  <use sperimentazioni/united/Grafici/Ahead6/4.jpg>
 Package pdftex.def Info: sperimentazioni/united/Grafici/Ahead6/4.jpg used on in
-put line 5348.
+put line 5571.
 (pdftex.def)             Requested size: 312.00119pt x 132.4754pt.
- [148pdfTeX warning (ext4): destination with the same identifier (name{figure.4
+ [150pdfTeX warning (ext4): destination with the same identifier (name{figure.4
 .45}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5349 \end{figure}
+l.5572 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.46}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5349 \end{figure}
+l.5572 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.47}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5349 \end{figure}
+l.5572 \end{figure}
                     <./sperimentazioni/united/Grafici/Ahead3/4.jpg> <./sperimen
 tazioni/united/Grafici/Ahead4/4.jpg> <./sperimentazioni/united/Grafici/Ahead5/4
 .jpg>]
-Overfull \hbox (0.53935pt too wide) in paragraph at lines 5352--5353
+Overfull \hbox (0.53935pt too wide) in paragraph at lines 5575--5576
 []\T1/cmr/m/n/12 A dif-fe-renza del da-ta-set Eco-te-xas, in Uni-ted-Sta-te-sPa
 -ci-fic, le ver-sioni VAR-
  []
 
-[149pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+[151pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 48}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.5358 \chapter
+l.5581 \chapter
                {Conclusioni} <./sperimentazioni/united/Grafici/Ahead6/4.jpg>]
 Capitolo 5.
-[150
-
-] [151]
-Capitolo 6.
 [152
 
-]
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 5430.
-
-[153]
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 5449.
-
-[154] [155] [156
-
-] [157]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5500.
- [158
+] [153]
+Capitolo 6.
+[154
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5500.
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 5653.
+
+[155]
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 5672.
+
+[156] [157] [158
+
+] [159]
+Overfull \hbox (7.24869pt too wide) in paragraph at lines 5722--5723
+[]\T1/cmr/m/n/12 Di con-se-guenza in-tendo rin-gra-ziare in-nan-zi-tutto la mia
+ re-la-trice, la Dott.ssa
+ []
+
+
+Overfull \hbox (4.99515pt too wide) in paragraph at lines 5734--5735
+[]\T1/cmr/m/n/12 Un al-tro rin-gra-zia-mento va alla mamma di Do-nato, senza la
+ quale avremmo
+ []
+
+[160
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5745.
+ [161]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5745.
  (Tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5500.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5500.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5745.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5745.
 
 Package rerunfilecheck Info: File `Tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 25185A4F9932687587BB9C0768A3176A;2053.
  ) 
 Here is how much of TeX's memory you used:
- 8455 strings out of 493634
- 126834 string characters out of 3133199
+ 8470 strings out of 493634
+ 126990 string characters out of 3133199
  223482 words of memory out of 3000000
  11176 multiletter control sequences out of 15000+200000
  16669 words of font info for 41 fonts, out of 3000000 for 9000
@@ -3077,9 +3158,9 @@ rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/PC-Corrado
 :/Users/PC-Corrado/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmsy6.pfb><C:/Users/PC-Corrado/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Tesi.pdf (158 pages, 9097342 bytes).
+Output written on Tesi.pdf (161 pages, 9117341 bytes).
 PDF statistics:
- 2103 PDF objects out of 2487 (max. 8388607)
- 516 named destinations out of 1000 (max. 500000)
+ 2158 PDF objects out of 2487 (max. 8388607)
+ 531 named destinations out of 1000 (max. 500000)
  594 words of extra memory for PDF output out of 10000 (max. 10000000)
 
