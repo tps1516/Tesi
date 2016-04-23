@@ -1,0 +1,61 @@
+INTRO [15 secondi]
+Buonasera a tutti sono il laureando Corrado Giancaspro e presento la mia tesi di laurea in Metodi Avanzati di Programmazione dal titolo "Uso di aggregati spazio temporali per la costruzione del modello VAR" relatrice la Dott.ssa Annalisa Appice e il prof. Donato Malerba.
+
+SOMMARIO [40 secondi]
+In questa presentazione vi sarà spiegato qual è l'obiettivo della tesi, e quindi il problema affrontato, quali sono state le ipotesi di risoluzione di tali  
+problemi e quindi il modo secondo il quale ho cercato di raggiungere gli obiettivi prefissati ed in che modo questi sono stati messi in pratica.  
+Seguiranno poi i risultati raccolti ed una descrizione di tali dati con conseguente valutazione del lavoro.  
+
+AGGREGATO [50 secondi]
+Prima ancora di definire qual è l'obiettivo della tesi vorrei dare una piccola definizione, utile alla comprensione delle cose che seguono.
+Vorrei definire cos'è un aggregato, ovvero una struttura che contiene i dati rilevati nel tempo dalle istanze che ricadono, o che sono ricadute negli  
+istanti precedenti a quello attuale, nel cluster. È quindi una struttura che contiene una serie storica multivariata di quelli che sono i dati che sono  
+ricaduti all'interno del cluster fino all'istante attuale. 
+Questo tipo di struttura è utile perché è sulla base di essa che verrà costruito il modello VAR.
+
+
+TRADE-OFF [50 secondi]
+Nelle versioni pre-esistenti di VARForecaster è possibile scegliere una versione molto accurata ma parecchio lenta o, al contrario, una versione più  
+veloce ma con errori di previsione del tutto inaccettabili. È per questo motivo che l'obiettivo della tesi è quello di cercare di bilanciare il rapporto tra  
+accuratezza ed efficienza nel sistema VARForecaster, anche perché, se in teoria useremmo la versione molto accurata, in pratica non potremmo farlo in quanto richiederebbe dei tempi troppo lunghi per l'elaborazione.
+
+IPOTESI [1 minuto e  50 secondi]
+Considerando il fatto che la fase che comporta un consumo maggiore di tempo è quella della costruzione del modello VAR, e che nella versione 1.0  
+non è possibile andare a migliorare le prestazioni in questa fase, ho cercato di migliorare l'accuratezza della versione 2.0. 
+Le problematiche riscontrate, e quindi le motivazioni ipotizzate per le quali la versione VARForecaster 2.0 è poco accurata, sono:
+-il fatto che gli aggregati associati ai nodi foglia creati in fase di ricostruzione del clustering tree non siano calcolati in tempo reale, ma siano una  
+copia di quello che è l'aggregato del cluster padre;
+-il fatto che l'albero sia troppo adattato ai dati attuali e che quindi esso sia poco adatto alla fase di previsione dei valori futuri.
+Le soluzioni ipotizzate per i problemi appena descritti sono:
+-il calcolo dell'aggregato in tempo reale;
+-la costruzione del CT in base ad una previsione di quello che potrebbe essere lo snapshot successivo a quello attuale.
+
+VARForecaster 2.1 [55 secondi]
+Il calcolo dell'aggregato in tempo reale comporta un miglioramento in termini di accuratezza, in quanto l'aggregato fa riferimento ai valori rilevati  
+fino all'istante attuale dalle istanze che ricadono realmente nel cluster in esame.
+Ma ancora il margine di errore non è accettabile e questo perché, a causa della natura dei dati in analisi, sono presenti molti outliers. Gli outliers non  
+sono altro che dei valori limite nella distribuzione.
+Per risolvere tale problema ho pensato di poter utilizzare la funzione mediana. Questa funzione, a causa della sua natura, è molto meno sensibile a  
+tali valori.
+
+Eccessivo adattamento [15 secondi]
+Come già detto, un altro problema della versione 2.0 è l'eccessivo adattamento del clustering tree ai dati attuali. 
+Tale problema si definisce overfitting e la sua conseguenza è avere delle basse prestazioni in fase di previsione dei dati futuri.
+
+VARForecaster 2.2 [50 secondi]
+Ciò vuol dire che l'albero è perfettamente adattato ai dati attuali e non tiene conto di quelli che potrebbero essere i valori successivi, a discapito  
+della precisione delle previsioni. Per cercare di evitare questo problema si cerca di prevedere quali potrebbero essere i dati che le istanze  
+assumeranno nel prossimo istante e si riapprende l'albero in base a queste previsioni. Così facendo si va ad applicare un modello VAR più adatto a  
+questi dati e di conseguenza migliore nel effettuare previsione dei valori futuri. 
+Per calcolare quelle che potrebbero essere le rilevazioni dell'istante successivo a quello attuale viene utilizzata una funzione di previsione, ovvero  
+l'exponential smoothing
+
+Smoothing [40 secondi]
+L'exponential smoothing è una tecnica di previsione che è molto utilizzaata nell'analisi delle serie storiche a causa della sua natura, infatti questa è  
+ottenuta come media ponderata di tutte le osservazioni disponibili e si assegnano pesi diversi alle varie osservazioni, in modo tale che i pesi delle  
+osservazioni passate diminuiscano in modo esponenziale.
+In questo metodo è possibile assegnare un peso maggiore alle osservazioni passate a discapito di quelle attuali, viceversa, è possibile assegnare un  
+peso maggiore alle osservazioni attuali a discapito di quelle precedenti, oppure è possibile dare pari importanza ad entrambe, non prediligendo  
+nessuna delle due.
+
+[7 minuti e 15 secondi] 
